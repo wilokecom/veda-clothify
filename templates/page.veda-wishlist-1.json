@@ -1,0 +1,209 @@
+{
+	"sections": {
+		"section_6418195c2967247e1b1eb4da": {
+			"type": "veda-634e2d67712cc47dd14ae91e",
+			"settings": {
+				"breadcrumb___separator": "<i class=\"far fa-arrow-right\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
+				"VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
+				"heading___divider": "line",
+				"heading___title": "Breadcrumb",
+				"heading___manual": false,
+				"heading___enable": false,
+				"VEDA_switch_1": false,
+				"VEDA_select_1": "boxed"
+			}
+		},
+		"section_6418195c2967247e1b1eb4db": {
+			"type": "veda-638dc595c7da843b95595231",
+			"blocks": {
+				"8c9a86dd-a4d5-43c3-8ca1-a71c7c2dbcbb": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Wish list products",
+						"heading___enable": true
+					}
+				},
+				"cfafa953-33d7-458b-915e-c924ce4ff75a": {
+					"type": "heading_text",
+					"settings": {
+						"heading___text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+						"heading___enable": true
+					}
+				},
+				"2dcb1c1d-3f6c-49ea-8585-12c02a772ff1": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 20,
+						"heading___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"8c9a86dd-a4d5-43c3-8ca1-a71c7c2dbcbb",
+				"cfafa953-33d7-458b-915e-c924ce4ff75a",
+				"2dcb1c1d-3f6c-49ea-8585-12c02a772ff1"
+			],
+			"settings": {
+				"add_to_cart___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
+				"add_to_cart___text": "{{ 'veda.products.product.add_to_cart' | t }}",
+				"add_to_cart___enable": true,
+				"quick_view___icon": "<i class=\"far fa-eye\"><\/i>",
+				"quick_view___view_detail": "{{ 'veda.products.product.view_details' | t }}",
+				"quick_view___quantity": "{{ 'veda.products.product.quantity.label' | t}}",
+				"VEDA_text_1": "{{ 'veda.products.product.quick_view' | t}}",
+				"quick_view___enable": true,
+				"wish_list_action___icon": "<i class=\"far fa-heart\"><\/i>",
+				"VEDA_text_2": "{{ 'veda.products.product.remove_from_wishlist' | t}}",
+				"wish_list_action___add": "{{ 'veda.products.product.add_to_wishlist' | t}}",
+				"VEDA_switch_1": true,
+				"compare_action___icon": "<i class=\"far fa-repeat-alt\"><\/i>",
+				"compare_action___remove": "{{ 'veda.products.product.remove_from_compare' | t}}",
+				"compare_action___add": "{{ 'veda.products.product.add_to_compare' | t}}",
+				"compare_action___enable": true,
+				"sold_out___text": "{{ 'veda.products.product.sold_out' | t}}",
+				"sold_out___enable": true,
+				"new___text": "{{ 'veda.products.product.new' | t }}",
+				"new___enable": true,
+				"sale___text": "{{ 'veda.products.product.on_sale' | t }}",
+				"sale___enable": true,
+				"VEDA_slider_2": 130,
+				"VEDA_switch_2": true,
+				"VEDA_switch_3": true,
+				"VEDA_switch_4": false,
+				"VEDA_select_1": "boxed"
+			}
+		},
+		"section_6418195c2967247e1b1eb4dc": {
+			"type": "veda-63fc7850106fff4e5282ea76",
+			"blocks": {
+				"bd0d33a2-1890-4315-a60e-70062fd09ebc": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Title",
+						"heading___enable": false
+					}
+				},
+				"48d5f045-a622-4796-8953-94ab9454ccf3": {
+					"type": "content",
+					"settings": {
+						"content___content_width": 51,
+						"content___aspect_ratio": 28,
+						"content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
+						"content___icon_enable": true,
+						"content___button_variant": "light",
+						"content___new_tab": false,
+						"content___button_text": "Shop now",
+						"content___title": "Comfortable Sofa Chair",
+						"content___sub_title": "Lookbook 2023"
+					}
+				}
+			},
+			"block_order": [
+				"bd0d33a2-1890-4315-a60e-70062fd09ebc",
+				"48d5f045-a622-4796-8953-94ab9454ccf3"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"far fa-angle-right\"><\/i>",
+				"VEDA_switch_1": true,
+				"VEDA_select_1": "top",
+				"VEDA_select_2": "link",
+				"VEDA_switch_2": false,
+				"button_view_all___text": "See All Collections",
+				"button_view_all___enable": false,
+				"VEDA_switch_3": false,
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_6418195c2967247e1b1eb4dd": {
+			"type": "veda-63ec53eff9fcfb779a9ce5b5",
+			"blocks": {
+				"c9fa50ce-3078-4761-a745-107272e6c003": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h3",
+						"heading___title": "Best Seller",
+						"heading___enable": true
+					}
+				},
+				"dff9eed8-e9f3-4b37-a891-2c3efe9dad6c": {
+					"type": "heading_text",
+					"settings": {
+						"heading___text": "<p>Upgrade your wardrobe with these stylish pieces.<\/p>",
+						"heading___enable": true
+					}
+				},
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 10,
+						"heading___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"c9fa50ce-3078-4761-a745-107272e6c003",
+				"dff9eed8-e9f3-4b37-a891-2c3efe9dad6c",
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+			],
+			"settings": {
+				"VEDA_slider_2": 150,
+				"image_section___width": 26,
+				"image_section___enable": true,
+				"VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",
+				"VEDA_icon_2": "<i class=\"fal fa-angle-left\"><\/i>",
+				"VEDA_select_1": "custom",
+				"VEDA_select_2": "top",
+				"VEDA_switch_1": true,
+				"VEDA_switch_2": false,
+				"slider_settings___loop": false,
+				"slider_settings___delay": 4000,
+				"VEDA_switch_3": false,
+				"add_to_cart___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
+				"add_to_cart___text": "{{ 'veda.products.product.add_to_cart' | t }}",
+				"add_to_cart___enable": true,
+				"compare_action___icon": "<i class=\"far fa-repeat-alt\"><\/i>",
+				"compare_action___remove": "{{ 'veda.products.product.remove_from_compare' | t}}",
+				"compare_action___add": "{{ 'veda.products.product.add_to_compare' | t}}",
+				"compare_action___enable": true,
+				"wish_list_action___icon": "<i class=\"far fa-heart\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.products.product.remove_from_wishlist' | t}}",
+				"wish_list_action___add": "{{ 'veda.products.product.add_to_wishlist' | t}}",
+				"VEDA_switch_4": true,
+				"quick_view___icon": "<i class=\"far fa-eye\"><\/i>",
+				"quick_view___view_detail": "{{ 'veda.products.product.view_details' | t }}",
+				"quick_view___quantity": "{{ 'veda.products.product.quantity.label' | t}}",
+				"VEDA_text_2": "{{ 'veda.products.product.quick_view' | t}}",
+				"quick_view___enable": true,
+				"VEDA_icon_3": "<i class=\"far fa-long-arrow-right\"><\/i>",
+				"VEDA_switch_5": true,
+				"VEDA_select_3": "bottom",
+				"VEDA_select_4": "gray",
+				"VEDA_switch_6": false,
+				"button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
+				"button_view_all___enable": true,
+				"sold_out___text": "{{ 'veda.products.product.sold_out' | t}}",
+				"sold_out___enable": true,
+				"new___text": "{{ 'veda.products.product.new' | t }}",
+				"new___enable": true,
+				"sale___text": "{{ 'veda.products.product.on_sale' | t }}",
+				"sale___enable": true,
+				"VEDA_slider_4": 130,
+				"VEDA_switch_7": true,
+				"VEDA_switch_8": true,
+				"product_settings___limit": 8,
+				"VEDA_collectionPicker_1": "on-sale",
+				"VEDA_switch_9": false,
+				"VEDA_select_5": "boxed"
+			}
+		}
+	},
+	"order": [
+		"section_6418195c2967247e1b1eb4da",
+		"section_6418195c2967247e1b1eb4db",
+		"section_6418195c2967247e1b1eb4dc",
+		"section_6418195c2967247e1b1eb4dd"
+	]
+}

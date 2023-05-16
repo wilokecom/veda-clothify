@@ -1,1 +1,548 @@
-{"sections":{"section_641819552967247e1b1eb4c2":{"type":"veda-632b57f0732d5072108bd23e","blocks":{"e569b9af-b0b2-4d2b-97ab-3c42c166500d":{"type":"content","settings":{"VEDA_icon_3":"<i class=\"far fa-angle-right\"><\/i>","VEDA_switch_4":true,"content___new_tab_right":true,"VEDA_text_1":"Button Right","VEDA_select_1":"dark","VEDA_switch_5":false,"VEDA_icon_4":"<i class=\"far fa-angle-right\"><\/i>","VEDA_switch_6":true,"content___new_tab_left":true,"VEDA_text_2":"Shop Now","VEDA_select_2":"dark","VEDA_switch_7":true,"content___title":"Hot Summer Fashion<br>Winter\/Spring","content___sub_title":"Women's Clothing","content___media_type":"image","content___advanced_mode":true}},"4b1204d5-84b0-4ea1-849b-b7a000ab52f4":{"type":"content","settings":{"VEDA_icon_3":"<i class=\"far fa-angle-right\"><\/i>","VEDA_switch_4":true,"content___new_tab_right":true,"VEDA_text_1":"Button Right","VEDA_select_1":"dark","VEDA_switch_5":false,"VEDA_icon_4":"<i class=\"far fa-angle-right\"><\/i>","VEDA_switch_6":true,"content___new_tab_left":true,"VEDA_text_2":"Shop Now","VEDA_select_2":"dark","VEDA_switch_7":true,"content___description":"<p>From casual wear to formal attire, we have everything you need.<\/p>","content___title":"Sale Up To 50% Off","content___sub_title":"Mens Clothing","content___media_type":"image","content___advanced_mode":true}}},"block_order":["e569b9af-b0b2-4d2b-97ab-3c42c166500d","4b1204d5-84b0-4ea1-849b-b7a000ab52f4"],"settings":{"VEDA_icon_1":"<i class=\"far fa-angle-right\"><\/i>","VEDA_icon_2":"<i class=\"far fa-angle-left\"><\/i>","VEDA_switch_1":true,"VEDA_switch_2":true,"slider_settings___loop":true,"slider_settings___delay":4000,"VEDA_switch_3":true,"VEDA_switch_8":false,"VEDA_select_3":"boxed","height":600}},"section_641819552967247e1b1eb4c3":{"type":"veda-63b7a4eca697f54dc73ee63a","blocks":{"ebd63086-64cb-4391-b441-3be0247a947f":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Season Collections","heading___enable":true}},"50d88fab-7d22-42d4-80d2-934bb364055d":{"type":"heading_space","settings":{"heading___space":30,"heading___enable":true}},"38d0dc54-ad57-4833-9eb4-22eef269b60a":{"type":"content","settings":{"content___new_tab":false,"content___title":"Activewear"}},"c3082409-c43c-4417-a537-35ae87005ab8":{"type":"content","settings":{"content___new_tab":false,"content___title":"Trend Bags"}},"a6f97846-8f6a-4f19-abc2-1b6c74381025":{"type":"content","settings":{"content___new_tab":false,"content___title":"Handbags"}},"7423db28-10ec-476e-9379-b7dec95d0af3":{"type":"content","settings":{"content___new_tab":false,"content___title":"Streethats"}},"18dda939-fde2-4051-a1f3-dd11cde5f607":{"type":"content","settings":{"content___new_tab":false,"content___title":"Sandals"}}},"block_order":["ebd63086-64cb-4391-b441-3be0247a947f","50d88fab-7d22-42d4-80d2-934bb364055d","38d0dc54-ad57-4833-9eb4-22eef269b60a","c3082409-c43c-4417-a537-35ae87005ab8","a6f97846-8f6a-4f19-abc2-1b6c74381025","7423db28-10ec-476e-9379-b7dec95d0af3","18dda939-fde2-4051-a1f3-dd11cde5f607"],"settings":{"VEDA_icon_1":"<i class=\"far fa-arrow-right\"><\/i>","VEDA_switch_1":true,"VEDA_select_1":"top","VEDA_select_2":"link","VEDA_switch_2":false,"button_view_all___text":"See All Collections","button_view_all___enable":true,"VEDA_switch_3":false,"VEDA_select_3":"boxed"}},"section_641819552967247e1b1eb4c4":{"type":"veda-637348ca9d1798051fea2475","blocks":{"c9fa50ce-3078-4761-a745-107272e6c003":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Best Sellers","heading___enable":true}},"9a87c5fe-6220-41ef-8863-8baf5a1448cf":{"type":"heading_text","settings":{"heading___text":"<p>Upgrade your wardrobe with these stylish pieces.<\/p>","heading___enable":false}},"e2f49099-eb9a-4696-ac4c-c95c64e32c18":{"type":"heading_space","settings":{"heading___space":30,"heading___enable":true}}},"block_order":["c9fa50ce-3078-4761-a745-107272e6c003","9a87c5fe-6220-41ef-8863-8baf5a1448cf","e2f49099-eb9a-4696-ac4c-c95c64e32c18"],"settings":{"add_to_cart___icon":"<i class=\"far fa-shopping-cart\"><\/i>","add_to_cart___text":"{{ 'veda.products.product.add_to_cart' | t }}","add_to_cart___enable":true,"compare_action___icon":"<i class=\"far fa-repeat-alt\"><\/i>","compare_action___remove":"{{ 'veda.products.product.remove_from_compare' | t}}","compare_action___add":"{{ 'veda.products.product.add_to_compare' | t}}","compare_action___enable":true,"wish_list_action___icon":"<i class=\"far fa-heart\"><\/i>","VEDA_text_1":"{{ 'veda.products.product.remove_from_wishlist' | t}}","wish_list_action___add":"{{ 'veda.products.product.add_to_wishlist' | t}}","VEDA_switch_1":true,"quick_view___icon":"<i class=\"far fa-eye\"><\/i>","quick_view___view_detail":"{{ 'veda.products.product.view_details' | t }}","quick_view___quantity":"{{ 'veda.products.product.quantity.label' | t}}","VEDA_text_2":"{{ 'veda.products.product.quick_view' | t}}","quick_view___enable":true,"VEDA_icon_1":"<i class=\"far fa-long-arrow-right\"><\/i>","VEDA_switch_2":true,"VEDA_select_1":"bottom","VEDA_select_2":"dark","VEDA_switch_3":false,"button_view_all___text":"{{'veda.sections.featured_collection.view_all' | t}}","button_view_all___enable":true,"sold_out___text":"{{ 'veda.products.product.sold_out' | t}}","sold_out___enable":true,"new___text":"{{ 'veda.products.product.new' | t }}","new___enable":true,"sale___text":"{{ 'veda.products.product.on_sale' | t }}","sale___enable":true,"VEDA_slider_2":130,"VEDA_switch_4":true,"VEDA_switch_5":true,"product_settings___limit":8,"VEDA_collectionPicker_1":"best-seller","VEDA_switch_6":false,"VEDA_select_3":"boxed"}},"section_641819552967247e1b1eb4c5":{"type":"veda-63e46f6ff9fcfb779a9ce59b","settings":{"content___choose_icon":"<i class=\"far fa-arrow-circle-right\"><\/i>","content___icon_enable":true,"content___button_variant":"link","content___new_tab":false,"content___button_text":"Shop now","content___text":"<p>Upgrade your winter wardrobe with our latest collection of cozy sweaters, stylish jackets, warm boots, and more. Shop now and stay stylish and warm this season!<\/p>","content___title":"In the <br>middle of winter","VEDA_switch_1":false,"VEDA_slider_3":50,"VEDA_select_1":"boxed","image_width":60,"enable_image":true}},"section_641819552967247e1b1eb4c6":{"type":"veda-63299b31732d5072108bd23b","blocks":{"1a518d5c-9af7-420e-aee1-f6182dee1392":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Lookbook","heading___enable":true}},"d2210504-463d-4dfb-96cd-b53abe177420":{"type":"heading_space","settings":{"heading___space":30,"heading___enable":true}},"38d0dc54-ad57-4833-9eb4-22eef269b60a":{"type":"content","settings":{"content___products":["t-shirt-with-print","floral-print-t-shirt"]}},"c3082409-c43c-4417-a537-35ae87005ab8":{"type":"content","settings":{"content___products":["floral-print-t-shirt","comfort-mini-denim-skirt"]}},"b2644754-670f-470d-b4bb-f2fcf6a6819e":{"type":"content","settings":{"content___products":["knitted-throw-pillows","yellow-sofa"]}},"ac0e0c5f-7d63-4372-aa0f-38f1ae012999":{"type":"content","settings":{"content___products":["vanilla-candle","bedside-table"]}},"a6f97846-8f6a-4f19-abc2-1b6c74381025":{"type":"content","settings":{"content___products":["gardening-hand-trowel","biodegradable-cardboard-pots"]}},"bfed187c-acea-412c-903e-ee0a5829421b":{"type":"content","settings":{"content___products":["gardening-hand-trowel","biodegradable-cardboard-pots"]}}},"block_order":["1a518d5c-9af7-420e-aee1-f6182dee1392","d2210504-463d-4dfb-96cd-b53abe177420","38d0dc54-ad57-4833-9eb4-22eef269b60a","c3082409-c43c-4417-a537-35ae87005ab8","b2644754-670f-470d-b4bb-f2fcf6a6819e","ac0e0c5f-7d63-4372-aa0f-38f1ae012999","a6f97846-8f6a-4f19-abc2-1b6c74381025","bfed187c-acea-412c-903e-ee0a5829421b"],"settings":{"responsive___row_height":320,"hot_spots___icon":"<i class=\"far fa-shopping-basket\"><\/i>","VEDA_icon_1":"<i class=\"far fa-angle-right\"><\/i>","VEDA_switch_1":true,"VEDA_select_1":"top","VEDA_select_2":"gray","VEDA_switch_2":false,"button_view_all___text":"See All Collections","button_view_all___enable":false,"VEDA_switch_3":false,"VEDA_select_3":"boxed"}},"section_641819552967247e1b1eb4c7":{"type":"veda-63e49bb7f9fcfb779a9ce59e","blocks":{"c9fa50ce-3078-4761-a745-107272e6c003":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"New Arrivals","heading___enable":true}},"e2f49099-eb9a-4696-ac4c-c95c64e32c18":{"type":"heading_space","settings":{"heading___space":20,"heading___enable":true}},"99c557d3-c5f1-43a0-9bc9-4a971c7a821c":{"type":"sidebar_banner","settings":{"sidebar___new_tab":false,"sidebar___title":"Sale 50% Off","sidebar___enable":true}},"23e341fb-4ae6-4498-b790-fb0048308463":{"type":"sidebar_product_list","settings":{"sidebar___limit":4,"VEDA_collectionPicker_1":"hot-items","sidebar___title":"Hot Deals!","sidebar___enable":true}}},"block_order":["c9fa50ce-3078-4761-a745-107272e6c003","e2f49099-eb9a-4696-ac4c-c95c64e32c18","99c557d3-c5f1-43a0-9bc9-4a971c7a821c","23e341fb-4ae6-4498-b790-fb0048308463"],"settings":{"add_to_cart___icon":"<i class=\"far fa-shopping-cart\"><\/i>","add_to_cart___text":"{{ 'veda.products.product.add_to_cart' | t }}","add_to_cart___enable":true,"compare_action___icon":"<i class=\"far fa-repeat-alt\"><\/i>","compare_action___remove":"{{ 'veda.products.product.remove_from_compare' | t}}","compare_action___add":"{{ 'veda.products.product.add_to_compare' | t}}","compare_action___enable":true,"wish_list_action___icon":"<i class=\"far fa-heart\"><\/i>","VEDA_text_1":"{{ 'veda.products.product.remove_from_wishlist' | t}}","wish_list_action___add":"{{ 'veda.products.product.add_to_wishlist' | t}}","VEDA_switch_1":true,"quick_view___icon":"<i class=\"far fa-eye\"><\/i>","quick_view___view_detail":"{{ 'veda.products.product.view_details' | t }}","quick_view___quantity":"{{ 'veda.products.product.quantity.label' | t}}","VEDA_text_2":"{{ 'veda.products.product.quick_view' | t}}","quick_view___enable":true,"VEDA_icon_1":"<i class=\"far fa-long-arrow-right\"><\/i>","VEDA_switch_2":true,"VEDA_select_1":"bottom","VEDA_select_2":"dark","VEDA_switch_3":false,"button_view_all___text":"View All Products","button_view_all___enable":true,"sold_out___text":"Sold out","sold_out___enable":true,"new___text":"{{ 'veda.products.product.new' | t }}","new___enable":true,"sale___text":"{{ 'veda.products.product.on_sale' | t }}","sale___enable":true,"VEDA_slider_2":130,"VEDA_switch_4":true,"VEDA_switch_5":true,"product_settings___limit":8,"VEDA_collectionPicker_2":"frontpage","VEDA_slider_4":1,"VEDA_switch_6":false,"VEDA_select_3":"boxed"}},"section_641819552967247e1b1eb4c8":{"type":"veda-632e8959732d5072108bd24c","blocks":{"311772a8-bf50-4b42-85e2-51cbe0e0e1a3":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Video","heading___enable":false}},"38d0dc54-ad57-4833-9eb4-22eef269b60a":{"type":"content","settings":{"content___border_radius":6,"content___video_url":"https:\/\/www.youtube.com\/embed\/Ez6ODtGpL1w","content___description":"<p>Phasellus dignissim maximus mi eu pretium<\/p>","content___title":"Parallax Video"}}},"block_order":["311772a8-bf50-4b42-85e2-51cbe0e0e1a3","38d0dc54-ad57-4833-9eb4-22eef269b60a"],"settings":{"general_settings___width":1300,"VEDA_switch_1":true,"VEDA_slider_1":3,"VEDA_switch_2":false,"VEDA_select_1":"boxed"}},"section_641819552967247e1b1eb4c9":{"type":"veda-63bbc9a64f397d5053e55b8f","blocks":{"3e2c7150-0e8e-4253-9059-9c26de3ab79e":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Our Services","heading___enable":false}},"29683ba3-86de-4c24-9d6f-2d1afcad380a":{"type":"heading_space","settings":{"heading___space":20,"heading___enable":false}},"38d0dc54-ad57-4833-9eb4-22eef269b60a":{"type":"content","settings":{"content___new_tab":false,"content___description":"<p>Add an extra touch of thoughtfulness with our free gift wrapping service.<\/p>","content___title":"Free gift wrapping","content___icon":"<i class=\"fal fa-box-full\"><\/i>"}},"8da9a324-f800-4be1-a475-6736f9047e25":{"type":"content","settings":{"content___new_tab":false,"content___description":"<p>Shop with confidence with our hassle-free and free returns.<\/p>","content___title":"Easy & Free returns","content___icon":"<i class=\"fal fa-ambulance\"><\/i>"}},"0639276e-dc73-4dab-a704-c003064abd2d":{"type":"content","settings":{"content___new_tab":false,"content___description":"<p>Get the latest fashion trends at a discount with our student discount.<\/p>","content___title":"Student discount","content___icon":"<i class=\"fal fa-blender\"><\/i>"}},"9c09b22b-186b-468d-a8d3-d171e5ffa629":{"type":"content","settings":{"content___new_tab":false,"content___description":"<p>Shop with peace of mind knowing that your information is safe and secure.<\/p>","content___title":"100% Secure shopping","content___icon":"<i class=\"fal fa-shopping-basket\"><\/i>"}},"9e76e844-077b-4a54-b71f-6a270f3180fe":{"type":"content","settings":{"content___new_tab":false,"content___description":"<p>Donec hendrerit blandit mauris. Integer aliquam<\/p>","content___title":"100% Secure shopping","content___icon":"<i class=\"fal fa-shopping-basket\"><\/i>"}}},"block_order":["3e2c7150-0e8e-4253-9059-9c26de3ab79e","29683ba3-86de-4c24-9d6f-2d1afcad380a","38d0dc54-ad57-4833-9eb4-22eef269b60a","8da9a324-f800-4be1-a475-6736f9047e25","0639276e-dc73-4dab-a704-c003064abd2d","9c09b22b-186b-468d-a8d3-d171e5ffa629","9e76e844-077b-4a54-b71f-6a270f3180fe"],"settings":{"VEDA_icon_1":"<i class=\"fal fa-angle-right\"><\/i>","VEDA_icon_2":"<i class=\"fal fa-angle-left\"><\/i>","VEDA_select_1":"circle_shadow","VEDA_select_2":"top","VEDA_switch_1":false,"VEDA_switch_2":false,"slider_settings___loop":false,"slider_settings___delay":4000,"VEDA_switch_3":false,"VEDA_icon_3":"<i class=\"far fa-arrow-right\"><\/i>","VEDA_switch_4":true,"VEDA_select_3":"top","VEDA_select_4":"link","VEDA_switch_5":false,"button_view_all___text":"View All Button","button_view_all___enable":false,"VEDA_slider_1":1,"VEDA_slider_2":1,"VEDA_switch_6":true,"VEDA_select_5":"boxed"}},"veda-641819552967247e1b1eb4c1-scripts":{"type":"veda-641819552967247e1b1eb4c1-scripts","settings":{}}},"order":["section_641819552967247e1b1eb4c2","section_641819552967247e1b1eb4c3","section_641819552967247e1b1eb4c4","section_641819552967247e1b1eb4c5","section_641819552967247e1b1eb4c6","section_641819552967247e1b1eb4c7","section_641819552967247e1b1eb4c8","section_641819552967247e1b1eb4c9","veda-641819552967247e1b1eb4c1-scripts"]}
+{
+	"sections": {
+		"section_641819552967247e1b1eb4c2": {
+			"type": "veda-632b57f0732d5072108bd23e",
+			"blocks": {
+				"e569b9af-b0b2-4d2b-97ab-3c42c166500d": {
+					"type": "content",
+					"settings": {
+						"VEDA_icon_3": "<i class=\"far fa-angle-right\"><\/i>",
+						"VEDA_switch_4": true,
+						"content___new_tab_right": true,
+						"VEDA_text_1": "Button Right",
+						"VEDA_select_1": "dark",
+						"VEDA_switch_5": false,
+						"VEDA_icon_4": "<i class=\"far fa-angle-right\"><\/i>",
+						"VEDA_switch_6": true,
+						"content___new_tab_left": true,
+						"VEDA_text_2": "Shop Now",
+						"VEDA_select_2": "dark",
+						"VEDA_switch_7": true,
+						"content___title": "Hot Summer Fashion<br>Winter\/Spring",
+						"content___sub_title": "Women's Clothing",
+						"content___media_type": "image",
+						"content___advanced_mode": true
+					}
+				},
+				"4b1204d5-84b0-4ea1-849b-b7a000ab52f4": {
+					"type": "content",
+					"settings": {
+						"VEDA_icon_3": "<i class=\"far fa-angle-right\"><\/i>",
+						"VEDA_switch_4": true,
+						"content___new_tab_right": true,
+						"VEDA_text_1": "Button Right",
+						"VEDA_select_1": "dark",
+						"VEDA_switch_5": false,
+						"VEDA_icon_4": "<i class=\"far fa-angle-right\"><\/i>",
+						"VEDA_switch_6": true,
+						"content___new_tab_left": true,
+						"VEDA_text_2": "Shop Now",
+						"VEDA_select_2": "dark",
+						"VEDA_switch_7": true,
+						"content___description": "<p>From casual wear to formal attire, we have everything you need.<\/p>",
+						"content___title": "Sale Up To 50% Off",
+						"content___sub_title": "Mens Clothing",
+						"content___media_type": "image",
+						"content___advanced_mode": true
+					}
+				}
+			},
+			"block_order": [
+				"e569b9af-b0b2-4d2b-97ab-3c42c166500d",
+				"4b1204d5-84b0-4ea1-849b-b7a000ab52f4"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"far fa-angle-right\"><\/i>",
+				"VEDA_icon_2": "<i class=\"far fa-angle-left\"><\/i>",
+				"VEDA_switch_1": true,
+				"VEDA_switch_2": true,
+				"slider_settings___loop": true,
+				"slider_settings___delay": 4000,
+				"VEDA_switch_3": true,
+				"VEDA_switch_8": false,
+				"VEDA_select_3": "boxed",
+				"height": 600
+			}
+		},
+		"section_641819552967247e1b1eb4c3": {
+			"type": "veda-63b7a4eca697f54dc73ee63a",
+			"blocks": {
+				"ebd63086-64cb-4391-b441-3be0247a947f": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Season Collections",
+						"heading___enable": true
+					}
+				},
+				"50d88fab-7d22-42d4-80d2-934bb364055d": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 30,
+						"heading___enable": true
+					}
+				},
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Activewear"
+					}
+				},
+				"c3082409-c43c-4417-a537-35ae87005ab8": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Trend Bags"
+					}
+				},
+				"a6f97846-8f6a-4f19-abc2-1b6c74381025": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Handbags"
+					}
+				},
+				"7423db28-10ec-476e-9379-b7dec95d0af3": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Streethats"
+					}
+				},
+				"18dda939-fde2-4051-a1f3-dd11cde5f607": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Sandals"
+					}
+				}
+			},
+			"block_order": [
+				"ebd63086-64cb-4391-b441-3be0247a947f",
+				"50d88fab-7d22-42d4-80d2-934bb364055d",
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a",
+				"c3082409-c43c-4417-a537-35ae87005ab8",
+				"a6f97846-8f6a-4f19-abc2-1b6c74381025",
+				"7423db28-10ec-476e-9379-b7dec95d0af3",
+				"18dda939-fde2-4051-a1f3-dd11cde5f607"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"far fa-arrow-right\"><\/i>",
+				"VEDA_switch_1": true,
+				"VEDA_select_1": "top",
+				"VEDA_select_2": "link",
+				"VEDA_switch_2": false,
+				"button_view_all___text": "See All Collections",
+				"button_view_all___enable": true,
+				"VEDA_switch_3": false,
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_641819552967247e1b1eb4c4": {
+			"type": "veda-637348ca9d1798051fea2475",
+			"blocks": {
+				"c9fa50ce-3078-4761-a745-107272e6c003": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Best Sellers",
+						"heading___enable": true
+					}
+				},
+				"9a87c5fe-6220-41ef-8863-8baf5a1448cf": {
+					"type": "heading_text",
+					"settings": {
+						"heading___text": "<p>Upgrade your wardrobe with these stylish pieces.<\/p>",
+						"heading___enable": false
+					}
+				},
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 30,
+						"heading___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"c9fa50ce-3078-4761-a745-107272e6c003",
+				"9a87c5fe-6220-41ef-8863-8baf5a1448cf",
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+			],
+			"settings": {
+				"add_to_cart___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
+				"add_to_cart___text": "{{ 'veda.products.product.add_to_cart' | t }}",
+				"add_to_cart___enable": true,
+				"compare_action___icon": "<i class=\"far fa-repeat-alt\"><\/i>",
+				"compare_action___remove": "{{ 'veda.products.product.remove_from_compare' | t}}",
+				"compare_action___add": "{{ 'veda.products.product.add_to_compare' | t}}",
+				"compare_action___enable": true,
+				"wish_list_action___icon": "<i class=\"far fa-heart\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.products.product.remove_from_wishlist' | t}}",
+				"wish_list_action___add": "{{ 'veda.products.product.add_to_wishlist' | t}}",
+				"VEDA_switch_1": true,
+				"quick_view___icon": "<i class=\"far fa-eye\"><\/i>",
+				"quick_view___view_detail": "{{ 'veda.products.product.view_details' | t }}",
+				"quick_view___quantity": "{{ 'veda.products.product.quantity.label' | t}}",
+				"VEDA_text_2": "{{ 'veda.products.product.quick_view' | t}}",
+				"quick_view___enable": true,
+				"VEDA_icon_1": "<i class=\"far fa-long-arrow-right\"><\/i>",
+				"VEDA_switch_2": true,
+				"VEDA_select_1": "bottom",
+				"VEDA_select_2": "dark",
+				"VEDA_switch_3": false,
+				"button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
+				"button_view_all___enable": true,
+				"sold_out___text": "{{ 'veda.products.product.sold_out' | t}}",
+				"sold_out___enable": true,
+				"new___text": "{{ 'veda.products.product.new' | t }}",
+				"new___enable": true,
+				"sale___text": "{{ 'veda.products.product.on_sale' | t }}",
+				"sale___enable": true,
+				"VEDA_slider_2": 130,
+				"VEDA_switch_4": true,
+				"VEDA_switch_5": true,
+				"product_settings___limit": 8,
+				"VEDA_collectionPicker_1": "best-seller",
+				"VEDA_switch_6": false,
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_641819552967247e1b1eb4c5": {
+			"type": "veda-63e46f6ff9fcfb779a9ce59b",
+			"settings": {
+				"content___choose_icon": "<i class=\"far fa-arrow-circle-right\"><\/i>",
+				"content___icon_enable": true,
+				"content___button_variant": "link",
+				"content___new_tab": false,
+				"content___button_text": "Shop now",
+				"content___text": "<p>Upgrade your winter wardrobe with our latest collection of cozy sweaters, stylish jackets, warm boots, and more. Shop now and stay stylish and warm this season!<\/p>",
+				"content___title": "In the <br>middle of winter",
+				"VEDA_switch_1": false,
+				"VEDA_slider_3": 50,
+				"VEDA_select_1": "boxed",
+				"image_width": 60,
+				"enable_image": true
+			}
+		},
+		"section_641819552967247e1b1eb4c6": {
+			"type": "veda-63299b31732d5072108bd23b",
+			"blocks": {
+				"1a518d5c-9af7-420e-aee1-f6182dee1392": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Lookbook",
+						"heading___enable": true
+					}
+				},
+				"d2210504-463d-4dfb-96cd-b53abe177420": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 30,
+						"heading___enable": true
+					}
+				},
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a": {
+					"type": "content",
+					"settings": {
+						"content___products": [
+							"t-shirt-with-print",
+							"floral-print-t-shirt"
+						]
+					}
+				},
+				"c3082409-c43c-4417-a537-35ae87005ab8": {
+					"type": "content",
+					"settings": {
+						"content___products": [
+							"floral-print-t-shirt",
+							"comfort-mini-denim-skirt"
+						]
+					}
+				},
+				"b2644754-670f-470d-b4bb-f2fcf6a6819e": {
+					"type": "content",
+					"settings": {
+						"content___products": [
+							"knitted-throw-pillows",
+							"yellow-sofa"
+						]
+					}
+				},
+				"ac0e0c5f-7d63-4372-aa0f-38f1ae012999": {
+					"type": "content",
+					"settings": {
+						"content___products": [
+							"vanilla-candle",
+							"bedside-table"
+						]
+					}
+				},
+				"a6f97846-8f6a-4f19-abc2-1b6c74381025": {
+					"type": "content",
+					"settings": {
+						"content___products": [
+							"gardening-hand-trowel",
+							"biodegradable-cardboard-pots"
+						]
+					}
+				},
+				"bfed187c-acea-412c-903e-ee0a5829421b": {
+					"type": "content",
+					"settings": {
+						"content___products": [
+							"gardening-hand-trowel",
+							"biodegradable-cardboard-pots"
+						]
+					}
+				}
+			},
+			"block_order": [
+				"1a518d5c-9af7-420e-aee1-f6182dee1392",
+				"d2210504-463d-4dfb-96cd-b53abe177420",
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a",
+				"c3082409-c43c-4417-a537-35ae87005ab8",
+				"b2644754-670f-470d-b4bb-f2fcf6a6819e",
+				"ac0e0c5f-7d63-4372-aa0f-38f1ae012999",
+				"a6f97846-8f6a-4f19-abc2-1b6c74381025",
+				"bfed187c-acea-412c-903e-ee0a5829421b"
+			],
+			"settings": {
+				"responsive___row_height": 320,
+				"hot_spots___icon": "<i class=\"far fa-shopping-basket\"><\/i>",
+				"VEDA_icon_1": "<i class=\"far fa-angle-right\"><\/i>",
+				"VEDA_switch_1": true,
+				"VEDA_select_1": "top",
+				"VEDA_select_2": "gray",
+				"VEDA_switch_2": false,
+				"button_view_all___text": "See All Collections",
+				"button_view_all___enable": false,
+				"VEDA_switch_3": false,
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_641819552967247e1b1eb4c7": {
+			"type": "veda-63e49bb7f9fcfb779a9ce59e",
+			"blocks": {
+				"c9fa50ce-3078-4761-a745-107272e6c003": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "New Arrivals",
+						"heading___enable": true
+					}
+				},
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 20,
+						"heading___enable": true
+					}
+				},
+				"99c557d3-c5f1-43a0-9bc9-4a971c7a821c": {
+					"type": "sidebar_banner",
+					"settings": {
+						"sidebar___new_tab": false,
+						"sidebar___title": "Sale 50% Off",
+						"sidebar___enable": true
+					}
+				},
+				"23e341fb-4ae6-4498-b790-fb0048308463": {
+					"type": "sidebar_product_list",
+					"settings": {
+						"sidebar___limit": 4,
+						"VEDA_collectionPicker_1": "hot-items",
+						"sidebar___title": "Hot Deals!",
+						"sidebar___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"c9fa50ce-3078-4761-a745-107272e6c003",
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18",
+				"99c557d3-c5f1-43a0-9bc9-4a971c7a821c",
+				"23e341fb-4ae6-4498-b790-fb0048308463"
+			],
+			"settings": {
+				"add_to_cart___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
+				"add_to_cart___text": "{{ 'veda.products.product.add_to_cart' | t }}",
+				"add_to_cart___enable": true,
+				"compare_action___icon": "<i class=\"far fa-repeat-alt\"><\/i>",
+				"compare_action___remove": "{{ 'veda.products.product.remove_from_compare' | t}}",
+				"compare_action___add": "{{ 'veda.products.product.add_to_compare' | t}}",
+				"compare_action___enable": true,
+				"wish_list_action___icon": "<i class=\"far fa-heart\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.products.product.remove_from_wishlist' | t}}",
+				"wish_list_action___add": "{{ 'veda.products.product.add_to_wishlist' | t}}",
+				"VEDA_switch_1": true,
+				"quick_view___icon": "<i class=\"far fa-eye\"><\/i>",
+				"quick_view___view_detail": "{{ 'veda.products.product.view_details' | t }}",
+				"quick_view___quantity": "{{ 'veda.products.product.quantity.label' | t}}",
+				"VEDA_text_2": "{{ 'veda.products.product.quick_view' | t}}",
+				"quick_view___enable": true,
+				"VEDA_icon_1": "<i class=\"far fa-long-arrow-right\"><\/i>",
+				"VEDA_switch_2": true,
+				"VEDA_select_1": "bottom",
+				"VEDA_select_2": "dark",
+				"VEDA_switch_3": false,
+				"button_view_all___text": "View All Products",
+				"button_view_all___enable": true,
+				"sold_out___text": "Sold out",
+				"sold_out___enable": true,
+				"new___text": "{{ 'veda.products.product.new' | t }}",
+				"new___enable": true,
+				"sale___text": "{{ 'veda.products.product.on_sale' | t }}",
+				"sale___enable": true,
+				"VEDA_slider_2": 130,
+				"VEDA_switch_4": true,
+				"VEDA_switch_5": true,
+				"product_settings___limit": 8,
+				"VEDA_collectionPicker_2": "frontpage",
+				"VEDA_slider_4": 1,
+				"VEDA_switch_6": false,
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_641819552967247e1b1eb4c8": {
+			"type": "veda-632e8959732d5072108bd24c",
+			"blocks": {
+				"311772a8-bf50-4b42-85e2-51cbe0e0e1a3": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Video",
+						"heading___enable": false
+					}
+				},
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a": {
+					"type": "content",
+					"settings": {
+						"content___border_radius": 6,
+						"content___video_url": "https:\/\/www.youtube.com\/embed\/Ez6ODtGpL1w",
+						"content___description": "<p>Phasellus dignissim maximus mi eu pretium<\/p>",
+						"content___title": "Parallax Video"
+					}
+				}
+			},
+			"block_order": [
+				"311772a8-bf50-4b42-85e2-51cbe0e0e1a3",
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a"
+			],
+			"settings": {
+				"general_settings___width": 1300,
+				"VEDA_switch_1": true,
+				"VEDA_slider_1": 3,
+				"VEDA_switch_2": false,
+				"VEDA_select_1": "boxed"
+			}
+		},
+		"section_641819552967247e1b1eb4c9": {
+			"type": "veda-63bbc9a64f397d5053e55b8f",
+			"blocks": {
+				"3e2c7150-0e8e-4253-9059-9c26de3ab79e": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Our Services",
+						"heading___enable": false
+					}
+				},
+				"29683ba3-86de-4c24-9d6f-2d1afcad380a": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 20,
+						"heading___enable": false
+					}
+				},
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___description": "<p>Add an extra touch of thoughtfulness with our free gift wrapping service.<\/p>",
+						"content___title": "Free gift wrapping",
+						"content___icon": "<i class=\"fal fa-box-full\"><\/i>"
+					}
+				},
+				"8da9a324-f800-4be1-a475-6736f9047e25": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___description": "<p>Shop with confidence with our hassle-free and free returns.<\/p>",
+						"content___title": "Easy & Free returns",
+						"content___icon": "<i class=\"fal fa-ambulance\"><\/i>"
+					}
+				},
+				"0639276e-dc73-4dab-a704-c003064abd2d": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___description": "<p>Get the latest fashion trends at a discount with our student discount.<\/p>",
+						"content___title": "Student discount",
+						"content___icon": "<i class=\"fal fa-blender\"><\/i>"
+					}
+				},
+				"9c09b22b-186b-468d-a8d3-d171e5ffa629": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___description": "<p>Shop with peace of mind knowing that your information is safe and secure.<\/p>",
+						"content___title": "100% Secure shopping",
+						"content___icon": "<i class=\"fal fa-shopping-basket\"><\/i>"
+					}
+				},
+				"9e76e844-077b-4a54-b71f-6a270f3180fe": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___description": "<p>Donec hendrerit blandit mauris. Integer aliquam<\/p>",
+						"content___title": "100% Secure shopping",
+						"content___icon": "<i class=\"fal fa-shopping-basket\"><\/i>"
+					}
+				}
+			},
+			"block_order": [
+				"3e2c7150-0e8e-4253-9059-9c26de3ab79e",
+				"29683ba3-86de-4c24-9d6f-2d1afcad380a",
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a",
+				"8da9a324-f800-4be1-a475-6736f9047e25",
+				"0639276e-dc73-4dab-a704-c003064abd2d",
+				"9c09b22b-186b-468d-a8d3-d171e5ffa629",
+				"9e76e844-077b-4a54-b71f-6a270f3180fe"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",
+				"VEDA_icon_2": "<i class=\"fal fa-angle-left\"><\/i>",
+				"VEDA_select_1": "circle_shadow",
+				"VEDA_select_2": "top",
+				"VEDA_switch_1": false,
+				"VEDA_switch_2": false,
+				"slider_settings___loop": false,
+				"slider_settings___delay": 4000,
+				"VEDA_switch_3": false,
+				"VEDA_icon_3": "<i class=\"far fa-arrow-right\"><\/i>",
+				"VEDA_switch_4": true,
+				"VEDA_select_3": "top",
+				"VEDA_select_4": "link",
+				"VEDA_switch_5": false,
+				"button_view_all___text": "View All Button",
+				"button_view_all___enable": false,
+				"VEDA_slider_1": 1,
+				"VEDA_slider_2": 1,
+				"VEDA_switch_6": true,
+				"VEDA_select_5": "boxed"
+			}
+		}
+	},
+	"order": [
+		"section_641819552967247e1b1eb4c2",
+		"section_641819552967247e1b1eb4c3",
+		"section_641819552967247e1b1eb4c4",
+		"section_641819552967247e1b1eb4c5",
+		"section_641819552967247e1b1eb4c6",
+		"section_641819552967247e1b1eb4c7",
+		"section_641819552967247e1b1eb4c8",
+		"section_641819552967247e1b1eb4c9"
+	]
+}

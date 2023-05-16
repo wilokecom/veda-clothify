@@ -1,1 +1,66 @@
-{"sections":{"section_6418196a2967247e1b1eb4f6":{"type":"veda-63e222e4d52fd52f5611cfa4","blocks":{"550ff581-eac8-4365-9246-87ee2ea4368a":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Register","heading___enable":true}},"2f597382-657a-4b9b-95cf-6f5aa5e833c7":{"type":"heading_text","settings":{"heading___text":"<p>Sign up for early Sale access plus tailored new arrivals, trends and promotions.<\/p>","heading___enable":true}},"a8de05fd-70a0-4225-b507-3106997e315f":{"type":"heading_divider","settings":{"heading___divider":"line","heading___enable":true}},"1a678098-0800-4489-b58d-66294429fdc7":{"type":"heading_space","settings":{"heading___space":20,"heading___enable":true}}},"block_order":["550ff581-eac8-4365-9246-87ee2ea4368a","2f597382-657a-4b9b-95cf-6f5aa5e833c7","a8de05fd-70a0-4225-b507-3106997e315f","1a678098-0800-4489-b58d-66294429fdc7"],"settings":{"VEDA_slider_1":50,"error___test":false,"button___choose_icon":"<i class=\"far fa-user-alt\"><\/i>","button___icon_enable":false,"button___variant":"dark","button___text":"{{ \"veda.customer.register.submit\"  | t}}","VEDA_slider_3":110,"image_section___enable":true,"VEDA_richText_1":"<p>Already have an account ? <a href=\"\/account\/login\">Sign in<\/a><\/p>","VEDA_text_1":"{{ \"veda.customer.register.password\" | t }}","VEDA_text_2":"{{ \"veda.customer.register.email\" | t }}","VEDA_text_3":"{{ 'veda.customer.register.last_name' | t}}","VEDA_text_4":"{{ 'veda.customer.register.first_name' | t }}","VEDA_switch_1":false,"VEDA_slider_6":0,"VEDA_slider_7":0,"VEDA_select_1":"full_width"}},"veda-6418196a2967247e1b1eb4f5-scripts":{"type":"veda-6418196a2967247e1b1eb4f5-scripts","settings":{}}},"order":["section_6418196a2967247e1b1eb4f6","veda-6418196a2967247e1b1eb4f5-scripts"]}
+{
+	"sections": {
+		"section_6418196a2967247e1b1eb4f6": {
+			"type": "veda-63e222e4d52fd52f5611cfa4",
+			"blocks": {
+				"550ff581-eac8-4365-9246-87ee2ea4368a": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Register",
+						"heading___enable": true
+					}
+				},
+				"2f597382-657a-4b9b-95cf-6f5aa5e833c7": {
+					"type": "heading_text",
+					"settings": {
+						"heading___text": "<p>Sign up for early Sale access plus tailored new arrivals, trends and promotions.<\/p>",
+						"heading___enable": true
+					}
+				},
+				"a8de05fd-70a0-4225-b507-3106997e315f": {
+					"type": "heading_divider",
+					"settings": {
+						"heading___divider": "line",
+						"heading___enable": true
+					}
+				},
+				"1a678098-0800-4489-b58d-66294429fdc7": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 20,
+						"heading___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"550ff581-eac8-4365-9246-87ee2ea4368a",
+				"2f597382-657a-4b9b-95cf-6f5aa5e833c7",
+				"a8de05fd-70a0-4225-b507-3106997e315f",
+				"1a678098-0800-4489-b58d-66294429fdc7"
+			],
+			"settings": {
+				"VEDA_slider_1": 50,
+				"error___test": false,
+				"button___choose_icon": "<i class=\"far fa-user-alt\"><\/i>",
+				"button___icon_enable": false,
+				"button___variant": "dark",
+				"button___text": "{{ \"veda.customer.register.submit\"  | t}}",
+				"VEDA_slider_3": 110,
+				"image_section___enable": true,
+				"VEDA_richText_1": "<p>Already have an account ? <a href=\"\/account\/login\">Sign in<\/a><\/p>",
+				"VEDA_text_1": "{{ \"veda.customer.register.password\" | t }}",
+				"VEDA_text_2": "{{ \"veda.customer.register.email\" | t }}",
+				"VEDA_text_3": "{{ 'veda.customer.register.last_name' | t}}",
+				"VEDA_text_4": "{{ 'veda.customer.register.first_name' | t }}",
+				"VEDA_switch_1": false,
+				"VEDA_slider_6": 0,
+				"VEDA_slider_7": 0,
+				"VEDA_select_1": "full_width"
+			}
+		}
+	},
+	"order": [
+		"section_6418196a2967247e1b1eb4f6"
+	]
+}

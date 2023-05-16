@@ -1,1 +1,194 @@
-{"sections":{"section_641819632967247e1b1eb4e5":{"type":"veda-634e3337712cc47dd14ae91f","settings":{"breadcrumb___separator":"<i class=\"far fa-arrow-right\"><\/i>","VEDA_text_1":"{{ 'veda.customer.account.page_title' | t }}","VEDA_text_2":"{{ 'veda.general.breadcrumbs.home' | t }}","heading___divider":"none","heading___title":"Breadcrumb","heading___manual":false,"heading___enable":true,"VEDA_switch_1":false,"VEDA_select_1":"boxed"}},"section_641819632967247e1b1eb4e6":{"type":"veda-6396e09ec7da843b9559523a","blocks":{"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Shopping cart","heading___enable":false}},"8ef86e8d-be48-41f5-9932-84a224aaf226":{"type":"empty_data_image","settings":{}},"a0d19ece-7f40-4ebc-b061-377b6bf3dd48":{"type":"empty_data_text","settings":{"empty_data___text":"Your cart is empty"}},"ce08e258-d90d-449c-bbd1-f5decbba6c47":{"type":"empty_data_button","settings":{"empty_data___choose_icon":"<i class=\"far fa-arrow-right\"><\/i>","empty_data___enable_icon":true,"empty_data___variant":"primary","empty_data___new_tab":false,"empty_data___text":"Back to shopping"}},"4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc":{"type":"actions_note","settings":{"actions___choose_icon":"<i class=\"far fa-pencil-alt\"><\/i>","actions___text":"Note","actions___enable_note":true}},"415c56aa-42da-4275-87e5-b59d413b020f":{"type":"actions_shipping","settings":{"actions___choose_icon":"<i class=\"far fa-shipping-fast\"><\/i>","actions___text":"Shipping","VEDA_switch_3":true}},"eb5e02e4-b85b-439e-a099-aea0efa1bf4d":{"type":"actions_discount","settings":{"actions___choose_icon":"<i class=\"far fa-percent\"><\/i>","actions___text":"Coupon","VEDA_switch_4":true}},"cc2f4d69-cd73-4374-8a3c-56cee24db9af":{"type":"check_out_price","settings":{"check_out___title":"Subtotal"}},"eb3c133b-92ae-4e4a-8d1d-05938b2fe30d":{"type":"check_out_text","settings":{}},"ce8f9bd2-9323-4838-862d-737ca2e007b5":{"type":"check_out_button","settings":{"check_out___choose_icon":"<i class=\"far fa-box-check\"><\/i>","check_out___icon_enable":false,"check_out___variant":"dark","check_out___text":"Check Out"}}},"block_order":["dcebbad4-bf99-4a53-bfa1-656ae3d1b04f","8ef86e8d-be48-41f5-9932-84a224aaf226","a0d19ece-7f40-4ebc-b061-377b6bf3dd48","ce08e258-d90d-449c-bbd1-f5decbba6c47","4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc","415c56aa-42da-4275-87e5-b59d413b020f","eb5e02e4-b85b-439e-a099-aea0efa1bf4d","cc2f4d69-cd73-4374-8a3c-56cee24db9af","eb3c133b-92ae-4e4a-8d1d-05938b2fe30d","ce8f9bd2-9323-4838-862d-737ca2e007b5"],"settings":{"VEDA_icon_1":"<i class=\"far fa-atom\"><\/i>","VEDA_switch_1":false,"cancel_button___variant":"gray","cancel_button___enable":true,"VEDA_icon_2":"<i class=\"far fa-atom\"><\/i>","VEDA_switch_2":false,"submit_button___variant":"dark","submit_button___enable":true,"VEDA_switch_5":false,"VEDA_select_1":"boxed"}},"section_641819632967247e1b1eb4e7":{"type":"veda-63bd204c807340208df10884","blocks":{"c9fa50ce-3078-4761-a745-107272e6c003":{"type":"heading_title","settings":{"heading___title_tag_name":"h4","heading___title":"Best Sellers","heading___enable":true}},"e2f49099-eb9a-4696-ac4c-c95c64e32c18":{"type":"heading_space","settings":{"heading___space":10,"heading___enable":true}}},"block_order":["c9fa50ce-3078-4761-a745-107272e6c003","e2f49099-eb9a-4696-ac4c-c95c64e32c18"],"settings":{"VEDA_icon_1":"<i class=\"fal fa-angle-right\"><\/i>","VEDA_icon_2":"<i class=\"fal fa-angle-left\"><\/i>","VEDA_select_1":"circle_shadow","VEDA_select_2":"middle","VEDA_switch_1":true,"VEDA_switch_2":false,"slider_settings___loop":false,"slider_settings___delay":4000,"VEDA_switch_3":false,"add_to_cart___icon":"<i class=\"far fa-shopping-cart\"><\/i>","add_to_cart___text":"{{ 'veda.products.product.add_to_cart' | t }}","add_to_cart___enable":true,"compare_action___icon":"<i class=\"far fa-repeat-alt\"><\/i>","compare_action___remove":"{{ 'veda.products.product.remove_from_compare' | t}}","compare_action___add":"{{ 'veda.products.product.add_to_compare' | t}}","compare_action___enable":true,"wish_list_action___icon":"<i class=\"far fa-heart\"><\/i>","VEDA_text_1":"{{ 'veda.products.product.remove_from_wishlist' | t}}","wish_list_action___add":"{{ 'veda.products.product.add_to_wishlist' | t}}","VEDA_switch_4":true,"quick_view___icon":"<i class=\"far fa-eye\"><\/i>","quick_view___view_detail":"{{ 'veda.products.product.view_details' | t }}","quick_view___quantity":"{{ 'veda.products.product.quantity.label' | t}}","VEDA_text_2":"{{ 'veda.products.product.quick_view' | t}}","quick_view___enable":true,"VEDA_icon_3":"<i class=\"far fa-long-arrow-right\"><\/i>","VEDA_switch_5":true,"VEDA_select_3":"top","VEDA_select_4":"link","VEDA_switch_6":false,"button_view_all___text":"{{'veda.sections.featured_collection.view_all' | t}}","button_view_all___enable":true,"sold_out___text":"{{ 'veda.products.product.sold_out' | t}}","sold_out___enable":true,"new___text":"{{ 'veda.products.product.new' | t }}","new___enable":true,"sale___text":"{{ 'veda.products.product.on_sale' | t }}","sale___enable":true,"VEDA_slider_2":130,"VEDA_switch_7":true,"VEDA_switch_8":true,"product_settings___limit":8,"VEDA_collectionPicker_1":"on-sale","VEDA_switch_9":false,"VEDA_select_5":"boxed"}},"veda-641819632967247e1b1eb4e4-scripts":{"type":"veda-641819632967247e1b1eb4e4-scripts","settings":{}}},"order":["section_641819632967247e1b1eb4e5","section_641819632967247e1b1eb4e6","section_641819632967247e1b1eb4e7","veda-641819632967247e1b1eb4e4-scripts"]}
+{
+	"sections": {
+		"section_641819632967247e1b1eb4e5": {
+			"type": "veda-634e3337712cc47dd14ae91f",
+			"settings": {
+				"breadcrumb___separator": "<i class=\"far fa-arrow-right\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
+				"VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
+				"heading___divider": "none",
+				"heading___title": "Breadcrumb",
+				"heading___manual": false,
+				"heading___enable": true,
+				"VEDA_switch_1": false,
+				"VEDA_select_1": "boxed"
+			}
+		},
+		"section_641819632967247e1b1eb4e6": {
+			"type": "veda-6396e09ec7da843b9559523a",
+			"blocks": {
+				"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Shopping cart",
+						"heading___enable": false
+					}
+				},
+				"8ef86e8d-be48-41f5-9932-84a224aaf226": {
+					"type": "empty_data_image",
+					"settings": {}
+				},
+				"a0d19ece-7f40-4ebc-b061-377b6bf3dd48": {
+					"type": "empty_data_text",
+					"settings": {
+						"empty_data___text": "Your cart is empty"
+					}
+				},
+				"ce08e258-d90d-449c-bbd1-f5decbba6c47": {
+					"type": "empty_data_button",
+					"settings": {
+						"empty_data___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
+						"empty_data___enable_icon": true,
+						"empty_data___variant": "primary",
+						"empty_data___new_tab": false,
+						"empty_data___text": "Back to shopping"
+					}
+				},
+				"4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc": {
+					"type": "actions_note",
+					"settings": {
+						"actions___choose_icon": "<i class=\"far fa-pencil-alt\"><\/i>",
+						"actions___text": "Note",
+						"actions___enable_note": true
+					}
+				},
+				"415c56aa-42da-4275-87e5-b59d413b020f": {
+					"type": "actions_shipping",
+					"settings": {
+						"actions___choose_icon": "<i class=\"far fa-shipping-fast\"><\/i>",
+						"actions___text": "Shipping",
+						"VEDA_switch_3": true
+					}
+				},
+				"eb5e02e4-b85b-439e-a099-aea0efa1bf4d": {
+					"type": "actions_discount",
+					"settings": {
+						"actions___choose_icon": "<i class=\"far fa-percent\"><\/i>",
+						"actions___text": "Coupon",
+						"VEDA_switch_4": true
+					}
+				},
+				"cc2f4d69-cd73-4374-8a3c-56cee24db9af": {
+					"type": "check_out_price",
+					"settings": {
+						"check_out___title": "Subtotal"
+					}
+				},
+				"eb3c133b-92ae-4e4a-8d1d-05938b2fe30d": {
+					"type": "check_out_text",
+					"settings": {}
+				},
+				"ce8f9bd2-9323-4838-862d-737ca2e007b5": {
+					"type": "check_out_button",
+					"settings": {
+						"check_out___choose_icon": "<i class=\"far fa-box-check\"><\/i>",
+						"check_out___icon_enable": false,
+						"check_out___variant": "dark",
+						"check_out___text": "Check Out"
+					}
+				}
+			},
+			"block_order": [
+				"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f",
+				"8ef86e8d-be48-41f5-9932-84a224aaf226",
+				"a0d19ece-7f40-4ebc-b061-377b6bf3dd48",
+				"ce08e258-d90d-449c-bbd1-f5decbba6c47",
+				"4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc",
+				"415c56aa-42da-4275-87e5-b59d413b020f",
+				"eb5e02e4-b85b-439e-a099-aea0efa1bf4d",
+				"cc2f4d69-cd73-4374-8a3c-56cee24db9af",
+				"eb3c133b-92ae-4e4a-8d1d-05938b2fe30d",
+				"ce8f9bd2-9323-4838-862d-737ca2e007b5"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"far fa-atom\"><\/i>",
+				"VEDA_switch_1": false,
+				"cancel_button___variant": "gray",
+				"cancel_button___enable": true,
+				"VEDA_icon_2": "<i class=\"far fa-atom\"><\/i>",
+				"VEDA_switch_2": false,
+				"submit_button___variant": "dark",
+				"submit_button___enable": true,
+				"VEDA_switch_5": false,
+				"VEDA_select_1": "boxed"
+			}
+		},
+		"section_641819632967247e1b1eb4e7": {
+			"type": "veda-63bd204c807340208df10884",
+			"blocks": {
+				"c9fa50ce-3078-4761-a745-107272e6c003": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h4",
+						"heading___title": "Best Sellers",
+						"heading___enable": true
+					}
+				},
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 10,
+						"heading___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"c9fa50ce-3078-4761-a745-107272e6c003",
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",
+				"VEDA_icon_2": "<i class=\"fal fa-angle-left\"><\/i>",
+				"VEDA_select_1": "circle_shadow",
+				"VEDA_select_2": "middle",
+				"VEDA_switch_1": true,
+				"VEDA_switch_2": false,
+				"slider_settings___loop": false,
+				"slider_settings___delay": 4000,
+				"VEDA_switch_3": false,
+				"add_to_cart___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
+				"add_to_cart___text": "{{ 'veda.products.product.add_to_cart' | t }}",
+				"add_to_cart___enable": true,
+				"compare_action___icon": "<i class=\"far fa-repeat-alt\"><\/i>",
+				"compare_action___remove": "{{ 'veda.products.product.remove_from_compare' | t}}",
+				"compare_action___add": "{{ 'veda.products.product.add_to_compare' | t}}",
+				"compare_action___enable": true,
+				"wish_list_action___icon": "<i class=\"far fa-heart\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.products.product.remove_from_wishlist' | t}}",
+				"wish_list_action___add": "{{ 'veda.products.product.add_to_wishlist' | t}}",
+				"VEDA_switch_4": true,
+				"quick_view___icon": "<i class=\"far fa-eye\"><\/i>",
+				"quick_view___view_detail": "{{ 'veda.products.product.view_details' | t }}",
+				"quick_view___quantity": "{{ 'veda.products.product.quantity.label' | t}}",
+				"VEDA_text_2": "{{ 'veda.products.product.quick_view' | t}}",
+				"quick_view___enable": true,
+				"VEDA_icon_3": "<i class=\"far fa-long-arrow-right\"><\/i>",
+				"VEDA_switch_5": true,
+				"VEDA_select_3": "top",
+				"VEDA_select_4": "link",
+				"VEDA_switch_6": false,
+				"button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
+				"button_view_all___enable": true,
+				"sold_out___text": "{{ 'veda.products.product.sold_out' | t}}",
+				"sold_out___enable": true,
+				"new___text": "{{ 'veda.products.product.new' | t }}",
+				"new___enable": true,
+				"sale___text": "{{ 'veda.products.product.on_sale' | t }}",
+				"sale___enable": true,
+				"VEDA_slider_2": 130,
+				"VEDA_switch_7": true,
+				"VEDA_switch_8": true,
+				"product_settings___limit": 8,
+				"VEDA_collectionPicker_1": "on-sale",
+				"VEDA_switch_9": false,
+				"VEDA_select_5": "boxed"
+			}
+		}
+	},
+	"order": [
+		"section_641819632967247e1b1eb4e5",
+		"section_641819632967247e1b1eb4e6",
+		"section_641819632967247e1b1eb4e7"
+	]
+}
