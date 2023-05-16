@@ -1,7 +1,6 @@
 {% assign uniqueId = 'id_c0f09fb2-eca3-43dc-b1dd-4714531d21ba' %}
 {% assign builderMode = false %}
 {% assign envatoMode = true %}
-{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
 {% liquid
   if null
     assign backgroundFixed = 'fixed'
@@ -15,11 +14,11 @@
     assign backgroundColor = ''
   endif
 
-  if 'none' == 'image' and section.settings.VEDA_image_1.src
+  if section.settings.VEDA_image_1.src
     assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
 
     assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
-  elsif 'none' == 'image' and section.settings.VEDA_image_1.src == blank
+  elsif section.settings.VEDA_image_1.src == blank
     assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
 
     assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
