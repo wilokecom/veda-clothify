@@ -1,1 +1,89 @@
-{"name":"veda-theme-footer","type":"footer","sections":{"veda-637b5cd0198ac3408dce96bc":{"type":"veda-637b5cd0198ac3408dce96bc","blocks":{"0e4c5ada-3a67-4827-8306-a4bf35284086":{"type":"content_navigation","settings":{"content___title":"Information","content___enable":true}},"24414265-5847-496a-96b5-074691d43f5b":{"type":"content_navigation","settings":{"content___title":"Customer","content___enable":true}},"7f0b68ea-47c1-453b-87e5-ab138e45b2da":{"type":"content_navigation","settings":{"content___title":"Categories","content___enable":true}},"f0ea41d2-b14d-4232-b13f-3923752fad2e":{"type":"content_navigation","settings":{"content___title":"Our Store","content___enable":true}},"1b624579-fa9e-40a8-8156-247c7f47e2a2":{"type":"socials","settings":{"socials___icon":"<i class=\"fab fa-facebook\"><\/i>"}},"60721be4-cf9d-4c7d-aafe-9d070c81aebc":{"type":"socials","settings":{"socials___icon":"<i class=\"fab fa-instagram\"><\/i>"}},"5595e860-13d5-4747-94ef-1f0375327241":{"type":"socials","settings":{"socials___icon":"<i class=\"fab fa-twitter\"><\/i>"}},"b25ec9d9-fcf3-481e-b34a-1d4a069c95c0":{"type":"socials","settings":{"socials___icon":"<i class=\"fab fa-youtube\"><\/i>"}}},"block_order":["0e4c5ada-3a67-4827-8306-a4bf35284086","24414265-5847-496a-96b5-074691d43f5b","7f0b68ea-47c1-453b-87e5-ab138e45b2da","f0ea41d2-b14d-4232-b13f-3923752fad2e","1b624579-fa9e-40a8-8156-247c7f47e2a2","60721be4-cf9d-4c7d-aafe-9d070c81aebc","5595e860-13d5-4747-94ef-1f0375327241","b25ec9d9-fcf3-481e-b34a-1d4a069c95c0"],"settings":{"logo___width":100,"logo___enable":false,"VEDA_select_1":"left","subscribe___icon":"<i class=\"far fa-paper-plane\"><\/i>","subscribe___button_text":"Send","VEDA_text_1":"Your email address","subscribe___description":"<p>Subscribe to our newsletter and get 10% off your first purchase<\/p>","subscribe___title":"Subscribe","VEDA_richText_1":"<p>All Rights Reserved © 2022 Veda Builder<\/p>","VEDA_switch_1":false,"VEDA_select_2":"boxed"}},"veda-theme-footer-scripts":{"type":"veda-theme-footer-scripts","settings":{}}},"order":["veda-637b5cd0198ac3408dce96bc","veda-theme-footer-scripts"]}
+{
+    "name": "veda-theme-footer",
+    "type": "footer",
+    "sections": {
+        "veda-637b5cd0198ac3408dce96bc": {
+            "type": "veda-637b5cd0198ac3408dce96bc",
+            "blocks": {
+                "0e4c5ada-3a67-4827-8306-a4bf35284086": {
+                    "type": "content_navigation",
+                    "settings": {
+                        "content___title": "Information",
+                        "content___enable": true
+                    }
+                },
+                "24414265-5847-496a-96b5-074691d43f5b": {
+                    "type": "content_navigation",
+                    "settings": {
+                        "content___title": "Customer",
+                        "content___enable": true
+                    }
+                },
+                "7f0b68ea-47c1-453b-87e5-ab138e45b2da": {
+                    "type": "content_navigation",
+                    "settings": {
+                        "content___title": "Categories",
+                        "content___enable": true
+                    }
+                },
+                "f0ea41d2-b14d-4232-b13f-3923752fad2e": {
+                    "type": "content_navigation",
+                    "settings": {
+                        "content___title": "Our Store",
+                        "content___enable": true
+                    }
+                },
+                "1b624579-fa9e-40a8-8156-247c7f47e2a2": {
+                    "type": "socials",
+                    "settings": {
+                        "socials___icon": "<i class=\"fab fa-facebook\"><\/i>"
+                    }
+                },
+                "60721be4-cf9d-4c7d-aafe-9d070c81aebc": {
+                    "type": "socials",
+                    "settings": {
+                        "socials___icon": "<i class=\"fab fa-instagram\"><\/i>"
+                    }
+                },
+                "5595e860-13d5-4747-94ef-1f0375327241": {
+                    "type": "socials",
+                    "settings": {
+                        "socials___icon": "<i class=\"fab fa-twitter\"><\/i>"
+                    }
+                },
+                "b25ec9d9-fcf3-481e-b34a-1d4a069c95c0": {
+                    "type": "socials",
+                    "settings": {
+                        "socials___icon": "<i class=\"fab fa-youtube\"><\/i>"
+                    }
+                }
+            },
+            "block_order": [
+                "0e4c5ada-3a67-4827-8306-a4bf35284086",
+                "24414265-5847-496a-96b5-074691d43f5b",
+                "7f0b68ea-47c1-453b-87e5-ab138e45b2da",
+                "f0ea41d2-b14d-4232-b13f-3923752fad2e",
+                "1b624579-fa9e-40a8-8156-247c7f47e2a2",
+                "60721be4-cf9d-4c7d-aafe-9d070c81aebc",
+                "5595e860-13d5-4747-94ef-1f0375327241",
+                "b25ec9d9-fcf3-481e-b34a-1d4a069c95c0"
+            ],
+            "settings": {
+                "logo___width": 100,
+                "logo___enable": false,
+                "VEDA_select_1": "left",
+                "subscribe___icon": "<i class=\"far fa-paper-plane\"><\/i>",
+                "subscribe___button_text": "Send",
+                "VEDA_text_1": "Your email address",
+                "subscribe___description": "<p>Subscribe to our newsletter and get 10% off your first purchase<\/p>",
+                "subscribe___title": "Subscribe",
+                "VEDA_richText_1": "<p>All Rights Reserved \u00a9 2022 Veda Builder<\/p>",
+                "VEDA_switch_1": false,
+                "VEDA_select_2": "boxed"
+            }
+        }
+    },
+    "order": [
+        "veda-637b5cd0198ac3408dce96bc"
+    ]
+}

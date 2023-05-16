@@ -1,29 +1,6 @@
 {% comment %}
 You SHOULD NOT modify source code in this page because
-It is automatically generated from Veda.
+It is automatically generated from Veda
 {% endcomment %}
 
-<script>
-  window.VedaThemeSlug = 'veda-clothify';
-</script>
-{% comment %}Detecting product id{% endcomment %}
-{% if request.page_type == 'product' %}
-  <script type="application/json" class="veda-product-id">{{ product.id }}</script>
-{% endif %}
-
-{% comment %}Multi currency purpose{% endcomment %}
-<script type="application/json" class="veda-money-format">{{ 100 | money }}</script>
-
-<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/veda-animate.css?v=1682651761" />
-<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/veda-flags.css?v=1682652211" />
-<link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/veda-main.css?v=1682652262" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
-{{ 'global-veda-globalCss.css' | asset_url | stylesheet_tag }}
-<script defer src="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/swiper-bundle.min.js?v=1682652602"></script>
-<script defer src="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/veda-main-1.1.js?v=1684211087"></script>
-<script defer src="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/photoswipe-lightbox.js?v=1683348469"></script>
-<script defer src="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/photoswipe.js?v=1683348461"></script>
-<script src="{{ 'global-veda-globalJs.js' | asset_url }}" defer></script>
+<script src="{{ 'veda-js_footer.js' | asset_url }}" defer></script>
