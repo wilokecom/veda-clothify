@@ -1,0 +1,1017 @@
+:root { --color-primary:#33C9C4;--rgb-color-primary:51, 201, 196;--color-secondary:#3540df;--rgb-color-secondary:53, 64, 223;--color-tertiary:#eb6c6c;--rgb-color-tertiary:235, 108, 108;--color-quaternary:#FBC473;--rgb-color-quaternary:251, 196, 115;--color-dark:#000000;--rgb-color-dark:0, 0, 0;--color-gray9:#232323;--rgb-color-gray9:35, 35, 35;--color-gray8:#3e3e3e;--rgb-color-gray8:62, 62, 62;--color-gray7:#575757;--rgb-color-gray7:87, 87, 87;--color-gray6:#888888;--rgb-color-gray6:136, 136, 136;--color-gray5:#b3b3b3;--rgb-color-gray5:179, 179, 179;--color-gray4:#dbdbdb;--rgb-color-gray4:219, 219, 219;--color-gray3:#e9e9e9;--rgb-color-gray3:233, 233, 233;--color-gray2:#f3f3f3;--rgb-color-gray2:243, 243, 243;--color-gray1:#fafafa;--rgb-color-gray1:250, 250, 250;--color-light:#ffffff;--rgb-color-light:255, 255, 255;--color-primary-freeze:#33C9C4;--rgb-color-primary-freeze:51, 201, 196;--color-secondary-freeze:#3540df;--rgb-color-secondary-freeze:53, 64, 223;--color-tertiary-freeze:#eb6c6c;--rgb-color-tertiary-freeze:235, 108, 108;--color-quaternary-freeze:#FBC473;--rgb-color-quaternary-freeze:251, 196, 115;--color-dark-freeze:#000000;--rgb-color-dark-freeze:0, 0, 0;--color-gray9-freeze:#232323;--rgb-color-gray9-freeze:35, 35, 35;--color-gray8-freeze:#3e3e3e;--rgb-color-gray8-freeze:62, 62, 62;--color-gray7-freeze:#575757;--rgb-color-gray7-freeze:87, 87, 87;--color-gray6-freeze:#888888;--rgb-color-gray6-freeze:136, 136, 136;--color-gray5-freeze:#b3b3b3;--rgb-color-gray5-freeze:179, 179, 179;--color-gray4-freeze:#dbdbdb;--rgb-color-gray4-freeze:219, 219, 219;--color-gray3-freeze:#e9e9e9;--rgb-color-gray3-freeze:233, 233, 233;--color-gray2-freeze:#f3f3f3;--rgb-color-gray2-freeze:243, 243, 243;--color-gray1-freeze:#fafafa;--rgb-color-gray1-freeze:250, 250, 250;--color-light-freeze:#ffffff;--rgb-color-light-freeze:255, 255, 255;--font-primary:Jost;--font-secondary:Jost;--font-tertiary:Playfair Display;--font-quaternary:Roboto Mono; }
+  :root.dark { --color-primary:#33C9C4;--rgb-color-primary:51, 201, 196;--color-secondary:#3540df;--rgb-color-secondary:53, 64, 223;--color-tertiary:#eb6c6c;--rgb-color-tertiary:235, 108, 108;--color-quaternary:#FBC473;--rgb-color-quaternary:251, 196, 115;--color-dark:#ffffff;--rgb-color-dark:255, 255, 255;--color-gray9:#fafafa;--rgb-color-gray9:250, 250, 250;--color-gray8:#f3f3f3;--rgb-color-gray8:243, 243, 243;--color-gray7:#e9e9e9;--rgb-color-gray7:233, 233, 233;--color-gray6:#dbdbdb;--rgb-color-gray6:219, 219, 219;--color-gray5:#b3b3b3;--rgb-color-gray5:179, 179, 179;--color-gray4:#888888;--rgb-color-gray4:136, 136, 136;--color-gray3:#575757;--rgb-color-gray3:87, 87, 87;--color-gray2:#3e3e3e;--rgb-color-gray2:62, 62, 62;--color-gray1:#232323;--rgb-color-gray1:35, 35, 35;--color-light:#000000;--rgb-color-light:0, 0, 0; }
+
+  html .container {
+    max-width: 1300px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  html .row {
+    margin-top: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  html .row > * {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  html .veda-grid-auto {
+    column-gap: 20px !important;
+    row-gap: 20px !important;
+  }
+
+
+      /* Temp atomic css */
+      
+    
+[data-id='id_9ee2783c-d72b-49ba-b321-53ccaae854c9'] .veda-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-template-areas: "large"; }
+  @media (min-width: 768px) {
+    [data-id='id_9ee2783c-d72b-49ba-b321-53ccaae854c9'] .veda-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "large large small" "large large small"; } }
+  @media (min-width: 992px) {
+    [data-id='id_9ee2783c-d72b-49ba-b321-53ccaae854c9'] .veda-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "large large small small" "large large small small"; } }
+
+[data-id='id_9ee2783c-d72b-49ba-b321-53ccaae854c9'] .veda-grid__item:nth-child(1) {
+  grid-area: large; }
+
+
+[data-css="css_1529751752"] {text-transform:uppercase !important;
+letter-spacing:3px !important;
+font-size: clamp(18px, 0.25vw + 17px, 20px) !important;
+font-weight:400 !important;
+}
+[data-css="css_40262483"] {font-size: clamp(38.5px, 2.3125vw + 29.25px, 57px) !important;
+font-weight:400 !important;
+}
+[data-css="css_4159235255"] {margin-bottom: clamp(23px, 0.8750000000000001vw + 19.5px, 30px) !important;
+}
+
+
+
+
+
+
+
+[data-css="css_1529751752"] {text-transform:uppercase !important;
+letter-spacing:3px !important;
+font-size: clamp(18px, 0.25vw + 17px, 20px) !important;
+font-weight:400 !important;
+}
+[data-css="css_40262483"] {font-size: clamp(38.5px, 2.3125vw + 29.25px, 57px) !important;
+font-weight:400 !important;
+}
+[data-css="css_4159235255"] {margin-bottom: clamp(23px, 0.8750000000000001vw + 19.5px, 30px) !important;
+}
+
+
+
+
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+[data-css="css_3813862879"] {font-size:15px !important;
+font-weight:300 !important;
+color:var(--color-gray9-freeze) !important;
+}
+[data-css="css_921292082"] {font-size:16px !important;
+color:var(--color-dark-freeze) !important;
+}
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+[data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_2416113382"] {margin-top: clamp(35px, 1.875vw + 27.5px, 50px) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+[data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+[data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+[data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+[data-css="css_4148353258"] {text-transform:capitalize !important;
+}
+
+
+
+
+
+[data-id='id_f338ced8-d46b-4440-8c7b-2d02bc0e7454'] .collapse-active .collapse-icon {
+  display: none; }
+
+[data-id='id_f338ced8-d46b-4440-8c7b-2d02bc0e7454'] .collapse-active .collapse-icon-active {
+  display: block; }
+
+[data-id='id_f338ced8-d46b-4440-8c7b-2d02bc0e7454'] .shopify-payment-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0; }
+
+[data-id='id_f338ced8-d46b-4440-8c7b-2d02bc0e7454'] .shopify-payment-button__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0; }
+
+[data-id='id_f338ced8-d46b-4440-8c7b-2d02bc0e7454'] .shopify-cleanslate {
+  display: none; }
+
+[data-id='id_f338ced8-d46b-4440-8c7b-2d02bc0e7454'] .shopify-payment-button__more-options {
+  display: none; }
+
+@keyframes viewEye {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: 0.6; }
+  50% {
+    opacity: 0.3; }
+  75% {
+    opacity: 0.6; }
+  100% {
+    opacity: 0.9; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+[data-css="css_3176898910"] {font-weight:400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3702158914"] {background-color:var(--color-gray1) !important;
+}
+
+
+
+[data-css="css_3702158914"] {background-color:var(--color-gray1) !important;
+}
+
+
+
+[data-css="css_3702158914"] {background-color:var(--color-gray1) !important;
+}
+
+
+
+[data-css="css_3702158914"] {background-color:var(--color-gray1) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3349579651"] {font-size:16px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3644769394"] {color:var(--color-dark-freeze) !important;
+}
+
+[data-css="css_4268326898"] {color:var(--color-dark-freeze) !important;
+font-size:16px !important;
+}
+[data-css="css_3644769394"] {color:var(--color-dark-freeze) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_1789800329"] {color:var(--color-light-freeze) !important;
+}
+
+[data-css="css_2342661455"] {color:var(--color-light-freeze) !important;
+font-size:16px !important;
+}
+[data-css="css_1789800329"] {color:var(--color-light-freeze) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3883667033"] {font-size: clamp(36px, 2vw + 28px, 52px) !important;
+font-weight:400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_521750971"] {font-family:Playfair Display !important;
+font-weight:400 !important;
+font-size: clamp(36px, 2vw + 28px, 52px) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_4246748016"] {font-size: clamp(34.5px, 1.8124999999999998vw + 27.25px, 49px) !important;
+}
+
+
+[data-css="css_1647087596"] {font-size: clamp(20.5px, 0.5625vw + 18.25px, 25px) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-css="css_3111065400"] {font-size: clamp(36px, 2vw + 28px, 52px) !important;
+}

@@ -1,0 +1,1055 @@
+{% assign uniqueId = 'id_d4254253-64c4-4d87-a45f-67a08dc8df1f' %}
+{% assign builderMode = false %}
+{% assign envatoMode = true %}
+{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
+{% liquid
+  if null
+    assign backgroundFixed = 'fixed'
+  else
+    assign backgroundFixed = 'scroll'
+  endif
+
+  if 'none' == 'color'
+    assign backgroundColor = 'background-color: ' | append: '#ffffff' | append: ';'
+  else
+    assign backgroundColor = ''
+  endif
+
+  if 'none' == 'image' and section.settings.VEDA_image_1.src
+    assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+  elsif 'none' == 'image' and section.settings.VEDA_image_1.src == blank
+    assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+  else
+    assign backgroundImage = ''
+  endif
+
+  assign sectionPadding = 'padding-top: ' | append: 50 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: 50 | append: 'px;padding-left: ' | append: null | append: 'px;'
+
+  if section.settings.VEDA_select_2 == 'full_width'
+    assign containerType = 'container-fluid'
+  else
+    assign containerType = 'container'
+  endif
+
+  if section.settings.VEDA_slider_7 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_7 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_7 | append: 'px;'
+  else
+    assign containerGap = ''
+  endif
+
+  if section.settings.section_settings___width >= 0
+    assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
+  else
+    assign containerWidth = ''
+  endif
+
+  if section.settings.VEDA_slider_6 >= 0
+    assign settingGap = section.settings.VEDA_slider_6 | divided_by: 2.0
+
+    assign settingGapVertical = section.settings.VEDA_slider_6
+  else
+    assign settingGap = ''
+
+    assign settingGapVertical = ''
+  endif
+
+  assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
+
+  assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
+
+  assign sectionSeparator = ''
+
+  if section.settings.VEDA_switch_2
+    if section.settings.VEDA_slider_5
+      assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_5 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+
+    if section.settings.VEDA_slider_4
+      assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_4 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+  endif
+
+  if colGap and rowGap and builderMode and envatoMode
+  endif
+%}
+{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+
+{% liquid
+  assign _alt = false
+
+  assign _style = false
+
+  assign _style = false
+
+  assign _placeholder = false
+
+  assign _placeholder_class = false
+
+  assign _test = false
+
+  assign _class = false
+%}
+{% capture Content %}
+  {% liquid
+    assign contentPadding = ''
+
+    if section.settings.VEDA_switch_1
+      if 'left' == 'left'
+        assign contentPadding = ' pr:40px@md'
+      else
+        assign contentPadding = ' pl:40px@md'
+      endif
+    endif
+  %}
+  <div
+    class="w:100%@+md! mih:100% d:flex fld:column ai:center"
+    {% if section.settings.VEDA_switch_1 %}
+      {% if 'left' == 'right' %}
+        style="width: {{ section.settings["VEDA_slider_1"] }}%; order: 1;"
+      {% else %}
+        style="width: {{ section.settings["VEDA_slider_1"] }}%;"
+      {% endif %}
+    {% endif %}
+  >
+    {% liquid
+      assign aspectRatio = 66
+
+      assign imageRadius = 0
+
+      if section.settings.content___aspect_ratio
+        assign aspectRatio = section.settings.content___aspect_ratio
+      endif
+
+      if section.settings.VEDA_slider_2
+        assign imageRadius = section.settings.VEDA_slider_2
+      endif
+    %}
+    <div
+      class="row row-cols-lg-{{ 2 }} row-cols-md-{{ 2 }} row-cols-sm-{{ 1 }} row-cols-{{ 1 }} {{ contentPadding }} w:100%"
+      {% if section.settings.VEDA_slider_6 or section.settings.VEDA_slider_6 == 0 %}
+        style="{{ rowGap }}"
+      {% endif %}
+    >
+      {% paginate blog.articles by section.settings.VEDA_slider_3 %}
+        {% for articleItem in blog.articles %}
+          <div
+            class="col"
+            {% if section.settings.VEDA_slider_6 or section.settings.VEDA_slider_6 == 0 %}
+              style="{{ colGap }}"
+            {% endif %}
+          >
+            <div class="d:flex fld:column jc:space-between bgc:color-light bdrs:10px mih:100% ov:hidden">
+              <div>
+                <a
+                  href="{{ articleItem.url }}"
+                  class="veda-image-cover d:block"
+                  style="--aspect-ratio: {{ aspectRatio }};border-radius: {{ imageRadius }}px"
+                >
+                  {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_test,_class,contentPadding,aspectRatio,imageRadius]>{% endcomment %}
+                  {% if articleItem.image.src != blank %}
+                    <img
+                      class="veda-lazyload {{ _class }}"
+                      src="{{ articleItem.image.src | image_url: width: 10 }}"
+                      draggable="false"
+                      {% if articleItem.title %}
+                        alt="{{ articleItem.title }}"
+                      {% else %}
+                        alt="image"
+                      {% endif %}
+                      {% if articleItem.image.width %}
+                        data-intrinsic-width="{{ articleItem.image.width }}"
+                        width="{{ articleItem.image.width }}"
+                      {% endif %}
+                      {% if articleItem.image.height %}
+                        height="{{ articleItem.image.height }}"
+                        data-intrinsic-height="{{ articleItem.image.height }}"
+                      {% endif %}
+                      {% if _style %}
+                        style="{{ _style }}"
+                      {% endif %}
+                      loading="lazy"
+                    >
+                  {% else %}
+                    {% liquid
+                      assign pl = 'lifestyle-1'
+
+                      if _placeholder
+                        assign pl = _placeholder
+                      endif
+
+                      assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                      if 'bg:color-gray3'
+                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'bg:color-gray3'
+                      endif
+                    %}
+                    {{ pl | placeholder_svg_tag: placeholder_class }}
+                  {% endif %}
+                  {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                </a>
+
+                <div class="p:15px">
+                  <div class="d:flex ai:center jc:space-between mb:15px">
+                    {% if section.settings.content___enable_author %}
+                      {% if builderMode %}
+                        <div class="d:flex ai:center">
+                          <div class="ff:font-secondary fz:12px fw:500 c:color-gray8">Elliana</div>
+                        </div>
+                      {% else %}
+                        <div class="d:flex ai:center" data-css="{{ null }}">
+                          <div class="ff:font-secondary fz:12px fw:500 c:color-gray8">
+                            {{ articleItem.user.name }}
+                          </div>
+                        </div>
+                      {% endif %}
+                    {% endif %}
+
+                    <div class="d:flex ai:center c:color-gray7 fz:13px ff:font-secondary">
+                      {% liquid
+                        assign tagSize = articleItem.tags | size
+                      %}
+                      {% if tagSize >= 1 and section.settings.content___enable_tag %}
+                        <div
+                          class="c:color-primary"
+                          data-css="{{ null }}"
+                        >
+                          {{ articleItem.tags[0] | link_to_tag: articleItem.tags[0] }}
+                        </div>
+                      {% endif %}
+                      {% if tagSize >= 1
+                        and section.settings.content___enable_tag
+                        and section.settings.content___enable_comment
+                        and articleItem.comments_enabled
+                      %}
+                        <div class="w:15px"></div>
+                      {% endif %}
+                      {% if section.settings.content___enable_comment and articleItem.comments_enabled %}
+                        <div class="ff:font-secondary" data-css="{{ null }}">
+                          {% if articleItem.comments_count > 1 %}
+                            <i class="far fa-comments-alt"></i>
+                            <span class="ml:3px">
+                              {{ articleItem.comments_count }}
+                            </span>
+                          {% else %}
+                            <i class="far fa-comment-alt"></i>
+                            <span class="ml:3px">
+                              {{ articleItem.comments_count }}
+                            </span>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                  <a
+                    href="{{ articleItem.url }}"
+                    class="lines-2 c:color-gray9 fz:16px fw:500 ff:font-secondary cur:pointer tt:capitalize trs:0.3s"
+                    data-css="{{ null }}"
+                  >
+                    {{ articleItem.title }}
+                  </a>
+                  {% if section.settings.content___enable_excerpt %}
+                    <div class="mt:10px lines-3" data-css="{{ null }}">
+                      {% liquid
+                        assign excerptSize = articleItem.excerpt | size
+                      %}
+                      {% if excerptSize > 0 %}
+                        {{ articleItem.excerpt | strip_html | truncatewords: 24, '...' }}
+                      {% elsif articleItem.content %}
+                        {{ articleItem.content | strip_html | truncatewords: 24, '...' }}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+              {% if section.settings.content___enable_date and articleItem.published_at %}
+                <div class="p:15px pt:0! c:color-gray7 fz:12px" data-css="{{ null }}">
+                  <i class="far fa-calendar-alt"></i>
+                  <span class="ff:font-secondary ml:3px">{{ articleItem.published_at | date: '%b %d, %Y' }}</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+        {% if paginate.pages > 1 %}
+          {% liquid
+            assign item_general_class = 'fz:15px! d:flex! ai:center jc:center ov:hidden trs:0.3s m:5px'
+
+            case section.settings.VEDA_select_1
+              when 'square_shadow'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1'
+              when 'square_border'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light bd:1px_solid_color-gray3 c:color-gray9 c:color-primary|h'
+              when 'square_gray'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-gray3 c:color-gray9 c:color-primary|h'
+              when 'circle_shadow'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1 bdrs:50%'
+              when 'circle_border'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light bd:1px_solid_color-gray3 c:color-gray9 c:color-primary|h bdrs:50%'
+              when 'circle_gray'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-gray3 c:color-gray9 c:color-primary|h bdrs:50%'
+              when 'custom'
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px'
+              else
+                assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px'
+            endcase
+          %}
+          <nav class="w:100% pt:50px m:0!" data-css="{{ null }}">
+            <ol class="d:flex jc:center ls:none m:0! p:0!">
+              {% if paginate.previous %}
+                <li>
+                  <a
+                    class="{{ item_general_class }} {{ item_variant_class }}"
+                    aria-label="Previous"
+                    href="{{ paginate.previous.url }}"
+                    data-css="{{ null }}"
+                  >
+                    <i class="far fa-arrow-left"></i>
+                  </a>
+                </li>
+              {% endif %}
+              {% for part in paginate.parts %}
+                {% if part.is_link %}
+                  <li>
+                    <a
+                      class="{{ item_general_class }} {{ item_variant_class }}"
+                      aria-label="Page {{ part.title }}"
+                      href="{{ part.url }}"
+                      data-css="{{ null }}"
+                    >
+                      {{ part.title }}
+                    </a>
+                  </li>
+                {% else %}
+                  {% if part.title == paginate.current_page %}
+                    <li>
+                      <span
+                        class="{{ item_general_class }} {{ item_variant_class }} bgc:color-primary! c:color-light-freeze!"
+                        aria-current="page"
+                        aria-label="Page {{ part.title }}"
+                        data-css="{{ null }}"
+                      >
+                        {{ part.title }}
+                      </span>
+                    </li>
+                  {% else %}
+                    <li>
+                      <span
+                        class="{{ item_general_class }} {{ item_variant_class }}"
+                        aria-label="Page {{ part.title }}"
+                        data-css="{{ null }}"
+                      >
+                        {{ part.title }}
+                      </span>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+              {% if paginate.next %}
+                <li>
+                  <a
+                    class="{{ item_general_class }} {{ item_variant_class }}"
+                    aria-label="Next"
+                    href="{{ paginate.next.url }}"
+                    data-css="{{ null }}"
+                  >
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </li>
+              {% endif %}
+            </ol>
+          </nav>
+        {% endif %}
+      {% endpaginate %}
+    </div>
+  </div>
+{% endcapture %}
+
+{% capture SideBar %}
+  {% if section.settings.VEDA_switch_1 %}
+    <div
+      class="pos:relative w:100%@+md! mt:30px@+md! mih:100%"
+      style="width: {{ 100 | minus: section.settings["VEDA_slider_1"] }}%"
+    >
+      {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+      {% for block in section.blocks %}
+        {% assign itemSidebar = block.settings %}
+
+        {% if itemSidebar.sidebar___enable %}
+          {% liquid
+            assign aspectRatio = 100
+
+            assign imageRadius = 0
+
+            if itemSidebar.sidebar___aspect_ratio
+              assign aspectRatio = itemSidebar.sidebar___aspect_ratio
+            endif
+
+            if itemSidebar.sidebar___border_radius
+              assign imageRadius = itemSidebar.sidebar___border_radius
+            endif
+          %}
+          <div class="mb:30px">
+            {% if itemSidebar.sidebar___title or itemSidebar.sidebar___description %}
+              <div class="mb:15px">
+                {% if itemSidebar.sidebar___title %}
+                  <h3 class="fz:20px fw:500 m:0">{{ itemSidebar.sidebar___title }}</h3>
+                {% endif %}
+                {% if itemSidebar.sidebar___description %}
+                  <div>{{ itemSidebar.sidebar___description }}</div>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% case block.type %}
+              {% when 'sidebar_image' %}
+                <a
+                  class="pos:relative d:block"
+                  href="{{ itemSidebar.sidebar___link }}"
+                  style="border-radius: {{ imageRadius }}px"
+                >
+                  {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_test,_class,contentPadding,aspectRatio,imageRadius,pl,placeholder_class,tagSize,excerptSize,item_general_class,item_variant_class,itemSidebar]>{% endcomment %}
+                  {% if itemSidebar.sidebar___image.src != blank %}
+                    <img
+                      class="veda-lazyload {{ _class }}"
+                      src="{{ itemSidebar.sidebar___image.src | image_url: width: 10 }}"
+                      draggable="false"
+                      {% if _alt %}
+                        alt="{{ _alt }}"
+                      {% else %}
+                        alt="image"
+                      {% endif %}
+                      {% if itemSidebar.sidebar___image.width %}
+                        data-intrinsic-width="{{ itemSidebar.sidebar___image.width }}"
+                        width="{{ itemSidebar.sidebar___image.width }}"
+                      {% endif %}
+                      {% if itemSidebar.sidebar___image.height %}
+                        height="{{ itemSidebar.sidebar___image.height }}"
+                        data-intrinsic-height="{{ itemSidebar.sidebar___image.height }}"
+                      {% endif %}
+                      {% if _style %}
+                        style="{{ _style }}"
+                      {% endif %}
+                      loading="lazy"
+                    >
+                  {% else %}
+                    {% liquid
+                      assign pl = 'lifestyle-1'
+
+                      if 'collection-1'
+                        assign pl = 'collection-1'
+                      endif
+
+                      assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                      if _placeholder_class
+                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
+                      endif
+                    %}
+                    {{ pl | placeholder_svg_tag: placeholder_class }}
+                  {% endif %}
+                  {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                </a>
+              {% when 'sidebar_posts' %}
+                {% liquid
+                  assign blogData = blogs[itemSidebar.sidebar___blog_name]
+                %}
+                <div>
+                  {% for articleItem2 in blogData.articles limit: itemSidebar.sidebar___count %}
+                    <a href="{{ articleItem2.url }}" class="mb:15px d:flex ai:center">
+                      <div
+                        class="veda-image-cover d:block w:64px miw:64px flxs:0 mr:15px ov:hidden"
+                        style="--aspect-ratio:{{ aspectRatio }};border-radius: {{ imageRadius }}px"
+                      >
+                        {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_test,_class,contentPadding,aspectRatio,imageRadius,pl,placeholder_class,tagSize,excerptSize,item_general_class,item_variant_class,blogData,itemSidebar]>{% endcomment %}
+                        {% if articleItem2.image.src != blank %}
+                          <img
+                            class="veda-lazyload {{ _class }}"
+                            src="{{ articleItem2.image.src | image_url: width: 10 }}"
+                            draggable="false"
+                            {% if articleItem2.title %}
+                              alt="{{ articleItem2.title }}"
+                            {% else %}
+                              alt="image"
+                            {% endif %}
+                            {% if articleItem2.image.width %}
+                              data-intrinsic-width="{{ articleItem2.image.width }}"
+                              width="{{ articleItem2.image.width }}"
+                            {% endif %}
+                            {% if articleItem2.image.height %}
+                              height="{{ articleItem2.image.height }}"
+                              data-intrinsic-height="{{ articleItem2.image.height }}"
+                            {% endif %}
+                            {% if _style %}
+                              style="{{ _style }}"
+                            {% endif %}
+                            loading="lazy"
+                          >
+                        {% else %}
+                          {% liquid
+                            assign pl = 'lifestyle-1'
+
+                            if 'product-1'
+                              assign pl = 'product-1'
+                            endif
+
+                            assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                            if _placeholder_class
+                              assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
+                            endif
+                          %}
+                          {{ pl | placeholder_svg_tag: placeholder_class }}
+                        {% endif %}
+                        {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                      </div>
+                      <div>
+                        {% liquid
+                          assign tagSize = articleItem2.tags | size
+                        %}
+                        {% if tagSize >= 1 %}
+                          <div
+                            class="mb:5px c:color-gray9 fz:11px fw:400 ff:font-secondary lts:1px tt:uppercase"
+                            data-css="{{ articleItem2.post_tag_design.id }}"
+                          >
+                            {{ articleItem2.tags[0] }}
+                          </div>
+                        {% endif %}
+                        <h3
+                          class="line-2 w:100% fz:15px fw:500 c:color-gray9 m:0"
+                          data-css="{{ articleItem2.post_title_design.id }}"
+                        >
+                          {{ articleItem2.title }}
+                        </h3>
+                      </div>
+                    </a>
+                  {% endfor %}
+                </div>
+              {% when 'sidebar_newsletter' %}
+                {% form 'customer' %}
+                  {% if builderMode and _test %}
+                    <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul">
+                      <span><i class="far fa-exclamation-circle mr:10px"></i></span>
+                      <div class="errors">Form error placeholder</div>
+                    </div>
+                  {% elsif form.errors %}
+                    <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul">
+                      <span><i class="far fa-exclamation-circle mr:10px"></i></span>
+                      {{ form.errors | default_errors }}
+                    </div>
+                  {% endif %}
+
+                  {% if builderMode and _test %}
+                    <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-success.1 c:color-success">
+                      <span><i class="far fa-check-circle mr:10px"></i></span>
+                      <div>{{ 'veda.newsletter.success' | t }}</div>
+                    </div>
+                  {% elsif form.posted_successfully? %}
+                    <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-success.1 c:color-success">
+                      <span><i class="far fa-check-circle mr:10px"></i></span>
+                      <div>{{ 'veda.newsletter.success' | t }}</div>
+                    </div>
+                  {% endif %}
+
+                  <div class="d:flex w:100% h:48px c:color-gray9 bd:none bgc:transparent">
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <input
+                      class="w:100% h:100%! p:0_15px! bgc:color-light bd:1px_solid_color-gray2 c:color-gray7 c:color-gray6||ph fz:14px fz:14px||ph ff:font-primary! bd:none"
+                      type="email"
+                      name="contact[email]"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      placeholder="{{ itemSidebar.VEDA_text_1 }}"
+                      data-css="{{ null }}"
+                    >
+                    <button
+                      class="d:inline-flex ai:center p:0_20px h:100% ff:font-secondary fw:500 trs:0.3s cur:pointer bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h bd:1px_solid_color-gray9 bd:1px_solid_color-primary|h"
+                      type="submit"
+                      aria-label="submit"
+                      data-css="{{ null }}"
+                    >
+                      {% if 'right' == 'left' %}
+                        <span class="mr:10px" data-css="{{ null }}">
+                          {{ itemSidebar.sidebar___icon }}
+                        </span>
+                      {% endif %}
+                      <span>{{ itemSidebar.sidebar___button_text }}</span>
+                      {% if 'right' == 'right' %}
+                        <span class="ml:10px" data-css="{{ null }}">
+                          {{ itemSidebar.sidebar___icon }}
+                        </span>
+                      {% endif %}
+                    </button>
+                  </div>
+                {% endform %}
+              {% when 'sidebar_collection' %}
+                {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+                {% for block in section.blocks %}
+                  {% if block.type == 'veda_collections' %}
+                    {% assign itemCollection = block.settings %}
+
+                    <a
+                      data-css="{{ null }}"
+                      class="d:flex ai:center c:color-gray7 fz:14px ff:font-secondary pt:6px pb:6px trs:0.3s"
+                      href="{{ itemCollection.veda_collections___link }}"
+                    >
+                      {{ itemCollection.veda_collections___label }}
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              {% when 'sidebar_tag' %}
+                <div class="d:flex fxw:wrap d:block*a p:3px_10px*a bd:1px_solid_color-gray3*a bgc:color-light*a mr:5px*a mb:5px*a trs:0.3s*a">
+                  {% for tag in blog.all_tags %}
+                    {{ tag | link_to_tag: tag }}
+                  {% endfor %}
+                </div>
+              {% else %}
+
+            {% endcase %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endcapture %}
+
+<section
+  data-id="{{ uniqueId }}"
+  class="veda-lazyload pos:relative z:1 bgz:cover bgp:center"
+  style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}{{ sectionSeparator }}"
+>
+  <div
+    class="{{ containerType }}"
+    {% if section.settings.VEDA_slider_7
+      or section.settings.VEDA_slider_7 == 0
+      or section.settings.section_settings___width
+      or section.settings.section_settings___width == 0
+    %}
+      style="{{ containerGap }}{{ containerWidth }}"
+    {% endif %}
+  >
+    <div class="d:flex@md jc:center">
+      {{ Content }}
+      {{ SideBar }}
+    </div>
+  </div>
+  {% if 'none' == 'video' and null %}
+    <div data-veda-video="{{ null }}"></div>
+  {% endif %}
+  {% if null %}
+    <div
+      class="pos:absolute ins:0 z:-1"
+      style="background-color: {{ null }};backdrop-filter: blur({{ null }}px)"
+    ></div>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "Blog 2",
+  "blocks": [
+    {
+      "type": "sidebar_collection",
+      "name": "Sidebar > Collection",
+      "settings": [
+        {
+          "label": "Sidebar > Count",
+          "id": "sidebar___count",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "label": "Sidebar > Description",
+          "id": "sidebar___description",
+          "type": "liquid"
+        },
+        {
+          "label": "Sidebar > Title",
+          "id": "sidebar___title",
+          "type": "liquid",
+          "default": "Title"
+        },
+        {
+          "label": "Sidebar > Enable",
+          "id": "sidebar___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "sidebar_posts",
+      "name": "Sidebar > Posts",
+      "settings": [
+        {
+          "label": "Sidebar > Border Radius",
+          "id": "sidebar___border_radius",
+          "type": "number"
+        },
+        {
+          "label": "Sidebar > Aspect Ratio",
+          "id": "sidebar___aspect_ratio",
+          "type": "number"
+        },
+        {
+          "label": "Sidebar > Count",
+          "id": "sidebar___count",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "label": "Sidebar > Blog",
+          "id": "sidebar___blog_name",
+          "type": "blog"
+        },
+        {
+          "label": "Sidebar > Description",
+          "id": "sidebar___description",
+          "type": "liquid"
+        },
+        {
+          "label": "Sidebar > Title",
+          "id": "sidebar___title",
+          "type": "liquid",
+          "default": "Title"
+        },
+        {
+          "label": "Sidebar > Enable",
+          "id": "sidebar___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "sidebar_image",
+      "name": "Sidebar > Image",
+      "settings": [
+        {
+          "label": "Sidebar > Border Radius",
+          "id": "sidebar___border_radius",
+          "type": "number"
+        },
+        {
+          "label": "Sidebar > Count",
+          "id": "sidebar___count",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "label": "Sidebar > Link",
+          "id": "sidebar___link",
+          "type": "text"
+        },
+        {
+          "type": "image_picker",
+          "id": "sidebar___image",
+          "label": "Image"
+        },
+        {
+          "label": "Sidebar > Description",
+          "id": "sidebar___description",
+          "type": "liquid"
+        },
+        {
+          "label": "Sidebar > Title",
+          "id": "sidebar___title",
+          "type": "liquid",
+          "default": "Title"
+        },
+        {
+          "label": "Sidebar > Enable",
+          "id": "sidebar___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "sidebar_newsletter",
+      "name": "Sidebar > Newsletter",
+      "settings": [
+        {
+          "label": "Sidebar > Icon",
+          "info": "[Get icon](https://fontawesome.com/v5/search)",
+          "id": "sidebar___icon",
+          "type": "html",
+          "default": "<i class=\"far fa-paper-plane\"></i>"
+        },
+        {
+          "label": "Sidebar > Button",
+          "id": "sidebar___button_text",
+          "type": "liquid",
+          "default": "Send"
+        },
+        {
+          "label": "Sidebar > Input Placeholder",
+          "id": "VEDA_text_1",
+          "type": "liquid",
+          "default": "Email"
+        },
+        {
+          "label": "Sidebar > Count",
+          "id": "sidebar___count",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "label": "Sidebar > Description",
+          "id": "sidebar___description",
+          "type": "liquid"
+        },
+        {
+          "label": "Sidebar > Title",
+          "id": "sidebar___title",
+          "type": "liquid",
+          "default": "Title"
+        },
+        {
+          "label": "Sidebar > Enable",
+          "id": "sidebar___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "sidebar_tag",
+      "name": "Sidebar > Tag",
+      "settings": [
+        {
+          "label": "Sidebar > Count",
+          "id": "sidebar___count",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "label": "Sidebar > Description",
+          "id": "sidebar___description",
+          "type": "liquid"
+        },
+        {
+          "label": "Sidebar > Title",
+          "id": "sidebar___title",
+          "type": "liquid",
+          "default": "Title"
+        },
+        {
+          "label": "Sidebar > Enable",
+          "id": "sidebar___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "veda_collections",
+      "name": "Collections",
+      "settings": [
+        {
+          "label": "Collections > Link",
+          "id": "veda_collections___link",
+          "type": "text"
+        },
+        {
+          "label": "Collections > Label",
+          "id": "veda_collections___label",
+          "type": "liquid",
+          "default": "Label"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "label": "Layout > Content Width (%)",
+      "id": "VEDA_slider_1",
+      "type": "number",
+      "default": 50
+    },
+    {
+      "label": "Layout > Enable Sidebar",
+      "id": "VEDA_switch_1",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Pagination > Item Variant",
+      "id": "VEDA_select_1",
+      "type": "select",
+      "default": "circle_border",
+      "options": [
+        {
+          "label": "Custom",
+          "value": "custom"
+        },
+        {
+          "label": "Square Shadow",
+          "value": "square_shadow"
+        },
+        {
+          "label": "Square Border",
+          "value": "square_border"
+        },
+        {
+          "label": "Square Gray",
+          "value": "square_gray"
+        },
+        {
+          "label": "Circle Shadow",
+          "value": "circle_shadow"
+        },
+        {
+          "label": "Circle Border",
+          "value": "circle_border"
+        },
+        {
+          "label": "Circle Gray",
+          "value": "circle_gray"
+        }
+      ]
+    },
+    {
+      "label": "Content > Image Border Radius",
+      "id": "VEDA_slider_2",
+      "type": "number"
+    },
+    {
+      "label": "Content > Aspect Ratio",
+      "id": "content___aspect_ratio",
+      "type": "number"
+    },
+    {
+      "label": "Content > Excerpt",
+      "id": "content___enable_excerpt",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Content > Tag",
+      "id": "content___enable_tag",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Content > Comment",
+      "id": "content___enable_comment",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Content > Date",
+      "id": "content___enable_date",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Content > Author",
+      "id": "content___enable_author",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Content > Quantity Displayed",
+      "id": "VEDA_slider_3",
+      "type": "number",
+      "default": 3
+    },
+    {
+      "label": "Section Settings > Separator Bottom",
+      "id": "VEDA_slider_4",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Separator Top",
+      "id": "VEDA_slider_5",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Separator",
+      "id": "VEDA_switch_2",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "VEDA_image_1",
+      "label": "Background Image"
+    },
+    {
+      "label": "Section Settings > Column Gap",
+      "id": "VEDA_slider_6",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Gap",
+      "id": "VEDA_slider_7",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Width",
+      "id": "section_settings___width",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Width",
+      "id": "VEDA_select_2",
+      "type": "select",
+      "default": "boxed",
+      "options": [
+        {
+          "label": "Boxed",
+          "value": "boxed"
+        },
+        {
+          "label": "Full Width",
+          "value": "full_width"
+        },
+        {
+          "label": "Manual",
+          "value": "manual"
+        }
+      ]
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "Blog 2",
+      "blocks": [
+        {
+          "type": "sidebar_collection"
+        },
+        {
+          "type": "sidebar_posts"
+        },
+        {
+          "type": "sidebar_newsletter"
+        },
+        {
+          "type": "sidebar_image"
+        },
+        {
+          "type": "sidebar_tag"
+        },
+        {
+          "type": "veda_collections"
+        },
+        {
+          "type": "veda_collections"
+        },
+        {
+          "type": "veda_collections"
+        },
+        {
+          "type": "veda_collections"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

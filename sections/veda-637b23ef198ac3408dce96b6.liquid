@@ -1,0 +1,1270 @@
+{% assign uniqueId = 'id_0aafdd87-ea9b-41f2-a834-7fceecc4db0a' %}
+{% assign builderMode = false %}
+{% assign envatoMode = true %}
+{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
+{% liquid
+  if null
+    assign backgroundFixed = 'fixed'
+  else
+    assign backgroundFixed = 'scroll'
+  endif
+
+  if 'none' == 'color'
+    assign backgroundColor = 'background-color: ' | append: null | append: ';'
+  else
+    assign backgroundColor = ''
+  endif
+
+  if 'none' == 'image' and section.settings.VEDA_image_1.src
+    assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+  elsif 'none' == 'image' and section.settings.VEDA_image_1.src == blank
+    assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+  else
+    assign backgroundImage = ''
+  endif
+
+  assign sectionPadding = 'padding-top: ' | append: 50 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: 50 | append: 'px;padding-left: ' | append: null | append: 'px;'
+
+  if section.settings.VEDA_select_3 == 'full_width'
+    assign containerType = 'container-fluid'
+  else
+    assign containerType = 'container'
+  endif
+
+  if section.settings.VEDA_slider_10 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_10 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_10 | append: 'px;'
+  else
+    assign containerGap = ''
+  endif
+
+  if section.settings.section_settings___width >= 0
+    assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
+  else
+    assign containerWidth = ''
+  endif
+
+  if section.settings.VEDA_slider_9 >= 0
+    assign settingGap = section.settings.VEDA_slider_9 | divided_by: 2.0
+
+    assign settingGapVertical = section.settings.VEDA_slider_9
+  else
+    assign settingGap = ''
+
+    assign settingGapVertical = ''
+  endif
+
+  assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
+
+  assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
+
+  assign sectionSeparator = ''
+
+  if section.settings.VEDA_switch_8
+    if section.settings.VEDA_slider_8
+      assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_8 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+
+    if section.settings.VEDA_slider_7
+      assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_7 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+  endif
+
+  if colGap and rowGap and builderMode and envatoMode
+  endif
+%}
+{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+
+{% liquid
+  assign _prefix = false
+
+  assign _style = false
+
+  assign _placeholder = false
+
+  assign _placeholder_class = false
+
+  assign _class = false
+
+  assign _component = false
+
+  assign _defaul_aspect_ratio = false
+
+  assign _image_border_radius = false
+%}
+{% capture Search %}
+  <div class="d:flex fld:column ai:center mb:30px">
+    <h3 class="ta:center fz:pfs(20px,28px) fw:500" data-css="{{ null }}">
+      {% if search.results_count == 1 %}
+        {{ 'veda.templates.search.results_with_count.one' | t: count: 1, terms: search.terms | escape }}
+      {% else %}
+        {{
+          'veda.templates.search.results_with_count.other'
+          | t: count: search.results_count, terms: search.terms
+          | escape
+        }}
+      {% endif %}
+    </h3>
+
+    <div class="w:100% maw:500px bd:1px_solid_color-gray3">
+      {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius]>{% endcomment %}
+      <div
+        class="veda-search-form-js bgc:color-light bdrs:6px pl:15px pr:5px trs:0.3s d:flex jc:center"
+        data-text-result="{{ 'veda.templates.search.search_for' | t: terms: 'a' }}"
+        data-css="{{ null }}"
+      >
+        <form
+          action="{{ routes.search_url }}"
+          method="GET"
+          class="w:100% d:flex ai:center jc:space-between"
+        >
+          <div class="d:flex ai:center w:100%">
+            <input
+              class="rs w:100% h:44px bd:0! bxsh:none! o:none! bgc:transparent ff:font-secondary fz:16px c:color-gray8 c:color-gray6||ph trs:0.3s"
+              data-css="{{ null }}"
+              type="text"
+              placeholder="{{ section.settings["VEDA_text_3"] }}"
+              name="q"
+              value="{{ search.terms | escape }}"
+              autocorrect="off"
+              autocomplete="off"
+            >
+            <div
+              class="veda-spinner bdw:2px mr:10px d:none"
+              style="--spinner-color: var(--color-primary); --spinner-size: 14px;display: none"
+            ></div>
+            {% if section.settings.veda_search___type %}
+              <input type="hidden" name="type" value="{{ section.settings["veda_search___type"] | replace: ' ', '' }}">
+            {% else %}
+              <input type="hidden" name="type" value="product,article,collection,page">
+            {% endif %}
+            {% if section.settings.VEDA_select_2 %}
+              <input type="hidden" name="options[unavailable_products]" value="last">
+            {% else %}
+              <input type="hidden" name="options[unavailable_products]" value="{{ section.settings["VEDA_select_2"] }}">
+            {% endif %}
+            {% if _prefix %}
+              <input type="hidden" name="options[prefix]" value="{{ _prefix }}">
+            {% else %}
+              <input type="hidden" name="options[prefix]" value="last">
+            {% endif %}
+            {% if section.settings.veda_search___fields %}
+              <input type="hidden" name="options[fields]" value="{{ section.settings["veda_search___fields"] }}">
+            {% else %}
+              <input type="hidden" name="options[fields]" value="title,vendor,product_type,variants.title">
+            {% endif %}
+            {% if section.settings.VEDA_slider_6 %}
+              <input type="hidden" name="limit" value="{{ section.settings["VEDA_slider_6"] }}">
+            {% else %}
+              <input type="hidden" name="limit" value="10">
+            {% endif %}
+          </div>
+          <button
+            class="rs flxs:0 bxsh:none bd:0 bgc:transparent! bxsh:none! o:none! fz:22px c:color-gray8 c:color-primary|h trs:0.3s cur:pointer"
+            data-css="{{ null }}"
+            type="submit"
+            aria-label="Search"
+          >
+            {{ section.settings.veda_search___icon }}
+          </button>
+        </form>
+      </div>
+      {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+    </div>
+  </div>
+{% endcapture %}
+
+{% capture Content %}
+  {% liquid
+    if section.settings.VEDA_slider_2
+      assign imageRadius = 'border-radius:' | append: section.settings.VEDA_slider_2 | append: 'px;'
+    endif
+
+    assign aspectRatio = 0.75
+
+    if section.settings.VEDA_slider_3
+      assign aspectRatio = 100 | divided_by: section.settings.VEDA_slider_3
+    endif
+
+    assign quantity_displayed = 8
+
+    if section.settings.VEDA_slider_1
+      assign quantity_displayed = section.settings.VEDA_slider_1
+    endif
+  %}
+
+  <div
+    class="row row-cols-lg-{{ 5 }} row-cols-md-{{ 4 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
+    {% if section.settings.VEDA_slider_9 or section.settings.VEDA_slider_9 == 0 %}
+      style="{{ rowGap }}"
+    {% endif %}
+  >
+    {% paginate search.results by quantity_displayed %}
+      {% for searchItem in search.results %}
+        {% liquid
+          assign articleCond = false
+
+          assign pageCond = false
+
+          assign productCond = false
+
+          if searchItem.object_type == 'article'
+            assign articleCond = true
+          elsif searchItem.object_type == 'page'
+            assign pageCond = true
+          elsif searchItem.object_type == 'product'
+            assign productCond = true
+          endif
+        %}
+        {% if articleCond %}
+          <div
+            class="col"
+            {% if section.settings.VEDA_slider_9 or section.settings.VEDA_slider_9 == 0 %}
+              style="{{ colGap }}"
+            {% endif %}
+          >
+            {% liquid
+              assign articleItem = searchItem
+            %}
+            <div class="d:flex fld:column">
+              <a
+                href="{{ articleItem.url }}"
+                class="veda-image-cover d:block"
+                style="--aspect-ratio: {{ aspectRatio }};border-radius: {{ imageRadius }}px"
+              >
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem]>{% endcomment %}
+                {% if articleItem.image.src != blank %}
+                  <img
+                    class="veda-lazyload {{ _class }}"
+                    src="{{ articleItem.image.src | image_url: width: 10 }}"
+                    draggable="false"
+                    {% if articleItem.title %}
+                      alt="{{ articleItem.title }}"
+                    {% else %}
+                      alt="image"
+                    {% endif %}
+                    {% if articleItem.image.width %}
+                      data-intrinsic-width="{{ articleItem.image.width }}"
+                      width="{{ articleItem.image.width }}"
+                    {% endif %}
+                    {% if articleItem.image.height %}
+                      height="{{ articleItem.image.height }}"
+                      data-intrinsic-height="{{ articleItem.image.height }}"
+                    {% endif %}
+                    {% if _style %}
+                      style="{{ _style }}"
+                    {% endif %}
+                    loading="lazy"
+                  >
+                {% else %}
+                  {% liquid
+                    assign pl = 'lifestyle-1'
+
+                    if _placeholder
+                      assign pl = _placeholder
+                    endif
+
+                    assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                    if _placeholder_class
+                      assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
+                    endif
+                  %}
+                  {{ pl | placeholder_svg_tag: placeholder_class }}
+                {% endif %}
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+              </a>
+
+              <div class="pt:15px">
+                {% liquid
+                  assign tagSize = articleItem.tags | size
+                %}
+                {% if tagSize >= 1 and section.settings.VEDA_switch_5 %}
+                  <div
+                    class="mb:5px c:color-gray9 fz:11px fw:500 ff:font-secondary lts:1px tt:uppercase"
+                    data-css="{{ null }}"
+                  >
+                    {{ articleItem.tags[0] | link_to_tag: articleItem.tags[0] }}
+                  </div>
+                {% endif %}
+                <a
+                  href="{{ articleItem.url }}"
+                  class="lines-3 c:color-gray9 fz:18px fw:500 ff:font-secondary cur:pointer trs:0.3s"
+                  data-css="{{ null }}"
+                >
+                  {{ articleItem.title }}
+                </a>
+                <div class="d:flex ai:center c:color-gray7 fz:13px">
+                  {% if section.settings.VEDA_switch_7 and articleItem.published_at %}
+                    <div class="mt:5px" data-css="{{ null }}">
+                      <i class="far fa-calendar-alt"></i>
+                      <span class="ff:font-secondary ml:3px">{{ articleItem.published_at | date: '%b %d, %Y' }}</span>
+                    </div>
+                  {% endif %}
+                  {% if section.settings.VEDA_switch_7
+                    and articleItem.published_at
+                    and section.settings.VEDA_switch_6
+                    and articleItem.comments_enabled
+                  %}
+                    <div class="ml:10px mr:10px c:color-gray5">.</div>
+                  {% endif %}
+                  {% if section.settings.VEDA_switch_6 and articleItem.comments_enabled %}
+                    <div class="mt:5px" data-css="{{ null }}">
+                      {% if articleItem.comments_count > 1 %}
+                        <i class="far fa-comments"></i>
+                        <span class="ff:font-secondary ml:3px tt:capitalize">
+                          {{ 'veda.blogs.article.comments.other' | t: count: articleItem.comments_count }}
+                        </span>
+                      {% else %}
+                        <i class="far fa-comment"></i>
+                        <span class="ff:font-secondary ml:3px tt:capitalize">
+                          {{ 'veda.blogs.article.comments.one' | t: count: articleItem.comments_count }}
+                        </span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+                {% if section.settings.VEDA_switch_4 %}
+                  <div class="mt:15px lines-3" data-css="{{ null }}">
+                    {% liquid
+                      assign excerptSize = articleItem.excerpt | size
+                    %}
+                    {% if excerptSize > 0 %}
+                      {{ articleItem.excerpt | strip_html | truncatewords: 24, '...' }}
+                    {% elsif articleItem.article_settings %}
+                      {{ articleItem.content | strip_html | truncatewords: 24, '...' }}
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% elsif pageCond %}
+          <div
+            class="col"
+            {% if section.settings.VEDA_slider_9 or section.settings.VEDA_slider_9 == 0 %}
+              style="{{ colGap }}"
+            {% endif %}
+          >
+            <a
+              href="{{ searchItem.url }}"
+              class="d:flex fld:column jc:center mih:250px p:20px bgc:color-gray2 bdrs:15px"
+              data-css="{{ null }}"
+            >
+              <h3
+                class="lines-3 c:color-gray9 fz:18px fw:500 cur:pointer trs:0.3s"
+                data-css="{{ null }}"
+              >
+                {{ searchItem.title }}
+              </h3>
+              <div class="d:flex ai:center c:color-gray7 fz:13px">
+                {% if searchItem.published_at %}
+                  <div class="mt:5px" data-css="{{ null }}">
+                    <i class="far fa-calendar-alt"></i>
+                    <span class="ff:font-secondary ml:3px">{{ searchItem.published_at | date: '%b %d, %Y' }}</span>
+                  </div>
+                {% endif %}
+                {% if searchItem.published_at and searchItem.author %}
+                  <div class="ml:10px mr:10px c:color-gray5">.</div>
+                {% endif %}
+                {% if searchItem.author %}
+                  <div class="mt:5px" data-css="{{ null }}">
+                    <i class="far fa-user"></i>
+                    <span class="ff:font-secondary ml:3px">
+                      {{ searchItem.author }}
+                    </span>
+                  </div>
+                {% endif %}
+              </div>
+              {% if searchItem.content %}
+                <div class="mt:15px lines-3" data-css="{{ null }}">
+                  {{ searchItem.content | strip_html | truncatewords: 24, '...' }}
+                </div>
+              {% endif %}
+            </a>
+          </div>
+        {% elsif productCond %}
+          {% liquid
+            assign productItem = searchItem
+          %}
+          <div
+            class="col"
+            {% if section.settings.VEDA_slider_9 or section.settings.VEDA_slider_9 == 0 %}
+              style="{{ colGap }}"
+            {% endif %}
+          >
+            <div
+              class="product-card-js group* pos:relative mih:100%"
+              data-css="{{ null }}"
+            >
+              {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem]>{% endcomment %}
+              {% liquid
+                assign price_compare = productItem.compare_at_price
+
+                if price_compare
+                  assign price_compare = productItem.compare_at_price
+                else
+                  assign price_compare = 0
+                endif
+              %}
+              <script class="{{ 'product-card-data-js' }}" type="application/json">
+                {
+                  id: {{ productItem.id | json }},
+                  title: {{ productItem.title | json }},
+                  vendor: {{ productItem.vendor | json }},
+                  handle: {{ productItem.handle | json }},
+                  available: {{ productItem.available | json }},
+                  content: {{ productItem.content | json }},
+                  description: {{ productItem.description | json }},
+                  featured_image: {{ productItem.featured_image | json }},
+                  images: {{ productItem.images | json }},
+                  options: {{ productItem.options | json }},
+                  selected_or_first_available_variant: {
+                    id: {{ productItem.selected_or_first_available_variant.id | json }},
+                    available: {{ productItem.selected_or_first_available_variant.available | json }},
+                    price: {{ productItem.selected_or_first_available_variant.price | money | json }},
+                    {% if productItem.selected_or_first_available_variant.compare_at_price %}
+                      compare_at_price: {{ productItem.selected_or_first_available_variant.compare_at_price | money | json }},
+                    {% else %}
+                      compare_at_price: {{ 0 | money | json }},
+                    {% endif %}
+                    featured_image: {{ productItem.selected_or_first_available_variant.featured_image | json }},
+                    image: {{ productItem.selected_or_first_available_variant.image | json }},
+                    inventory_quantity: {{ productItem.selected_or_first_available_variant.inventory_quantity | json }},
+                    options: {{ productItem.selected_or_first_available_variant.options | json }},
+                    title: {{ productItem.selected_or_first_available_variant.title | json }},
+                    sku: {{ productItem.selected_or_first_available_variant.sku | json }},
+                    url: {{ productItem.selected_or_first_available_variant.url | json }},
+                  },
+                  price_max: {{ productItem.price_max | json }},
+                  price_min: {{ productItem.price_min | json }},
+                  type: {{ productItem.type | json }},
+                  tags: {{ productItem.tags | json }},
+                  variants: [
+                  {% for item in productItem.variants %}
+                      {
+                        id: {{ item.id | json }},
+                        available: {{ item.available | json }},
+                        price: {{ item.price | money | json }},
+                        {% if item.compare_at_price %}
+                          compare_at_price: {{ item.compare_at_price | money | json }},
+                        {% else %}
+                          compare_at_price: {{ 0 | money | json }},
+                        {% endif %}
+                        featured_image: {{ item.featured_image | json }},
+                        image: {{ item.image | json }},
+                        inventory_quantity: {{ item.inventory_quantity | json }},
+                        options: {{ item.options | json }},
+                        title: {{ item.title | json }},
+                        sku: {{ item.sku | json }},
+                        url: {{ item.url | json }},
+                      },
+                  {% endfor %}
+                ],
+                  price: {{ productItem.price | money | json }},
+                  compare_at_price: {{ price_compare | money | json }},
+                  options_with_values: {{ productItem.options_with_values | json }},
+                  url: {{ productItem.url | json }},
+                  published_at: {{ productItem.published_at | json }}
+                }
+              </script>
+              {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+              <script type="application/json" class="quickview-data-js">
+                {
+                  add_to_cart_text: "{{ section.settings["add_to_cart___text"] }}",
+                  quantity_text: "{{ section.settings["quick_view___quantity"] }}",
+                  sold_out_text: "{{ section.settings["sold_out___text"] }}",
+                  view_detail: "{{ section.settings["quick_view___view_detail"] }}",
+                  add_compare: "{{ section.settings["compare_action___add"] }}",
+                  remove_compare: "{{ section.settings["compare_action___remove"] }}",
+                  add_wish_list: "{{ section.settings["wish_list_action___add"] }}",
+                  remove_wish_list: "{{ section.settings["VEDA_text_1"] }}",
+                }
+              </script>
+              <script type="application/json" class="current-variant-id">
+                {{ productItem.selected_or_first_available_variant.id | json }}
+              </script>
+              <div class="pos:absolute t:10px l:10px z:12 d:flex fld:column">
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_5:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem,price_compare]>{% endcomment %}
+                {% liquid
+                  assign productDate = productItem.published_at | date: '%s'
+
+                  assign currentDate = 'now' | date: '%s'
+
+                  assign difference = currentDate | minus: productDate | divided_by: 86400.0
+                %}
+                {% if section.settings.new___enable %}
+                  {% if difference < 10 %}
+                    <div
+                      {% if 'p:3px_10px bdrs:3px bgc:#17c478 lh:normal fz:12px ff:font-secondary tt:uppercase lts:1px c:color-light-freeze mb:5px' %}
+                        class="w:fit-content {{ 'p:3px_10px bdrs:3px bgc:#17c478 lh:normal fz:12px ff:font-secondary tt:uppercase lts:1px c:color-light-freeze mb:5px' }}"
+                      {% else %}
+                        class="p:5px_10px bdrs:3px bgc:#17c478 lh:normal fz:10px ff:font-secondary tt:uppercase lts:1px c:color-light-freeze mb:5px w:fit-content"
+                      {% endif %}
+                      {% if 'new' %}
+                        component="{{ 'new' }}"
+                      {% endif %}
+                      data-css="{{ null }}"
+                    >
+                      {{ section.settings.new___text }}
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_6:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem,price_compare,productDate,currentDate,difference]>{% endcomment %}
+                {% if productItem.compare_at_price > productItem.price and section.settings.sale___enable %}
+                  <div
+                    {% if 'p:3px_10px bdrs:3px bgc:#eb4747 lh:normal fz:12px ff:font-secondary tt:uppercase lts:1px c:color-light-freeze' %}
+                      class="w:fit-content {{ 'p:3px_10px bdrs:3px bgc:#eb4747 lh:normal fz:12px ff:font-secondary tt:uppercase lts:1px c:color-light-freeze' }}"
+                    {% else %}
+                      class="p:5px_10px bdrs:3px bgc:#eb4747 lh:normal fz:10px ff:font-secondary tt:uppercase lts:1px c:color-light-freeze w:fit-content"
+                    {% endif %}
+                    {% if 'sale' %}
+                      component="{{ 'sale' }}"
+                    {% endif %}
+                    data-css="{{ null }}"
+                  >
+                    {% liquid
+                      assign ratio = productItem.price | times: 100.0 | divided_by: productItem.compare_at_price
+                    %}
+                    -{{ 100 | minus: ratio | ceil }}%
+                  </div>
+                {% endif %}
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+              </div>
+              <div class="w:100% pos:relative">
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_7:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem,price_compare,productDate,currentDate,difference,ratio]>{% endcomment %}
+                {% liquid
+                  if _defaul_aspect_ratio and _defaul_aspect_ratio != 0
+                    assign aspectRatio = _defaul_aspect_ratio
+                  else
+                    assign aspectRatio = 90
+                  endif
+
+                  if section.settings.VEDA_slider_3 and section.settings.VEDA_slider_3 != 0
+                    assign aspectRatio = section.settings.VEDA_slider_3
+                  endif
+                %}
+                <div
+                  class="ov:hidden w:100%"
+                  {% if _image_border_radius %}
+                    style="border-radius: {{ _image_border_radius }}px"
+                  {% endif %}
+                >
+                  <a
+                    href="{{ productItem.url }}"
+                    class="veda-image-cover pos:relative d:block trs:opacity_0.3s z:1 {% if productItem.images[1] %}op:0*group-hover{% endif %}"
+                    style="--aspect-ratio:{{ aspectRatio }}"
+                  >
+                    <img
+                      class="product-card-image-js veda-lazyload"
+                      src="{{ productItem.featured_image.src | image_url: width: 10 }}"
+                      alt="{{ productItem.title }}"
+                      width="{{ productItem.featured_image.width }}"
+                      height="{{ productItem.featured_image.height }}"
+                      data-intrinsic-width="{{ productItem.featured_image.width }}"
+                      data-intrinsic-height="{{ productItem.featured_image.height }}"
+                      loading="lazy"
+                    >
+                  </a>
+                  {% if productItem.images[1] %}
+                    <a
+                      href="{{ productItem.url }}"
+                      class="veda-image-cover pos:absolute! t:0 l:-100000px w:100% z:9 op:0 trs:opacity_0.4s,left_0s_0.4s trs:opacity_0.4s,left_0s_0s*group-hover op:1*group-hover l:0*group-hover"
+                      style="--aspect-ratio:{{ aspectRatio }}"
+                    >
+                      <img
+                        class="veda-lazyload bgc:color-light-freeze"
+                        src="{{ productItem.images[1].src | image_url: width: 10 }}"
+                        alt="{{ productItem.title }}"
+                        width="{{ productItem.featured_image.width }}"
+                        height="{{ productItem.featured_image.height }}"
+                        data-intrinsic-width="{{ productItem.images[1].width }}"
+                        data-intrinsic-height="{{ productItem.images[1].height }}"
+                        loading="lazy"
+                      >
+                    </a>
+                  {% endif %}
+                </div>
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_8:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem,price_compare,productDate,currentDate,difference,ratio]>{% endcomment %}
+                <div class="pos:absolute l:0 b:0 r:0 z:12 h:50px m:auto ov:hidden ov:visible|h">
+                  <div class="pos:absolute l:10px b:10px b:-5px@md r:10px h:34px h:38px@md d:flex cur:pointer trf:translateY(100%)@md trs:0.3s trf:translateY(0)*group-hover b:10px*group-hover">
+                    {% if section.settings.quick_view___enable %}
+                      <span
+                        class="quickview-toggle-js mr:5px w:34px w:38px@md h:100% pos:relative fz:14px bgc:color-gray9-freeze c:color-light-freeze trs:0.3s c:color-primary|h d:flex! ai:center jc:center bdrs:4px|be fz:12px|be"
+                        data-tooltip-text="{{ section.settings["VEDA_text_2"] }}"
+                        data-tooltip-position="top"
+                        data-tooltip-active="false"
+                        data-css="{{ null }}"
+                      >
+                        {{ section.settings.quick_view___icon }}
+                      </span>
+                    {% endif %}
+                    {% if section.settings.add_to_cart___enable %}
+                      <span
+                        class="product-card-add-js lines-1 w:34px@+md flx:1@md h:100% pos:relative fz:14px ff:font-secondary bgc:color-gray9-freeze c:color-light-freeze trs:0.3s c:color-primary|h d:flex! ai:center jc:center us:none"
+                        data-tooltip-position="top"
+                        data-tooltip-text="{{ section.settings["add_to_cart___text"] }}"
+                        data-cart-success-text="{{ section.settings["add_to_cart___text"] }}"
+                        data-css="{{ null }}"
+                      >
+                        {% if section.settings.add_to_cart___icon %}
+                          <div class="product-cart-add-icon-js mr:10px@md">
+                            {{ section.settings.add_to_cart___icon }}
+                          </div>
+                        {% endif %}
+                        <span class="d:none@+md">{{ section.settings.add_to_cart___text }}</span>
+                      </span>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="pos:absolute t:0 r:0 b:0 z:12 w:44px m:auto ov:hidden ov:visible|h">
+                  <div class="pos:absolute r:10px r:-5px@md t:50%@md t:10px w:34px d:flex fld:column ai:center cur:pointer trf:translate(100%,-50%)@md trs:0.3s trf:translate(0,-50%)*group-hover@md r:10px*group-hover@md">
+                    {% if section.settings.VEDA_switch_1 %}
+                      <span
+                        class="wishlist-toggle-js mb:8px w:34px h:34px pos:relative fz:14px bdrs:50% bgc:color-light c:color-gray9 trs:0.3s c:color-primary|h d:flex! ai:center jc:center bdrs:4px|be fz:12px|be"
+                        data-tooltip-position="left"
+                        data-tooltip-active="true"
+                        data-tooltip-text="{{ section.settings["wish_list_action___add"] }}"
+                        data-tooltip-active-text="{{ section.settings["VEDA_text_1"] }}"
+                        data-css="{{ null }}"
+                      >
+                        {{ section.settings.wish_list_action___icon }}
+                      </span>
+                    {% endif %}
+                    {% if section.settings.compare_action___enable %}
+                      <span
+                        class="compare-toggle-js w:34px h:34px pos:relative fz:14px bdrs:50% bgc:color-light c:color-gray9 trs:0.3s c:color-primary|h d:flex! ai:center jc:center bdrs:4px|be fz:12px|be"
+                        data-tooltip-position="left"
+                        data-tooltip-active="false"
+                        data-tooltip-text="{{ section.settings["compare_action___add"] }}"
+                        data-tooltip-active-text="{{ section.settings["compare_action___remove"] }}"
+                        data-css="{{ null }}"
+                      >
+                        {{ section.settings.compare_action___icon }}
+                      </span>
+                    {% endif %}
+                  </div>
+                </div>
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_9:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem,price_compare,productDate,currentDate,difference,ratio]>{% endcomment %}
+                {% liquid
+                  assign is_sold_out = true
+
+                  assign variant = productItem.selected_or_first_available_variant
+
+                  if variant.available
+                    assign is_sold_out = false
+                  endif
+
+                  if builderMode
+                    assign poiter_event = ''
+                  else
+                    assign poiter_event = 'pe:none'
+                  endif
+
+                  if is_sold_out and section.settings.sold_out___enable
+                    assign visibleSoldOut = 'd:block'
+                  else
+                    assign visibleSoldOut = 'd:none'
+                  endif
+                %}
+                <div class="sold-out-js pos:absolute t:50% l:0 p:pfs(5px,20px) w:100% h:fit-content trf:translateY(-50%) bg:transparent!*span ta:center z:10 {{ poiter_event }} {{ visibleSoldOut }}">
+                  <div
+                    class="pos:absolute t:0 l:0 w:100% h:100% bgc:color-gray9 op:0.4 z:-1"
+                    data-css="{{ null }}"
+                  ></div>
+                  <span
+                    class=" fz:pfs(13px,20px) fw:500 c:color-light"
+                    style="background: transparent !important; background-color: transparent !important"
+                    data-css="{{ null }}"
+                  >
+                    {{ section.settings.sold_out___text }}
+                  </span>
+                </div>
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+              </div>
+              <div
+                class="d:flex fld:column pt:10px"
+                style="text-align: {{ "left" }}"
+              >
+                <div style="order:{{ "0" }}">
+                  {% if section.settings.VEDA_switch_3 %}
+                    <a
+                      class="{{ 'd:block fz:12px ff:font-secondary c:color-gray7' }}"
+                      data-css="{{ null }}"
+                      href="{{ shop.url }}/collections/vendors?q={{ productItem.vendor }}"
+                      {% if _component %}
+                        component="{{ _component }}"
+                      {% endif %}
+                    >
+                      {{ productItem.vendor }}
+                    </a>
+                  {% endif %}
+                </div>
+                <h3 style="order:{{ "1" }}">
+                  <a
+                    class="d:block mt:5px fz:14px ff:font-secondary fw:400 c:color-gray9 trs:0.3s"
+                    href="{{ productItem.url }}"
+                    data-css="{{ null }}"
+                  >
+                    {{ productItem.title }}
+                  </a>
+                </h3>
+                <div style="order:{{ "2" }}">
+                  <div>
+                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_10:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem,price_compare,productDate,currentDate,difference,ratio,is_sold_out,variant,poiter_event,visibleSoldOut]>{% endcomment %}
+                    <div class="{{ 'product-content-price-js d:inline-flex mt:5px' }}">
+                      {% if productItem.selected_or_first_available_variant.compare_at_price
+                          > productItem.selected_or_first_available_variant.price
+                      %}
+                        <div class="product-price-on-sale-js">
+                          <del
+                            class="{{ 'fw:400 ff:font-secondary fz:16px c:color-gray6' }} mr:5px"
+                            data-css="{{ null }}"
+                          >
+                            {{ productItem.selected_or_first_available_variant.compare_at_price | money }}
+                          </del>
+                          <ins
+                            class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }}"
+                            data-css="{{ null }}"
+                          >
+                            {{ productItem.selected_or_first_available_variant.price | money }}
+                          </ins>
+                        </div>
+                        <ins
+                          class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }} product-price-not-sale-js d:none"
+                          data-css="{{ null }}"
+                        >
+                        </ins>
+                      {% else %}
+                        <div class="product-price-on-sale-js d:none">
+                          <del
+                            class="{{ 'fw:400 ff:font-secondary fz:16px c:color-gray6' }} mr:5px"
+                            data-css="{{ null }}"
+                          >
+                          </del>
+                          <ins
+                            class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }}"
+                            data-css="{{ null }}"
+                          >
+                          </ins>
+                        </div>
+                        <ins
+                          class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }} product-price-not-sale-js"
+                          data-css="{{ null }}"
+                        >
+                          <div>
+                            {{ productItem.selected_or_first_available_variant.price | money }}
+                          </div>
+                        </ins>
+                      {% endif %}
+                    </div>
+                    {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                  </div>
+                </div>
+                {% if section.settings.VEDA_switch_2 %}
+                  <div style="order:{{ "3" }}">
+                    <div
+                      class="product-card-colors-js d:flex mt:8px mt:0|e ml:-2px mr:-2px"
+                      {% if 'left' == 'center' %}
+                        style="justify-content: center"
+                      {% elsif 'left' == 'right' %}
+                        style="justify-content: flex-end"
+                      {% endif %}
+                    ></div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% if paginate.pages > 1 %}
+        {% liquid
+          assign item_general_class = 'fz:15px! d:flex! ai:center jc:center ov:hidden trs:0.3s m:5px'
+
+          case section.settings.VEDA_select_1
+            when 'square_shadow'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1'
+            when 'square_border'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light bd:1px_solid_color-gray3 c:color-gray9 c:color-primary|h'
+            when 'square_gray'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-gray3 c:color-gray9 c:color-primary|h'
+            when 'circle_shadow'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1 bdrs:50%'
+            when 'circle_border'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-light bd:1px_solid_color-gray3 c:color-gray9 c:color-primary|h bdrs:50%'
+            when 'circle_gray'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px bgc:color-gray3 c:color-gray9 c:color-primary|h bdrs:50%'
+            when 'custom'
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px'
+            else
+              assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px'
+          endcase
+        %}
+        <nav class="w:100% pt:50px m:0!" data-css="{{ null }}">
+          <ol class="d:flex jc:center ls:none m:0! p:0!">
+            {% if paginate.previous %}
+              <li>
+                <a
+                  class="{{ item_general_class }} {{ item_variant_class }}"
+                  aria-label="Previous"
+                  href="{{ paginate.previous.url }}"
+                  data-css="{{ null }}"
+                >
+                  <i class="far fa-arrow-left"></i>
+                </a>
+              </li>
+            {% endif %}
+            {% for part in paginate.parts %}
+              {% if part.is_link %}
+                <li>
+                  <a
+                    class="{{ item_general_class }} {{ item_variant_class }}"
+                    aria-label="Page {{ part.title }}"
+                    href="{{ part.url }}"
+                    data-css="{{ null }}"
+                  >
+                    {{ part.title }}
+                  </a>
+                </li>
+              {% else %}
+                {% if part.title == paginate.current_page %}
+                  <li>
+                    <span
+                      class="{{ item_general_class }} {{ item_variant_class }} bgc:color-primary! c:color-light-freeze!"
+                      aria-current="page"
+                      aria-label="Page {{ part.title }}"
+                      data-css="{{ null }}"
+                    >
+                      {{ part.title }}
+                    </span>
+                  </li>
+                {% else %}
+                  <li>
+                    <span
+                      class="{{ item_general_class }} {{ item_variant_class }}"
+                      aria-label="Page {{ part.title }}"
+                      data-css="{{ null }}"
+                    >
+                      {{ part.title }}
+                    </span>
+                  </li>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
+            {% if paginate.next %}
+              <li>
+                <a
+                  class="{{ item_general_class }} {{ item_variant_class }}"
+                  aria-label="Next"
+                  href="{{ paginate.next.url }}"
+                  data-css="{{ null }}"
+                >
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </li>
+            {% endif %}
+          </ol>
+        </nav>
+      {% endif %}
+    {% endpaginate %}
+  </div>
+{% endcapture %}
+
+<section
+  data-id="{{ uniqueId }}"
+  class="pos:relative z:1 bgz:cover bgp:center"
+  style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}{{ sectionSeparator }}"
+>
+  <div
+    class="{{ containerType }}"
+    {% if section.settings.VEDA_slider_10
+      or section.settings.VEDA_slider_10 == 0
+      or section.settings.section_settings___width
+      or section.settings.section_settings___width == 0
+    %}
+      style="{{ containerGap }}{{ containerWidth }}"
+    {% endif %}
+  >
+    {{ Search }}
+    {{ Content }}
+  </div>
+  {% if 'none' == 'video' and null %}
+    <div data-veda-video="{{ null }}"></div>
+  {% endif %}
+  {% if null %}
+    <div
+      class="pos:absolute ins:0 z:-1"
+      style="background-color: {{ null }};backdrop-filter: blur({{ null }}px)"
+    ></div>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "Search 3",
+  "blocks": [],
+  "settings": [
+    {
+      "label": "Pagination > Item Variant",
+      "id": "VEDA_select_1",
+      "type": "select",
+      "default": "circle_border",
+      "options": [
+        {
+          "label": "Custom",
+          "value": "custom"
+        },
+        {
+          "label": "Square Shadow",
+          "value": "square_shadow"
+        },
+        {
+          "label": "Square Border",
+          "value": "square_border"
+        },
+        {
+          "label": "Square Gray",
+          "value": "square_gray"
+        },
+        {
+          "label": "Circle Shadow",
+          "value": "circle_shadow"
+        },
+        {
+          "label": "Circle Border",
+          "value": "circle_border"
+        },
+        {
+          "label": "Circle Gray",
+          "value": "circle_gray"
+        }
+      ]
+    },
+    {
+      "label": "Pagination > Quantity Displayed",
+      "id": "VEDA_slider_1",
+      "type": "number"
+    },
+    {
+      "label": "Add To Cart > Icon",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "add_to_cart___icon",
+      "type": "html",
+      "default": "<i class=\"far fa-atom\"></i>"
+    },
+    {
+      "label": "Add To Cart > Text",
+      "id": "add_to_cart___text",
+      "type": "liquid",
+      "default": "Add To Cart"
+    },
+    {
+      "label": "Add To Cart > Enable",
+      "id": "add_to_cart___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Wishlist Action > Icon",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "wish_list_action___icon",
+      "type": "html",
+      "default": "<i class=\"far fa-atom\"></i>"
+    },
+    {
+      "label": "Wishlist Action > Remove From Wishlist",
+      "id": "VEDA_text_1",
+      "type": "liquid",
+      "default": "Remove From Wishlist"
+    },
+    {
+      "label": "Wishlist Action > Add To Wishlist",
+      "id": "wish_list_action___add",
+      "type": "liquid",
+      "default": "Add To Wishlist"
+    },
+    {
+      "label": "Wishlist Action > Enable",
+      "id": "VEDA_switch_1",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Quick View > Icon",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "quick_view___icon",
+      "type": "html",
+      "default": "<i class=\"far fa-atom\"></i>"
+    },
+    {
+      "label": "Quick View > View Detail",
+      "id": "quick_view___view_detail",
+      "type": "liquid",
+      "default": "View Detail"
+    },
+    {
+      "label": "Quick View > Quantity",
+      "id": "quick_view___quantity",
+      "type": "liquid",
+      "default": "Quantity"
+    },
+    {
+      "label": "Quick View > Quick View",
+      "id": "VEDA_text_2",
+      "type": "liquid"
+    },
+    {
+      "label": "Quick View > Enable",
+      "id": "quick_view___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Compare Action > Icon",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "compare_action___icon",
+      "type": "html",
+      "default": "<i class=\"far fa-atom\"></i>"
+    },
+    {
+      "label": "Compare Action > Remove From Compare",
+      "id": "compare_action___remove",
+      "type": "liquid",
+      "default": "Remove From Compare"
+    },
+    {
+      "label": "Compare Action > Add To Compare",
+      "id": "compare_action___add",
+      "type": "liquid",
+      "default": "Add To Compare"
+    },
+    {
+      "label": "Compare Action > Enable",
+      "id": "compare_action___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Sold Out > Text",
+      "id": "sold_out___text",
+      "type": "liquid",
+      "default": "Text"
+    },
+    {
+      "label": "Sold Out > Enable",
+      "id": "sold_out___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Sale > Text",
+      "id": "sale___text",
+      "type": "liquid",
+      "default": "Text"
+    },
+    {
+      "label": "Sale > Enable",
+      "id": "sale___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "New > Text",
+      "id": "new___text",
+      "type": "liquid",
+      "default": "New"
+    },
+    {
+      "label": "New > Enable",
+      "id": "new___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Product Settings > Image Border Radius",
+      "id": "VEDA_slider_2",
+      "type": "number"
+    },
+    {
+      "label": "Product Settings > Aspect Ratio",
+      "id": "VEDA_slider_3",
+      "type": "number",
+      "default": 130
+    },
+    {
+      "label": "Product Settings > Enable Color",
+      "id": "VEDA_switch_2",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Product Settings > Enable Vendor",
+      "id": "VEDA_switch_3",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Article Settings > Image Border Radius",
+      "id": "VEDA_slider_4",
+      "type": "number"
+    },
+    {
+      "label": "Article Settings > Aspect Ratio",
+      "id": "VEDA_slider_5",
+      "type": "number"
+    },
+    {
+      "label": "Article Settings > Excerpt",
+      "id": "VEDA_switch_4",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Article Settings > Tag",
+      "id": "VEDA_switch_5",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Article Settings > Comment",
+      "id": "VEDA_switch_6",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Article Settings > Date",
+      "id": "VEDA_switch_7",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Search Action > Unavailable Product",
+      "id": "VEDA_select_2",
+      "type": "select",
+      "default": "last",
+      "options": [
+        {
+          "label": "Last",
+          "value": "last"
+        },
+        {
+          "label": "Show",
+          "value": "show"
+        },
+        {
+          "label": "Hidden",
+          "value": "hidden"
+        }
+      ]
+    },
+    {
+      "label": "Search Action > Limit",
+      "id": "VEDA_slider_6",
+      "type": "number",
+      "default": 4
+    },
+    {
+      "label": "Search Action > Fields",
+      "id": "veda_search___fields",
+      "type": "text",
+      "default": "title"
+    },
+    {
+      "label": "Search Action > Type",
+      "id": "veda_search___type",
+      "type": "text",
+      "default": "product"
+    },
+    {
+      "label": "Search Action > Icon",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "veda_search___icon",
+      "type": "html",
+      "default": "<i class=\"far fa-search\"></i>"
+    },
+    {
+      "label": "Search Action > Placeholder",
+      "id": "VEDA_text_3",
+      "type": "liquid",
+      "default": "{veda.general.search.search}"
+    },
+    {
+      "label": "Search Action > Title",
+      "id": "veda_search___title",
+      "type": "liquid",
+      "default": "Title"
+    },
+    {
+      "label": "Section Settings > Separator Bottom",
+      "id": "VEDA_slider_7",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Separator Top",
+      "id": "VEDA_slider_8",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Separator",
+      "id": "VEDA_switch_8",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "VEDA_image_1",
+      "label": "Background Image"
+    },
+    {
+      "label": "Section Settings > Column Gap",
+      "id": "VEDA_slider_9",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Gap",
+      "id": "VEDA_slider_10",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Width",
+      "id": "section_settings___width",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Width",
+      "id": "VEDA_select_3",
+      "type": "select",
+      "default": "boxed",
+      "options": [
+        {
+          "label": "Boxed",
+          "value": "boxed"
+        },
+        {
+          "label": "Full Width",
+          "value": "full_width"
+        },
+        {
+          "label": "Manual",
+          "value": "manual"
+        }
+      ]
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "Search 3",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

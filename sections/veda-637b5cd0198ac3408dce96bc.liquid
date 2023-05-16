@@ -1,0 +1,780 @@
+{% assign uniqueId = 'id_77c2808a-4c7f-4284-ab5d-9e70ce8c0f9a' %}
+{% assign builderMode = false %}
+{% assign envatoMode = true %}
+{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
+{% liquid
+  if null
+    assign backgroundFixed = 'fixed'
+  else
+    assign backgroundFixed = 'scroll'
+  endif
+
+  if 'color' == 'color'
+    assign backgroundColor = 'background-color: ' | append: '#000000' | append: ';'
+  else
+    assign backgroundColor = ''
+  endif
+
+  if 'color' == 'image' and section.settings.VEDA_image_1.src
+    assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+  elsif 'color' == 'image' and section.settings.VEDA_image_1.src == blank
+    assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+  else
+    assign backgroundImage = ''
+  endif
+
+  assign sectionPadding = 'padding-top: ' | append: 50 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: null | append: 'px;padding-left: ' | append: null | append: 'px;'
+
+  if section.settings.VEDA_select_2 == 'full_width'
+    assign containerType = 'container-fluid'
+  else
+    assign containerType = 'container'
+  endif
+
+  if section.settings.VEDA_slider_4 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_4 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_4 | append: 'px;'
+  else
+    assign containerGap = ''
+  endif
+
+  if section.settings.section_settings___width >= 0
+    assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
+  else
+    assign containerWidth = ''
+  endif
+
+  if section.settings.VEDA_slider_3 >= 0
+    assign settingGap = section.settings.VEDA_slider_3 | divided_by: 2.0
+
+    assign settingGapVertical = section.settings.VEDA_slider_3
+  else
+    assign settingGap = ''
+
+    assign settingGapVertical = ''
+  endif
+
+  assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
+
+  assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
+
+  assign sectionSeparator = ''
+
+  if section.settings.VEDA_switch_1
+    if section.settings.VEDA_slider_2
+      assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_2 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+
+    if section.settings.VEDA_slider_1
+      assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_1 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+  endif
+
+  if colGap and rowGap and builderMode and envatoMode
+  endif
+%}
+{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+
+{% liquid
+  assign _alt = false
+
+  assign _style = false
+
+  assign _placeholder = false
+
+  assign _placeholder_class = false
+
+  assign _component = false
+%}
+{% capture Subscribe %}
+  <div
+    data-css="{{ null }}"
+    class="d:flex@sm ai:center jc:space-between bgc:color-primary p:pfs(30px,40px) mt:-50px mb:40px"
+  >
+    {% if section.settings.logo___enable %}
+      <div
+        class="pos:relative flxs:1 mr:30px@sm mb:20px@+sm"
+        style="width: {{ section.settings["logo___width"] }}px"
+      >
+        {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component]>{% endcomment %}
+        {% if section.settings.logo___image.src != blank %}
+          <img
+            class="veda-lazyload {{ _class }}"
+            src="{{ section.settings["logo___image"].src | image_url: width: 10 }}"
+            draggable="false"
+            {% if _alt %}
+              alt="{{ _alt }}"
+            {% else %}
+              alt="image"
+            {% endif %}
+            {% if section.settings.logo___image.width %}
+              data-intrinsic-width="{{ section.settings["logo___image"].width }}"
+              width="{{ section.settings["logo___image"].width }}"
+            {% endif %}
+            {% if section.settings.logo___image.height %}
+              height="{{ section.settings["logo___image"].height }}"
+              data-intrinsic-height="{{ section.settings["logo___image"].height }}"
+            {% endif %}
+            {% if _style %}
+              style="{{ _style }}"
+            {% endif %}
+            loading="lazy"
+          >
+        {% else %}
+          {% liquid
+            assign pl = 'lifestyle-1'
+
+            if _placeholder
+              assign pl = _placeholder
+            endif
+
+            assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+            if 'w:80px'
+              assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'w:80px'
+            endif
+          %}
+          {{ pl | placeholder_svg_tag: placeholder_class }}
+        {% endif %}
+        {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+      </div>
+    {% endif %}
+    <div class="w:40%@sm pr:30px@sm mb:20px@+sm">
+      {% if section.settings.subscribe___title %}
+        <h3
+          class="c:color-light-freeze fz:28px fw:400 ff:font-secondary"
+          data-css="{{ null }}"
+        >
+          {{ section.settings.subscribe___title }}
+        </h3>
+      {% endif %}
+      {% if section.settings.subscribe___description %}
+        <div
+          class="mt:5px fz:14px c:color-light-freeze.8"
+          data-css="{{ null }}"
+        >
+          {{ section.settings.subscribe___description }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="w:60%@sm">
+      {% form 'customer' %}
+        {% if builderMode and _test %}
+          <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul">
+            <span><i class="far fa-exclamation-circle mr:10px"></i></span>
+            <div class="errors">Form error placeholder</div>
+          </div>
+        {% elsif form.errors %}
+          <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul">
+            <span><i class="far fa-exclamation-circle mr:10px"></i></span>
+            {{ form.errors | default_errors }}
+          </div>
+        {% endif %}
+
+        {% if builderMode and _test %}
+          <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-success.1 c:color-success">
+            <span><i class="far fa-check-circle mr:10px"></i></span>
+            <div>{{ 'veda.newsletter.success' | t }}</div>
+          </div>
+        {% elsif form.posted_successfully? %}
+          <div class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-success.1 c:color-success">
+            <span><i class="far fa-check-circle mr:10px"></i></span>
+            <div>{{ 'veda.newsletter.success' | t }}</div>
+          </div>
+        {% endif %}
+
+        <div class="d:flex w:100% h:40px c:color-gray9 bgc:transparent bdb:2px_solid_color-light-freeze.6">
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input
+            class="w:100% h:100%! pr:15px bgc:transparent c:color-light-freeze c:color-light-freeze.8||ph fz:18px ff:font-secondary! bd:none"
+            type="email"
+            name="contact[email]"
+            autocorrect="off"
+            autocapitalize="off"
+            placeholder="{{ section.settings["VEDA_text_1"] }}"
+            data-css="{{ null }}"
+          >
+          <button
+            class="d:inline-flex ai:center h:100% ff:font-secondary fw:500 fz:18px trs:0.3s cur:pointer c:color-light-freeze trs:0.3s bgc:transparent bd:0 bxsh:none o:none"
+            type="submit"
+            aria-label="submit"
+            data-css="{{ null }}"
+          >
+            {% if section.settings.VEDA_select_1 == 'left' %}
+              <span
+                {% if section.settings.subscribe___button_text %}
+                  class="mr:10px"
+                {% endif %}
+                data-css="{{ null }}"
+              >
+                {{ section.settings.subscribe___icon }}
+              </span>
+            {% endif %}
+            <span>{{ section.settings.subscribe___button_text }}</span>
+            {% if section.settings.VEDA_select_1 == 'right' %}
+              <span
+                {% if section.settings.subscribe___button_text %}
+                  class="mr:10px"
+                {% endif %}
+                data-css="{{ null }}"
+              >
+                {{ section.settings.subscribe___icon }}
+              </span>
+            {% endif %}
+          </button>
+        </div>
+      {% endform %}
+    </div>
+    {{ Socials }}
+  </div>
+{% endcapture %}
+
+{% capture Content %}
+  {% if envatoMode %}
+    {% liquid
+      assign menuIndex = -1
+    %}
+    {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+    {% for block in section.blocks %}
+      {% assign item = block.settings %}
+
+      {% capture Socials %}
+        {% if item.content___enable_socials %}
+          <div class="d:flex mt:20px">
+            {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+            {% for block in section.blocks %}
+              {% if block.type == 'socials' %}
+                {% assign social = block.settings %}
+
+                <a
+                  href="{{ social.socials___link }}"
+                  data-css="{{ null }}"
+                  class="d:flex ai:center jc:center w:36px h:36px bdrs:50% bd:1px_solid lh:normal fz:15px c:color-light-freeze.7 c:color-primary|h! trs:0.3s mr:10px"
+                >
+                  {{ social.socials___icon }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endcapture %}
+      {% if item.content___enable %}
+        <div
+          class="col"
+          {% if section.settings.VEDA_slider_3 or section.settings.VEDA_slider_3 == 0 %}
+            style="{{ colGap }}"
+          {% endif %}
+        >
+          <div>
+            {% if item.content___title and block.type != 'subscribe' %}
+              <h3
+                class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
+                data-css="{{ null }}"
+              >
+                {{ item.content___title }}
+              </h3>
+            {% endif %}
+            {% case block.type %}
+              {% when 'content_information' %}
+                {% if item.content___logo.src %}
+                  <a href="/" class="d:block maw:200px">
+                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
+                    {% if item.image.src != blank %}
+                      <img
+                        class="veda-lazyload {{ _class }}"
+                        src="{{ item.image.src | image_url: width: 10 }}"
+                        draggable="false"
+                        {% if _alt %}
+                          alt="{{ _alt }}"
+                        {% else %}
+                          alt="image"
+                        {% endif %}
+                        {% if item.image.width %}
+                          data-intrinsic-width="{{ item.image.width }}"
+                          width="{{ item.image.width }}"
+                        {% endif %}
+                        {% if item.image.height %}
+                          height="{{ item.image.height }}"
+                          data-intrinsic-height="{{ item.image.height }}"
+                        {% endif %}
+                        {% if _style %}
+                          style="{{ _style }}"
+                        {% endif %}
+                        loading="lazy"
+                      >
+                    {% else %}
+                      {% liquid
+                        assign pl = 'lifestyle-1'
+
+                        if _placeholder
+                          assign pl = _placeholder
+                        endif
+
+                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                        if 'w:80px'
+                          assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'w:80px'
+                        endif
+                      %}
+                      {{ pl | placeholder_svg_tag: placeholder_class }}
+                    {% endif %}
+                    {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                  </a>
+                {% endif %}
+                {% if item.content___description %}
+                  <div
+                    class="mt:15px fz:14px c:color-light-freeze.6"
+                    data-css="{{ null }}"
+                  >
+                    {{ item.content___description }}
+                  </div>
+                {% endif %}
+                {{ Socials }}
+              {% when 'content_navigation' %}
+                {% liquid
+                  assign menuIndex = menuIndex | plus: 1
+                %}
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
+                {% if section.settings.menu.links[menuIndex].links != blank %}
+                  <ul class="{{ 'p:0! m:0! w:fit-content ls:none' }}">
+                    {% for link in section.settings.menu.links[menuIndex].links %}
+                      <li>
+                        <a
+                          class="{{ 'd:flex ai:center c:color-light-freeze.6 fz:14px ff:font-secondary pt:6px pb:6px trs:0.3s' }}"
+                          href="{{ link.url }}"
+                          {% if link.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          <span>
+                            {{ link.title }}
+                          </span>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+            {% endcase %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+    {% for block in section.blocks %}
+      {% assign item1 = block.settings %}
+
+      {% capture Socials %}
+        {% if item1.content___enable_socials %}
+          <div class="d:flex mt:20px">
+            {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+            {% for block in section.blocks %}
+              {% if block.type == 'socials' %}
+                {% assign social1 = block.settings %}
+
+                <a
+                  href="{{ social1.socials___link }}"
+                  data-css="{{ null }}"
+                  class="d:flex ai:center jc:center w:36px h:36px bdrs:50% bd:1px_solid lh:normal fz:15px c:color-light-freeze.7 c:color-primary|h! trs:0.3s mr:10px"
+                >
+                  {{ social1.socials___icon }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endcapture %}
+      {% if item1.content___enable %}
+        <div
+          class="col"
+          {% if section.settings.VEDA_slider_3 or section.settings.VEDA_slider_3 == 0 %}
+            style="{{ colGap }}"
+          {% endif %}
+        >
+          <div>
+            {% if item1.content___title and block.type != 'subscribe' %}
+              <h3
+                class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
+                data-css="{{ null }}"
+              >
+                {{ item1.content___title }}
+              </h3>
+            {% endif %}
+            {% case block.type %}
+              {% when 'content_information' %}
+                {% if item1.content___logo.src %}
+                  <a href="/" class="d:block maw:200px">
+                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_5:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item1]>{% endcomment %}
+                    {% if item1.image.src != blank %}
+                      <img
+                        class="veda-lazyload {{ _class }}"
+                        src="{{ item1.image.src | image_url: width: 10 }}"
+                        draggable="false"
+                        {% if _alt %}
+                          alt="{{ _alt }}"
+                        {% else %}
+                          alt="image"
+                        {% endif %}
+                        {% if item1.image.width %}
+                          data-intrinsic-width="{{ item1.image.width }}"
+                          width="{{ item1.image.width }}"
+                        {% endif %}
+                        {% if item1.image.height %}
+                          height="{{ item1.image.height }}"
+                          data-intrinsic-height="{{ item1.image.height }}"
+                        {% endif %}
+                        {% if _style %}
+                          style="{{ _style }}"
+                        {% endif %}
+                        loading="lazy"
+                      >
+                    {% else %}
+                      {% liquid
+                        assign pl = 'lifestyle-1'
+
+                        if _placeholder
+                          assign pl = _placeholder
+                        endif
+
+                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                        if 'w:80px'
+                          assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'w:80px'
+                        endif
+                      %}
+                      {{ pl | placeholder_svg_tag: placeholder_class }}
+                    {% endif %}
+                    {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                  </a>
+                {% endif %}
+                {% if item1.content___description %}
+                  <div
+                    class="mt:15px fz:14px c:color-light-freeze.6"
+                    data-css="{{ null }}"
+                  >
+                    {{ item1.content___description }}
+                  </div>
+                {% endif %}
+                {{ Socials }}
+              {% when 'content_navigation' %}
+                <ul class="p:0! m:0! w:fit-content ls:none"></ul>
+            {% endcase %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endcapture %}
+
+{% capture FooterBottom %}
+  <div
+    class="ff:font-secondary c:color-light-freeze.8 fz:14px bdt:1px_solid_color-light-freeze.1 mt:30px"
+    data-css="{{ null }}"
+  >
+    <div class="d:flex@sm ai:center jc:space-between ta:center@+sm p:20px_0">
+      <div>
+        {{ section.settings.VEDA_richText_1 }}
+      </div>
+      <div class="pos:relative mt:15px@+sm d:flex">
+        {% for type in shop.enabled_payment_types %}
+          <img
+            class="mt:3px mb:3px mr:6px"
+            src="{{ type | payment_type_img_url }}"
+            width="38"
+            height="24"
+            loading="lazy"
+            alt="payment"
+          >
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endcapture %}
+
+<footer data-id="{{ uniqueId }}">
+  {% if 50 %}
+    <div class="separator-js" style="height: {{ 50 }}px"></div>
+  {% endif %}
+  <div
+    class="veda-lazyload pos:relative z:1 bgz:cover bgp:center pt:1px! mt:-1px"
+    style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}{{ sectionSeparator }}"
+  >
+    <div
+      class="{{ containerType }}"
+      {% if section.settings.VEDA_slider_4
+        or section.settings.VEDA_slider_4 == 0
+        or section.settings.section_settings___width
+        or section.settings.section_settings___width == 0
+      %}
+        style="{{ containerGap }}{{ containerWidth }}"
+      {% endif %}
+    >
+      {{ Subscribe }}
+      <div
+        class="row row-cols-lg-{{ 4 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
+        {% if section.settings.VEDA_slider_3 or section.settings.VEDA_slider_3 == 0 %}
+          style="{{ rowGap }}"
+        {% endif %}
+      >
+        {{ Content }}
+      </div>
+      {{ FooterBottom }}
+    </div>
+    {% if 'color' == 'video' and null %}
+      <div data-veda-video="{{ null }}"></div>
+    {% endif %}
+    {% if null %}
+      <div
+        class="pos:absolute ins:0 z:-1"
+        style="background-color: {{ null }};backdrop-filter: blur({{ null }}px)"
+      ></div>
+    {% endif %}
+  </div>
+</footer>
+{% schema %}
+{
+  "name": "Footer 4",
+  "blocks": [
+    {
+      "type": "socials",
+      "name": "Socials",
+      "settings": [
+        {
+          "label": "Socials > Link",
+          "id": "socials___link",
+          "type": "text"
+        },
+        {
+          "label": "Socials > Icon",
+          "info": "[Get icon](https://fontawesome.com/v5/search)",
+          "id": "socials___icon",
+          "type": "html",
+          "default": "<i class=\"far fa-atom\"></i>"
+        }
+      ]
+    },
+    {
+      "type": "content_information",
+      "name": "Content > Information",
+      "settings": [
+        {
+          "label": "Content > Enable Socials",
+          "id": "content___enable_socials",
+          "type": "checkbox",
+          "default": false
+        },
+        {
+          "label": "Content > Description",
+          "id": "content___description",
+          "type": "liquid"
+        },
+        {
+          "type": "image_picker",
+          "id": "content___logo",
+          "label": "Logo"
+        },
+        {
+          "label": "Content > Title",
+          "id": "content___title",
+          "type": "liquid"
+        },
+        {
+          "label": "Content > Enable",
+          "id": "content___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "content_navigation",
+      "name": "Content > Navigation",
+      "settings": [
+        {
+          "label": "Content > Title",
+          "id": "content___title",
+          "type": "liquid"
+        },
+        {
+          "label": "Content > Enable",
+          "id": "content___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    },
+    {
+      "label": "Logo > Width",
+      "id": "logo___width",
+      "type": "number"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo___image",
+      "label": "Image"
+    },
+    {
+      "label": "Logo > Enable",
+      "id": "logo___enable",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Subscribe > Icon Position",
+      "id": "VEDA_select_1",
+      "type": "select",
+      "default": "left",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "label": "Subscribe > Icon",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "subscribe___icon",
+      "type": "html",
+      "default": "<i class=\"far fa-paper-plane\"></i>"
+    },
+    {
+      "label": "Subscribe > Button Text",
+      "id": "subscribe___button_text",
+      "type": "liquid",
+      "default": "Send"
+    },
+    {
+      "label": "Subscribe > Placeholder",
+      "id": "VEDA_text_1",
+      "type": "liquid",
+      "default": "Your email address"
+    },
+    {
+      "label": "Subscribe > Description",
+      "id": "subscribe___description",
+      "type": "liquid",
+      "default": "<p>Subscribe to our newsletter and get 10% off your first purchase</p>"
+    },
+    {
+      "label": "Subscribe > Title",
+      "id": "subscribe___title",
+      "type": "liquid",
+      "default": "Subscribe"
+    },
+    {
+      "label": "Footer Bottom > Copyright",
+      "id": "VEDA_richText_1",
+      "type": "liquid",
+      "default": "<p>Copyright</p>"
+    },
+    {
+      "label": "Section Settings > Separator Bottom",
+      "id": "VEDA_slider_1",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Separator Top",
+      "id": "VEDA_slider_2",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Separator",
+      "id": "VEDA_switch_1",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "VEDA_image_1",
+      "label": "Background Image"
+    },
+    {
+      "label": "Section Settings > Column Gap",
+      "id": "VEDA_slider_3",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Gap",
+      "id": "VEDA_slider_4",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Width",
+      "id": "section_settings___width",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Width",
+      "id": "VEDA_select_2",
+      "type": "select",
+      "default": "boxed",
+      "options": [
+        {
+          "label": "Boxed",
+          "value": "boxed"
+        },
+        {
+          "label": "Full Width",
+          "value": "full_width"
+        },
+        {
+          "label": "Manual",
+          "value": "manual"
+        }
+      ]
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "Footer 4",
+      "blocks": [
+        {
+          "type": "content_navigation"
+        },
+        {
+          "type": "content_navigation"
+        },
+        {
+          "type": "content_navigation"
+        },
+        {
+          "type": "content_navigation"
+        },
+        {
+          "type": "socials"
+        },
+        {
+          "type": "socials"
+        },
+        {
+          "type": "socials"
+        },
+        {
+          "type": "socials"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
