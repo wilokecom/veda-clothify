@@ -44,11 +44,13 @@
 
 <!--VEDA_HEADER_SCRIPTS_POSITION-->
 {%- render 'veda-header-scripts' -%}
+<!--VEDA_NO_PLACEMENT_ADDON_POSITION-->
+{% render 'veda-no-placement-addons' %}
 </head>
 
   <body class="gradient">
 <!--VEDA_HEADER_THEME_POSITION-->
-{%sections 'veda-theme-header' %}
+{% sections 'veda-theme-header' %}
 
 
 
@@ -102,9 +104,10 @@
 
 
 
+{% render 'banana-stand-footer' %}
 
 <!--VEDA_FOOTER_THEME_POSITION-->
-{%sections 'veda-theme-footer' %}
+{% sections 'veda-theme-footer' %}
 <!--VEDA_FOOTER_SCRIPTS_POSITION-->
 {%- render 'veda-footer-scripts' -%}</body>
 

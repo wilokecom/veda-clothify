@@ -1,7 +1,7 @@
-function veda_fn_1b40636372de460db3307c456ed69250 () {
+function veda_fn_7e434f06822d44ef9d778e1a0559a51c () {
         
-  if (window.veda_fn_1b40636372de460db3307c456ed69250Cleanup === undefined) {
-    window.veda_fn_1b40636372de460db3307c456ed69250Cleanup = {
+  if (window.veda_fn_7e434f06822d44ef9d778e1a0559a51cCleanup === undefined) {
+    window.veda_fn_7e434f06822d44ef9d778e1a0559a51cCleanup = {
       listeners: [],
       push(listener) {
         this.listeners.push(listener);
@@ -12,7 +12,7 @@ function veda_fn_1b40636372de460db3307c456ed69250 () {
       }
     }
   }
-  window.veda_fn_1b40636372de460db3307c456ed69250Cleanup.cleanup();
+  window.veda_fn_7e434f06822d44ef9d778e1a0559a51cCleanup.cleanup();
 
         const uniqueIds = ["id_698bda23-62fc-490e-9ec2-b842b986b3fb","id_b3e4398a-9fbc-47a3-8931-2bf416c368cc","id_9484bc11-76c7-40bc-8a1f-12409dc245c2"];
         uniqueIds.forEach(uniqueId => {
@@ -26,11 +26,11 @@ function veda_fn_1b40636372de460db3307c456ed69250 () {
           });
         });
       }
-veda_fn_1b40636372de460db3307c456ed69250();
-function veda_fn_4253137d154d4ef9b29c9fd1c0724b82 () {
+veda_fn_7e434f06822d44ef9d778e1a0559a51c();
+function veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7 () {
       
-  if (window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup === undefined) {
-    window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup = {
+  if (window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup === undefined) {
+    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup = {
       listeners: [],
       push(listener) {
         this.listeners.push(listener);
@@ -41,7 +41,7 @@ function veda_fn_4253137d154d4ef9b29c9fd1c0724b82 () {
       }
     }
   }
-  window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.cleanup();
+  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.cleanup();
 
       const uniqueId = "id_141bc910-704e-46d3-a876-990c1bd1d6a7";
       const containers = document.querySelectorAll(`[data-id="${uniqueId}"]`);
@@ -88,7 +88,7 @@ function containerZIndex() {
   container.addEventListener("click", handleContainerClick);
   window.addEventListener("click", handleWindowClick);
 
-  window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
     container.removeEventListener("click", handleContainerClick);
     window.removeEventListener("click", handleWindowClick);
   });
@@ -129,7 +129,7 @@ function navigation() {
   }
   checkResponsive();
   window.addEventListener("resize", checkResponsive);
-  window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
     window.removeEventListener("resize", checkResponsive);
   });
 }
@@ -208,7 +208,7 @@ function compare() {
     const unsubscribe = productCompare.subscribe((state) => {
       setBadbe(compareBadgeEl, state.length);
     });
-    window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
       unsubscribe();
       comparePopupEl.removeEventListener("click", handleClick);
     });
@@ -229,7 +229,7 @@ function wishList() {
       setBadbe(wishlistBadgeEl, count);
     });
 
-    window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
       unsubscribe();
     });
   });
@@ -256,7 +256,7 @@ function search() {
         }
       };
       btnSearchEl.addEventListener("click", handleClick);
-      window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+      window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
         btnSearchEl.removeEventListener("click", handleClick);
       });
     });
@@ -280,7 +280,7 @@ function headerSticky() {
         }
       },
     });
-    window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
       destroy();
     });
   }
@@ -301,7 +301,7 @@ function handlePredictiveSearch() {
     };
   }
   const destroy = predictiveSearch(el, predictiveSearchOptions);
-  window.veda_fn_4253137d154d4ef9b29c9fd1c0724b82Cleanup.push(() => {
+  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
     destroy();
   });
 }
@@ -310,4 +310,4 @@ headerSticky();
 handlePredictiveSearch();
       });
     }
-veda_fn_4253137d154d4ef9b29c9fd1c0724b82();
+veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7();
