@@ -1,1 +1,147 @@
-{"sections":{"section_641819632967247e1b1eb4e5":{"type":"veda-634e3337712cc47dd14ae91f","settings":{"breadcrumb___separator":"<i class=\"far fa-arrow-right\"><\/i>","VEDA_text_1":"{{ 'veda.customer.account.page_title' | t }}","VEDA_text_2":"{{ 'veda.general.breadcrumbs.home' | t }}","heading___divider":"none","heading___title":"Breadcrumb","heading___manual":false,"heading___enable":true,"VEDA_switch_1":false,"VEDA_switch_2":false,"VEDA_select_1":"cover","VEDA_switch_3":false,"VEDA_select_2":"image","VEDA_select_3":"boxed"}},"section_641819632967247e1b1eb4e6":{"type":"veda-6396e09ec7da843b9559523a","blocks":{"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f":{"type":"heading_title","settings":{"heading___title_tag_name":"h2","heading___title":"Shopping cart","heading___enable":false}},"4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc":{"type":"actions_note","settings":{}},"415c56aa-42da-4275-87e5-b59d413b020f":{"type":"actions_shipping","settings":{}},"eb5e02e4-b85b-439e-a099-aea0efa1bf4d":{"type":"actions_discount","settings":{}},"cc2f4d69-cd73-4374-8a3c-56cee24db9af":{"type":"check_out_price","settings":{}},"eb3c133b-92ae-4e4a-8d1d-05938b2fe30d":{"type":"check_out_text","settings":{}},"ce8f9bd2-9323-4838-862d-737ca2e007b5":{"type":"check_out_button","settings":{"check_out___variant":"dark"}}},"block_order":["dcebbad4-bf99-4a53-bfa1-656ae3d1b04f","4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc","415c56aa-42da-4275-87e5-b59d413b020f","eb5e02e4-b85b-439e-a099-aea0efa1bf4d","cc2f4d69-cd73-4374-8a3c-56cee24db9af","eb3c133b-92ae-4e4a-8d1d-05938b2fe30d","ce8f9bd2-9323-4838-862d-737ca2e007b5"],"settings":{"cancel_button___variant":"gray","submit_button___variant":"dark","empty_data___variant":"primary","empty_data___link":"\/collections\/all","empty_data___new_tab":false,"VEDA_switch_1":false,"VEDA_switch_2":false,"VEDA_select_1":"cover","VEDA_switch_3":false,"VEDA_select_2":"none","VEDA_select_3":"boxed"}},"section_641819632967247e1b1eb4e7":{"type":"veda-63bd204c807340208df10884","blocks":{"c9fa50ce-3078-4761-a745-107272e6c003":{"type":"heading_title","settings":{"heading___title_tag_name":"h4","heading___title":"Best Sellers","heading___enable":true}},"e2f49099-eb9a-4696-ac4c-c95c64e32c18":{"type":"heading_space","settings":{"heading___space":10,"heading___enable":true}}},"block_order":["c9fa50ce-3078-4761-a745-107272e6c003","e2f49099-eb9a-4696-ac4c-c95c64e32c18"],"settings":{"VEDA_icon_1":"<i class=\"fal fa-angle-right\"><\/i>","VEDA_icon_2":"<i class=\"fal fa-angle-left\"><\/i>","VEDA_select_1":"circle_shadow","VEDA_select_2":"middle","VEDA_switch_1":true,"VEDA_switch_2":false,"slider_settings___loop":false,"slider_settings___delay":4000,"VEDA_switch_3":false,"compare_action___enable":true,"VEDA_switch_4":true,"quick_view___enable":true,"VEDA_icon_3":"<i class=\"far fa-long-arrow-right\"><\/i>","VEDA_switch_5":true,"VEDA_select_3":"bottom","VEDA_select_4":"gray","VEDA_switch_6":false,"button_view_all___text":"{{'veda.sections.featured_collection.view_all' | t}}","button_view_all___enable":true,"sold_out___enable":true,"new___enable":true,"sale___enable":true,"VEDA_slider_2":130,"VEDA_switch_7":true,"VEDA_switch_8":true,"product_settings___limit":8,"VEDA_collectionPicker_1":"ella","VEDA_switch_9":false,"VEDA_switch_10":false,"VEDA_select_5":"cover","VEDA_switch_11":false,"VEDA_select_6":"none","VEDA_select_7":"boxed"}},"veda-641819632967247e1b1eb4e4-scripts":{"type":"veda-641819632967247e1b1eb4e4-scripts","settings":{}}},"order":["section_641819632967247e1b1eb4e5","section_641819632967247e1b1eb4e6","section_641819632967247e1b1eb4e7","veda-641819632967247e1b1eb4e4-scripts"]}
+{
+	"sections": {
+		"section_641819632967247e1b1eb4e5": {
+			"type": "veda-breadcrumb-3",
+			"settings": {
+				"breadcrumb___separator": "<i class=\"far fa-arrow-right\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
+				"VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
+				"heading___divider": "none",
+				"heading___title": "Breadcrumb",
+				"heading___manual": false,
+				"heading___enable": true,
+				"VEDA_switch_1": false,
+				"VEDA_switch_2": false,
+				"VEDA_select_1": "cover",
+				"VEDA_switch_3": false,
+				"VEDA_select_2": "image",
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_641819632967247e1b1eb4e6": {
+			"type": "veda-cart-1",
+			"blocks": {
+				"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Shopping cart",
+						"heading___enable": false
+					}
+				},
+				"4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc": {
+					"type": "actions_note",
+					"settings": {}
+				},
+				"415c56aa-42da-4275-87e5-b59d413b020f": {
+					"type": "actions_shipping",
+					"settings": {}
+				},
+				"eb5e02e4-b85b-439e-a099-aea0efa1bf4d": {
+					"type": "actions_discount",
+					"settings": {}
+				},
+				"cc2f4d69-cd73-4374-8a3c-56cee24db9af": {
+					"type": "check_out_price",
+					"settings": {}
+				},
+				"eb3c133b-92ae-4e4a-8d1d-05938b2fe30d": {
+					"type": "check_out_text",
+					"settings": {}
+				},
+				"ce8f9bd2-9323-4838-862d-737ca2e007b5": {
+					"type": "check_out_button",
+					"settings": {
+						"check_out___variant": "dark"
+					}
+				}
+			},
+			"block_order": [
+				"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f",
+				"4aa94eb0-5e69-4fff-a3ac-4a245b5f3bcc",
+				"415c56aa-42da-4275-87e5-b59d413b020f",
+				"eb5e02e4-b85b-439e-a099-aea0efa1bf4d",
+				"cc2f4d69-cd73-4374-8a3c-56cee24db9af",
+				"eb3c133b-92ae-4e4a-8d1d-05938b2fe30d",
+				"ce8f9bd2-9323-4838-862d-737ca2e007b5"
+			],
+			"settings": {
+				"cancel_button___variant": "gray",
+				"submit_button___variant": "dark",
+				"empty_data___variant": "primary",
+				"empty_data___link": "\/collections\/all",
+				"empty_data___new_tab": false,
+				"VEDA_switch_1": false,
+				"VEDA_switch_2": false,
+				"VEDA_select_1": "cover",
+				"VEDA_switch_3": false,
+				"VEDA_select_2": "none",
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_641819632967247e1b1eb4e7": {
+			"type": "veda-product-carousel-3",
+			"blocks": {
+				"c9fa50ce-3078-4761-a745-107272e6c003": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h4",
+						"heading___title": "Best Sellers",
+						"heading___enable": true
+					}
+				},
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 10,
+						"heading___enable": true
+					}
+				}
+			},
+			"block_order": [
+				"c9fa50ce-3078-4761-a745-107272e6c003",
+				"e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",
+				"VEDA_icon_2": "<i class=\"fal fa-angle-left\"><\/i>",
+				"VEDA_select_1": "circle_shadow",
+				"VEDA_select_2": "middle",
+				"VEDA_switch_1": true,
+				"VEDA_switch_2": false,
+				"slider_settings___loop": false,
+				"slider_settings___delay": 4000,
+				"VEDA_switch_3": false,
+				"compare_action___enable": true,
+				"VEDA_switch_4": true,
+				"quick_view___enable": true,
+				"VEDA_icon_3": "<i class=\"far fa-long-arrow-right\"><\/i>",
+				"VEDA_switch_5": true,
+				"VEDA_select_3": "bottom",
+				"VEDA_select_4": "gray",
+				"VEDA_switch_6": false,
+				"button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
+				"button_view_all___enable": true,
+				"sold_out___enable": true,
+				"new___enable": true,
+				"sale___enable": true,
+				"VEDA_slider_2": 130,
+				"VEDA_switch_7": true,
+				"VEDA_switch_8": true,
+				"product_settings___limit": 8,
+				"VEDA_collectionPicker_1": "ella",
+				"VEDA_switch_9": false,
+				"VEDA_switch_10": false,
+				"VEDA_select_5": "cover",
+				"VEDA_switch_11": false,
+				"VEDA_select_6": "none",
+				"VEDA_select_7": "boxed"
+			}
+		}
+	},
+	"order": [
+		"section_641819632967247e1b1eb4e5",
+		"section_641819632967247e1b1eb4e6",
+		"section_641819632967247e1b1eb4e7"
+	]
+}
