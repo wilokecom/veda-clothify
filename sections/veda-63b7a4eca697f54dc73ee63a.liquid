@@ -1,42 +1,41 @@
 {% assign uniqueId = 'id_9ee2783c-d72b-49ba-b321-53ccaae854c9' %}
 {% assign builderMode = false %}
 {% assign envatoMode = true %}
-{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
 {% liquid
-  if null
+  if section.settings.VEDA_switch_5
     assign backgroundFixed = 'fixed'
   else
     assign backgroundFixed = 'scroll'
   endif
 
-  if 'none' == 'color'
+  if section.settings.VEDA_select_4 == 'color'
     assign backgroundColor = 'background-color: ' | append: null | append: ';'
   else
     assign backgroundColor = ''
   endif
 
-  if  section.settings.VEDA_image_1.src
+  if section.settings.VEDA_select_4 == 'image' and section.settings.VEDA_image_1.src
     assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
 
-    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
-  elsif  section.settings.VEDA_image_1.src == blank
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_3 | append: ';'
+  elsif section.settings.VEDA_select_4 == 'image' and section.settings.VEDA_image_1.src == blank
     assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
 
-    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_3 | append: ';'
   else
     assign backgroundImage = ''
   endif
 
-  assign sectionPadding = 'padding-top: ' | append: 60 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: 50 | append: 'px;padding-left: ' | append: null | append: 'px;'
+  assign sectionPadding = 'padding-top: ' | append: 50 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: 50 | append: 'px;padding-left: ' | append: null | append: 'px;'
 
-  if section.settings.VEDA_select_3 == 'full_width'
+  if section.settings.VEDA_select_5 == 'full_width'
     assign containerType = 'container-fluid'
   else
     assign containerType = 'container'
   endif
 
-  if section.settings.VEDA_slider_5 >= 0
-    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_5 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_5 | append: 'px;'
+  if section.settings.VEDA_slider_6 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_6 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_6 | append: 'px;'
   else
     assign containerGap = ''
   endif
@@ -47,10 +46,10 @@
     assign containerWidth = ''
   endif
 
-  if section.settings.VEDA_slider_4 >= 0
-    assign settingGap = section.settings.VEDA_slider_4 | divided_by: 2.0
+  if section.settings.VEDA_slider_5 >= 0
+    assign settingGap = section.settings.VEDA_slider_5 | divided_by: 2.0
 
-    assign settingGapVertical = section.settings.VEDA_slider_4
+    assign settingGapVertical = section.settings.VEDA_slider_5
   else
     assign settingGap = ''
 
@@ -76,7 +75,6 @@
   if colGap and rowGap and builderMode and envatoMode
   endif
 %}
-{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 
 {% liquid
   assign _class = false
@@ -94,8 +92,8 @@
 {% capture Content %}
   <div
     class="veda-grid"
-    {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
-      style="gap: {{ section.settings["VEDA_slider_4"] }}px"
+    {% if section.settings.VEDA_slider_5 or section.settings.VEDA_slider_5 == 0 %}
+      style="gap: {{ section.settings["VEDA_slider_5"] }}px"
     {% endif %}
   >
     {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
@@ -125,7 +123,7 @@
           class="group* veda-grid__item veda-image-cover ov:hidden"
           style="border-radius: {{ imageRadius }}px; --aspect-ratio: {{ aspectRatio }}"
         >
-          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,item]>{% endcomment %}
+          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,item]>{% endcomment %}
           {% if item.content___image.src != blank %}
             <img
               class="veda-lazyload {{ 'trf:scale(1.1)*group-hover trs:0.5s' }}"
@@ -187,8 +185,8 @@
 >
   <div
     class="{{ containerType }}"
-    {% if section.settings.VEDA_slider_5
-      or section.settings.VEDA_slider_5 == 0
+    {% if section.settings.VEDA_slider_6
+      or section.settings.VEDA_slider_6 == 0
       or section.settings.section_settings___width
       or section.settings.section_settings___width == 0
     %}
@@ -210,7 +208,7 @@
             class="pos:relative"
           {% endif %}
         >
-          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class]>{% endcomment %}
+          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class]>{% endcomment %}
           <div class="d:flex fld:column w:100%">
             {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
@@ -347,7 +345,7 @@
             {% endfor %}
           </div>
           {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
-          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class,align,headingDividerPadding]>{% endcomment %}
+          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class,align,headingDividerPadding]>{% endcomment %}
           {% liquid
             if section.settings.VEDA_select_2 == 'link'
               assign defaultClass = ''
@@ -454,7 +452,7 @@
         {{ Content }}
       </div>
     </div>
-    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_5:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class,contentXs,contentSm,contentMd,contentLg]>{% endcomment %}
+    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class,contentXs,contentSm,contentMd,contentLg]>{% endcomment %}
     {% liquid
       if section.settings.VEDA_select_2 == 'link'
         assign defaultClass = ''
@@ -547,13 +545,13 @@
     {% endif %}
     {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
   </div>
-  {% if 'none' == 'video' and null %}
-    <div data-veda-video="{{ null }}"></div>
+  {% if section.settings.VEDA_select_4 == 'video' and section.settings.VEDA_video_1 %}
+    <div data-veda-video="{{ section.settings["VEDA_video_1"] }}"></div>
   {% endif %}
-  {% if null %}
+  {% if section.settings.VEDA_switch_4 %}
     <div
       class="pos:absolute ins:0 z:-1"
-      style="background-color: {{ null }};backdrop-filter: blur({{ null }}px)"
+      style="background-color: {{ null }};backdrop-filter: blur({{ section.settings["VEDA_slider_4"] }}px)"
     ></div>
   {% endif %}
 </section>
@@ -834,18 +832,80 @@
       "default": false
     },
     {
+      "label": "Section Settings > Background Overlay Blur",
+      "id": "VEDA_slider_4",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Background Overlay",
+      "id": "VEDA_switch_4",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Size",
+      "id": "VEDA_select_3",
+      "type": "select",
+      "default": "cover",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "label": "Section Settings > Background Fixed",
+      "id": "VEDA_switch_5",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Video",
+      "id": "VEDA_video_1",
+      "type": "text"
+    },
+    {
       "type": "image_picker",
       "id": "VEDA_image_1",
       "label": "Background Image"
     },
     {
+      "label": "Section Settings > Background Type",
+      "id": "VEDA_select_4",
+      "type": "select",
+      "default": "none",
+      "options": [
+        {
+          "label": "Image",
+          "value": "image"
+        },
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Video",
+          "value": "video"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
       "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_4",
+      "id": "VEDA_slider_5",
       "type": "number"
     },
     {
       "label": "Section Settings > Container Gap",
-      "id": "VEDA_slider_5",
+      "id": "VEDA_slider_6",
       "type": "number"
     },
     {
@@ -855,7 +915,7 @@
     },
     {
       "label": "Section Settings > Container Width",
-      "id": "VEDA_select_3",
+      "id": "VEDA_select_5",
       "type": "select",
       "default": "boxed",
       "options": [

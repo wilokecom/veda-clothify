@@ -1,42 +1,41 @@
 {% assign uniqueId = 'id_7553dfc5-8c20-4a74-b6c8-a6586f1bf495' %}
 {% assign builderMode = false %}
 {% assign envatoMode = true %}
-{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
 {% liquid
-  if null
+  if section.settings.VEDA_switch_4
     assign backgroundFixed = 'fixed'
   else
     assign backgroundFixed = 'scroll'
   endif
 
-  if 'none' == 'color'
+  if section.settings.VEDA_select_3 == 'color'
     assign backgroundColor = 'background-color: ' | append: null | append: ';'
   else
     assign backgroundColor = ''
   endif
 
-  if  section.settings.VEDA_image_1.src
+  if section.settings.VEDA_select_3 == 'image' and section.settings.VEDA_image_1.src
     assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
 
-    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
-  elsif  section.settings.VEDA_image_1.src == blank
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_2 | append: ';'
+  elsif section.settings.VEDA_select_3 == 'image' and section.settings.VEDA_image_1.src == blank
     assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
 
-    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_2 | append: ';'
   else
     assign backgroundImage = ''
   endif
 
   assign sectionPadding = 'padding-top: ' | append: 50 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: 50 | append: 'px;padding-left: ' | append: null | append: 'px;'
 
-  if section.settings.VEDA_select_2 == 'full_width'
+  if section.settings.VEDA_select_4 == 'full_width'
     assign containerType = 'container-fluid'
   else
     assign containerType = 'container'
   endif
 
-  if section.settings.VEDA_slider_7 >= 0
-    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_7 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_7 | append: 'px;'
+  if section.settings.VEDA_slider_8 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_8 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_8 | append: 'px;'
   else
     assign containerGap = ''
   endif
@@ -47,10 +46,10 @@
     assign containerWidth = ''
   endif
 
-  if section.settings.VEDA_slider_6 >= 0
-    assign settingGap = section.settings.VEDA_slider_6 | divided_by: 2.0
+  if section.settings.VEDA_slider_7 >= 0
+    assign settingGap = section.settings.VEDA_slider_7 | divided_by: 2.0
 
-    assign settingGapVertical = section.settings.VEDA_slider_6
+    assign settingGapVertical = section.settings.VEDA_slider_7
   else
     assign settingGap = ''
 
@@ -76,13 +75,13 @@
   if colGap and rowGap and builderMode and envatoMode
   endif
 %}
-{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 
 {% liquid
   assign _alt = false
 
   assign _style = false
 
+  assign _placeholder = false
 
   assign _placeholder_class = false
 
@@ -92,7 +91,7 @@
 {% capture CollectionContent %}
   <div
     class="row row-cols-lg-{{ 4 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
-    {% if section.settings.VEDA_slider_6 or section.settings.VEDA_slider_6 == 0 %}
+    {% if section.settings.VEDA_slider_7 or section.settings.VEDA_slider_7 == 0 %}
       style="{{ rowGap }}"
     {% endif %}
   >
@@ -108,7 +107,7 @@
       {% for collection_item in collections %}
         <div
           class="col"
-          {% if section.settings.VEDA_slider_6 or section.settings.VEDA_slider_6 == 0 %}
+          {% if section.settings.VEDA_slider_7 or section.settings.VEDA_slider_7 == 0 %}
             style="{{ colGap }}"
           {% endif %}
         >
@@ -124,7 +123,7 @@
               class="veda-image-cover pos:relative ov:hidden trf:scale(1.1)*group-hover trs:0.3s"
               style="--aspect-ratio: {{ aspectRatio }}; border-radius: {{ section.settings["VEDA_slider_1"] }}%"
             >
-              {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_class,aspectRatio]>{% endcomment %}
+              {% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_class,aspectRatio]>{% endcomment %}
               {% if collection_item.image.src != blank %}
                 <img
                   class="veda-lazyload {{ _class }}"
@@ -177,6 +176,7 @@
       {% endfor %}
       {% if paginate.pages > 1 %}
         <div class="mt:0! w:100%">
+          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_class,aspectRatio,pl,placeholder_class]>{% endcomment %}
           {% liquid
             assign item_general_class = 'fz:15px! d:flex! ai:center jc:center ov:hidden trs:0.3s m:5px'
 
@@ -265,6 +265,7 @@
               {% endif %}
             </ol>
           </nav>
+          {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
         </div>
       {% endif %}
     {% endpaginate %}
@@ -278,8 +279,8 @@
 >
   <div
     class="{{ containerType }}"
-    {% if section.settings.VEDA_slider_7
-      or section.settings.VEDA_slider_7 == 0
+    {% if section.settings.VEDA_slider_8
+      or section.settings.VEDA_slider_8 == 0
       or section.settings.section_settings___width
       or section.settings.section_settings___width == 0
     %}
@@ -454,13 +455,13 @@
       </div>
     </div>
   </div>
-  {% if 'none' == 'video' and null %}
-    <div data-veda-video="{{ null }}"></div>
+  {% if section.settings.VEDA_select_3 == 'video' and section.settings.VEDA_video_1 %}
+    <div data-veda-video="{{ section.settings["VEDA_video_1"] }}"></div>
   {% endif %}
-  {% if null %}
+  {% if section.settings.VEDA_switch_3 %}
     <div
       class="pos:absolute ins:0 z:-1"
-      style="background-color: {{ null }};backdrop-filter: blur({{ null }}px)"
+      style="background-color: {{ null }};backdrop-filter: blur({{ section.settings["VEDA_slider_6"] }}px)"
     ></div>
   {% endif %}
 </section>
@@ -678,18 +679,80 @@
       "default": false
     },
     {
+      "label": "Section Settings > Background Overlay Blur",
+      "id": "VEDA_slider_6",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Background Overlay",
+      "id": "VEDA_switch_3",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Size",
+      "id": "VEDA_select_2",
+      "type": "select",
+      "default": "cover",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "label": "Section Settings > Background Fixed",
+      "id": "VEDA_switch_4",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Video",
+      "id": "VEDA_video_1",
+      "type": "text"
+    },
+    {
       "type": "image_picker",
       "id": "VEDA_image_1",
       "label": "Background Image"
     },
     {
+      "label": "Section Settings > Background Type",
+      "id": "VEDA_select_3",
+      "type": "select",
+      "default": "none",
+      "options": [
+        {
+          "label": "Image",
+          "value": "image"
+        },
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Video",
+          "value": "video"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
       "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_6",
+      "id": "VEDA_slider_7",
       "type": "number"
     },
     {
       "label": "Section Settings > Container Gap",
-      "id": "VEDA_slider_7",
+      "id": "VEDA_slider_8",
       "type": "number"
     },
     {
@@ -699,7 +762,7 @@
     },
     {
       "label": "Section Settings > Container Width",
-      "id": "VEDA_select_2",
+      "id": "VEDA_select_4",
       "type": "select",
       "default": "boxed",
       "options": [

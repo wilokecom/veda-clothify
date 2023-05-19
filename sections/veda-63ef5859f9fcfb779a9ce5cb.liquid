@@ -132,7 +132,15 @@
       >
         {% if section.settings.button___icon_enable and 'right' == 'left' %}
           <span
-            class="mr:10px"
+            {% if section.settings.button___text != '' %}
+              {% if '' %}
+                class="mr:10px {{ '' }}"
+              {% else %}
+                class="mr:10px"
+              {% endif %}
+            {% elsif '' %}
+              class="{{ '' }}"
+            {% endif %}
             data-css="{{ null }}"
           >
             {{ section.settings.button___choose_icon }}
@@ -143,10 +151,14 @@
         </span>
         {% if section.settings.button___icon_enable and 'right' == 'right' %}
           <span
-            {% if '' %}
-              class="ml:10px {{ '' }}"
-            {% else %}
-              class="ml:10px"
+            {% if section.settings.button___text != '' %}
+              {% if '' %}
+                class="ml:10px {{ '' }}"
+              {% else %}
+                class="ml:10px"
+              {% endif %}
+            {% elsif '' %}
+              class="{{ '' }}"
             {% endif %}
             data-css="{{ null }}"
           >
@@ -231,7 +243,15 @@
       >
         {% if section.settings.button___icon_enable and 'right' == 'left' %}
           <span
-            class="mr:10px"
+            {% if section.settings.button___text != '' %}
+              {% if '' %}
+                class="mr:10px {{ '' }}"
+              {% else %}
+                class="mr:10px"
+              {% endif %}
+            {% elsif '' %}
+              class="{{ '' }}"
+            {% endif %}
             data-css="{{ null }}"
           >
             {{ section.settings.button___choose_icon }}
@@ -242,10 +262,14 @@
         </span>
         {% if section.settings.button___icon_enable and 'right' == 'right' %}
           <span
-            {% if '' %}
-              class="ml:10px {{ '' }}"
-            {% else %}
-              class="ml:10px"
+            {% if section.settings.button___text != '' %}
+              {% if '' %}
+                class="ml:10px {{ '' }}"
+              {% else %}
+                class="ml:10px"
+              {% endif %}
+            {% elsif '' %}
+              class="{{ '' }}"
             {% endif %}
             data-css="{{ null }}"
           >
@@ -260,9 +284,7 @@
 {% schema %}
 {
   "name": "Announcement Bar 1",
-  "blocks": [
-
-  ],
+  "blocks": [],
   "settings": [
     {
       "label": "Button > Choose",
@@ -397,9 +419,7 @@
   "presets": [
     {
       "name": "Announcement Bar 1",
-      "blocks": [
-
-      ]
+      "blocks": []
     }
   ]
 }

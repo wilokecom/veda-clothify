@@ -1,42 +1,41 @@
 {% assign uniqueId = 'id_77c2808a-4c7f-4284-ab5d-9e70ce8c0f9a' %}
 {% assign builderMode = false %}
 {% assign envatoMode = true %}
-{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section]>{% endcomment %}
 {% liquid
-  if null
+  if section.settings.VEDA_switch_3
     assign backgroundFixed = 'fixed'
   else
     assign backgroundFixed = 'scroll'
   endif
 
-  if 'color' == 'color'
+  if section.settings.VEDA_select_3 == 'color'
     assign backgroundColor = 'background-color: ' | append: '#000000' | append: ';'
   else
     assign backgroundColor = ''
   endif
 
-  if 'color' == 'image' and section.settings.VEDA_image_1.src
+  if section.settings.VEDA_select_3 == 'image' and section.settings.VEDA_image_1.src
     assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
 
-    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
-  elsif 'color' == 'image' and section.settings.VEDA_image_1.src == blank
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_2 | append: ';'
+  elsif section.settings.VEDA_select_3 == 'image' and section.settings.VEDA_image_1.src == blank
     assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
 
-    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: 'cover' | append: ';'
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_2 | append: ';'
   else
     assign backgroundImage = ''
   endif
 
   assign sectionPadding = 'padding-top: ' | append: 50 | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: null | append: 'px;padding-left: ' | append: null | append: 'px;'
 
-  if section.settings.VEDA_select_2 == 'full_width'
+  if section.settings.VEDA_select_4 == 'full_width'
     assign containerType = 'container-fluid'
   else
     assign containerType = 'container'
   endif
 
-  if section.settings.VEDA_slider_4 >= 0
-    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_4 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_4 | append: 'px;'
+  if section.settings.VEDA_slider_5 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_5 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_5 | append: 'px;'
   else
     assign containerGap = ''
   endif
@@ -47,10 +46,10 @@
     assign containerWidth = ''
   endif
 
-  if section.settings.VEDA_slider_3 >= 0
-    assign settingGap = section.settings.VEDA_slider_3 | divided_by: 2.0
+  if section.settings.VEDA_slider_4 >= 0
+    assign settingGap = section.settings.VEDA_slider_4 | divided_by: 2.0
 
-    assign settingGapVertical = section.settings.VEDA_slider_3
+    assign settingGapVertical = section.settings.VEDA_slider_4
   else
     assign settingGap = ''
 
@@ -76,7 +75,6 @@
   if colGap and rowGap and builderMode and envatoMode
   endif
 %}
-{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 
 {% liquid
   assign _alt = false
@@ -85,7 +83,9 @@
 
   assign _placeholder = false
 
+  assign _placeholder_class = false
 
+  assign _component = false
 %}
 {% capture Subscribe %}
   <div
@@ -97,7 +97,7 @@
         class="pos:relative flxs:1 mr:30px@sm mb:20px@+sm"
         style="width: {{ section.settings["logo___width"] }}px"
       >
-        {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component]>{% endcomment %}
+        {% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component]>{% endcomment %}
         {% if section.settings.logo___image.src != blank %}
           <img
             class="veda-lazyload {{ _class }}"
@@ -264,7 +264,7 @@
       {% if item.content___enable %}
         <div
           class="col"
-          {% if section.settings.VEDA_slider_3 or section.settings.VEDA_slider_3 == 0 %}
+          {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
             style="{{ colGap }}"
           {% endif %}
         >
@@ -281,7 +281,7 @@
               {% when 'content_information' %}
                 {% if item.content___logo.src %}
                   <a href="/" class="d:block maw:200px">
-                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
+                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
                     {% if item.image.src != blank %}
                       <img
                         class="veda-lazyload {{ _class }}"
@@ -337,7 +337,7 @@
                 {% liquid
                   assign menuIndex = menuIndex | plus: 1
                 %}
-                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
+                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
                 {% if section.settings.menu.links[menuIndex].links != blank %}
                   <ul class="{{ 'p:0! m:0! w:fit-content ls:none' }}">
                     {% for link in section.settings.menu.links[menuIndex].links %}
@@ -393,7 +393,7 @@
       {% if item1.content___enable %}
         <div
           class="col"
-          {% if section.settings.VEDA_slider_3 or section.settings.VEDA_slider_3 == 0 %}
+          {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
             style="{{ colGap }}"
           {% endif %}
         >
@@ -410,7 +410,7 @@
               {% when 'content_information' %}
                 {% if item1.content___logo.src %}
                   <a href="/" class="d:block maw:200px">
-                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_5:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item1]>{% endcomment %}
+                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item1]>{% endcomment %}
                     {% if item1.image.src != blank %}
                       <img
                         class="veda-lazyload {{ _class }}"
@@ -507,8 +507,8 @@
   >
     <div
       class="{{ containerType }}"
-      {% if section.settings.VEDA_slider_4
-        or section.settings.VEDA_slider_4 == 0
+      {% if section.settings.VEDA_slider_5
+        or section.settings.VEDA_slider_5 == 0
         or section.settings.section_settings___width
         or section.settings.section_settings___width == 0
       %}
@@ -518,7 +518,7 @@
       {{ Subscribe }}
       <div
         class="row row-cols-lg-{{ 4 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
-        {% if section.settings.VEDA_slider_3 or section.settings.VEDA_slider_3 == 0 %}
+        {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
           style="{{ rowGap }}"
         {% endif %}
       >
@@ -526,13 +526,13 @@
       </div>
       {{ FooterBottom }}
     </div>
-    {% if 'color' == 'video' and null %}
-      <div data-veda-video="{{ null }}"></div>
+    {% if section.settings.VEDA_select_3 == 'video' and section.settings.VEDA_video_1 %}
+      <div data-veda-video="{{ section.settings["VEDA_video_1"] }}"></div>
     {% endif %}
-    {% if null %}
+    {% if section.settings.VEDA_switch_2 %}
       <div
         class="pos:absolute ins:0 z:-1"
-        style="background-color: {{ null }};backdrop-filter: blur({{ null }}px)"
+        style="background-color: {{ null }};backdrop-filter: blur({{ section.settings["VEDA_slider_3"] }}px)"
       ></div>
     {% endif %}
   </div>
@@ -702,18 +702,80 @@
       "default": false
     },
     {
+      "label": "Section Settings > Background Overlay Blur",
+      "id": "VEDA_slider_3",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Background Overlay",
+      "id": "VEDA_switch_2",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Size",
+      "id": "VEDA_select_2",
+      "type": "select",
+      "default": "cover",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "label": "Section Settings > Background Fixed",
+      "id": "VEDA_switch_3",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Video",
+      "id": "VEDA_video_1",
+      "type": "text"
+    },
+    {
       "type": "image_picker",
       "id": "VEDA_image_1",
       "label": "Background Image"
     },
     {
+      "label": "Section Settings > Background Type",
+      "id": "VEDA_select_3",
+      "type": "select",
+      "default": "none",
+      "options": [
+        {
+          "label": "Image",
+          "value": "image"
+        },
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Video",
+          "value": "video"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
       "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_3",
+      "id": "VEDA_slider_4",
       "type": "number"
     },
     {
       "label": "Section Settings > Container Gap",
-      "id": "VEDA_slider_4",
+      "id": "VEDA_slider_5",
       "type": "number"
     },
     {
@@ -723,7 +785,7 @@
     },
     {
       "label": "Section Settings > Container Width",
-      "id": "VEDA_select_2",
+      "id": "VEDA_select_4",
       "type": "select",
       "default": "boxed",
       "options": [

@@ -30,6 +30,18 @@ It is automatically generated from Veda.
     {{ content_for_header }}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+    {% comment %} Fera addon {% endcomment %}
+    {%- liquid
+        capture  fedaScript
+            render 'banana-stand-footer'
+        endcapture
+
+        unless  fedaScript contains 'Liquid error'
+            echo fedaScript
+        endunless
+    %}
+
     <!--VEDA_HEADER_SCRIPTS_POSITION-->
     {%- render 'veda-header-scripts' -%}
     {%- render 'veda-pv-header-scripts' -%}

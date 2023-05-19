@@ -32,28 +32,20 @@
     {% render 'meta-tags' %}
 
     {{ content_for_header }}
-
+    
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-
-
-<!--VEDA_NO_PLACEMENT_ADDON_POSITION-->
-
-<!--VEDA_HEADER_SCRIPTS_POSITION-->
-{%- render 'veda-header-scripts' -%}
+    {%- render 'veda-header-scripts' -%}
 <!--VEDA_NO_PLACEMENT_ADDON_POSITION-->
 {% render 'veda-no-placement-addons' %}
 </head>
 
   <body class="gradient">
 <!--VEDA_HEADER_THEME_POSITION-->
-{% sections 'veda-theme-header' %}
-
-
-
+{%sections 'veda-theme-header' %}
 
     <div id="veda-root">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -101,16 +93,10 @@
     </script>
   </div>
 
-
-
-
-{% render 'banana-stand-footer' %}
-
 <!--VEDA_FOOTER_THEME_POSITION-->
-{% sections 'veda-theme-footer' %}
+{%sections 'veda-theme-footer' %}
 <!--VEDA_FOOTER_SCRIPTS_POSITION-->
 {%- render 'veda-footer-scripts' -%}</body>
-
 
 
 </html>

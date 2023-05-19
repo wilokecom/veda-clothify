@@ -1,36 +1,7 @@
-function veda_fn_7e434f06822d44ef9d778e1a0559a51c () {
-        
-  if (window.veda_fn_7e434f06822d44ef9d778e1a0559a51cCleanup === undefined) {
-    window.veda_fn_7e434f06822d44ef9d778e1a0559a51cCleanup = {
-      listeners: [],
-      push(listener) {
-        this.listeners.push(listener);
-      },
-      cleanup() {
-        this.listeners.forEach(listener => listener());
-        this.listeners = [];
-      }
-    }
-  }
-  window.veda_fn_7e434f06822d44ef9d778e1a0559a51cCleanup.cleanup();
-
-        const uniqueIds = ["id_698bda23-62fc-490e-9ec2-b842b986b3fb","id_b3e4398a-9fbc-47a3-8931-2bf416c368cc","id_9484bc11-76c7-40bc-8a1f-12409dc245c2"];
-        uniqueIds.forEach(uniqueId => {
-          const containers = document.querySelectorAll(`[data-id="${uniqueId}"]`);
-          containers.forEach(container => {
-            if (!container) {
-              return;
-            }
-            veda.plugins.videoCover(container);
-            
-          });
-        });
-      }
-veda_fn_7e434f06822d44ef9d778e1a0559a51c();
-function veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7 () {
+function veda_fn_740362d1c83b4345ad82db822e10abb4 () {
       
-  if (window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup === undefined) {
-    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup = {
+  if (window.veda_fn_740362d1c83b4345ad82db822e10abb4Cleanup === undefined) {
+    window.veda_fn_740362d1c83b4345ad82db822e10abb4Cleanup = {
       listeners: [],
       push(listener) {
         this.listeners.push(listener);
@@ -41,7 +12,34 @@ function veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7 () {
       }
     }
   }
-  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.cleanup();
+  window.veda_fn_740362d1c83b4345ad82db822e10abb4Cleanup.cleanup();
+
+      const uniqueId = "id_698bda23-62fc-490e-9ec2-b842b986b3fb";
+      const containers = document.querySelectorAll(`[data-id="${uniqueId}"]`);
+      containers.forEach(container => {
+        if (!container) {
+          return;
+        }
+        veda.plugins.videoCover(container);
+        
+      });
+    }
+veda_fn_740362d1c83b4345ad82db822e10abb4();
+function veda_fn_0df57bd5794e40fb829069656d2904ac () {
+      
+  if (window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup === undefined) {
+    window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup = {
+      listeners: [],
+      push(listener) {
+        this.listeners.push(listener);
+      },
+      cleanup() {
+        this.listeners.forEach(listener => listener());
+        this.listeners = [];
+      }
+    }
+  }
+  window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.cleanup();
 
       const uniqueId = "id_141bc910-704e-46d3-a876-990c1bd1d6a7";
       const containers = document.querySelectorAll(`[data-id="${uniqueId}"]`);
@@ -88,7 +86,7 @@ function containerZIndex() {
   container.addEventListener("click", handleContainerClick);
   window.addEventListener("click", handleWindowClick);
 
-  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+  window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
     container.removeEventListener("click", handleContainerClick);
     window.removeEventListener("click", handleWindowClick);
   });
@@ -129,7 +127,7 @@ function navigation() {
   }
   checkResponsive();
   window.addEventListener("resize", checkResponsive);
-  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+  window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
     window.removeEventListener("resize", checkResponsive);
   });
 }
@@ -208,7 +206,7 @@ function compare() {
     const unsubscribe = productCompare.subscribe((state) => {
       setBadbe(compareBadgeEl, state.length);
     });
-    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+    window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
       unsubscribe();
       comparePopupEl.removeEventListener("click", handleClick);
     });
@@ -229,7 +227,7 @@ function wishList() {
       setBadbe(wishlistBadgeEl, count);
     });
 
-    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+    window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
       unsubscribe();
     });
   });
@@ -256,7 +254,7 @@ function search() {
         }
       };
       btnSearchEl.addEventListener("click", handleClick);
-      window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+      window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
         btnSearchEl.removeEventListener("click", handleClick);
       });
     });
@@ -280,7 +278,7 @@ function headerSticky() {
         }
       },
     });
-    window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+    window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
       destroy();
     });
   }
@@ -301,7 +299,7 @@ function handlePredictiveSearch() {
     };
   }
   const destroy = predictiveSearch(el, predictiveSearchOptions);
-  window.veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7Cleanup.push(() => {
+  window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
     destroy();
   });
 }
@@ -310,4 +308,4 @@ headerSticky();
 handlePredictiveSearch();
       });
     }
-veda_fn_ee24fa5e08a44fd0ad41d795c2edc9e7();
+veda_fn_0df57bd5794e40fb829069656d2904ac();
