@@ -3,7 +3,7 @@
 	"type": "header",
 	"sections": {
 		"veda-63ef5859f9fcfb779a9ce5cb": {
-			"type": "veda-63ef5859f9fcfb779a9ce5cb",
+			"type": "veda-announcement-bar-1",
 			"settings": {
 				"button___choose_icon": "<i class=\"far fa-angle-right\"><\/i>",
 				"button___icon_enable": false,
@@ -19,7 +19,7 @@
 			}
 		},
 		"veda-635b54e57542792ecaa24e62": {
-			"type": "veda-635b54e57542792ecaa24e62",
+			"type": "veda-header-1",
 			"blocks": {
 				"4cfe2388-f7e4-4d4e-8555-72b1d246db1e": {
 					"type": "right_actions_wishlist",
