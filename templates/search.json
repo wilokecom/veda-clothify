@@ -1,40 +1,40 @@
 {
-	"sections": {
-		"section_6418196c2967247e1b1eb4fa": {
-			"type": "veda-search-3",
-			"settings": {
-				"VEDA_select_1": "circle_border",
-				"VEDA_slider_1": 10,
-				"VEDA_switch_1": true,
-				"quick_view___enable": true,
-				"compare_action___enable": true,
-				"sold_out___enable": true,
-				"sale___enable": true,
-				"new___enable": true,
-				"VEDA_slider_3": 130,
-				"VEDA_switch_2": true,
-				"VEDA_switch_3": true,
-				"VEDA_switch_4": true,
-				"VEDA_switch_5": true,
-				"VEDA_switch_6": true,
-				"VEDA_switch_7": true,
-				"VEDA_select_2": "last",
-				"VEDA_slider_6": 4,
-				"veda_search___fields": "title",
-				"veda_search___type": "product",
-				"veda_search___icon": "<i class=\"far fa-search\"><\/i>",
-				"VEDA_text_1": "{{ \"veda.general.search.search\" | t }}",
-				"veda_search___title": "{{ \"veda.general.search.search\" | t }}",
-				"VEDA_switch_8": false,
-				"VEDA_switch_9": false,
-				"VEDA_select_3": "cover",
-				"VEDA_switch_10": false,
-				"VEDA_select_4": "none",
-				"VEDA_select_5": "boxed"
-			}
-		}
-	},
-	"order": [
-		"section_6418196c2967247e1b1eb4fa"
-	]
+    "sections": {
+        "section_6418196c2967247e1b1eb4fa": {
+            "type": "veda-search-3",
+            "settings": {
+                "VEDA_select_1": "circle_border",
+                "VEDA_slider_1": 10,
+                "VEDA_switch_1": true,
+                "quick_view___enable": true,
+                "compare_action___enable": true,
+                "sold_out___enable": true,
+                "sale___enable": true,
+                "new___enable": true,
+                "VEDA_slider_3": 130,
+                "VEDA_switch_2": true,
+                "VEDA_switch_3": true,
+                "VEDA_switch_4": true,
+                "VEDA_switch_5": true,
+                "VEDA_switch_6": true,
+                "VEDA_switch_7": true,
+                "VEDA_select_2": "last",
+                "VEDA_slider_6": 4,
+                "veda_search___fields": "title",
+                "veda_search___type": "product",
+                "veda_search___icon": "<i class=\"far fa-search\"><\/i>",
+                "VEDA_text_1": "{{ \"veda.general.search.search\" | t }}",
+                "veda_search___title": "{{ \"veda.general.search.search\" | t }}",
+                "VEDA_switch_8": false,
+                "VEDA_switch_9": false,
+                "VEDA_select_3": "cover",
+                "VEDA_switch_10": false,
+                "VEDA_select_4": "none",
+                "VEDA_select_5": "boxed"
+            }
+        }
+    },
+    "order": [
+        "section_6418196c2967247e1b1eb4fa"
+    ]
 }

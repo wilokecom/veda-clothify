@@ -1,312 +1,312 @@
 {
-	"sections": {
-		"section_641819582967247e1b1eb4cb": {
-			"type": "veda-breadcrumb-1",
-			"settings": {
-				"breadcrumb___separator": "<i class=\"far fa-chevron-right\"><\/i>",
-				"VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
-				"VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
-				"heading___divider": "none",
-				"heading___title": "Breadcrumb",
-				"heading___manual": true,
-				"heading___enable": false,
-				"VEDA_slider_1": 1,
-				"VEDA_switch_1": true,
-				"VEDA_switch_2": false,
-				"VEDA_select_1": "cover",
-				"VEDA_switch_3": false,
-				"VEDA_select_2": "none",
-				"VEDA_select_3": "boxed"
-			}
-		},
-		"section_641819582967247e1b1eb4cc": {
-			"type": "veda-product-information-3",
-			"blocks": {
-				"b4170ccc-705f-451c-9314-d4353849962a": {
-					"type": "content_badge",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"1f058951-80d5-4a1b-ac03-fdc583c6393b": {
-					"type": "content_title",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"c0ad51c0-8e3c-4f32-bf47-2897bd88112a": {
-					"type": "content_price",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"deef49c6-5e12-4e64-945c-2161345b147e": {
-					"type": "content_vendor",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"545dd67b-a62a-4719-981d-8432749f27b9": {
-					"type": "content_sku",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"4396d027-1d50-4c3f-9c96-ec4fa2af14e6": {
-					"type": "content_availability",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"c3b31759-9fda-4d7d-81bf-bd180fe3ec55": {
-					"type": "content_type",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"f4058e97-b509-47b3-90ba-d0a0a5800c80": {
-					"type": "content_options",
-					"settings": {
-						"content___color_height": 34,
-						"content___color_width": 34,
-						"content___border_radius": 20,
-						"content___enable": true
-					}
-				},
-				"774f1f74-7f05-41b3-b58d-a58ddb548dba": {
-					"type": "content_actions",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"b09ef4c3-98fd-4a0b-8a0a-db0f6d5b60ce": {
-					"type": "content_viewing",
-					"settings": {
-						"content___viewing_time": 3,
-						"content___max": 50,
-						"content___min": 28,
-						"content___enable": true
-					}
-				},
-				"a04cfa70-e96e-440b-b8cf-d1bb5720816d": {
-					"type": "content_pick_up",
-					"settings": {
-						"content___enable": true
-					}
-				},
-				"b5092959-02f3-4335-90a0-9990f9465da7": {
-					"type": "content_collapse",
-					"settings": {
-						"VEDA_icon_1": "<i class=\"fal fa-minus\"><\/i>",
-						"VEDA_icon_2": "<i class=\"fal fa-plus\"><\/i>",
-						"content___enable": true
-					}
-				},
-				"4a08c2f7-77e4-4df9-b546-961fec3ff691": {
-					"type": "content_payment",
-					"settings": {
-						"content___title": "Guarantee safe & secure checkout",
-						"content___enable": true
-					}
-				},
-				"6ddbc319-1502-4e8f-9fc8-10823e0e15ab": {
-					"type": "content_share",
-					"settings": {
-						"content___share_type": "facebook,twitter,pinterest,telegram,email,messenger",
-						"content___title": "Share",
-						"content___enable": true
-					}
-				},
-				"444e3f5d-ec20-481e-8927-4ad8d94522c6": {
-					"type": "collapse_rich_text",
-					"settings": {
-						"collapse___description": "<p>Return Policy: We will gladly accept returns for any reason within 30 days of receipt of delivery.<br>Availability: Ships anywhere in the United States<br>Processing Time: Allow 3-4 business days processing time for your order to ship.<\/p>",
-						"collapse___title": "Shipping Info",
-						"collapse___icon": "<i class=\"far fa-shipping-fast\"><\/i>",
-						"collapse___enable": true
-					}
-				},
-				"adb0d232-64ca-48ce-a6e7-c6ff9fbd40c2": {
-					"type": "collapse_rich_text",
-					"settings": {
-						"collapse___description": "<p>Order in the next 13 hours 30 minutes to get it between Tuesday, Jan 24 and Saturday, Jan 28<\/p>",
-						"collapse___title": "Order Info",
-						"collapse___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
-						"collapse___enable": true
-					}
-				},
-				"82015ff4-c7e1-4355-98dc-946d61bb40a1": {
-					"type": "collapse_ask_to_question",
-					"settings": {
-						"collapse___title": "Ask to question",
-						"collapse___icon": "<i class=\"far fa-question-circle\"><\/i>",
-						"collapse___enable": true
-					}
-				}
-			},
-			"block_order": [
-				"b4170ccc-705f-451c-9314-d4353849962a",
-				"1f058951-80d5-4a1b-ac03-fdc583c6393b",
-				"c0ad51c0-8e3c-4f32-bf47-2897bd88112a",
-				"deef49c6-5e12-4e64-945c-2161345b147e",
-				"545dd67b-a62a-4719-981d-8432749f27b9",
-				"4396d027-1d50-4c3f-9c96-ec4fa2af14e6",
-				"c3b31759-9fda-4d7d-81bf-bd180fe3ec55",
-				"f4058e97-b509-47b3-90ba-d0a0a5800c80",
-				"774f1f74-7f05-41b3-b58d-a58ddb548dba",
-				"b09ef4c3-98fd-4a0b-8a0a-db0f6d5b60ce",
-				"a04cfa70-e96e-440b-b8cf-d1bb5720816d",
-				"b5092959-02f3-4335-90a0-9990f9465da7",
-				"4a08c2f7-77e4-4df9-b546-961fec3ff691",
-				"6ddbc319-1502-4e8f-9fc8-10823e0e15ab",
-				"444e3f5d-ec20-481e-8927-4ad8d94522c6",
-				"adb0d232-64ca-48ce-a6e7-c6ff9fbd40c2",
-				"82015ff4-c7e1-4355-98dc-946d61bb40a1"
-			],
-			"settings": {
-				"buy_now___variant": "primary",
-				"compare_action___variant": "dark",
-				"compare_action___enable": true,
-				"VEDA_select_1": "dark",
-				"VEDA_switch_1": true,
-				"VEDA_select_2": "dark",
-				"VEDA_switch_2": false,
-				"VEDA_switch_3": false,
-				"VEDA_select_3": "cover",
-				"VEDA_switch_4": false,
-				"VEDA_select_4": "none",
-				"VEDA_select_5": "boxed"
-			}
-		},
-		"section_641819582967247e1b1eb4cd": {
-			"type": "veda-product-details-tabs-1",
-			"blocks": {
-				"bb15f4c4-b7a5-4e46-9300-214cad36d856": {
-					"type": "content_description",
-					"settings": {
-						"content___title": "Description"
-					}
-				},
-				"8baf523f-c0be-45e4-8589-4857f205b259": {
-					"type": "content_rich_text",
-					"settings": {
-						"content___text": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>",
-						"content___title": "Shipping & Return"
-					}
-				},
-				"29e06dd2-61df-46ed-a3bf-3e06c04797b6": {
-					"type": "content_rich_text",
-					"settings": {
-						"content___text": "<p>You can write your content here or click the icon in the editor to add \"metafields\"<\/p>",
-						"content___title": "Custom Tab"
-					}
-				},
-				"fc9a770f-0c01-4a76-af76-a3001cff5c37": {
-					"type": "content_review",
-					"settings": {
-						"content___title": "Review"
-					}
-				}
-			},
-			"block_order": [
-				"bb15f4c4-b7a5-4e46-9300-214cad36d856",
-				"8baf523f-c0be-45e4-8589-4857f205b259",
-				"29e06dd2-61df-46ed-a3bf-3e06c04797b6",
-				"fc9a770f-0c01-4a76-af76-a3001cff5c37"
-			],
-			"settings": {
-				"VEDA_switch_1": false,
-				"VEDA_switch_2": false,
-				"VEDA_select_1": "cover",
-				"VEDA_switch_3": false,
-				"VEDA_select_2": "none",
-				"VEDA_select_3": "boxed"
-			}
-		},
-		"section_641819582967247e1b1eb4ce": {
-			"type": "veda-recommendations-3",
-			"blocks": {
-				"c9fa50ce-3078-4761-a745-107272e6c003": {
-					"type": "heading_title",
-					"settings": {
-						"heading___title_tag_name": "h4",
-						"heading___title": "Related Products",
-						"heading___enable": true
-					}
-				},
-				"e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
-					"type": "heading_space",
-					"settings": {
-						"heading___space": 10,
-						"heading___enable": true
-					}
-				}
-			},
-			"block_order": [
-				"c9fa50ce-3078-4761-a745-107272e6c003",
-				"e2f49099-eb9a-4696-ac4c-c95c64e32c18"
-			],
-			"settings": {
-				"VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",
-				"VEDA_icon_2": "<i class=\"fal fa-angle-left\"><\/i>",
-				"VEDA_select_1": "circle_shadow",
-				"VEDA_select_2": "middle",
-				"VEDA_switch_1": true,
-				"VEDA_switch_2": true,
-				"slider_settings___loop": false,
-				"slider_settings___delay": 4000,
-				"VEDA_switch_3": false,
-				"compare_action___enable": true,
-				"VEDA_switch_4": true,
-				"quick_view___enable": true,
-				"VEDA_icon_3": "<i class=\"far fa-long-arrow-right\"><\/i>",
-				"VEDA_switch_5": true,
-				"VEDA_select_3": "top",
-				"VEDA_select_4": "link",
-				"VEDA_switch_6": false,
-				"button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
-				"button_view_all___enable": true,
-				"sold_out___enable": true,
-				"new___enable": true,
-				"sale___enable": true,
-				"VEDA_slider_2": 130,
-				"VEDA_switch_7": true,
-				"VEDA_switch_8": true,
-				"product_settings___limit": 8,
-				"VEDA_switch_9": false,
-				"VEDA_switch_10": false,
-				"VEDA_select_5": "cover",
-				"VEDA_switch_11": false,
-				"VEDA_select_6": "none",
-				"VEDA_select_7": "boxed"
-			}
-		},
-		"section_641819582967247e1b1eb4cf": {
-			"type": "veda-image-with-text-9",
-			"settings": {
-				"content___choose_icon": "<i class=\"far fa-arrow-circle-right\"><\/i>",
-				"content___icon_enable": true,
-				"content___button_variant": "link",
-				"content___new_tab": false,
-				"content___button_text": "Shop now",
-				"content___text": "<p>Nulla diam est, luctus vel erat et, tincidunt consectetur justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus libero mauris, rutrum eu diam condimentum, porttitor pharetra massa.<\/p>",
-				"content___title": "The living room's <br>furniture",
-				"VEDA_switch_1": false,
-				"VEDA_switch_2": false,
-				"VEDA_select_1": "cover",
-				"VEDA_switch_3": false,
-				"VEDA_select_2": "none",
-				"VEDA_select_3": "boxed",
-				"image_width": 50,
-				"enable_image": true
-			}
-		}
-	},
-	"order": [
-		"section_641819582967247e1b1eb4cb",
-		"section_641819582967247e1b1eb4cc",
-		"section_641819582967247e1b1eb4cd",
-		"section_641819582967247e1b1eb4ce",
-		"section_641819582967247e1b1eb4cf"
-	]
+    "sections": {
+        "section_641819582967247e1b1eb4cb": {
+            "type": "veda-breadcrumb-1",
+            "settings": {
+                "breadcrumb___separator": "<i class=\"far fa-chevron-right\"><\/i>",
+                "VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
+                "VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
+                "heading___divider": "none",
+                "heading___title": "Breadcrumb",
+                "heading___manual": true,
+                "heading___enable": false,
+                "VEDA_slider_1": 1,
+                "VEDA_switch_1": true,
+                "VEDA_switch_2": false,
+                "VEDA_select_1": "cover",
+                "VEDA_switch_3": false,
+                "VEDA_select_2": "none",
+                "VEDA_select_3": "boxed"
+            }
+        },
+        "section_641819582967247e1b1eb4cc": {
+            "type": "veda-product-information-3",
+            "blocks": {
+                "b4170ccc-705f-451c-9314-d4353849962a": {
+                    "type": "content_badge",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "1f058951-80d5-4a1b-ac03-fdc583c6393b": {
+                    "type": "content_title",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "c0ad51c0-8e3c-4f32-bf47-2897bd88112a": {
+                    "type": "content_price",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "deef49c6-5e12-4e64-945c-2161345b147e": {
+                    "type": "content_vendor",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "545dd67b-a62a-4719-981d-8432749f27b9": {
+                    "type": "content_sku",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "4396d027-1d50-4c3f-9c96-ec4fa2af14e6": {
+                    "type": "content_availability",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "c3b31759-9fda-4d7d-81bf-bd180fe3ec55": {
+                    "type": "content_type",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "f4058e97-b509-47b3-90ba-d0a0a5800c80": {
+                    "type": "content_options",
+                    "settings": {
+                        "content___color_height": 34,
+                        "content___color_width": 34,
+                        "content___border_radius": 20,
+                        "content___enable": true
+                    }
+                },
+                "774f1f74-7f05-41b3-b58d-a58ddb548dba": {
+                    "type": "content_actions",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "b09ef4c3-98fd-4a0b-8a0a-db0f6d5b60ce": {
+                    "type": "content_viewing",
+                    "settings": {
+                        "content___viewing_time": 3,
+                        "content___max": 50,
+                        "content___min": 28,
+                        "content___enable": true
+                    }
+                },
+                "a04cfa70-e96e-440b-b8cf-d1bb5720816d": {
+                    "type": "content_pick_up",
+                    "settings": {
+                        "content___enable": true
+                    }
+                },
+                "b5092959-02f3-4335-90a0-9990f9465da7": {
+                    "type": "content_collapse",
+                    "settings": {
+                        "VEDA_icon_1": "<i class=\"fal fa-minus\"><\/i>",
+                        "VEDA_icon_2": "<i class=\"fal fa-plus\"><\/i>",
+                        "content___enable": true
+                    }
+                },
+                "4a08c2f7-77e4-4df9-b546-961fec3ff691": {
+                    "type": "content_payment",
+                    "settings": {
+                        "content___title": "Guarantee safe & secure checkout",
+                        "content___enable": true
+                    }
+                },
+                "6ddbc319-1502-4e8f-9fc8-10823e0e15ab": {
+                    "type": "content_share",
+                    "settings": {
+                        "content___share_type": "facebook,twitter,pinterest,telegram,email,messenger",
+                        "content___title": "Share",
+                        "content___enable": true
+                    }
+                },
+                "444e3f5d-ec20-481e-8927-4ad8d94522c6": {
+                    "type": "collapse_rich_text",
+                    "settings": {
+                        "collapse___description": "<p>Return Policy: We will gladly accept returns for any reason within 30 days of receipt of delivery.<br>Availability: Ships anywhere in the United States<br>Processing Time: Allow 3-4 business days processing time for your order to ship.<\/p>",
+                        "collapse___title": "Shipping Info",
+                        "collapse___icon": "<i class=\"far fa-shipping-fast\"><\/i>",
+                        "collapse___enable": true
+                    }
+                },
+                "adb0d232-64ca-48ce-a6e7-c6ff9fbd40c2": {
+                    "type": "collapse_rich_text",
+                    "settings": {
+                        "collapse___description": "<p>Order in the next 13 hours 30 minutes to get it between Tuesday, Jan 24 and Saturday, Jan 28<\/p>",
+                        "collapse___title": "Order Info",
+                        "collapse___icon": "<i class=\"far fa-shopping-cart\"><\/i>",
+                        "collapse___enable": true
+                    }
+                },
+                "82015ff4-c7e1-4355-98dc-946d61bb40a1": {
+                    "type": "collapse_ask_to_question",
+                    "settings": {
+                        "collapse___title": "Ask to question",
+                        "collapse___icon": "<i class=\"far fa-question-circle\"><\/i>",
+                        "collapse___enable": true
+                    }
+                }
+            },
+            "block_order": [
+                "b4170ccc-705f-451c-9314-d4353849962a",
+                "1f058951-80d5-4a1b-ac03-fdc583c6393b",
+                "c0ad51c0-8e3c-4f32-bf47-2897bd88112a",
+                "deef49c6-5e12-4e64-945c-2161345b147e",
+                "545dd67b-a62a-4719-981d-8432749f27b9",
+                "4396d027-1d50-4c3f-9c96-ec4fa2af14e6",
+                "c3b31759-9fda-4d7d-81bf-bd180fe3ec55",
+                "f4058e97-b509-47b3-90ba-d0a0a5800c80",
+                "774f1f74-7f05-41b3-b58d-a58ddb548dba",
+                "b09ef4c3-98fd-4a0b-8a0a-db0f6d5b60ce",
+                "a04cfa70-e96e-440b-b8cf-d1bb5720816d",
+                "b5092959-02f3-4335-90a0-9990f9465da7",
+                "4a08c2f7-77e4-4df9-b546-961fec3ff691",
+                "6ddbc319-1502-4e8f-9fc8-10823e0e15ab",
+                "444e3f5d-ec20-481e-8927-4ad8d94522c6",
+                "adb0d232-64ca-48ce-a6e7-c6ff9fbd40c2",
+                "82015ff4-c7e1-4355-98dc-946d61bb40a1"
+            ],
+            "settings": {
+                "buy_now___variant": "primary",
+                "compare_action___variant": "dark",
+                "compare_action___enable": true,
+                "VEDA_select_1": "dark",
+                "VEDA_switch_1": true,
+                "VEDA_select_2": "dark",
+                "VEDA_switch_2": false,
+                "VEDA_switch_3": false,
+                "VEDA_select_3": "cover",
+                "VEDA_switch_4": false,
+                "VEDA_select_4": "none",
+                "VEDA_select_5": "boxed"
+            }
+        },
+        "section_641819582967247e1b1eb4cd": {
+            "type": "veda-product-details-tabs-1",
+            "blocks": {
+                "bb15f4c4-b7a5-4e46-9300-214cad36d856": {
+                    "type": "content_description",
+                    "settings": {
+                        "content___title": "Description"
+                    }
+                },
+                "8baf523f-c0be-45e4-8589-4857f205b259": {
+                    "type": "content_rich_text",
+                    "settings": {
+                        "content___text": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>",
+                        "content___title": "Shipping & Return"
+                    }
+                },
+                "29e06dd2-61df-46ed-a3bf-3e06c04797b6": {
+                    "type": "content_rich_text",
+                    "settings": {
+                        "content___text": "<p>You can write your content here or click the icon in the editor to add \"metafields\"<\/p>",
+                        "content___title": "Custom Tab"
+                    }
+                },
+                "fc9a770f-0c01-4a76-af76-a3001cff5c37": {
+                    "type": "content_review",
+                    "settings": {
+                        "content___title": "Review"
+                    }
+                }
+            },
+            "block_order": [
+                "bb15f4c4-b7a5-4e46-9300-214cad36d856",
+                "8baf523f-c0be-45e4-8589-4857f205b259",
+                "29e06dd2-61df-46ed-a3bf-3e06c04797b6",
+                "fc9a770f-0c01-4a76-af76-a3001cff5c37"
+            ],
+            "settings": {
+                "VEDA_switch_1": false,
+                "VEDA_switch_2": false,
+                "VEDA_select_1": "cover",
+                "VEDA_switch_3": false,
+                "VEDA_select_2": "none",
+                "VEDA_select_3": "boxed"
+            }
+        },
+        "section_641819582967247e1b1eb4ce": {
+            "type": "veda-recommendations-3",
+            "blocks": {
+                "c9fa50ce-3078-4761-a745-107272e6c003": {
+                    "type": "heading_title",
+                    "settings": {
+                        "heading___title_tag_name": "h4",
+                        "heading___title": "Related Products",
+                        "heading___enable": true
+                    }
+                },
+                "e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
+                    "type": "heading_space",
+                    "settings": {
+                        "heading___space": 10,
+                        "heading___enable": true
+                    }
+                }
+            },
+            "block_order": [
+                "c9fa50ce-3078-4761-a745-107272e6c003",
+                "e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+            ],
+            "settings": {
+                "VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",
+                "VEDA_icon_2": "<i class=\"fal fa-angle-left\"><\/i>",
+                "VEDA_select_1": "circle_shadow",
+                "VEDA_select_2": "middle",
+                "VEDA_switch_1": true,
+                "VEDA_switch_2": true,
+                "slider_settings___loop": false,
+                "slider_settings___delay": 4000,
+                "VEDA_switch_3": false,
+                "compare_action___enable": true,
+                "VEDA_switch_4": true,
+                "quick_view___enable": true,
+                "VEDA_icon_3": "<i class=\"far fa-long-arrow-right\"><\/i>",
+                "VEDA_switch_5": true,
+                "VEDA_select_3": "top",
+                "VEDA_select_4": "link",
+                "VEDA_switch_6": false,
+                "button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
+                "button_view_all___enable": true,
+                "sold_out___enable": true,
+                "new___enable": true,
+                "sale___enable": true,
+                "VEDA_slider_2": 130,
+                "VEDA_switch_7": true,
+                "VEDA_switch_8": true,
+                "product_settings___limit": 8,
+                "VEDA_switch_9": false,
+                "VEDA_switch_10": false,
+                "VEDA_select_5": "cover",
+                "VEDA_switch_11": false,
+                "VEDA_select_6": "none",
+                "VEDA_select_7": "boxed"
+            }
+        },
+        "section_641819582967247e1b1eb4cf": {
+            "type": "veda-image-with-text-9",
+            "settings": {
+                "content___choose_icon": "<i class=\"far fa-arrow-circle-right\"><\/i>",
+                "content___icon_enable": true,
+                "content___button_variant": "link",
+                "content___new_tab": false,
+                "content___button_text": "Shop now",
+                "content___text": "<p>Nulla diam est, luctus vel erat et, tincidunt consectetur justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus libero mauris, rutrum eu diam condimentum, porttitor pharetra massa.<\/p>",
+                "content___title": "The living room's <br>furniture",
+                "VEDA_switch_1": false,
+                "VEDA_switch_2": false,
+                "VEDA_select_1": "cover",
+                "VEDA_switch_3": false,
+                "VEDA_select_2": "none",
+                "VEDA_select_3": "boxed",
+                "image_width": 50,
+                "enable_image": true
+            }
+        }
+    },
+    "order": [
+        "section_641819582967247e1b1eb4cb",
+        "section_641819582967247e1b1eb4cc",
+        "section_641819582967247e1b1eb4cd",
+        "section_641819582967247e1b1eb4ce",
+        "section_641819582967247e1b1eb4cf"
+    ]
 }
