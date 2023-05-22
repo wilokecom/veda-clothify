@@ -187,17 +187,12 @@
 				"VEDA_select_6": "none",
 				"VEDA_select_7": "boxed"
 			}
-		},
-		"veda-6418195c2967247e1b1eb4d9-scripts": {
-			"type": "veda-6418195c2967247e1b1eb4d9-scripts",
-			"settings": []
 		}
 	},
 	"order": [
 		"section_6418195c2967247e1b1eb4da",
 		"section_6418195c2967247e1b1eb4db",
 		"section_6418195c2967247e1b1eb4dc",
-		"section_6418195c2967247e1b1eb4dd",
-		"veda-6418195c2967247e1b1eb4d9-scripts"
+		"section_6418195c2967247e1b1eb4dd"
 	]
 }

@@ -209,16 +209,11 @@
 				"VEDA_select_6": "none",
 				"VEDA_select_7": "boxed"
 			}
-		},
-		"veda-6418195b2967247e1b1eb4d5-scripts": {
-			"type": "veda-6418195b2967247e1b1eb4d5-scripts",
-			"settings": []
 		}
 	},
 	"order": [
 		"section_6418195b2967247e1b1eb4d6",
 		"section_6418195b2967247e1b1eb4d7",
-		"section_6418195b2967247e1b1eb4d8",
-		"veda-6418195b2967247e1b1eb4d5-scripts"
+		"section_6418195b2967247e1b1eb4d8"
 	]
 }

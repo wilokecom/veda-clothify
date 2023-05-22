@@ -300,10 +300,6 @@
 				"image_width": 50,
 				"enable_image": true
 			}
-		},
-		"veda-641819562967247e1b1eb4ca-scripts": {
-			"type": "veda-641819562967247e1b1eb4ca-scripts",
-			"settings": []
 		}
 	},
 	"order": [
@@ -311,7 +307,6 @@
 		"section_641819582967247e1b1eb4cc",
 		"section_641819582967247e1b1eb4cd",
 		"section_641819582967247e1b1eb4ce",
-		"section_641819582967247e1b1eb4cf",
-		"veda-641819562967247e1b1eb4ca-scripts"
+		"section_641819582967247e1b1eb4cf"
 	]
 }
