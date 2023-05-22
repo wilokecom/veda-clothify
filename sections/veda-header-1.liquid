@@ -443,8 +443,6 @@
 
     {% for block in section.blocks %}
       {% assign action = block.settings %}
-
-      {% if action.right_actions___enable %}
         {% if block.type == 'right_actions_wishlist' %}
           <a
             href="{{ action.right_actions___link }}"
@@ -508,7 +506,6 @@
             {% endif %}
           </div>
         {% endif %}
-      {% endif %}
     {% endfor %}
   </div>
 {% endcapture %}
@@ -771,7 +768,7 @@
             data-css="{{ null }}"
             class="input-search-js rs w:100% bd:0! bxsh:none! o:none! bgc:transparent ff:font-secondary fz:pfs(26px,34px) c:color-gray8 c:color-gray5||ph trs:0.3s"
             type="text"
-            placeholder="{{ section.settings["VEDA_text_1"] }}"
+            placeholder="{{ "veda.general.search.search" | t }}"
             name="q"
             value="{{ search.terms | escape }}"
             autocorrect="off"
@@ -813,7 +810,7 @@
           type="submit"
           aria-label="Search"
         >
-          {{ section.settings.veda_search___icon }}
+          <i class="far fa-search"></i>
         </button>
       </form>
     </div>
@@ -1007,12 +1004,6 @@
           "id": "right_actions___icon",
           "type": "html",
           "default": "<i class=\"far fa-heart\"></i>"
-        },
-        {
-          "label": "Right Actions > Enable",
-          "id": "right_actions___enable",
-          "type": "checkbox",
-          "default": true
         }
       ]
     },
@@ -1032,12 +1023,6 @@
           "id": "right_actions___icon",
           "type": "html",
           "default": "<i class=\"far fa-heart\"></i>"
-        },
-        {
-          "label": "Right Actions > Enable",
-          "id": "right_actions___enable",
-          "type": "checkbox",
-          "default": true
         }
       ]
     },
@@ -1051,12 +1036,6 @@
           "id": "right_actions___icon",
           "type": "html",
           "default": "<i class=\"far fa-heart\"></i>"
-        },
-        {
-          "label": "Right Actions > Enable",
-          "id": "right_actions___enable",
-          "type": "checkbox",
-          "default": true
         }
       ]
     },
@@ -1081,12 +1060,6 @@
           "id": "right_actions___icon",
           "type": "html",
           "default": "<i class=\"far fa-heart\"></i>"
-        },
-        {
-          "label": "Right Actions > Enable",
-          "id": "right_actions___enable",
-          "type": "checkbox",
-          "default": true
         }
       ]
     },
@@ -1128,12 +1101,6 @@
           "id": "right_actions___icon",
           "type": "html",
           "default": "<i class=\"far fa-heart\"></i>"
-        },
-        {
-          "label": "Right Actions > Enable",
-          "id": "right_actions___enable",
-          "type": "checkbox",
-          "default": true
         }
       ]
     }
@@ -1190,38 +1157,11 @@
       "default": "product"
     },
     {
-      "label": "Search > Icon",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "veda_search___icon",
-      "type": "html",
-      "default": "<i class=\"far fa-search\"></i>"
-    },
-    {
-      "label": "Search > Placeholder",
-      "id": "VEDA_text_1",
-      "type": "liquid",
-      "default": "{veda.general.search.search}"
-    },
-    {
       "label": "Announcement Bar > Text",
       "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
       "id": "announcement_bar___text",
       "type": "liquid",
       "default": "<p>Open Doors To A World Of Fashion | <a href=\"#\">Discover More</a></p>"
-    },
-    {
-      "label": "Navigation > Sub-menu Arrow",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "VEDA_icon_3",
-      "type": "html",
-      "default": "<i class=\"fal fa-angle-right\"></i>"
-    },
-    {
-      "label": "Navigation > Arrow",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "navigation___arrow",
-      "type": "html",
-      "default": "<i class=\"fal fa-angle-down\"></i>"
     },
     {
       "label": "Navigation > Sticky",
