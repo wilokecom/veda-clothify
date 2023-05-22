@@ -1,0 +1,1076 @@
+{% assign uniqueId = 'id_74349b3c-a97c-48a9-831a-d5cf30c2e733' %}
+{% assign builderMode = false %}
+{% assign envatoMode = true %}
+{% liquid
+  if section.settings.VEDA_switch_5
+    assign backgroundFixed = 'fixed'
+  else
+    assign backgroundFixed = 'scroll'
+  endif
+
+  if section.settings.VEDA_select_2 == 'color'
+    assign backgroundColor = 'background-color: ' | append: null | append: ';'
+  else
+    assign backgroundColor = ''
+  endif
+
+  if section.settings.VEDA_select_2 == 'image' and section.settings.VEDA_image_1.src
+    assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_1 | append: ';'
+  elsif section.settings.VEDA_select_2 == 'image' and section.settings.VEDA_image_1.src == blank
+    assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
+
+    assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_1 | append: ';'
+  else
+    assign backgroundImage = ''
+  endif
+
+  assign sectionPadding = 'padding-top: ' | append: null | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: null | append: 'px;padding-left: ' | append: null | append: 'px;'
+
+  if section.settings.VEDA_select_3 == 'full_width'
+    assign containerType = 'container-fluid'
+  else
+    assign containerType = 'container'
+  endif
+
+  if section.settings.VEDA_slider_8 >= 0
+    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_8 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_8 | append: 'px;'
+  else
+    assign containerGap = ''
+  endif
+
+  if section.settings.section_settings___width >= 0
+    assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
+  else
+    assign containerWidth = ''
+  endif
+
+  if section.settings.VEDA_slider_7 >= 0
+    assign settingGap = section.settings.VEDA_slider_7 | divided_by: 2.0
+
+    assign settingGapVertical = section.settings.VEDA_slider_7
+  else
+    assign settingGap = ''
+
+    assign settingGapVertical = ''
+  endif
+
+  assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
+
+  assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
+
+  assign sectionSeparator = ''
+
+  if section.settings.VEDA_switch_3
+    if section.settings.VEDA_slider_5
+      assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_5 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+
+    if section.settings.VEDA_slider_4
+      assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_4 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
+    endif
+  endif
+
+  if colGap and rowGap and builderMode and envatoMode
+  endif
+%}
+
+{% liquid
+  assign _data_confirm_message = false
+
+  assign _data_target = false
+
+  assign _aria_label = false
+
+  assign _data_index = false
+
+  assign _data_form_active = false
+
+  assign _form = false
+
+  assign _name = false
+
+  assign _id = false
+
+  assign _tooltip_position = false
+
+  assign _tooltip_text = false
+
+  assign _data_button_video_id = false
+
+  assign _alt = false
+
+  assign _placeholder = false
+
+  assign _placeholder_class = false
+
+  assign _icon_class = false
+%}
+
+{% capture FormActive %}
+  {% form 'activate_customer_password' %}
+    {% if builderMode and section.settings.form_error___test %}
+      <div
+        class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
+        data-css="{{ null }}"
+        {% if 'form_error' %}
+          component="{{ 'form_error' }}"
+        {% else %}
+
+        {% endif %}
+      >
+        <span><i class="far fa-exclamation-circle mr:10px"></i></span>
+        <div class="errors">Form error placeholder</div>
+      </div>
+    {% elsif form.errors %}
+      <div
+        class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
+        data-css="{{ null }}"
+      >
+        <span><i class="far fa-exclamation-circle mr:10px"></i></span>
+        {{ form.errors | default_errors }}
+      </div>
+    {% endif %}
+
+    <div>
+      <label class="d:block mb:15px">
+        <span class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px" data-css="{{ null }}">
+          {{ section.settings.VEDA_text_2 }}
+        </span>
+        <input
+          class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
+          data-css="{{ null }}"
+          type="password"
+          name="customer[password]"
+        >
+      </label>
+      <label class="d:block mb:15px">
+        <span class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px" data-css="{{ null }}">
+          {{ section.settings.VEDA_text_1 }}
+        </span>
+        <input
+          class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
+          data-css="{{ null }}"
+          type="password"
+          name="customer[password_confirmation]"
+        >
+      </label>
+      <div class="d:flex fxw:wrap mt:20px">
+        <div class="w:50% pr:5px">
+          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_data_confirm_message,_data_target,_aria_label,_data_index,_data_form_active,_form,_name,_id,_tooltip_position,_tooltip_text,_data_button_video_id,_alt,_placeholder,_placeholder_class,_icon_class]>{% endcomment %}
+          {% liquid
+            if section.settings.active_button___variant == 'link'
+              assign default_class = 'rs lh:1.5 fz:15px ff:font-primary fw:500 bd:0 bxsh:none p:0 bg:none cur:pointer trs:0.3s '
+            else
+              assign default_class = 'rs lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer '
+            endif
+
+            assign default_for_bottom_class = ''
+
+            case section.settings.active_button___variant
+              when 'primary'
+                assign variant_class = ' bgc:color-primary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
+              when 'secondary'
+                assign variant_class = ' bgc:color-secondary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
+              when 'dark'
+                assign variant_class = ' bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h'
+              when 'gray'
+                assign variant_class = ' bgc:color-gray2 c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
+              when 'light'
+                assign variant_class = ' bgc:color-light c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
+              else
+                assign variant_class = ' c:color-gray9 c:color-primary|h'
+            endcase
+          %}
+
+          <button
+            type="{{ 'submit' }}"
+            component="{{ 'active_button' }}"
+            {% if 'w:100%' %}
+              class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }} {{ 'w:100%' }}"
+            {% else %}
+              class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }}"
+            {% endif %}
+            {% if _data_confirm_message %}
+              data-confirm-message="{{ _data_confirm_message }}"
+            {% endif %}
+            {% if _data_target %}
+              data-target="{{ _data_target }}"
+            {% endif %}
+            {% if _aria_label %}
+              aria-label="{{ _aria_label }}"
+            {% endif %}
+            {% if _data_index %}
+              data-index="{{ _data_index }}"
+            {% endif %}
+            {% if _data_form_active %}
+              data-form-active="{{ _data_form_active }}"
+            {% endif %}
+            {% if _form %}
+              form="{{ _form }}"
+            {% endif %}
+            {% if _name %}
+              name="{{ _name }}"
+            {% endif %}
+            {% if _id %}
+              id="{{ _id }}"
+            {% endif %}
+            {% if _tooltip_position %}
+              data-tooltip-position="{{ _tooltip_position }}"
+            {% endif %}
+            {% if _tooltip_text %}
+              data-tooltip-text="{{ _tooltip_text }}"
+            {% endif %}
+            {% if _data_button_video_id %}
+              data-button-video-id="{{ _data_button_video_id }}"
+            {% endif %}
+            data-css="{{ null }}"
+          >
+            {% if section.settings.VEDA_switch_2 and 'left' == 'left' %}
+              <span
+                {% if section.settings.active_button___text != '' %}
+                  {% if _icon_class %}
+                    class="mr:10px {{ _icon_class }}"
+                  {% else %}
+                    class="mr:10px"
+                  {% endif %}
+                {% elsif _icon_class %}
+                  class="{{ _icon_class }}"
+                {% endif %}
+                data-css="{{ null }}"
+              >
+                {{ section.settings.VEDA_icon_2 }}
+              </span>
+            {% endif %}
+            <span>
+              {{ section.settings.active_button___text }}
+            </span>
+            {% if section.settings.VEDA_switch_2 and 'left' == 'right' %}
+              <span
+                {% if section.settings.active_button___text != '' %}
+                  {% if _icon_class %}
+                    class="ml:10px {{ _icon_class }}"
+                  {% else %}
+                    class="ml:10px"
+                  {% endif %}
+                {% elsif _icon_class %}
+                  class="{{ _icon_class }}"
+                {% endif %}
+                data-css="{{ null }}"
+              >
+                {{ section.settings.VEDA_icon_2 }}
+              </span>
+            {% endif %}
+          </button>
+          {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+        </div>
+        <div class="w:50% pl:5px">
+          {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_data_confirm_message,_data_target,_aria_label,_data_index,_data_form_active,_form,_name,_id,_tooltip_position,_tooltip_text,_data_button_video_id,_alt,_placeholder,_placeholder_class,_icon_class,default_class,default_for_bottom_class,variant_class]>{% endcomment %}
+          {% liquid
+            if section.settings.decline_button___variant == 'link'
+              assign default_class = 'rs lh:1.5 fz:15px ff:font-primary fw:500 bd:0 bxsh:none p:0 bg:none cur:pointer trs:0.3s '
+            else
+              assign default_class = 'rs lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer '
+            endif
+
+            assign default_for_bottom_class = ''
+
+            case section.settings.decline_button___variant
+              when 'primary'
+                assign variant_class = ' bgc:color-primary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
+              when 'secondary'
+                assign variant_class = ' bgc:color-secondary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
+              when 'dark'
+                assign variant_class = ' bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h'
+              when 'gray'
+                assign variant_class = ' bgc:color-gray2 c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
+              when 'light'
+                assign variant_class = ' bgc:color-light c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
+              else
+                assign variant_class = ' c:color-gray9 c:color-primary|h'
+            endcase
+          %}
+
+          <button
+            type="{{ 'submit' }}"
+            component="{{ 'decline_button' }}"
+            {% if 'w:100%' %}
+              class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }} {{ 'w:100%' }}"
+            {% else %}
+              class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }}"
+            {% endif %}
+            {% if _data_confirm_message %}
+              data-confirm-message="{{ _data_confirm_message }}"
+            {% endif %}
+            {% if _data_target %}
+              data-target="{{ _data_target }}"
+            {% endif %}
+            {% if _aria_label %}
+              aria-label="{{ _aria_label }}"
+            {% endif %}
+            {% if _data_index %}
+              data-index="{{ _data_index }}"
+            {% endif %}
+            {% if _data_form_active %}
+              data-form-active="{{ _data_form_active }}"
+            {% endif %}
+            {% if _form %}
+              form="{{ _form }}"
+            {% endif %}
+            {% if 'decline' %}
+              name="{{ 'decline' }}"
+            {% endif %}
+            {% if _id %}
+              id="{{ _id }}"
+            {% endif %}
+            {% if _tooltip_position %}
+              data-tooltip-position="{{ _tooltip_position }}"
+            {% endif %}
+            {% if _tooltip_text %}
+              data-tooltip-text="{{ _tooltip_text }}"
+            {% endif %}
+            {% if _data_button_video_id %}
+              data-button-video-id="{{ _data_button_video_id }}"
+            {% endif %}
+            data-css="{{ null }}"
+          >
+            {% if section.settings.VEDA_switch_1 and 'left' == 'left' %}
+              <span
+                {% if section.settings.decline_button___text != '' %}
+                  {% if _icon_class %}
+                    class="mr:10px {{ _icon_class }}"
+                  {% else %}
+                    class="mr:10px"
+                  {% endif %}
+                {% elsif _icon_class %}
+                  class="{{ _icon_class }}"
+                {% endif %}
+                data-css="{{ null }}"
+              >
+                {{ section.settings.VEDA_icon_1 }}
+              </span>
+            {% endif %}
+            <span>
+              {{ section.settings.decline_button___text }}
+            </span>
+            {% if section.settings.VEDA_switch_1 and 'left' == 'right' %}
+              <span
+                {% if section.settings.decline_button___text != '' %}
+                  {% if _icon_class %}
+                    class="ml:10px {{ _icon_class }}"
+                  {% else %}
+                    class="ml:10px"
+                  {% endif %}
+                {% elsif _icon_class %}
+                  class="{{ _icon_class }}"
+                {% endif %}
+                data-css="{{ null }}"
+              >
+                {{ section.settings.VEDA_icon_1 }}
+              </span>
+            {% endif %}
+          </button>
+          {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+        </div>
+      </div>
+    </div>
+  {% endform %}
+{% endcapture %}
+
+{% capture FormWrapper %}
+  {% assign formPadding = 'padding-top: '
+    | append: null
+    | append: 'px;padding-right: '
+    | append: null
+    | append: 'px;padding-bottom: '
+    | append: null
+    | append: 'px;padding-left: '
+    | append: null
+    | append: 'px;'
+  %}
+  <div
+    {% if 'center' == 'right' %}
+      class="w:100%@+md! p:20px mih:100% d:flex fld:column jc:center ai:flex-end"
+    {% elsif 'center' == 'center' %}
+      class="w:100%@+md! p:20px mih:100% d:flex fld:column jc:center ai:center"
+    {% else %}
+      class="w:100%@+md! p:20px mih:100% d:flex fld:column jc:center"
+    {% endif %}
+    {% if 'left' == 'right' %}
+      style="width: {{ 100 | minus: section.settings["VEDA_slider_1"] }}%; {{ formPadding }}"
+    {% else %}
+      style="width: {{ 100 | minus: section.settings["VEDA_slider_1"] }}%; order: 1; {{ formPadding }}"
+    {% endif %}
+  >
+    <div class="maw:400px w:100%">
+      {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_data_confirm_message,_data_target,_aria_label,_data_index,_data_form_active,_form,_name,_id,_tooltip_position,_tooltip_text,_data_button_video_id,_alt,_placeholder,_placeholder_class,_icon_class,default_class,default_for_bottom_class,variant_class,formPadding]>{% endcomment %}
+      <div class="d:flex fld:column w:100%">
+        {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
+
+        {% for block in section.blocks %}
+          {% assign heading_item = block.settings %}
+
+          {% if heading_item.heading___enable %}
+            {% liquid
+              assign align = 'left'
+
+              if 'left' == 'left'
+                assign align = 'start'
+              elsif 'left' == 'right'
+                assign align = 'end'
+              endif
+            %}
+            {% capture attr %}
+              data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+            {% endcapture %}
+            {% case block.type %}
+              {% when 'heading_title' %}
+                {% if heading_item.heading___title_tag_name == 'h2' %}
+                  <h2 {{ attr }}>{{ heading_item.heading___title }}</h2>
+                {% elsif heading_item.heading___title_tag_name == 'h3' %}
+                  <h3 {{ attr }}>{{ heading_item.heading___title }}</h3>
+                {% elsif heading_item.heading___title_tag_name == 'h4' %}
+                  <h4 {{ attr }}>{{ heading_item.heading___title }}</h4>
+                {% elsif heading_item.heading___title_tag_name == 'h5' %}
+                  <h5 {{ attr }}>{{ heading_item.heading___title }}</h5>
+                {% elsif heading_item.heading___title_tag_name == 'h6' %}
+                  <h6 {{ attr }}>{{ heading_item.heading___title }}</h6>
+                {% endif %}
+              {% when 'heading_text' %}
+                <div
+                  data-css="{{ null }}"
+                  style="text-align: {{ align }}"
+                  class="fz:16px"
+                >
+                  {{ heading_item.heading___text }}
+                </div>
+              {% when 'heading_icon' %}
+                <div
+                  data-css="{{ null }}"
+                  {% if 'left' == 'left' %}
+                    style="text-align: start"
+                  {% elsif 'left' == 'center' %}
+                    style="text-align: {{ "left" }}; margin-left: auto; margin-right: auto"
+                  {% elsif 'left' == 'right' %}
+                    style="text-align: end; margin-left: auto; margin-right: 0"
+                  {% endif %}
+                  class="fz:34px"
+                >
+                  {{ heading_item.heading___icon }}
+                </div>
+              {% when 'heading_space' %}
+                <div style="height: {{ heading_item.heading___space }}px"></div>
+              {% when 'link' %}
+                <a
+                  href="{{ heading_item.link }}"
+                  class="ff:font-secondary fz:16px fw:500 c:color-gray9 c:color-gray9|h! td:underline"
+                  data-css="{{ heading_item.link_design.id }}"
+                  style="text-align: {{ align }}"
+                >
+                  {{ heading_item.text_link }}
+                </a>
+              {% when 'heading_divider' %}
+                {% assign headingDividerPadding = 'padding-top: '
+                  | append: null
+                  | append: 'px;padding-right: '
+                  | append: null
+                  | append: 'px;padding-bottom: '
+                  | append: null
+                  | append: 'px;padding-left: '
+                  | append: null
+                  | append: 'px;'
+                %}
+                <div
+                  class="pt:20px fz:0"
+                  style="text-align: {{ align }};{{ headingDividerPadding }}"
+                >
+                  {% if heading_item.heading___divider == 'wave' %}
+                    <div class="d:inline-block">
+                      <svg
+                        width="56px"
+                        height="7px"
+                        viewBox="0 0 56 7"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        fill="none"
+                      >
+                        <g transform="translate(-288.000000, -4390.000000)" class="stk:color-gray3" style="stroke: {{ null }}">
+                            <g transform="translate(135.000000, 4033.000000)">
+                                <g transform="translate(0.000000, 48.000000)">
+                                    <g transform="translate(153.000000, 310.000000)">
+                                        <path d="M0,0 C4.64733427,0 4.65894638,2 9.33333333,2 C14.0077203,2 13.9400367,0 18.6666667,0 C23.3932966,0 23.3301172,2 28,2 C32.6698828,2 32.6447946,0 37.3333333,0 C42.0218721,0 41.9540981,2 46.6666667,2 C51.3792353,2 51.3554302,0 56,0"></path>
+                                        <path d="M0,3 C4.64733427,3 4.65894638,5 9.33333333,5 C14.0077203,5 13.9400367,3 18.6666667,3 C23.3932966,3 23.3301172,5 28,5 C32.6698828,5 32.6447946,3 37.3333333,3 C42.0218721,3 41.9540981,5 46.6666667,5 C51.3792353,5 51.3554302,3 56,3"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                      </svg>
+                    </div>
+                  {% elsif heading_item.heading___divider == 'mountain' %}
+                    <div class="d:inline-block">
+                      <svg
+                        width="60px"
+                        height="9px"
+                        viewBox="0 0 60 9"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-3.000000, -47.000000)" stroke-width="2" class="stk:color-gray3" style="stroke: {{ null }}">
+                                <g transform="translate(0.000000, 45.000000)">
+                                    <polyline points="4 9 9.8 4 15.6 9 21.4 4 27.2 9 33 4 38.8 9 44.6 4 50.4 9 56.2 4 62 9"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                      </svg>
+                    </div>
+                  {% else %}
+                    <div
+                      class="d:inline-block! w:50px h:2px bgc:color-gray3"
+                      style="background-color: {{ null }}"
+                    ></div>
+                  {% endif %}
+                </div>
+              {% else %}
+
+            {% endcase %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+      {{ FormActive }}
+    </div>
+  </div>
+{% endcapture %}
+
+{% capture ImageSection %}
+  {% liquid
+    assign aspectRatio = 70
+
+    assign imageRadius = 0
+
+    if section.settings.VEDA_slider_3
+      assign aspectRatio = section.settings.VEDA_slider_3
+    endif
+
+    if section.settings.VEDA_slider_2
+      assign imageRadius = section.settings.VEDA_slider_2
+    endif
+  %}
+  {% if section.settings.image_section___enable %}
+    <div
+      class="veda-image-cover pos:relative w:100%@+md! mih:100%"
+      style="--aspect-ratio:{{ aspectRatio }}; width: {{ section.settings["VEDA_slider_1"] }}%"
+    >
+      {% liquid
+        assign imageStyle = 'border-radius:' | append: imageRadius | append: 'px'
+      %}
+      {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_data_confirm_message,_data_target,_aria_label,_data_index,_data_form_active,_form,_name,_id,_tooltip_position,_tooltip_text,_data_button_video_id,_alt,_placeholder,_placeholder_class,_icon_class,default_class,default_for_bottom_class,variant_class,formPadding,align,headingDividerPadding,aspectRatio,imageRadius,imageStyle]>{% endcomment %}
+      {% if section.settings.image_section___image.src != blank %}
+        <img
+          class="veda-lazyload {{ 'pos:absolute t:0 l:0 w:100% h:100% obf:cover' }}"
+          src="{{ section.settings["image_section___image"].src | image_url: width: 10 }}"
+          draggable="false"
+          {% if _alt %}
+            alt="{{ _alt }}"
+          {% else %}
+            alt="image"
+          {% endif %}
+          {% if section.settings.image_section___image.width %}
+            data-intrinsic-width="{{ section.settings["image_section___image"].width }}"
+            width="{{ section.settings["image_section___image"].width }}"
+          {% endif %}
+          {% if section.settings.image_section___image.height %}
+            height="{{ section.settings["image_section___image"].height }}"
+            data-intrinsic-height="{{ section.settings["image_section___image"].height }}"
+          {% endif %}
+          {% if imageStyle %}
+            style="{{ imageStyle }}"
+          {% endif %}
+          loading="lazy"
+        >
+      {% else %}
+        {% liquid
+          assign pl = 'lifestyle-1'
+
+          if _placeholder
+            assign pl = _placeholder
+          endif
+
+          assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'pos:absolute t:0 l:0 w:100% h:100% obf:cover'
+
+          if _placeholder_class
+            assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
+          endif
+        %}
+        {{ pl | placeholder_svg_tag: placeholder_class }}
+      {% endif %}
+      {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+    </div>
+  {% endif %}
+{% endcapture %}
+
+<section
+  data-id="{{ uniqueId }}"
+  class="veda-lazyload pos:relative z:1 bgz:cover bgp:center"
+  style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}{{ sectionSeparator }}"
+>
+  <div
+    class="{{ containerType }}"
+    {% if section.settings.VEDA_slider_8
+      or section.settings.VEDA_slider_8 == 0
+      or section.settings.section_settings___width
+      or section.settings.section_settings___width == 0
+    %}
+      style="{{ containerGap }}{{ containerWidth }}"
+    {% endif %}
+  >
+    <div class="d:flex@md">
+      {{ FormWrapper }}
+      {{ ImageSection }}
+    </div>
+  </div>
+  {% if section.settings.VEDA_select_2 == 'video' and section.settings.VEDA_video_1 %}
+    <div data-veda-video="{{ section.settings["VEDA_video_1"] }}"></div>
+  {% endif %}
+  {% if section.settings.VEDA_switch_4 %}
+    <div
+      class="pos:absolute ins:0 z:-1"
+      style="background-color: {{ null }};backdrop-filter: blur({{ section.settings["VEDA_slider_6"] }}px)"
+    ></div>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "Activate Account 1",
+  "blocks": [
+    {
+      "type": "heading_title",
+      "name": "Heading > Title",
+      "settings": [
+        {
+          "label": "Heading > Tag Name",
+          "id": "heading___title_tag_name",
+          "type": "select",
+          "default": "h2",
+          "options": [
+            {
+              "label": "H2",
+              "value": "h2"
+            },
+            {
+              "label": "H3",
+              "value": "h3"
+            },
+            {
+              "label": "H4",
+              "value": "h4"
+            },
+            {
+              "label": "H5",
+              "value": "h5"
+            },
+            {
+              "label": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "label": "Heading > Title",
+          "id": "heading___title",
+          "type": "liquid",
+          "default": "This is a title"
+        },
+        {
+          "label": "Heading > Enable",
+          "id": "heading___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "heading_text",
+      "name": "Heading > Text",
+      "settings": [
+        {
+          "label": "Heading > Text",
+          "id": "heading___text",
+          "type": "liquid",
+          "default": "<p>This is a text</p>"
+        },
+        {
+          "label": "Heading > Enable",
+          "id": "heading___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "heading_divider",
+      "name": "Heading > Divider",
+      "settings": [
+        {
+          "label": "Heading > Divider",
+          "id": "heading___divider",
+          "type": "select",
+          "default": "line",
+          "options": [
+            {
+              "label": "Line",
+              "value": "line"
+            },
+            {
+              "label": "Wave",
+              "value": "wave"
+            },
+            {
+              "label": "Mountain",
+              "value": "mountain"
+            }
+          ]
+        },
+        {
+          "label": "Heading > Enable",
+          "id": "heading___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "heading_icon",
+      "name": "Heading > Icon",
+      "settings": [
+        {
+          "label": "Heading > Icon",
+          "info": "[Get icon](https://fontawesome.com/v5/search)",
+          "id": "heading___icon",
+          "type": "html",
+          "default": "<i class=\"far fa-atom\"></i>"
+        },
+        {
+          "label": "Heading > Enable",
+          "id": "heading___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "heading_space",
+      "name": "Heading > Space",
+      "settings": [
+        {
+          "label": "Heading > Space",
+          "id": "heading___space",
+          "type": "number",
+          "default": 20
+        },
+        {
+          "label": "Heading > Enable",
+          "id": "heading___enable",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "label": "Layout > Image Width (%)",
+      "id": "VEDA_slider_1",
+      "type": "number",
+      "default": 50
+    },
+    {
+      "label": "Decline Button > Choose",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "VEDA_icon_1",
+      "type": "html",
+      "default": "<i class=\"far fa-atom\"></i>"
+    },
+    {
+      "label": "Decline Button > Enable",
+      "id": "VEDA_switch_1",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Decline Button > Variant",
+      "id": "decline_button___variant",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        {
+          "label": "Primary",
+          "value": "primary"
+        },
+        {
+          "label": "Secondary",
+          "value": "secondary"
+        },
+        {
+          "label": "Dark",
+          "value": "dark"
+        },
+        {
+          "label": "Gray",
+          "value": "gray"
+        },
+        {
+          "label": "Light",
+          "value": "light"
+        }
+      ]
+    },
+    {
+      "label": "Decline Button > Text",
+      "id": "decline_button___text",
+      "type": "liquid",
+      "default": "View All"
+    },
+    {
+      "label": "Decline Button > Enable",
+      "id": "decline_button___enable",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Active Button > Choose",
+      "info": "[Get icon](https://fontawesome.com/v5/search)",
+      "id": "VEDA_icon_2",
+      "type": "html",
+      "default": "<i class=\"far fa-atom\"></i>"
+    },
+    {
+      "label": "Active Button > Enable",
+      "id": "VEDA_switch_2",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Active Button > Variant",
+      "id": "active_button___variant",
+      "type": "select",
+      "default": "primary",
+      "options": [
+        {
+          "label": "Primary",
+          "value": "primary"
+        },
+        {
+          "label": "Secondary",
+          "value": "secondary"
+        },
+        {
+          "label": "Dark",
+          "value": "dark"
+        },
+        {
+          "label": "Gray",
+          "value": "gray"
+        },
+        {
+          "label": "Light",
+          "value": "light"
+        }
+      ]
+    },
+    {
+      "label": "Active Button > Text",
+      "id": "active_button___text",
+      "type": "liquid",
+      "default": "View All"
+    },
+    {
+      "label": "Active Button > Enable",
+      "id": "active_button___enable",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Image > Image Border Radius",
+      "id": "VEDA_slider_2",
+      "type": "number"
+    },
+    {
+      "label": "Image > Aspect Ratio",
+      "id": "VEDA_slider_3",
+      "type": "number"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_section___image",
+      "label": "Image"
+    },
+    {
+      "label": "Image > Enable",
+      "id": "image_section___enable",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "label": "Form Error > Test",
+      "id": "form_error___test",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Form > Confirm Password",
+      "id": "VEDA_text_1",
+      "type": "liquid",
+      "default": "Confirm Password"
+    },
+    {
+      "label": "Form > Password",
+      "id": "VEDA_text_2",
+      "type": "liquid",
+      "default": "Password"
+    },
+    {
+      "label": "Section Settings > Separator Bottom",
+      "id": "VEDA_slider_4",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Separator Top",
+      "id": "VEDA_slider_5",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Separator",
+      "id": "VEDA_switch_3",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Overlay Blur",
+      "id": "VEDA_slider_6",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Background Overlay",
+      "id": "VEDA_switch_4",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Size",
+      "id": "VEDA_select_1",
+      "type": "select",
+      "default": "cover",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "label": "Section Settings > Background Fixed",
+      "id": "VEDA_switch_5",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Video",
+      "id": "VEDA_video_1",
+      "type": "text"
+    },
+    {
+      "type": "image_picker",
+      "id": "VEDA_image_1",
+      "label": "Background Image"
+    },
+    {
+      "label": "Section Settings > Background Type",
+      "id": "VEDA_select_2",
+      "type": "select",
+      "default": "none",
+      "options": [
+        {
+          "label": "Image",
+          "value": "image"
+        },
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Video",
+          "value": "video"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "label": "Section Settings > Column Gap",
+      "id": "VEDA_slider_7",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Gap",
+      "id": "VEDA_slider_8",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Width",
+      "id": "section_settings___width",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Container Width",
+      "id": "VEDA_select_3",
+      "type": "select",
+      "default": "boxed",
+      "options": [
+        {
+          "label": "Boxed",
+          "value": "boxed"
+        },
+        {
+          "label": "Full Width",
+          "value": "full_width"
+        },
+        {
+          "label": "Manual",
+          "value": "manual"
+        }
+      ]
+    }
+  ],
+  "tag": "div",
+  "presets": [
+    {
+      "name": "Activate Account 1",
+      "blocks": [
+        {
+          "type": "heading_title"
+        },
+        {
+          "type": "heading_text"
+        },
+        {
+          "type": "heading_divider"
+        },
+        {
+          "type": "heading_space"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
