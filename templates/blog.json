@@ -21,7 +21,7 @@
             }
         },
         "section_6418196d2967247e1b1eb4fd": {
-            "type": "veda-breadcrumb-1",
+            "type": "veda-main-breadcrumb",
             "settings": {
                 "breadcrumb___separator": "<i class=\"far fa-chevron-right\"><\/i>",
                 "VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
