@@ -2,11 +2,7 @@
 {% assign builderMode = false %}
 {% assign envatoMode = true %}
 {% liquid
-	if section.settings.VEDA_switch_5
-		assign backgroundFixed = 'fixed'
-	else
-		assign backgroundFixed = 'scroll'
-	endif
+	assign backgroundFixed = 'scroll'
 	
 	if section.settings.VEDA_select_4 == 'color'
 		assign opacity = section.settings.background_opacity | times: 0.01
@@ -19,11 +15,11 @@
 	if section.settings.VEDA_select_4 == 'image' and section.settings.VEDA_image_1.src
 		assign bgImage = section.settings.VEDA_image_1.src | image_url: width: 2000
 		
-		assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_3 | append: ';'
+		assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: cover;'
 	elsif section.settings.VEDA_select_4 == 'image' and section.settings.VEDA_image_1.src == blank
 		assign bgImage = 'https://cdn.shopify.com/s/files/1/0552/5510/5616/files/udxhtnzxtq.png?v=1681903122&width=1000'
 		
-		assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: ' | append: section.settings.VEDA_select_3 | append: ';'
+		assign backgroundImage = 'background-image: url(' | append: bgImage | append: ');background-attachment: ' | append: backgroundFixed | append: ';background-size: cover;'
 	else
 		assign backgroundImage = ''
 	endif
@@ -35,38 +31,6 @@
 	else
 		assign containerType = 'container'
 	endif
-	
-	if section.settings.VEDA_slider_6 >= 0
-		assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_6 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_6 | append: 'px;'
-	else
-		assign containerGap = ''
-	endif
-	
-	if section.settings.section_settings___width >= 0
-		assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
-	else
-		assign containerWidth = ''
-	endif
-	
-	if section.settings.VEDA_slider_5 >= 0
-		assign settingGap = section.settings.VEDA_slider_5 | divided_by: 2.0
-		
-		assign settingGapVertical = section.settings.VEDA_slider_5
-	else
-		assign settingGap = ''
-		
-		assign settingGapVertical = ''
-	endif
-	
-	assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
-	
-	assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
-	
-	if colGap and rowGap and builderMode and envatoMode
-	endif
-%}
-
-{% liquid
 	assign _class = false
 	
 	assign _component = false
@@ -173,31 +137,10 @@
 	class="veda-lazyload pos:relative z:1 bgz:cover bgp:center"
 	style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}"
 >
-	<div
-		class="{{ containerType }}"
-		{% if section.settings.VEDA_slider_6
-		or section.settings.VEDA_slider_6 == 0
-		or section.settings.section_settings___width
-		or section.settings.section_settings___width == 0
-		%}
-			style="{{ containerGap }}{{ containerWidth }}"
-		{% endif %}
-	>
-		<div
-			{% if 'left' == 'left' %}
-				class="row mt:0!"
-			{% else %}
-				class="row mt:0! fld:row-reverse"
-			{% endif %}
-		>
+	<div class="{{ containerType }}">
+		<div class="row mt:0!">
 			<div class="col-xs-{{ 12 }} col-sm-{{ 12 }} col-md-{{ 12 }} col-lg-{{ 12 }} mt:0!">
-				<div
-					{% if 12 == 12 %}
-						class="pos:relative d:flex ai:center jc:space-between"
-					{% else %}
-						class="pos:relative"
-					{% endif %}
-				>
+				<div class="pos:relative d:flex ai:center jc:space-between">
 					{% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,_style,_placeholder,_placeholder_class,aspectRatio,imageRadius,pl,placeholder_class]>{% endcomment %}
 					<div class="d:flex fld:column w:100%">
 						{% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
@@ -205,7 +148,6 @@
 						{% for block in section.blocks %}
 							{% assign heading_item = block.settings %}
 							
-							{% if heading_item.heading___enable %}
 								{% liquid
 									assign align = 'left'
 									
@@ -331,7 +273,6 @@
 									{% else %}
 								
 								{% endcase %}
-							{% endif %}
 						{% endfor %}
 					</div>
 					{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
@@ -544,20 +485,11 @@
 			"name": "Content",
 			"settings": [
 				{
-					"label": "Content > Image Border Radius",
-					"id": "VEDA_slider_1",
-					"type": "number"
-				},
-				{
-					"label": "Content > Link",
-					"id": "content___link",
-					"type": "text"
-				},
-				{
-					"label": "Content > Open In New Tab",
-					"id": "content___new_tab",
-					"type": "checkbox",
-					"default": false
+					"label": "Content > Title",
+					"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
+					"id": "content___title",
+					"type": "liquid",
+					"default": "Category"
 				},
 				{
 					"type": "image_picker",
@@ -566,12 +498,21 @@
 					"label": "Image"
 				},
 				{
-					"label": "Content > Title",
-					"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-					"id": "content___title",
-					"type": "liquid",
-					"default": "Category"
-				}
+					"label": "Image Border Radius",
+					"id": "VEDA_slider_1",
+					"type": "number"
+				},
+				{
+					"label": "Link",
+					"id": "content___link",
+					"type": "url"
+				},
+				{
+					"label": "Open In New Tab",
+					"id": "content___new_tab",
+					"type": "checkbox",
+					"default": false
+				},
 			]
 		},
 		{
@@ -612,12 +553,6 @@
 					"id": "heading___title",
 					"type": "liquid",
 					"default": "This is a title"
-				},
-				{
-					"label": "Heading > Enable",
-					"id": "heading___enable",
-					"type": "checkbox",
-					"default": true
 				}
 			]
 		},
@@ -631,12 +566,6 @@
 					"id": "heading___text",
 					"type": "liquid",
 					"default": "<p>This is a text</p>"
-				},
-				{
-					"label": "Heading > Enable",
-					"id": "heading___enable",
-					"type": "checkbox",
-					"default": true
 				}
 			]
 		},
@@ -663,12 +592,6 @@
 							"value": "mountain"
 						}
 					]
-				},
-				{
-					"label": "Heading > Enable",
-					"id": "heading___enable",
-					"type": "checkbox",
-					"default": true
 				}
 			]
 		},
@@ -682,12 +605,6 @@
 					"id": "heading___icon",
 					"type": "html",
 					"default": "<i class=\"far fa-atom\"></i>"
-				},
-				{
-					"label": "Heading > Enable",
-					"id": "heading___enable",
-					"type": "checkbox",
-					"default": true
 				}
 			]
 		},
@@ -700,25 +617,19 @@
 					"id": "heading___space",
 					"type": "number",
 					"default": 20
-				},
-				{
-					"label": "Heading > Enable",
-					"id": "heading___enable",
-					"type": "checkbox",
-					"default": true
 				}
 			]
 		}
 	],
 	"settings": [
 		{
-			"label": "View All Button > Enable",
+			"label": "Enable View More button",
 			"id": "button_view_all___enable",
 			"type": "checkbox",
 			"default": true
 		},
 		{
-			"label": "View All Button > Position",
+			"label": "Button position",
 			"id": "VEDA_select_1",
 			"type": "select",
 			"default": "bottom",
@@ -734,7 +645,7 @@
 			]
 		},
 		{
-			"label": "View All Button > Variant",
+			"label": "Button Variant",
 			"id": "VEDA_select_2",
 			"type": "select",
 			"default": "primary",
@@ -766,20 +677,20 @@
 			]
 		},
 		{
-			"label": "View All Button > Link",
+			"label": "Button Link",
 			"id": "button_view_all___link",
-			"type": "text"
+			"type": "url"
 		},
 		{
-			"label": "View All Button > Open In New Tab",
+			"label": "Open In New Tab",
 			"id": "VEDA_switch_2",
 			"type": "checkbox",
 			"default": false
 		},
 		{
-			"label": "View All Button > Text",
+			"label": "Button Text",
 			"id": "button_view_all___text",
-			"type": "liquid",
+			"type": "text",
 			"default": "See All Collections"
 		},
 		{
@@ -812,37 +723,15 @@
 			"label": "Background Image"
 		},
 		{
-			"label": "Section Settings > Background Overlay Blur",
-			"id": "VEDA_slider_4",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Enable Background Overlay",
+			"label": "Enable Background Overlay",
 			"id": "VEDA_switch_4",
 			"type": "checkbox",
 			"default": false
 		},
 		{
-			"label": "Section Settings > Background Size",
-			"id": "VEDA_select_3",
-			"type": "select",
-			"default": "cover",
-			"options": [
-				{
-					"label": "Cover",
-					"value": "cover"
-				},
-				{
-					"label": "Contain",
-					"value": "contain"
-				}
-			]
-		},
-		{
-			"label": "Section Settings > Background Fixed",
-			"id": "VEDA_switch_5",
-			"type": "checkbox",
-			"default": false
+			"label": "Background Overlay",
+			"id": "VEDA_slider_4",
+			"type": "number"
 		},
 		{
 			"type": "color",
@@ -861,27 +750,12 @@
 			"default": 100
 		},
 		{
-			"label": "Section Settings > Background Video",
+			"label": "Background Video",
 			"id": "VEDA_video_1",
 			"type": "text"
 		},
 		{
-			"label": "Section Settings > Column Gap",
-			"id": "VEDA_slider_5",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Container Gap",
-			"id": "VEDA_slider_6",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Width",
-			"id": "section_settings___width",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Container Width",
+			"label": "Container Width",
 			"id": "VEDA_select_5",
 			"type": "select",
 			"default": "boxed",

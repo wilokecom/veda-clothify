@@ -30,16 +30,6 @@
 						"right_actions___enable": true
 					}
 				},
-				"213241f6-36c4-4e5a-80dd-0e489a33c8b5": {
-					"type": "right_actions_space",
-					"settings": {
-						"VEDA_slider_4": 20,
-						"VEDA_slider_5": 10,
-						"VEDA_select_3": "none",
-						"right_actions___icon": "<i class=\"far fa-heart\"><\/i>",
-						"right_actions___enable": true
-					}
-				},
 				"f43ac1a1-5104-4dc2-9b16-ec8237a5f615": {
 					"type": "right_actions_compare",
 					"settings": {
@@ -48,30 +38,10 @@
 						"right_actions___enable": true
 					}
 				},
-				"45efde74-fab0-41f1-823f-7f3b97b94dc7": {
-					"type": "right_actions_space",
-					"settings": {
-						"VEDA_slider_4": 20,
-						"VEDA_slider_5": 10,
-						"VEDA_select_3": "none",
-						"right_actions___icon": "<i class=\"far fa-heart\"><\/i>",
-						"right_actions___enable": true
-					}
-				},
 				"66f495c6-0b1b-4416-a076-44730507a8fd": {
 					"type": "right_actions_search",
 					"settings": {
 						"right_actions___icon": "<i class=\"far fa-search\"><\/i>",
-						"right_actions___enable": true
-					}
-				},
-				"064fb989-b5a8-4df9-bb9f-2949dc626112": {
-					"type": "right_actions_space",
-					"settings": {
-						"VEDA_slider_4": 20,
-						"VEDA_slider_5": 10,
-						"VEDA_select_3": "none",
-						"right_actions___icon": "<i class=\"far fa-heart\"><\/i>",
 						"right_actions___enable": true
 					}
 				},
