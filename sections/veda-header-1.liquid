@@ -27,9 +27,7 @@
   else
     assign backgroundImage = ''
   endif
-
-  assign sectionPadding = 'padding-top: ' | append: null | append: 'px;padding-right: ' | append: null | append: 'px;padding-bottom: ' | append: null | append: 'px;padding-left: ' | append: null | append: 'px;'
-
+  
   if section.settings.VEDA_select_6 == 'full_width'
     assign containerType = 'container-fluid'
   else
@@ -48,37 +46,6 @@
     assign containerWidth = ''
   endif
 
-  if section.settings.VEDA_slider_9 >= 0
-    assign settingGap = section.settings.VEDA_slider_9 | divided_by: 2.0
-
-    assign settingGapVertical = section.settings.VEDA_slider_9
-  else
-    assign settingGap = ''
-
-    assign settingGapVertical = ''
-  endif
-
-  assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
-
-  assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
-
-  assign sectionSeparator = ''
-
-  if section.settings.VEDA_switch_3
-    if section.settings.VEDA_slider_7
-      assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_7 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
-    endif
-
-    if section.settings.VEDA_slider_6
-      assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_6 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
-    endif
-  endif
-
-  if colGap and rowGap and builderMode and envatoMode
-  endif
-%}
-
-{% liquid
   assign _prefix = false
 
   assign _alt = false
@@ -744,7 +711,7 @@
 >
   <div
     class="veda-background veda-lazyload pos:absolute ins:0 z:-1 bgz:cover bgp:center bgc:color-light"
-    style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}{{ sectionSeparator }}"
+    style="{{ backgroundColor }}{{ backgroundImage }}"
   ></div>
   <div>
     {{ Topbar }}
@@ -1194,23 +1161,7 @@
       "default": true
     },
     {
-      "label": "Section Settings > Separator Bottom",
-      "id": "VEDA_slider_6",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Separator Top",
-      "id": "VEDA_slider_7",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Enable Separator",
-      "id": "VEDA_switch_3",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Section Settings > Background Type",
+      "label": "Background Type",
       "id": "VEDA_select_5",
       "type": "select",
       "default": "none",
@@ -1239,18 +1190,18 @@
       "label": "Background Image"
     },
     {
-      "label": "Section Settings > Background Overlay Blur",
+      "label": "Background Overlay Blur",
       "id": "VEDA_slider_8",
       "type": "number"
     },
     {
-      "label": "Section Settings > Enable Background Overlay",
+      "label": "Enable Background Overlay",
       "id": "VEDA_switch_4",
       "type": "checkbox",
       "default": false
     },
     {
-      "label": "Section Settings > Background Size",
+      "label": "Background Size",
       "id": "VEDA_select_4",
       "type": "select",
       "default": "cover",
@@ -1266,7 +1217,7 @@
       ]
     },
     {
-      "label": "Section Settings > Background Fixed",
+      "label": "Background Fixed",
       "id": "VEDA_switch_5",
       "type": "checkbox",
       "default": false
@@ -1288,27 +1239,12 @@
       "default": 100
     },
     {
-      "label": "Section Settings > Background Video",
-      "id": "VEDA_video_1",
-      "type": "text"
-    },
-    {
-      "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_9",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Container Gap",
-      "id": "VEDA_slider_10",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Width",
+      "label": "Section Width",
       "id": "section_settings___width",
       "type": "number"
     },
     {
-      "label": "Section Settings > Container Width",
+      "label": "Container Width",
       "id": "VEDA_select_6",
       "type": "select",
       "default": "boxed",

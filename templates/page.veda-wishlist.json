@@ -1,7 +1,7 @@
 {
     "sections": {
         "section_6418195c2967247e1b1eb4da": {
-            "type": "veda-breadcrumb-2",
+            "type": "veda-main-breadcrumb",
             "settings": {
                 "breadcrumb___separator": "<i class=\"far fa-arrow-right\"><\/i>",
                 "VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
