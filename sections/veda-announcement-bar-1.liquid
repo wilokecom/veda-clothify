@@ -3,7 +3,9 @@
 {% assign envatoMode = true %}
 {% liquid
   if section.settings.background_type == 'color'
-    assign backgroundColor = 'background-color: ' | append: 'rgba(100,196,162,1)' | append: ';'
+    assign opacity = section.settings.background_opacity | times: 0.01
+    assign modifyBackground = section.settings.background_color | color_modify: 'alpha', opacity
+    assign backgroundColor = 'background-color: ' | append: modifyBackground | append: ';'
   else
     assign backgroundColor = ''
   endif
@@ -283,144 +285,160 @@
 </a>
 {% schema %}
 {
-  "name": "Announcement Bar 1",
-  "blocks": [],
-  "settings": [
-    {
-      "label": "Button > Choose",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "button___choose_icon",
-      "type": "html",
-      "default": "<i class=\"far fa-atom\"></i>"
-    },
-    {
-      "label": "Button > Enable",
-      "id": "button___icon_enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Button > Variant",
-      "id": "button___variant",
-      "type": "select",
-      "default": "link",
-      "options": [
-        {
-          "label": "Link",
-          "value": "link"
-        },
-        {
-          "label": "Primary",
-          "value": "primary"
-        },
-        {
-          "label": "Secondary",
-          "value": "secondary"
-        },
-        {
-          "label": "Dark",
-          "value": "dark"
-        },
-        {
-          "label": "Gray",
-          "value": "gray"
-        },
-        {
-          "label": "Light",
-          "value": "light"
-        }
-      ]
-    },
-    {
-      "label": "Button > Text",
-      "id": "button___text",
-      "type": "liquid",
-      "default": "Buy Now!"
-    },
-    {
-      "label": "Button > Enable",
-      "id": "button___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Link",
-      "id": "link",
-      "type": "text"
-    },
-    {
-      "label": "Open In New Tab",
-      "id": "new_tab",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Message",
-      "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-      "id": "message",
-      "type": "liquid",
-      "default": "<p>Anniversary sales: up to $50 OFF</p>"
-    },
-    {
-      "label": "Background Animation",
-      "id": "background_animation",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Background Fixed",
-      "id": "background_fixed",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Background Size",
-      "id": "background_size",
-      "type": "select",
-      "default": "cover",
-      "options": [
-        {
-          "label": "Cover",
-          "value": "cover"
-        },
-        {
-          "label": "Contain",
-          "value": "contain"
-        }
-      ]
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
-    },
-    {
-      "label": "Background Type",
-      "id": "background_type",
-      "type": "select",
-      "default": "color",
-      "options": [
-        {
-          "label": "None",
-          "value": "none"
-        },
-        {
-          "label": "Color",
-          "value": "color"
-        },
-        {
-          "label": "Image",
-          "value": "image"
-        }
-      ]
-    }
-  ],
-  "tag": "div",
-  "presets": [
-    {
-      "name": "Announcement Bar 1",
-      "blocks": []
-    }
-  ]
+	"name": "Announcement Bar 1",
+	"blocks": [],
+	"settings": [
+		{
+			"label": "Button > Choose",
+			"info": "[Get icon](https://fontawesome.com/v5/search)",
+			"id": "button___choose_icon",
+			"type": "html",
+			"default": "<i class=\"far fa-atom\"></i>"
+		},
+		{
+			"label": "Button > Enable",
+			"id": "button___icon_enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Button > Variant",
+			"id": "button___variant",
+			"type": "select",
+			"default": "link",
+			"options": [
+				{
+					"label": "Link",
+					"value": "link"
+				},
+				{
+					"label": "Primary",
+					"value": "primary"
+				},
+				{
+					"label": "Secondary",
+					"value": "secondary"
+				},
+				{
+					"label": "Dark",
+					"value": "dark"
+				},
+				{
+					"label": "Gray",
+					"value": "gray"
+				},
+				{
+					"label": "Light",
+					"value": "light"
+				}
+			]
+		},
+		{
+			"label": "Button > Text",
+			"id": "button___text",
+			"type": "liquid",
+			"default": "Buy Now!"
+		},
+		{
+			"label": "Button > Enable",
+			"id": "button___enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Link",
+			"id": "link",
+			"type": "text"
+		},
+		{
+			"label": "Open In New Tab",
+			"id": "new_tab",
+			"type": "checkbox",
+			"default": false
+		},
+		{
+			"label": "Message",
+			"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
+			"id": "message",
+			"type": "liquid",
+			"default": "<p>Anniversary sales: up to $50 OFF</p>"
+		},
+		{
+			"label": "Background Type",
+			"id": "background_type",
+			"type": "select",
+			"default": "color",
+			"options": [
+				{
+					"label": "None",
+					"value": "none"
+				},
+				{
+					"label": "Color",
+					"value": "color"
+				},
+				{
+					"label": "Image",
+					"value": "image"
+				}
+			]
+		},
+		{
+			"label": "Background Animation",
+			"id": "background_animation",
+			"type": "checkbox",
+			"default": false
+		},
+		{
+			"label": "Background Fixed",
+			"id": "background_fixed",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Background Size",
+			"id": "background_size",
+			"type": "select",
+			"default": "cover",
+			"options": [
+				{
+					"label": "Cover",
+					"value": "cover"
+				},
+				{
+					"label": "Contain",
+					"value": "contain"
+				}
+			]
+		},
+		{
+			"type": "image_picker",
+			"id": "background_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "color",
+			"id": "background_color",
+			"label": "Background Color",
+			"default": "#fff"
+		},
+		{
+			"type": "range",
+			"id": "background_opacity",
+			"min": 0,
+			"unit": "%",
+			"max": 100,
+			"step": 1,
+			"label": "Opacity",
+			"default": 100
+		}
+	],
+	"tag": "div",
+	"presets": [
+		{
+			"name": "Announcement Bar 1",
+			"blocks": []
+		}
+	]
 }
 {% endschema %}

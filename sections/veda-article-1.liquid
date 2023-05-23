@@ -9,7 +9,9 @@
   endif
 
   if section.settings.VEDA_select_4 == 'color'
-    assign backgroundColor = 'background-color: ' | append: null | append: ';'
+    assign opacity = section.settings.background_opacity | times: 0.01
+    assign modifyBackground = section.settings.background_color | color_modify: 'alpha', opacity
+    assign backgroundColor = 'background-color: ' | append: modifyBackground | append: ';'
   else
     assign backgroundColor = ''
   endif
@@ -1525,6 +1527,35 @@
       "default": false
     },
     {
+      "label": "Section Settings > Background Type",
+      "id": "VEDA_select_4",
+      "type": "select",
+      "default": "none",
+      "options": [
+        {
+          "label": "Image",
+          "value": "image"
+        },
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Video",
+          "value": "video"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "VEDA_image_1",
+      "label": "Background Image"
+    },
+    {
       "label": "Section Settings > Background Overlay Blur",
       "id": "VEDA_slider_6",
       "type": "number"
@@ -1558,38 +1589,25 @@
       "default": false
     },
     {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "min": 0,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "label": "Opacity",
+      "default": 100
+    },
+    {
       "label": "Section Settings > Background Video",
       "id": "VEDA_video_1",
       "type": "text"
-    },
-    {
-      "type": "image_picker",
-      "id": "VEDA_image_1",
-      "label": "Background Image"
-    },
-    {
-      "label": "Section Settings > Background Type",
-      "id": "VEDA_select_4",
-      "type": "select",
-      "default": "none",
-      "options": [
-        {
-          "label": "Image",
-          "value": "image"
-        },
-        {
-          "label": "Color",
-          "value": "color"
-        },
-        {
-          "label": "Video",
-          "value": "video"
-        },
-        {
-          "label": "None",
-          "value": "none"
-        }
-      ]
     },
     {
       "label": "Section Settings > Column Gap",
