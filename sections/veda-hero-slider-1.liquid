@@ -294,88 +294,15 @@
 													data-css="{{ null }}"
 													href="{{ item.VEDA_linkPicker_2 }}"
 												>
-													{% if item.VEDA_switch_6 and 'right' == 'left' %}
-														<span
-															class="mr:10px"
-															data-css="{{ null }}"
-														>
-                              {{ item.VEDA_icon_4 }}
-                            </span>
-													{% endif %}
 													<span>
                             {{ item.VEDA_text_2 }}
                           </span>
-													{% if item.VEDA_switch_6 and 'right' == 'right' %}
+													{% if item.VEDA_switch_6 %}
 														<span
 															class="ml:10px"
 															data-css="{{ null }}"
 														>
                               {{ item.VEDA_icon_4 }}
-                            </span>
-													{% endif %}
-												</a>
-												{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
-											</div>
-										{% endif %}
-										
-										{% if item.VEDA_switch_5 %}
-											<div>
-												{% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_alt,_style,_placeholder,_placeholder_class,_component,generalClassName,delay,pl,placeholder_class,default_class,default_for_bottom_class,variant_class,item]>{% endcomment %}
-												{% liquid
-													if item.VEDA_select_1 == 'link'
-														assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s '
-													else
-														assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer '
-													endif
-													
-													assign default_for_bottom_class = ''
-													
-													case item.VEDA_select_1
-														when 'primary'
-															assign variant_class = ' bgc:color-primary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
-														when 'secondary'
-															assign variant_class = ' bgc:color-secondary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
-														when 'dark'
-															assign variant_class = ' bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h'
-														when 'gray'
-															assign variant_class = ' bgc:color-gray3 c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
-														when 'light'
-															assign variant_class = ' bgc:color-light c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
-														else
-															assign variant_class = ' c:color-gray9 c:color-primary|h'
-													endcase
-												%}
-												
-												<a
-													component="{{ _component }}"
-													{% if 'bdrs:6px mt:10px' %}
-														class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }} {{ 'bdrs:6px mt:10px' }}"
-													{% else %}
-														class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }}"
-													{% endif %}
-													{% if item.content___new_tab_right %}
-														target="_blank"
-													{% endif %}
-													data-css="{{ null }}"
-													href="{{ item.VEDA_linkPicker_1 }}"
-												>
-													{% if item.VEDA_switch_4 and 'right' == 'left' %}
-														<span
-															class="mr:10px"
-															data-css="{{ null }}"
-														>
-                              {{ item.VEDA_icon_3 }}
-                            </span>
-													{% endif %}
-													<span>
-                            {{ item.VEDA_text_1 }}
-                          </span>
-													{% if item.VEDA_switch_4 and 'right' == 'right' %}
-														<span
-															class="ml:10px"
-															data-css="{{ null }}"
-														>
-                              {{ item.VEDA_icon_3 }}
                             </span>
 													{% endif %}
 												</a>
@@ -415,105 +342,43 @@
 			"name": "Content",
 			"settings": [
 				{
-					"label": "Content > Icon",
-					"info": "[Get icon](https://fontawesome.com/v5/search)",
-					"id": "VEDA_icon_3",
-					"type": "html",
-					"default": "<i class=\"far fa-angle-right\"></i>"
-				},
-				{
-					"label": "Content > Icon Enable",
-					"id": "VEDA_switch_4",
+					"label": "Enable button",
+					"id": "VEDA_switch_7",
 					"type": "checkbox",
 					"default": true
 				},
 				{
-					"label": "Content > Link",
-					"id": "VEDA_linkPicker_1",
-					"type": "text"
-				},
-				{
-					"label": "Content > Open In New Tab",
-					"id": "content___new_tab_right",
-					"type": "checkbox",
-					"default": true
-				},
-				{
-					"label": "Content > Text",
-					"id": "VEDA_text_1",
-					"type": "liquid",
-					"default": "Button Right"
-				},
-				{
-					"label": "Content > Variant",
-					"id": "VEDA_select_1",
-					"type": "select",
-					"default": "dark",
-					"options": [
-						{
-							"label": "Link",
-							"value": "link"
-						},
-						{
-							"label": "Primary",
-							"value": "primary"
-						},
-						{
-							"label": "Secondary",
-							"value": "secondary"
-						},
-						{
-							"label": "Dark",
-							"value": "dark"
-						},
-						{
-							"label": "Gray",
-							"value": "gray"
-						},
-						{
-							"label": "Light",
-							"value": "light"
-						}
-					]
-				},
-				{
-					"label": "Content > Enable",
-					"id": "VEDA_switch_5",
-					"type": "checkbox",
-					"default": false
-				},
-				{
-					"label": "Content > Icon",
+					"label": "Button icon",
 					"info": "[Get icon](https://fontawesome.com/v5/search)",
 					"id": "VEDA_icon_4",
 					"type": "html",
 					"default": "<i class=\"far fa-angle-right\"></i>"
 				},
 				{
-					"label": "Content > Icon Enable",
+					"label": "Button icon",
 					"id": "VEDA_switch_6",
 					"type": "checkbox",
 					"default": true
 				},
 				{
-					"label": "Content > Link",
+					"label": "Button Link",
 					"id": "VEDA_linkPicker_2",
-					"type": "text"
+					"type": "url"
 				},
 				{
-					"label": "Content > Open In New Tab",
+					"label": "Open In New Tab",
 					"id": "content___new_tab_left",
 					"type": "checkbox",
 					"default": true
 				},
 				{
-					"label": "Content > Text",
+					"label": "Button Name",
 					"id": "VEDA_text_2",
 					"type": "liquid",
-					"default": "Button Left"
+					"default": "Shop Now"
 				},
 				{
-					"label": "Content > Variant",
+					"label": "Button Variant",
 					"id": "VEDA_select_2",
 					"type": "select",
 					"default": "primary",
@@ -545,35 +410,19 @@
 					]
 				},
 				{
-					"label": "Content > Enable",
-					"id": "VEDA_switch_7",
-					"type": "checkbox",
-					"default": true
-				},
-				{
-					"label": "Content > Description",
-					"id": "content___description",
-					"type": "liquid"
-				},
-				{
-					"label": "Content > Title",
-					"id": "content___title",
-					"type": "liquid"
-				},
-				{
-					"label": "Content > Sub Title",
+					"label": "Sub Heading",
 					"id": "content___sub_title",
 					"type": "liquid"
 				},
 				{
-					"label": "Content > Video",
-					"id": "content___video",
-					"type": "text"
+					"label": "Heading",
+					"id": "content___title",
+					"type": "liquid"
 				},
 				{
-					"type": "image_picker",
-					"id": "content___image",
-					"label": "Image"
+					"label": "Description",
+					"id": "content___description",
+					"type": "liquid"
 				},
 				{
 					"label": "Content > Media Type",
@@ -592,11 +441,14 @@
 					]
 				},
 				{
-					"label": "Content > Advanced Mode",
-					"info": "Use advanced mode to customize design and animate",
-					"id": "content___advanced_mode",
-					"type": "checkbox",
-					"default": false
+					"label": "Content > Video",
+					"id": "content___video",
+					"type": "text"
+				},
+				{
+					"type": "image_picker",
+					"id": "content___image",
+					"label": "Image"
 				}
 			]
 		}

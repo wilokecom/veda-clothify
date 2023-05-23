@@ -50,22 +50,18 @@
 
 <a
   data-id="{{ uniqueId }}"
-  href="{{ section.settings["link"] }}"
+  href="{{ section.settings.button_link }}"
   {% if section.settings.new_tab %}
     target="_blank"
   {% endif %}
-  {% if section.settings.background_animation %}
-    class="veda-lazyload bg-animation d:block pos:relative z:1 bgz:cover bgp:center"
-  {% else %}
-    class="veda-lazyload d:block pos:relative z:1 bgz:cover bgp:center"
-  {% endif %}
+  class="veda-lazyload d:block pos:relative z:1 bgz:cover bgp:center"
   style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}"
 >
   <div class="d:flex ai:center jc:center ta:center">
     <div class="pl:20px pr:20px fz:16px c:color-gray8" data-css="{{ "css_1789800329" }}">
       {{ section.settings.message }}
     </div>
-    {% if section.settings.button___enable and 'right' == 'right' %}
+    {% if section.settings.button___enable %}
       {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundColor,bgImage,backgroundImage,sectionPadding,_data_confirm_message,_data_target,_aria_label,_data_index,_data_form_active,_form,_name,_id,_tooltip_position,_tooltip_text,_data_button_video_id,default_class,default_for_bottom_class,variant_class]>{% endcomment %}
       {% liquid
         if section.settings.button___variant == 'link'
@@ -92,47 +88,10 @@
         endcase
       %}
 
-      <button
+      <span
         type="{{ 'button' }}"
         component="{{ 'button' }}"
-        {% if 'p:6px_15px! bdrs:3px' %}
-          class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }} {{ 'p:6px_15px! bdrs:3px' }}"
-        {% else %}
-          class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }}"
-        {% endif %}
-        {% if _data_confirm_message %}
-          data-confirm-message="{{ _data_confirm_message }}"
-        {% endif %}
-        {% if _data_target %}
-          data-target="{{ _data_target }}"
-        {% endif %}
-        {% if _aria_label %}
-          aria-label="{{ _aria_label }}"
-        {% endif %}
-        {% if _data_index %}
-          data-index="{{ _data_index }}"
-        {% endif %}
-        {% if _data_form_active %}
-          data-form-active="{{ _data_form_active }}"
-        {% endif %}
-        {% if _form %}
-          form="{{ _form }}"
-        {% endif %}
-        {% if _name %}
-          name="{{ _name }}"
-        {% endif %}
-        {% if _id %}
-          id="{{ _id }}"
-        {% endif %}
-        {% if _tooltip_position %}
-          data-tooltip-position="{{ _tooltip_position }}"
-        {% endif %}
-        {% if _tooltip_text %}
-          data-tooltip-text="{{ _tooltip_text }}"
-        {% endif %}
-        {% if _data_button_video_id %}
-          data-button-video-id="{{ _data_button_video_id }}"
-        {% endif %}
+        class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }} {{ 'p:6px_15px! bdrs:3px' }}"
         data-css="{{ "css_3422187993" }}"
       >
         <span>
@@ -154,7 +113,7 @@
             {{ section.settings.button___choose_icon }}
           </span>
         {% endif %}
-      </button>
+      </span>
       {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
     {% endif %}
   </div>
@@ -171,14 +130,14 @@
 			"default": true
 		},
 		{
-			"label": "Button > Choose",
+			"label": "Button Icon",
 			"info": "[Get icon](https://fontawesome.com/v5/search)",
 			"id": "button___choose_icon",
 			"type": "html",
 			"default": "<i class=\"far fa-atom\"></i>"
 		},
 		{
-			"label": "Button > Variant",
+			"label": "Button Variant",
 			"id": "button___variant",
 			"type": "select",
 			"default": "link",
@@ -210,15 +169,15 @@
 			]
 		},
 		{
-			"label": "Button > Text",
+			"label": "Button Text",
 			"id": "button___text",
-			"type": "liquid",
+			"type": "text",
 			"default": "Buy Now!"
 		},
 		{
 			"label": "Link",
-			"id": "link",
-			"type": "text"
+			"id": "button_link",
+			"type": "url"
 		},
 		{
 			"label": "Open In New Tab",
@@ -257,12 +216,6 @@
 			"type": "image_picker",
 			"id": "background_image",
 			"label": "Background Image"
-		},
-		{
-			"label": "Background Animation",
-			"id": "background_animation",
-			"type": "checkbox",
-			"default": false
 		},
 		{
 			"label": "Background Fixed",
