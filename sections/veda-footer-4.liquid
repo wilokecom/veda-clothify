@@ -194,41 +194,23 @@
             name="contact[email]"
             autocorrect="off"
             autocapitalize="off"
-            placeholder="{{ section.settings["VEDA_text_1"] }}"
-            data-css="{{ null }}"
+            placeholder="{{ 'veda.templates.contact.form.email' | t }}"
           >
           <button
             class="d:inline-flex ai:center h:100% ff:font-secondary fw:500 fz:18px trs:0.3s cur:pointer c:color-light-freeze trs:0.3s bgc:transparent bd:0 bxsh:none o:none"
             type="submit"
             aria-label="submit"
-            data-css="{{ null }}"
           >
-            {% if section.settings.VEDA_select_1 == 'left' %}
-              <span
-                {% if section.settings.subscribe___button_text %}
-                  class="mr:10px"
-                {% endif %}
-                data-css="{{ null }}"
-              >
-                {{ section.settings.subscribe___icon }}
-              </span>
-            {% endif %}
-            <span>{{ section.settings.subscribe___button_text }}</span>
-            {% if section.settings.VEDA_select_1 == 'right' %}
-              <span
-                {% if section.settings.subscribe___button_text %}
-                  class="mr:10px"
-                {% endif %}
-                data-css="{{ null }}"
-              >
-                {{ section.settings.subscribe___icon }}
-              </span>
-            {% endif %}
+            <span
+              class="mr:10px"
+            >
+              <i class="far fa-paper-plane"></i>
+            </span>
+            <span>{{ 'veda.templates.contact.form.send' | t }}</span>
           </button>
         </div>
       {% endform %}
     </div>
-    {{ Socials }}
   </div>
 {% endcapture %}
 
@@ -237,32 +219,9 @@
     {% liquid
       assign menuIndex = -1
     %}
-    {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
     {% for block in section.blocks %}
       {% assign item = block.settings %}
-
-      {% capture Socials %}
-        {% if item.content___enable_socials %}
-          <div class="d:flex mt:20px">
-            {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
-
-            {% for block in section.blocks %}
-              {% if block.type == 'socials' %}
-                {% assign social = block.settings %}
-
-                <a
-                  href="{{ social.socials___link }}"
-                  data-css="{{ null }}"
-                  class="d:flex ai:center jc:center w:36px h:36px bdrs:50% bd:1px_solid lh:normal fz:15px c:color-light-freeze.7 c:color-primary|h! trs:0.3s mr:10px"
-                >
-                  {{ social.socials___icon }}
-                </a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endcapture %}
       {% if item.content___enable %}
         <div
           class="col"
@@ -283,7 +242,6 @@
               {% when 'content_information' %}
                 {% if item.content___logo.src %}
                   <a href="/" class="d:block maw:200px">
-                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_2:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
                     {% if item.image.src != blank %}
                       <img
                         class="veda-lazyload {{ _class }}"
@@ -323,23 +281,19 @@
                       %}
                       {{ pl | placeholder_svg_tag: placeholder_class }}
                     {% endif %}
-                    {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
                   </a>
                 {% endif %}
                 {% if item.content___description %}
                   <div
                     class="mt:15px fz:14px c:color-light-freeze.6"
-                    data-css="{{ null }}"
                   >
                     {{ item.content___description }}
                   </div>
                 {% endif %}
-                {{ Socials }}
               {% when 'content_navigation' %}
                 {% liquid
                   assign menuIndex = menuIndex | plus: 1
                 %}
-                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item]>{% endcomment %}
                 {% if section.settings.menu.links[menuIndex].links != blank %}
                   <ul class="{{ 'p:0! m:0! w:fit-content ls:none' }}">
                     {% for link in section.settings.menu.links[menuIndex].links %}
@@ -359,39 +313,15 @@
                     {% endfor %}
                   </ul>
                 {% endif %}
-                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
             {% endcase %}
           </div>
         </div>
       {% endif %}
     {% endfor %}
   {% else %}
-    {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
     {% for block in section.blocks %}
       {% assign item1 = block.settings %}
-
-      {% capture Socials %}
-        {% if item1.content___enable_socials %}
-          <div class="d:flex mt:20px">
-            {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
-
-            {% for block in section.blocks %}
-              {% if block.type == 'socials' %}
-                {% assign social1 = block.settings %}
-
-                <a
-                  href="{{ social1.socials___link }}"
-                  data-css="{{ null }}"
-                  class="d:flex ai:center jc:center w:36px h:36px bdrs:50% bd:1px_solid lh:normal fz:15px c:color-light-freeze.7 c:color-primary|h! trs:0.3s mr:10px"
-                >
-                  {{ social1.socials___icon }}
-                </a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endcapture %}
       {% if item1.content___enable %}
         <div
           class="col"
@@ -463,7 +393,6 @@
                     {{ item1.content___description }}
                   </div>
                 {% endif %}
-                {{ Socials }}
               {% when 'content_navigation' %}
                 <ul class="p:0! m:0! w:fit-content ls:none"></ul>
             {% endcase %}
@@ -544,33 +473,9 @@
   "name": "Footer 4",
   "blocks": [
     {
-      "type": "socials",
-      "name": "Socials",
-      "settings": [
-        {
-          "label": "Socials > Link",
-          "id": "socials___link",
-          "type": "text"
-        },
-        {
-          "label": "Socials > Icon",
-          "info": "[Get icon](https://fontawesome.com/v5/search)",
-          "id": "socials___icon",
-          "type": "html",
-          "default": "<i class=\"far fa-atom\"></i>"
-        }
-      ]
-    },
-    {
       "type": "content_information",
       "name": "Content > Information",
       "settings": [
-        {
-          "label": "Content > Enable Socials",
-          "id": "content___enable_socials",
-          "type": "checkbox",
-          "default": false
-        },
         {
           "label": "Content > Description",
           "id": "content___description",
@@ -633,41 +538,6 @@
       "id": "logo___enable",
       "type": "checkbox",
       "default": false
-    },
-    {
-      "label": "Subscribe > Icon Position",
-      "id": "VEDA_select_1",
-      "type": "select",
-      "default": "left",
-      "options": [
-        {
-          "label": "Left",
-          "value": "left"
-        },
-        {
-          "label": "Right",
-          "value": "right"
-        }
-      ]
-    },
-    {
-      "label": "Subscribe > Icon",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "subscribe___icon",
-      "type": "html",
-      "default": "<i class=\"far fa-paper-plane\"></i>"
-    },
-    {
-      "label": "Subscribe > Button Text",
-      "id": "subscribe___button_text",
-      "type": "liquid",
-      "default": "Send"
-    },
-    {
-      "label": "Subscribe > Placeholder",
-      "id": "VEDA_text_1",
-      "type": "liquid",
-      "default": "Your email address"
     },
     {
       "label": "Subscribe > Description",
@@ -769,7 +639,7 @@
       "type": "color",
       "id": "background_color",
       "label": "Background Color",
-      "default": "#fff"
+      "default": "#000000"
     },
     {
       "type": "range",
@@ -838,18 +708,6 @@
         },
         {
           "type": "content_navigation"
-        },
-        {
-          "type": "socials"
-        },
-        {
-          "type": "socials"
-        },
-        {
-          "type": "socials"
-        },
-        {
-          "type": "socials"
         }
       ]
     }
