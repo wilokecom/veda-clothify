@@ -9,7 +9,9 @@
   endif
 
   if section.settings.VEDA_select_4 == 'color'
-    assign backgroundColor = 'background-color: ' | append: null | append: ';'
+    assign opacity = section.settings.background_opacity | times: 0.01
+    assign modifyBackground = section.settings.background_color | color_modify: 'alpha', opacity
+    assign backgroundColor = 'background-color: ' | append: modifyBackground | append: ';'
   else
     assign backgroundColor = ''
   endif
@@ -1266,49 +1268,6 @@
       "default": false
     },
     {
-      "label": "Section Settings > Background Overlay Blur",
-      "id": "VEDA_slider_5",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Enable Background Overlay",
-      "id": "VEDA_switch_7",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Section Settings > Background Size",
-      "id": "VEDA_select_3",
-      "type": "select",
-      "default": "cover",
-      "options": [
-        {
-          "label": "Cover",
-          "value": "cover"
-        },
-        {
-          "label": "Contain",
-          "value": "contain"
-        }
-      ]
-    },
-    {
-      "label": "Section Settings > Background Fixed",
-      "id": "VEDA_switch_8",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Section Settings > Background Video",
-      "id": "VEDA_video_1",
-      "type": "text"
-    },
-    {
-      "type": "image_picker",
-      "id": "VEDA_image_1",
-      "label": "Background Image"
-    },
-    {
       "label": "Section Settings > Background Type",
       "id": "VEDA_select_4",
       "type": "select",
@@ -1331,6 +1290,65 @@
           "value": "none"
         }
       ]
+    },
+    {
+      "type": "image_picker",
+      "id": "VEDA_image_1",
+      "label": "Background Image"
+    },
+    {
+      "label": "Section Settings > Background Size",
+      "id": "VEDA_select_3",
+      "type": "select",
+      "default": "cover",
+      "options": [
+        {
+          "label": "Cover",
+          "value": "cover"
+        },
+        {
+          "label": "Contain",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "label": "Section Settings > Background Overlay Blur",
+      "id": "VEDA_slider_5",
+      "type": "number"
+    },
+    {
+      "label": "Section Settings > Enable Background Overlay",
+      "id": "VEDA_switch_7",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Background Fixed",
+      "id": "VEDA_switch_8",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "min": 0,
+      "unit": "%",
+      "max": 100,
+      "step": 1,
+      "label": "Opacity",
+      "default": 100
+    },
+    {
+      "label": "Section Settings > Background Video",
+      "id": "VEDA_video_1",
+      "type": "text"
     },
     {
       "label": "Section Settings > Column Gap",
