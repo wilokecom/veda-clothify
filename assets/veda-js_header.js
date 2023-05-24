@@ -54,7 +54,7 @@ function veda_fn_0df57bd5794e40fb829069656d2904ac () {
   sticky,
   select,
   mobileMenu,
-  predictiveSearch,
+  predictiveSearch,cart
 } = veda.plugins;
 const comparePopupEls = container.querySelectorAll(".veda-compare-toggle-js");
 const wishlistToggleEls = container.querySelectorAll(
@@ -306,6 +306,21 @@ function handlePredictiveSearch() {
 
 headerSticky();
 handlePredictiveSearch();
+const unSubCart = cart.subscribe(async (state) => {
+
+  const badgeCart = container.querySelector(".veda-cart-badge-js");
+  if (!!badgeCart) {
+    badgeCart.textContent = `${state?.item_count}`;
+    if (state?.item_count) {
+      badgeCart.style.display = 'flex'
+    } else {
+      badgeCart.style.display = 'none'
+    }
+  }
+});
+window.veda_fn_0df57bd5794e40fb829069656d2904acCleanup.push(() => {
+  unSubCart();
+});
       });
     }
 veda_fn_0df57bd5794e40fb829069656d2904ac();

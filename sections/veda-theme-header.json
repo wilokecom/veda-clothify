@@ -41,7 +41,7 @@
 				"66f495c6-0b1b-4416-a076-zz3c57": {
 					"type": "right_actions_cart",
 					"settings": {
-						"right_actions___enable": true
+						"right_actions___new_tab": true
 					}
 				},
 				"66f495c6-0b1b-4416-a076-44730507a8fd": {

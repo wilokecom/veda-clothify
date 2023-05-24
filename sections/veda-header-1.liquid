@@ -402,20 +402,17 @@
 						target="_blank"
 					{% endif %}
 					class="veda-wishlist-badge-toggle-js lh:normal p:0_5px c:color-gray9 c:color-primary|h trs:0.3s ml:10px"
-					data-css="{{ null }}"
 				>
-					<div class="pos:relative d:inline-block">
+					<div class="pos:relative">
 						<i class="far fa-heart"></i>
-						<div
-							class="veda-wishlist-badge-js lh:normal d:none! jc:center ai:center c:color-light-freeze pos:absolute t:-4px r:-8px miw:16px h:16px fz:9px bdrs:8px bgc:#eb4747 fw:500 pl:2px pr:2px"
-							data-css="{{ null }}"
-						></div>
+						<span
+							class="veda-wishlist-badge-js lh:normal d:none! jc:center ai:center c:color-light-freeze pos:absolute t:-5px r:-8px miw:16px h:16px fz:9px bdrs:8px bgc:#eb4747 fw:500 pl:2px pr:2px"
+						></span>
 					</div>
 				</a>
 			{% elsif block.type == 'right_actions_compare' %}
 				<div
 					class="veda-compare-toggle-js p:0_5px c:color-gray9 c:color-primary|h trs:0.3s cur:pointer ml:10px"
-					data-css="{{ null }}"
 					data-options="
               {
                 compareOptionsTitle: '{{ action.VEDA_tags_1 }}',
@@ -424,28 +421,26 @@
 				>
 					<div class="pos:relative d:inline-block">
 						<i class="far fa-repeat"></i>
-						<div
+						<span
 							class="veda-compare-badge-js d:none! jc:center ai:center c:color-light-freeze pos:absolute t:-4px r:-8px miw:16px h:16px fz:9px bdrs:8px bgc:#eb4747 fw:500 pl:2px pr:2px"
-							data-css="{{ null }}"
-						></div>
+						></span>
 					</div>
 				</div>
 			{% elsif block.type == 'right_actions_cart' %}
-				<div class="pos:relative z:2 bgz:cover bgp:center">
 				<a
 					href="/cart"
 					{% if action.right_actions___new_tab %}
 						target="_blank"
 					{% endif %}
-					data-css="{{ null }}"
-					class="veda-cart-toggle-js pos:relative"
+					class="veda-cart-toggle-js d:inline-block lh:normal p:0_5px pos:relative ml:10px"
 				>
-					<i class="far fa-shopping"></i>
+					<i class="far fa-shopping-cart"></i>
+					<span
+							class="veda-cart-badge-js d:flex jc:center ai:center c:color-light-freeze pos:absolute t:-5px r:-5px miw:16px h:16px fz:9px bdrs:8px bgc:#eb4747 fw:500 pl:2px pr:2px"
+						>{{ cart.item_count }}</span>
 				</a>
-				</div>
 			{% elsif block.type == 'right_actions_search' %}
 				<span
-					data-css="{{ null }}"
 					class="btn-search-js p:0_5px cur:pointer c:color-gray9 c:color-primary|h trs:0.3s ml:10px"
 				>
             <i class="far fa-search"></i>
