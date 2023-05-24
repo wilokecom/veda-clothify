@@ -60,13 +60,9 @@
 				class="swiper-slide w:var(--width-xs)@+sm"
 				style="--width-xs: calc({{ 100 | divided_by: 1 }}% - {{ 40 | divided_by: 2 }}px);"
 			>
-				<a
+				<div
 					class="d:flex w:100% trs:0.3s"
-					style="text-align: {{ "left" }}"
-					href="{{ item.content___link }}"
-					{% if item.content___new_tab %}
-						target="_blank"
-					{% endif %}
+					style="text-align: left"
 				>
 					<span class="d:block fz:30px c:color-primary mr:20px" data-css="{{ null }}">{{ item.content___icon }}</span>
 					<div>
@@ -79,7 +75,7 @@
 							</div>
 						{% endif %}
 					</div>
-				</a>
+				</div>
 			</div>
 		{% endif %}
 	{% endfor %}
@@ -396,62 +392,6 @@
 							assign custom_class = _class
 						endif
 					%}
-					{% capture ViewAllBase %}
-						<a
-							{% if _component %}
-								component="{{ _component }}"
-							{% else %}
-							
-							{% endif %}
-							class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-							data-css="{{ null }}"
-							{% if _default_link %}
-								href="{{ _default_link }}"
-							{% else %}
-								href="{{ section.settings["button_view_all___link"] }}"
-							{% endif %}
-							{% if section.settings.VEDA_switch_5 %}
-								target="_blank"
-							{% endif %}
-						>
-							{% if section.settings.VEDA_switch_4 and 'right' == 'left' %}
-								<span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
-							{% endif %}
-							<span>
-                {{ section.settings.button_view_all___text }}
-              </span>
-							{% if section.settings.VEDA_switch_4 and 'right' == 'right' %}
-								<span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
-							{% endif %}
-						</a>
-					{% endcapture %}
-					
-					{% capture ViewAllTop %}
-						{% if section.settings.button_view_all___enable and section.settings.VEDA_select_3 == 'top' %}
-							<div class="d:none@+md flxs:0">
-								{{ ViewAllBase }}
-							</div>
-						{% endif %}
-					{% endcapture %}
-					
-					{% capture ViewAllBottom %}
-						{% if section.settings.button_view_all___enable and section.settings.VEDA_select_3 == 'bottom' %}
-							<div style="text-align: {{ "left" }}">
-								{{ ViewAllBase }}
-							</div>
-						{% endif %}
-						{% if section.settings.button_view_all___enable and section.settings.VEDA_select_3 == 'top' %}
-							<div class="d:none@md mt:30px">
-								{{ ViewAllBase }}
-							</div>
-						{% endif %}
-					{% endcapture %}
-					
-					{% if 'top' == 'top' %}
-						{{ ViewAllTop }}
-					{% else %}
-						{{ ViewAllBottom }}
-					{% endif %}
 					{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 					
 					{% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,borderRadius,delay,gap,arrowGeneralClassName,arrowVariantClassName,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class]>{% endcomment %}
@@ -545,35 +485,6 @@
 				assign custom_class = _class
 			endif
 		%}
-		{% capture ViewAllBase %}
-			<a
-				{% if _component %}
-					component="{{ _component }}"
-				{% else %}
-				
-				{% endif %}
-				class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-				data-css="{{ null }}"
-				{% if _default_link %}
-					href="{{ _default_link }}"
-				{% else %}
-					href="{{ section.settings["button_view_all___link"] }}"
-				{% endif %}
-				{% if section.settings.VEDA_switch_5 %}
-					target="_blank"
-				{% endif %}
-			>
-				{% if section.settings.VEDA_switch_4 and 'right' == 'left' %}
-					<span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
-				{% endif %}
-				<span>
-          {{ section.settings.button_view_all___text }}
-        </span>
-				{% if section.settings.VEDA_switch_4 and 'right' == 'right' %}
-					<span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
-				{% endif %}
-			</a>
-		{% endcapture %}
 		
 		{% capture ViewAllTop %}
 			{% if section.settings.button_view_all___enable and section.settings.VEDA_select_3 == 'top' %}
@@ -582,26 +493,6 @@
 				</div>
 			{% endif %}
 		{% endcapture %}
-		
-		{% capture ViewAllBottom %}
-			{% if section.settings.button_view_all___enable and section.settings.VEDA_select_3 == 'bottom' %}
-				<div style="text-align: {{ "left" }}">
-					{{ ViewAllBase }}
-				</div>
-			{% endif %}
-			{% if section.settings.button_view_all___enable and section.settings.VEDA_select_3 == 'top' %}
-				<div class="d:none@md mt:30px">
-					{{ ViewAllBase }}
-				</div>
-			{% endif %}
-		{% endcapture %}
-		
-		{% if 'bottom' == 'top' %}
-			{{ ViewAllTop }}
-		{% else %}
-			{{ ViewAllBottom }}
-		{% endif %}
-		{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 	</div>
 	{% if section.settings.VEDA_switch_7 %}
 		<div
@@ -619,27 +510,16 @@
 			"name": "Content",
 			"settings": [
 				{
-					"label": "Content > Link",
-					"id": "content___link",
-					"type": "text"
-				},
-				{
-					"label": "Content > Open In New Tab",
-					"id": "content___new_tab",
-					"type": "checkbox",
-					"default": false
-				},
-				{
-					"label": "Content > Description",
-					"id": "content___description",
-					"type": "liquid"
-				},
-				{
 					"label": "Content > Title",
 					"id": "content___title",
 					"type": "liquid",
 					"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
 					"default": "Category"
+				},
+				{
+					"label": "Content > Description",
+					"id": "content___description",
+					"type": "liquid"
 				},
 				{
 					"label": "Content > Icon",
@@ -871,100 +751,6 @@
 			"id": "VEDA_icon_3",
 			"type": "html",
 			"default": "<i class=\"far fa-atom\"></i>"
-		},
-		{
-			"label": "View All Button > Enable",
-			"id": "VEDA_switch_4",
-			"type": "checkbox",
-			"default": true
-		},
-		{
-			"label": "View All Button > Position",
-			"id": "VEDA_select_3",
-			"type": "select",
-			"default": "bottom",
-			"options": [
-				{
-					"label": "Top",
-					"value": "top"
-				},
-				{
-					"label": "Bottom",
-					"value": "bottom"
-				}
-			]
-		},
-		{
-			"label": "View All Button > Variant",
-			"id": "VEDA_select_4",
-			"type": "select",
-			"default": "link",
-			"options": [
-				{
-					"label": "Link",
-					"value": "link"
-				},
-				{
-					"label": "Primary",
-					"value": "primary"
-				},
-				{
-					"label": "Secondary",
-					"value": "secondary"
-				},
-				{
-					"label": "Dark",
-					"value": "dark"
-				},
-				{
-					"label": "Gray",
-					"value": "gray"
-				},
-				{
-					"label": "Light",
-					"value": "light"
-				}
-			]
-		},
-		{
-			"label": "View All Button > Link",
-			"id": "button_view_all___link",
-			"type": "text"
-		},
-		{
-			"label": "View All Button > Open In New Tab",
-			"id": "VEDA_switch_5",
-			"type": "checkbox",
-			"default": false
-		},
-		{
-			"label": "View All Button > Text",
-			"id": "button_view_all___text",
-			"type": "liquid",
-			"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-			"default": "View All"
-		},
-		{
-			"label": "View All Button > Enable",
-			"id": "button_view_all___enable",
-			"type": "checkbox",
-			"default": false
-		},
-		{
-			"label": "Section Settings > Separator Bottom",
-			"id": "VEDA_slider_1",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Separator Top",
-			"id": "VEDA_slider_2",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Enable Separator",
-			"id": "VEDA_switch_6",
-			"type": "checkbox",
-			"default": false
 		},
 		{
 			"label": "Section Settings > Background Type",
