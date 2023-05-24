@@ -19,7 +19,7 @@
 			}
 		},
 		"section_641819632967247e1b1eb4e6": {
-			"type": "veda-cart-1",
+			"type": "veda-main-cart",
 			"blocks": {
 				"dcebbad4-bf99-4a53-bfa1-656ae3d1b04f": {
 					"type": "heading_title",

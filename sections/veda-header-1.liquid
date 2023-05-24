@@ -2,11 +2,8 @@
 {% assign builderMode = false %}
 {% assign envatoMode = true %}
 {% liquid
-	if section.settings.VEDA_switch_5
-		assign backgroundFixed = 'fixed'
-	else
-		assign backgroundFixed = 'scroll'
-	endif
+	
+	assign backgroundFixed = 'scroll'
 	
 	if section.settings.VEDA_select_5 == 'color'
 		assign opacity = section.settings.background_opacity | times: 0.01
@@ -33,19 +30,7 @@
 	else
 		assign containerType = 'container'
 	endif
-	
-	if section.settings.VEDA_slider_10 >= 0
-		assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_10 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_10 | append: 'px;'
-	else
-		assign containerGap = ''
-	endif
-	
-	if section.settings.section_settings___width >= 0
-		assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
-	else
-		assign containerWidth = ''
-	endif
-	
+
 	assign _prefix = false
 	
 	assign _alt = false
@@ -416,7 +401,7 @@
 					{% if action.right_actions___new_tab %}
 						target="_blank"
 					{% endif %}
-					class="veda-wishlist-badge-toggle-js lh:normal p:0_5px c:color-gray9 c:color-primary|h trs:0.3s"
+					class="veda-wishlist-badge-toggle-js lh:normal p:0_5px c:color-gray9 c:color-primary|h trs:0.3s ml:10px"
 					data-css="{{ null }}"
 				>
 					<div class="pos:relative d:inline-block">
@@ -429,7 +414,7 @@
 				</a>
 			{% elsif block.type == 'right_actions_compare' %}
 				<div
-					class="veda-compare-toggle-js p:0_5px c:color-gray9 c:color-primary|h trs:0.3s cur:pointer"
+					class="veda-compare-toggle-js p:0_5px c:color-gray9 c:color-primary|h trs:0.3s cur:pointer ml:10px"
 					data-css="{{ null }}"
 					data-options="
               {
@@ -448,7 +433,7 @@
 			{% elsif block.type == 'right_actions_search' %}
 				<span
 					data-css="{{ null }}"
-					class="btn-search-js p:0_5px cur:pointer c:color-gray9 c:color-primary|h trs:0.3s"
+					class="btn-search-js p:0_5px cur:pointer c:color-gray9 c:color-primary|h trs:0.3s ml:10px"
 				>
             <i class="far fa-search"></i>
           </span>
@@ -610,16 +595,7 @@
 
 {% capture Topbar %}
 	<div data-css="{{ null }}" class="bdb:1px_solid_color-gray2">
-		<div
-			class="pl:15px@+md! pr:15px@+md! {{ containerType }}"
-			{% if section.settings.VEDA_slider_10
-			or section.settings.VEDA_slider_10 == 0
-			or section.settings.section_settings___width
-			or section.settings.section_settings___width == 0
-			%}
-				style="{{ containerGap }}{{ containerWidth }}"
-			{% endif %}
-		>
+		<div class="pl:15px@+md! pr:15px@+md! {{ containerType }}">
 			<div class="pos:relative d:flex ai:center jc:space-between pt:10px pb:10px">
 				<div class="d:flex ai:center w:33.3333%@md">
 					{{ LanguageAndCurrency }}
@@ -665,16 +641,7 @@
 		{% endif %}
 	>
 		<div class="w:100% bgc:inherit">
-			<div
-				class="pl:15px@+md! pr:15px@+md! {{ containerType }}"
-				{% if section.settings.VEDA_slider_10
-				or section.settings.VEDA_slider_10 == 0
-				or section.settings.section_settings___width
-				or section.settings.section_settings___width == 0
-				%}
-					style="{{ containerGap }}{{ containerWidth }}"
-				{% endif %}
-			>
+			<div class="pl:15px@+md! pr:15px@+md! {{ containerType }}">
 				<nav class="veda-nav d:flex ai:center jc:space-between mih:60px">
 					<div class="d:flex ai:center">
 						<div
@@ -1033,16 +1000,16 @@
 			"default": 4
 		},
 		{
-			"label": "Search > Fields",
+			"label": "Search > By",
 			"id": "veda_search___fields",
 			"type": "text",
-			"default": "title"
+			"default": "title, vendor, type, tag, variant_title"
 		},
 		{
-			"label": "Search > Type",
+			"label": "Search > Target",
 			"id": "veda_search___type",
 			"type": "text",
-			"default": "product"
+			"default": "product, article, collection, page"
 		},
 		{
 			"label": "Announcement Bar > Text",
@@ -1119,12 +1086,6 @@
 			]
 		},
 		{
-			"label": "Background Fixed",
-			"id": "VEDA_switch_5",
-			"type": "checkbox",
-			"default": false
-		},
-		{
 			"type": "color",
 			"id": "background_color",
 			"label": "Background Color",
@@ -1139,11 +1100,6 @@
 			"step": 1,
 			"label": "Opacity",
 			"default": 100
-		},
-		{
-			"label": "Section Width",
-			"id": "section_settings___width",
-			"type": "number"
 		},
 		{
 			"label": "Container Width",

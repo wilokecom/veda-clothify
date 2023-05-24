@@ -14,43 +14,8 @@
 		assign containerGap = ''
 	endif
 	
-	if section.settings.section_settings___width >= 0
-		assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
-	else
-		assign containerWidth = ''
-	endif
-	
-	if section.settings.VEDA_slider_4 >= 0
-		assign settingGap = section.settings.VEDA_slider_4 | divided_by: 2.0
-		
-		assign settingGapVertical = section.settings.VEDA_slider_4
-	else
-		assign settingGap = ''
-		
-		assign settingGapVertical = ''
-	endif
-	
-	assign colGap = 'margin-top: ' | append: settingGapVertical | append: 'px; padding-left: ' | append: settingGap | append: 'px; padding-right: ' | append: settingGap | append: 'px;'
-	
-	assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
-	
 	assign sectionSeparator = ''
-	
-	if section.settings.VEDA_switch_8
-		if section.settings.VEDA_slider_2
-			assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_2 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
-		endif
-		
-		if section.settings.VEDA_slider_1
-			assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_1 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
-		endif
-	endif
-	
-	if colGap and rowGap and builderMode and envatoMode
-	endif
-%}
 
-{% liquid
 	assign _class = false
 	
 	assign _alt = false
@@ -189,16 +154,7 @@
 								<div data-veda-video="{{ item.content___video }}"></div>
 							</div>
 						{% endif %}
-						<div
-							class="d:flex ai:center h:100% {{ containerType }}"
-							{% if section.settings.VEDA_slider_5
-							or section.settings.VEDA_slider_5 == 0
-							or section.settings.section_settings___width
-							or section.settings.section_settings___width == 0
-							%}
-								style="{{ containerGap }}{{ containerWidth }}"
-							{% endif %}
-						>
+						<div class="d:flex ai:center h:100% {{ containerType }}">
 							<div
 								class="pos:relative d:flex w:100% pt:30px pb:50px"
 								style="justify-content: {{ "flex-end" }};"
@@ -429,7 +385,7 @@
 					"type": "liquid"
 				},
 				{
-					"label": "Content > Media Type",
+					"label": "Media Type",
 					"id": "content___media_type",
 					"type": "select",
 					"default": "image",
@@ -445,7 +401,7 @@
 					]
 				},
 				{
-					"label": "Content > Video",
+					"label": "Video Url",
 					"id": "content___video",
 					"type": "text"
 				},
@@ -475,31 +431,6 @@
 			"id": "VEDA_switch_3",
 			"type": "checkbox",
 			"default": true
-		},
-		{
-			"label": "Section Settings > Separator Bottom",
-			"id": "VEDA_slider_1",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Separator Top",
-			"id": "VEDA_slider_2",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Column Gap",
-			"id": "VEDA_slider_4",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Container Gap",
-			"id": "VEDA_slider_5",
-			"type": "number"
-		},
-		{
-			"label": "Section Settings > Width",
-			"id": "section_settings___width",
-			"type": "number"
 		},
 		{
 			"label": "Section Settings > Container Width",
