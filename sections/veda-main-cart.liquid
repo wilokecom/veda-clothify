@@ -76,28 +76,27 @@
 	endif
 %}
 {% capture TableHeader %}
-	<div class="d:flex@400px d:none" data-css="{{ null }}">
+	<div class="d:flex@400px d:none" >
 		<div
 			class="flex:1 w:100% w:40%@md p:15px_0 fz:15px ff:font-secondary fw:500"
-			data-css="{{ null }}"
 		>
 			{{ 'veda.sections.cart.headings.product' | t }}
 		</div>
 		<div
 			class="flex:0_0_auto w:40% w:20%@sm p:15px_0 fz:15px ff:font-secondary fw:500 ta:left@md ta:right"
-			data-css="{{ null }}"
+			
 		>
 			{{ 'veda.sections.cart.headings.price' | t }}
 		</div>
 		<div
 			class="d:block@md d:none flex:0_0_auto w:40% w:20%@sm p:15px_0 fz:15px ff:font-secondary fw:500"
-			data-css="{{ null }}"
+			
 		>
 			{{ 'veda.sections.cart.headings.quantity' | t }}
 		</div>
 		<div
 			class="d:block@md d:none flex:0_0_auto w:20% p:15px_0 fz:15px ff:font-secondary fw:500 ta:right"
-			data-css="{{ null }}"
+			
 		>
 			{{ 'veda.sections.cart.headings.total' | t }}
 		</div>
@@ -170,7 +169,7 @@
 									endif
 								%}
 								{% capture attr %}
-									data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+									 class="fw:500" style="text-align: {{ align }}"
 								{% endcapture %}
 								{% case block.type %}
 									{% when 'heading_title' %}
@@ -187,7 +186,7 @@
 										{% endif %}
 									{% when 'heading_text' %}
 										<div
-											data-css="{{ null }}"
+											
 											style="text-align: {{ align }}"
 											class="fz:16px"
 										>
@@ -195,7 +194,7 @@
 										</div>
 									{% when 'heading_icon' %}
 										<div
-											data-css="{{ null }}"
+											
 											{% if 'center' == 'left' %}
 												style="text-align: start"
 											{% elsif 'center' == 'center' %}
@@ -311,13 +310,6 @@
       "type": "check_out_price",
       "name": "Check Out > Price",
       "settings": [
-        {
-          "label": "Check Out > Title",
-          "id": "check_out___title",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Title"
-        }
       ]
     },
     {
@@ -329,21 +321,8 @@
     },
     {
       "type": "check_out_button",
-      "name": "Check Out > Button",
+      "name": "Check Out Button",
       "settings": [
-        {
-          "label": "Check Out > Choose",
-          "info": "[Get icon](https://fontawesome.com/v5/search)",
-          "id": "check_out___choose_icon",
-          "type": "html",
-          "default": "<i class=\"far fa-atom\"></i>"
-        },
-        {
-          "label": "Check Out > Enable",
-          "id": "check_out___icon_enable",
-          "type": "checkbox",
-          "default": true
-        },
         {
           "label": "Check Out > Variant",
           "id": "check_out___variant",
@@ -371,13 +350,6 @@
               "value": "light"
             }
           ]
-        },
-        {
-          "label": "Check Out > Text",
-          "id": "check_out___text",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Text"
         }
       ]
     },
@@ -385,91 +357,24 @@
       "type": "actions_note",
       "name": "Actions > Note",
       "settings": [
-        {
-          "label": "Actions > Choose",
-          "info": "[Get icon](https://fontawesome.com/v5/search)",
-          "id": "actions___choose_icon",
-          "type": "html",
-          "default": "<i class=\"far fa-atom\"></i>"
-        },
-        {
-          "label": "Actions > Text",
-          "id": "actions___text",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Text"
-        },
-        {
-          "label": "Actions > Enable",
-          "id": "actions___enable_note",
-          "type": "checkbox",
-          "default": true
-        }
       ]
     },
     {
       "type": "actions_shipping",
       "name": "Actions > Shipping",
       "settings": [
-        {
-          "label": "Actions > Choose",
-          "info": "[Get icon](https://fontawesome.com/v5/search)",
-          "id": "actions___choose_icon",
-          "type": "html",
-          "default": "<i class=\"far fa-atom\"></i>"
-        },
-        {
-          "label": "Actions > Text",
-          "id": "actions___text",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Text"
-        },
-        {
-          "label": "Actions > Enable",
-          "id": "VEDA_switch_3",
-          "type": "checkbox",
-          "default": true
-        }
       ]
     },
     {
       "type": "actions_discount",
       "name": "Actions > Discount",
       "settings": [
-        {
-          "label": "Actions > Choose",
-          "info": "[Get icon](https://fontawesome.com/v5/search)",
-          "id": "actions___choose_icon",
-          "type": "html",
-          "default": "<i class=\"far fa-atom\"></i>"
-        },
-        {
-          "label": "Actions > Text",
-          "id": "actions___text",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Text"
-        },
-        {
-          "label": "Actions > Enable",
-          "id": "VEDA_switch_4",
-          "type": "checkbox",
-          "default": true
-        }
       ]
     },
     {
       "type": "empty_data_text",
       "name": "Empty > Text",
       "settings": [
-        {
-          "label": "Empty > Text",
-          "id": "empty_data___text",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Text"
-        }
       ]
     },
     {
@@ -502,19 +407,6 @@
       "type": "empty_data_button",
       "name": "Empty > Button",
       "settings": [
-        {
-          "label": "Empty > Choose",
-          "info": "[Get icon](https://fontawesome.com/v5/search)",
-          "id": "empty_data___choose_icon",
-          "type": "html",
-          "default": "<i class=\"far fa-atom\"></i>"
-        },
-        {
-          "label": "Empty > Enable Icon",
-          "id": "empty_data___enable_icon",
-          "type": "checkbox",
-          "default": true
-        },
         {
           "label": "Empty > Variant",
           "id": "empty_data___variant",
@@ -553,13 +445,6 @@
           "id": "empty_data___new_tab",
           "type": "checkbox",
           "default": false
-        },
-        {
-          "label": "Empty > Text",
-          "id": "empty_data___text",
-          "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "default": "Text"
         }
       ]
     },
@@ -599,7 +484,6 @@
           "label": "Heading > Title",
           "id": "heading___title",
           "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
           "default": "This is a title"
         },
         {
@@ -618,7 +502,6 @@
           "label": "Heading > Text",
           "id": "heading___text",
           "type": "liquid",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
           "default": "<p>This is a text</p>"
         },
         {
@@ -701,19 +584,6 @@
   ],
   "settings": [
     {
-      "label": "Cancel Button > Choose",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "VEDA_icon_1",
-      "type": "html",
-      "default": "<i class=\"far fa-atom\"></i>"
-    },
-    {
-      "label": "Cancel Button > Enable",
-      "id": "VEDA_switch_1",
-      "type": "checkbox",
-      "default": true
-    },
-    {
       "label": "Cancel Button > Variant",
       "id": "cancel_button___variant",
       "type": "select",
@@ -742,25 +612,6 @@
       ]
     },
     {
-      "label": "Cancel Button > Enable",
-      "id": "cancel_button___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Submit Button > Choose",
-      "info": "[Get icon](https://fontawesome.com/v5/search)",
-      "id": "VEDA_icon_2",
-      "type": "html",
-      "default": "<i class=\"far fa-atom\"></i>"
-    },
-    {
-      "label": "Submit Button > Enable",
-      "id": "VEDA_switch_2",
-      "type": "checkbox",
-      "default": true
-    },
-    {
       "label": "Submit Button > Variant",
       "id": "submit_button___variant",
       "type": "select",
@@ -787,12 +638,6 @@
           "value": "light"
         }
       ]
-    },
-    {
-      "label": "Submit Button > Enable",
-      "id": "submit_button___enable",
-      "type": "checkbox",
-      "default": true
     },
     {
       "label": "Table > Image Border Radius",

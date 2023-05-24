@@ -4,8 +4,8 @@
 			
 			{% case block.type %}
 				{% when 'empty_data_text' %}
-					<h3 class="mt:50px fz:35px fw:700 c:color-gray9" data-css="{{ null }}">
-						{{ emptyItem.empty_data___text }}
+					<h3 class="mt:50px fz:35px fw:700 c:color-gray9">
+						{{ 'veda.sections.cart.empty' | t }}
 					</h3>
 				{% when 'empty_data_image' %}
 					{% liquid
@@ -110,25 +110,9 @@
 						data-css="{{ null }}"
 						href="{{ emptyItem.empty_data___link }}"
 					>
-						{% if emptyItem.empty_data___enable_icon and 'right' == 'left' %}
-							<span
-								class="mr:10px"
-								data-css="{{ null }}"
-							>
-                {{ emptyItem.empty_data___choose_icon }}
-              </span>
-						{% endif %}
 						<span>
-              {{ emptyItem.empty_data___text }}
+              {{ "veda.general.continue_shopping" | t }}
             </span>
-						{% if emptyItem.empty_data___enable_icon and 'right' == 'right' %}
-							<span
-								class="ml:10px"
-								data-css="{{ null }}"
-							>
-                {{ emptyItem.empty_data___choose_icon }}
-              </span>
-						{% endif %}
 					</a>
 				{% else %}
 			

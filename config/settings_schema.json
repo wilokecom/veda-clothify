@@ -136,6 +136,59 @@
 		]
 	},
 	{
+    "name": "Review Settings",
+    "settings": [
+			{
+				"type": "radio",
+				"id": "theme_review_app",
+				"label": "Shopify Review App",
+				"default": "shopify",
+				"options": [
+					{
+						"label": "Shopify [install here](https://apps.shopify.com/product-reviews)",
+						"value": "shopify"
+					},
+					{
+						"label": "Judge.me [install here](https://apps.shopify.com/judgeme)",
+						"value": "judgeme"
+					},
+					{
+						"label": "Ryviu [install here](https://apps.shopify.com/ryviu)",
+						"value": "ryviu"
+					},
+					{
+						"label": "Stamped.io [install here](https://apps.shopify.com/product-reviews-addon)",
+						"value": "stamped"
+					},
+					{
+						"label": "Rivyo [install here](https://apps.shopify.com/rivyo-product-review)",
+						"value": "rivyo"
+					},
+					{
+						"label": "Ali [install here](https://apps.shopify.com/ali-reviews)",
+						"value": "ali"
+					},
+					{
+						"label": "Areviews [install here](https://apps.shopify.com/areviews-aliexpress)",
+						"value": "areviews"
+					},
+					{
+						"label": "Loox [install here](https://apps.shopify.com/loox)",
+						"value": "loox"
+					},
+					{
+						"label": "LAI [install here](https://apps.shopify.com/lai-reviews)",
+						"value": "lai"
+					},
+					{
+						"label": "Other",
+						"value": "other"
+					}
+				]
+			}
+		]
+  },
+	{
 		"name": "Layout",
 		"settings": [
 			{

@@ -68,85 +68,6 @@
                 "height": 600
             }
         },
-        "section_641819552967247e1b1eb4c3": {
-            "type": "veda-collections-9",
-            "blocks": {
-                "ebd63086-64cb-4391-b441-3be0247a947f": {
-                    "type": "heading_title",
-                    "settings": {
-                        "heading___title_tag_name": "h2",
-                        "heading___title": "Season Collections",
-                        "heading___enable": true
-                    }
-                },
-                "50d88fab-7d22-42d4-80d2-934bb364055d": {
-                    "type": "heading_space",
-                    "settings": {
-                        "heading___space": 30,
-                        "heading___enable": true
-                    }
-                },
-                "38d0dc54-ad57-4833-9eb4-22eef269b60a": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Activewear"
-                    }
-                },
-                "c3082409-c43c-4417-a537-35ae87005ab8": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Trend Bags"
-                    }
-                },
-                "a6f97846-8f6a-4f19-abc2-1b6c74381025": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Handbags"
-                    }
-                },
-                "7423db28-10ec-476e-9379-b7dec95d0af3": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Streethats"
-                    }
-                },
-                "18dda939-fde2-4051-a1f3-dd11cde5f607": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Sandals"
-                    }
-                }
-            },
-            "block_order": [
-                "ebd63086-64cb-4391-b441-3be0247a947f",
-                "50d88fab-7d22-42d4-80d2-934bb364055d",
-                "38d0dc54-ad57-4833-9eb4-22eef269b60a",
-                "c3082409-c43c-4417-a537-35ae87005ab8",
-                "a6f97846-8f6a-4f19-abc2-1b6c74381025",
-                "7423db28-10ec-476e-9379-b7dec95d0af3",
-                "18dda939-fde2-4051-a1f3-dd11cde5f607"
-            ],
-            "settings": {
-                "VEDA_icon_1": "<i class=\"far fa-arrow-right\"><\/i>",
-                "VEDA_switch_1": true,
-                "VEDA_select_1": "top",
-                "VEDA_select_2": "gray",
-                "VEDA_switch_2": false,
-                "button_view_all___text": "See All Collections",
-                "button_view_all___enable": true,
-                "VEDA_switch_3": false,
-                "VEDA_switch_4": false,
-                "VEDA_select_3": "cover",
-                "VEDA_switch_5": false,
-                "VEDA_select_4": "none",
-                "VEDA_select_5": "boxed"
-            }
-        },
         "section_641819552967247e1b1eb4c4": {
             "type": "veda-product-grid-3",
             "blocks": {
@@ -432,7 +353,6 @@
     },
     "order": [
         "section_641819552967247e1b1eb4c2",
-        "section_641819552967247e1b1eb4c3",
         "section_641819552967247e1b1eb4c4",
         "section_641819552967247e1b1eb4c5",
         "section_641819552967247e1b1eb4c7",

@@ -413,6 +413,76 @@
                   {{ productItem.title }}
                 </a>
               </h3>
+              <div class="compare-rating-js" style="order:1">
+                {% case settings.theme_review_app %}
+                  {% when 'shopify' %}
+                    <span class="shopify-product-reviews-badge" data-id="{{ productItem.id }}"></span>
+                  {% when 'judgeme' %}
+                    {% render 'judgeme_core' %}
+                      {% render 'judgeme_widgets',
+                        widget_type: 'judgeme_preview_badge',
+                        jm_style: 'font-size: 16px;font-weight: 400;',
+                        concierge_install: false,
+                        product: productItem
+                      %}
+                  {% when 'ryviu' %}
+                    <div class="ryviu-collection">
+                      <ryviu-widget-total
+                        collection="1"
+                        product_id="{{ productItem.id }}"
+                        handle="{{ productItem.handle }}"
+                        reviews_data="{{ productItem.metafields.ryviu.product_reviews_info | escape }}"
+                      ></ryviu-widget-total>
+                    </div>
+                  {% when 'stamped' %}
+                    <span
+                      class="stamped-product-reviews-badge stamped-main-badge"
+                      data-id="{{ productItem.id }}"
+                      data-product-sku="{{ productItem.handle }}"
+                      data-product-title="{{ productItem.title }}"
+                      data-product-type="{{ productItem.type }}"
+                      style="display: block;"
+                    >
+                      {{ productItem.metafields.stamped.badge }}
+                    </span>
+                  {% when 'rivyo' %}
+                    <div
+                      class="wc_product_review_badge"
+                      data-handle="{{ productItem.handle }}"
+                      data-product_id="{{ productItem.id }}"
+                    ></div>
+                  {% when 'ali' %}
+                      <div
+                        product-id="{{ productItem.id }}"
+                        product-handle="{{ productItem.handle }}"
+                        class="alireviews-review-star-rating"
+                      ></div>
+                  {% when 'areviews' %}
+                    <div
+                      class="areviews_product_item areviews_stars{{ productItem.id }}"
+                      data-product-id="{{ productItem.id }}"
+                    ></div>
+                  {% when 'loox' %}
+                    <div
+                      class="loox-rating"
+                      data-id="{{ productItem.id }}"
+                      data-rating="{{ productItem.metafields.loox.avg_rating }}"
+                      data-raters="{{ productItem.metafields.loox.num_reviews }}"
+                    ></div>
+                  {% when 'lai' %}
+                    <div
+                      class="scm-reviews-rate"
+                      data-rate-version2="{{ productItem.metafields.scm_review_importer.reviewsData.reviewCountInfo | json }}"
+                      data-product-id="{{ productItem.id }}"
+                    ></div>
+                    <script>
+                      if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
+                      SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
+                    </script>
+                  {% when 'other' %}
+                    {{ section.settings.star_snippet_code }}
+                {% endcase %}
+              </div>
               <div style="order:{{ "2" }}">
                 <div>
                   <div class="{{ 'product-content-price-js d:inline-flex mt:5px' }}">
@@ -919,6 +989,12 @@
       "type": "heading_title",
       "name": "Heading > Title",
       "settings": [
+        {
+          "label": "Snippet Code",
+          "id": "star_snippet_code",
+          "type": "liquid",
+          "info": "Please provide the snippet code of the review app you want to use if you select Other."
+        },
         {
           "label": "Heading > Tag Name",
           "id": "heading___title_tag_name",

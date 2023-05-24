@@ -415,11 +415,80 @@
               <a
                 class="d:block mt:5px fz:14px ff:font-secondary fw:400 c:color-gray9 trs:0.3s"
                 href="{{ productItem.url }}"
-                data-css="{{ null }}"
               >
                 {{ productItem.title }}
               </a>
             </h3>
+            <div class="compare-rating-js" style="order:1">
+              {% case settings.theme_review_app %}
+                {% when 'shopify' %}
+                  <span class="shopify-product-reviews-badge" data-id="{{ productItem.id }}"></span>
+                {% when 'judgeme' %}
+                  {% render 'judgeme_core' %}
+                    {% render 'judgeme_widgets',
+                      widget_type: 'judgeme_preview_badge',
+                      jm_style: 'font-size: 16px;font-weight: 400;',
+                      concierge_install: false,
+                      product: productItem
+                    %}
+                {% when 'ryviu' %}
+                  <div class="ryviu-collection">
+                    <ryviu-widget-total
+                      collection="1"
+                      product_id="{{ productItem.id }}"
+                      handle="{{ productItem.handle }}"
+                      reviews_data="{{ productItem.metafields.ryviu.product_reviews_info | escape }}"
+                    ></ryviu-widget-total>
+                  </div>
+                {% when 'stamped' %}
+                  <span
+                    class="stamped-product-reviews-badge stamped-main-badge"
+                    data-id="{{ productItem.id }}"
+                    data-product-sku="{{ productItem.handle }}"
+                    data-product-title="{{ productItem.title }}"
+                    data-product-type="{{ productItem.type }}"
+                    style="display: block;"
+                  >
+                    {{ productItem.metafields.stamped.badge }}
+                  </span>
+                {% when 'rivyo' %}
+                  <div
+                    class="wc_product_review_badge"
+                    data-handle="{{ productItem.handle }}"
+                    data-product_id="{{ productItem.id }}"
+                  ></div>
+                {% when 'ali' %}
+                    <div
+                      product-id="{{ productItem.id }}"
+                      product-handle="{{ productItem.handle }}"
+                      class="alireviews-review-star-rating"
+                    ></div>
+                {% when 'areviews' %}
+                  <div
+                    class="areviews_product_item areviews_stars{{ productItem.id }}"
+                    data-product-id="{{ productItem.id }}"
+                  ></div>
+                {% when 'loox' %}
+                  <div
+                    class="loox-rating"
+                    data-id="{{ productItem.id }}"
+                    data-rating="{{ productItem.metafields.loox.avg_rating }}"
+                    data-raters="{{ productItem.metafields.loox.num_reviews }}"
+                  ></div>
+                {% when 'lai' %}
+                  <div
+                    class="scm-reviews-rate"
+                    data-rate-version2="{{ productItem.metafields.scm_review_importer.reviewsData.reviewCountInfo | json }}"
+                    data-product-id="{{ productItem.id }}"
+                  ></div>
+                  <script>
+                    if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
+                    SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
+                  </script>
+                {% when 'other' %}
+                  {{ section.settings.star_snippet_code }}
+              {% endcase %}
+            </div>
             <div style="order:{{ "2" }}">
               <div>
                 {% comment %}<BẮT_ĐẦU_TÁCH_FILE_8:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_defaul_aspect_ratio,_image_border_radius,_default_link,quantity_product_displayed,collectionData,productData,price_compare,productDate,currentDate,difference,ratio,aspectRatio,is_sold_out,variant,poiter_event,visibleSoldOut]>{% endcomment %}
@@ -1227,6 +1296,12 @@
     }
   ],
   "settings": [
+    {
+      "label": "Snippet Code",
+      "id": "star_snippet_code",
+      "type": "liquid",
+      "info": "Please provide the snippet code of the review app you want to use if you select Other."
+    },
     {
       "label": "Slider Settings > Right",
       "info": "[Get icon](https://fontawesome.com/v5/search)",

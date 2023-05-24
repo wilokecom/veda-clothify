@@ -93,7 +93,6 @@
     class="veda-tabs__nav addon-disabled d:none@+md w:100% d:flex {{ alignStyle }}"
     data-css="{{ null }}"
   >
-    {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
     {% for block in section.blocks %}
       {% assign navItem = block.settings %}
@@ -146,7 +145,72 @@
             {% liquid
               assign class = 'pb:10px@+md cnt:(Please_add_a_review_add-on)|empty|be fz:16px|be c:color-gray9|be'
             %}
-            <div class="{{ class }} addon-disabled"></div>
+            <div class="{{ class }} veda-review_widget addon-disabled">
+                {% case settings.theme_review_app %}
+                  {% when 'shopify' %}
+                    <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+                  {% when 'judgeme' %}
+                    {% render 'judgeme_core' %}
+                    {% render 'judgeme_widgets',
+                      widget_type: 'judgeme_review_widget',
+                      concierge_install: false,
+                      product: product
+                    %}
+                  {% when 'ryviu' %}
+                    <div class="lt-block-reviews">
+                      <ryviu-widget
+                        product_id="{{ product.id }}"
+                        handle="{{ product.handle }}"
+                        title_product="{{ product.title }}"
+                        image_product="{{ product.featured_image.src | image_url: width: 200 }}"
+                      ></ryviu-widget>
+                    </div>
+                  {% when 'stamped' %}
+                    <div
+                      id="stamped-main-widget"
+                      data-product-id="{{ product.id }}"
+                      data-name="{{ product.title | escape }}"
+                      data-url="{{ shop.url }}{{ product.url }}"
+                      data-image-url="{{ product.featured_image | image_url: width: 400 | replace: '?', '%3F' | replace: '&','%26' }}"
+                      data-description="{{ product.description | escape }}"
+                      data-product-sku="{{ product.handle }}"
+                      data-product-title="{{ product.title }}"
+                      data-product-type="{{ product.type }}"
+                    >
+                      {{ product.metafields.stamped.reviews }}
+                    </div>
+                  {% when 'rivyo' %}
+                    <div
+                      id="wc_review_section"
+                      class="wc_review_main_content"
+                      data-url="{{ shop.url }}"
+                      data-handle="{{ product.handle }}"
+                      data-product_id="{{ product.id }}"
+                      data-limit="0"
+                    ></div>
+                  {% when 'ali' %}
+                    <div class="alireviews-review-box"></div>
+                  {% when 'areviews' %}
+                    <div id="Areviewsapp" class="page-full">{% render 'aliexpress_reviews' %}</div>
+                  {% when 'loox' %}
+                    <div id="looxReviews" data-product-id="{{ product.id }}" class="loox-reviews-default">
+                      {{ product.metafields.loox.reviews }}
+                    </div>
+                  {% when 'lai' %}
+                    <div class="scm-container custom" style="display: none;">
+                      <div id="scm-reviews-importer" class="scm-reviews-importer">
+                        <iframe id="scm-reviews-importer-iframe" width="100%"> </iframe>
+                      </div>
+                    </div>
+                    {% render 'reviews-importer', product: product %}
+                    <script>
+                      if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
+                      SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
+                    </script>
+                  {% when 'other' %}
+                    {{ contentItem.review_snippet_code }}
+                {% endcase %}
+            </div>
           {% when 'content_rich_text' %}
             <div class="veda-content addon-disabled pb:10px@+md">{{ contentItem.content___text }}</div>
           {% else %}
@@ -199,6 +263,7 @@
     ></div>
   {% endif %}
 </section>
+
 {% schema %}
 {
   "name": "Product Details Tabs 1",
@@ -226,6 +291,12 @@
           "type": "liquid",
           "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
           "default": "Title"
+        },
+        {
+          "label": "Snippet Code",
+          "id": "review_snippet_code",
+          "type": "liquid",
+          "info": "Please provide the snippet code of the review app you want to use if you select Other."
         }
       ]
     },

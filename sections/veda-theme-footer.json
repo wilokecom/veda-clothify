@@ -32,41 +32,13 @@
 						"content___title": "Our Store",
 						"content___enable": true
 					}
-				},
-				"1b624579-fa9e-40a8-8156-247c7f47e2a2": {
-					"type": "socials",
-					"settings": {
-						"socials___icon": "<i class=\"fab fa-facebook\"><\/i>"
-					}
-				},
-				"60721be4-cf9d-4c7d-aafe-9d070c81aebc": {
-					"type": "socials",
-					"settings": {
-						"socials___icon": "<i class=\"fab fa-instagram\"><\/i>"
-					}
-				},
-				"5595e860-13d5-4747-94ef-1f0375327241": {
-					"type": "socials",
-					"settings": {
-						"socials___icon": "<i class=\"fab fa-twitter\"><\/i>"
-					}
-				},
-				"b25ec9d9-fcf3-481e-b34a-1d4a069c95c0": {
-					"type": "socials",
-					"settings": {
-						"socials___icon": "<i class=\"fab fa-youtube\"><\/i>"
-					}
 				}
 			},
 			"block_order": [
 				"0e4c5ada-3a67-4827-8306-a4bf35284086",
 				"24414265-5847-496a-96b5-074691d43f5b",
 				"7f0b68ea-47c1-453b-87e5-ab138e45b2da",
-				"f0ea41d2-b14d-4232-b13f-3923752fad2e",
-				"1b624579-fa9e-40a8-8156-247c7f47e2a2",
-				"60721be4-cf9d-4c7d-aafe-9d070c81aebc",
-				"5595e860-13d5-4747-94ef-1f0375327241",
-				"b25ec9d9-fcf3-481e-b34a-1d4a069c95c0"
+				"f0ea41d2-b14d-4232-b13f-3923752fad2e"
 			],
 			"settings": {
 				"logo___width": 100,

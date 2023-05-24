@@ -941,7 +941,6 @@
       %}
       <div class="col-xs-{{ contentXs }} col-sm-{{ contentSm }} col-md-{{ contentMd }} col-lg-{{ contentLg }}">
         <div class="pos:sticky t:10px w:100% sidebar-js">
-          {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
           {% for block in section.blocks %}
             {% assign sbItem = block.settings %}
@@ -955,123 +954,155 @@
                 <h4 class="fw:500 mb:15px" data-css="{{ null }}">{{ sbItem.sidebar___title }}</h4>
                 {% case block.type %}
                   {% when 'sidebar_product_list' %}
-                    <div data-css="{{ null }}">
+                    <div>
                       {% assign sidebarProductLimit = sbItem.sidebar___limit %}
                       {% assign sidebarCollectionData = collections[sbItem.VEDA_collectionPicker_1] %}
                       {% assign sidebarProductData = sidebarCollectionData.products %}
-                      {% for sidebarProductItem in sidebarProductData limit: sidebarProductLimit %}
-                        <a
-                          href="{{ sidebarProductItem.url }}"
-                          data-css="{{ null }}"
-                          {% if forloop.index == 1 %}
-                            class="group* d:flex ai:center"
-                          {% else %}
-                            class="group* d:flex ai:center mt:10px"
-                          {% endif %}
-                        >
-                          <div class="w:70px flxs:0 mr:10px">
-                            <div class="veda-image-cover">
-                              {% comment %}<BẮT_ĐẦU_TÁCH_FILE_12:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_defaul_aspect_ratio,_image_border_radius,_default_link,_alt,_style,_placeholder,_placeholder_class,quantity_product_displayed,collectionData,productData,price_compare,productDate,currentDate,difference,ratio,aspectRatio,is_sold_out,variant,poiter_event,visibleSoldOut,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class,contentXs,contentSm,contentMd,contentLg,sidebarProductLimit,sidebarCollectionData,sidebarProductData,sbItem]>{% endcomment %}
-                              {% if sidebarProductItem.featured_image.src != blank %}
-                                <img
-                                  class="veda-lazyload {{ _class }}"
-                                  src="{{ sidebarProductItem.featured_image.src | image_url: width: 10 }}"
-                                  draggable="false"
-                                  {% if sidebarProductItem.title %}
-                                    alt="{{ sidebarProductItem.title }}"
-                                  {% else %}
-                                    alt="image"
-                                  {% endif %}
-                                  {% if sidebarProductItem.featured_image.width %}
-                                    data-intrinsic-width="{{ sidebarProductItem.featured_image.width }}"
-                                    width="{{ sidebarProductItem.featured_image.width }}"
-                                  {% endif %}
-                                  {% if sidebarProductItem.featured_image.height %}
-                                    height="{{ sidebarProductItem.featured_image.height }}"
-                                    data-intrinsic-height="{{ sidebarProductItem.featured_image.height }}"
-                                  {% endif %}
-                                  {% if _style %}
-                                    style="{{ _style }}"
-                                  {% endif %}
-                                  loading="lazy"
-                                >
-                              {% else %}
-                                {% liquid
-                                  assign pl = 'lifestyle-1'
+                      {% if sidebarCollectionData != blank %}
+                        {% for sidebarProductItem in sidebarProductData limit: sidebarProductLimit %}
+                          <a
+                            href="{{ sidebarProductItem.url }}"
+                            {% if forloop.index == 1 %}
+                              class="group* d:flex ai:center"
+                            {% else %}
+                              class="group* d:flex ai:center mt:10px"
+                            {% endif %}
+                          >
+                            <div class="w:70px flxs:0 mr:10px">
+                              <div class="veda-image-cover">
+                                {% comment %}<BẮT_ĐẦU_TÁCH_FILE_12:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_defaul_aspect_ratio,_image_border_radius,_default_link,_alt,_style,_placeholder,_placeholder_class,quantity_product_displayed,collectionData,productData,price_compare,productDate,currentDate,difference,ratio,aspectRatio,is_sold_out,variant,poiter_event,visibleSoldOut,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class,contentXs,contentSm,contentMd,contentLg,sidebarProductLimit,sidebarCollectionData,sidebarProductData,sbItem]>{% endcomment %}
+                                {% if sidebarProductItem.featured_image.src != blank %}
+                                  <img
+                                    class="veda-lazyload {{ _class }}"
+                                    src="{{ sidebarProductItem.featured_image.src | image_url: width: 10 }}"
+                                    draggable="false"
+                                    {% if sidebarProductItem.title %}
+                                      alt="{{ sidebarProductItem.title }}"
+                                    {% else %}
+                                      alt="image"
+                                    {% endif %}
+                                    {% if sidebarProductItem.featured_image.width %}
+                                      data-intrinsic-width="{{ sidebarProductItem.featured_image.width }}"
+                                      width="{{ sidebarProductItem.featured_image.width }}"
+                                    {% endif %}
+                                    {% if sidebarProductItem.featured_image.height %}
+                                      height="{{ sidebarProductItem.featured_image.height }}"
+                                      data-intrinsic-height="{{ sidebarProductItem.featured_image.height }}"
+                                    {% endif %}
+                                    {% if _style %}
+                                      style="{{ _style }}"
+                                    {% endif %}
+                                    loading="lazy"
+                                  >
+                                {% else %}
+                                  {% liquid
+                                    assign pl = 'lifestyle-1'
 
-                                  if _placeholder
-                                    assign pl = _placeholder
-                                  endif
+                                    if _placeholder
+                                      assign pl = _placeholder
+                                    endif
 
-                                  assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+                                    assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
 
-                                  if _placeholder_class
-                                    assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
-                                  endif
+                                    if _placeholder_class
+                                      assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
+                                    endif
+                                  %}
+                                  {{ pl | placeholder_svg_tag: placeholder_class }}
+                                {% endif %}
+                                {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
+                              </div>
+                            </div>
+                            <div>
+                              <h4 class="lines-2 m:0 fz:14px ff:font-secondary fw:500 c:color-gray9 c:color-primary*group-hover trs:0.3s">
+                                {{ sidebarProductItem.title }}
+                              </h4>
+                              {% comment %}<BẮT_ĐẦU_TÁCH_FILE_13:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_defaul_aspect_ratio,_image_border_radius,_default_link,_alt,_style,_placeholder,_placeholder_class,quantity_product_displayed,collectionData,productData,price_compare,productDate,currentDate,difference,ratio,aspectRatio,is_sold_out,variant,poiter_event,visibleSoldOut,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class,contentXs,contentSm,contentMd,contentLg,sidebarProductLimit,sidebarCollectionData,sidebarProductData,pl,placeholder_class,sbItem]>{% endcomment %}
+                              <div class="{{ 'product-content-price-js' }}">
+                                {% if sidebarProductItem.selected_or_first_available_variant.compare_at_price
+                                    > sidebarProductItem.selected_or_first_available_variant.price
                                 %}
-                                {{ pl | placeholder_svg_tag: placeholder_class }}
-                              {% endif %}
+                                  <div class="product-price-on-sale-js">
+                                    <del
+                                      class="{{ 'fw:400 ff:font-secondary fz:14px c:color-gray6' }} mr:5px"
+                                      data-css="{{ null }}"
+                                    >
+                                      {{
+                                        sidebarProductItem.selected_or_first_available_variant.compare_at_price
+                                        | money
+                                      }}
+                                    </del>
+                                    <ins
+                                      class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }}"
+                                      data-css="{{ null }}"
+                                    >
+                                      {{ sidebarProductItem.selected_or_first_available_variant.price | money }}
+                                    </ins>
+                                  </div>
+                                  <ins
+                                    class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }} product-price-not-sale-js d:none"
+                                    data-css="{{ null }}"
+                                  >
+                                  </ins>
+                                {% else %}
+                                  <div class="product-price-on-sale-js d:none">
+                                    <del
+                                      class="{{ 'fw:400 ff:font-secondary fz:14px c:color-gray6' }} mr:5px"
+                                      data-css="{{ null }}"
+                                    >
+                                    </del>
+                                    <ins
+                                      class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }}"
+                                      data-css="{{ null }}"
+                                    >
+                                    </ins>
+                                  </div>
+                                  <ins
+                                    class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }} product-price-not-sale-js"
+                                    data-css="{{ null }}"
+                                  >
+                                    <div>
+                                      {{ sidebarProductItem.selected_or_first_available_variant.price | money }}
+                                    </div>
+                                  </ins>
+                                {% endif %}
+                              </div>
                               {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
                             </div>
-                          </div>
-                          <div>
-                            <h4 class="lines-2 m:0 fz:14px ff:font-secondary fw:500 c:color-gray9 c:color-primary*group-hover trs:0.3s">
-                              {{ sidebarProductItem.title }}
-                            </h4>
-                            {% comment %}<BẮT_ĐẦU_TÁCH_FILE_13:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_defaul_aspect_ratio,_image_border_radius,_default_link,_alt,_style,_placeholder,_placeholder_class,quantity_product_displayed,collectionData,productData,price_compare,productDate,currentDate,difference,ratio,aspectRatio,is_sold_out,variant,poiter_event,visibleSoldOut,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class,contentXs,contentSm,contentMd,contentLg,sidebarProductLimit,sidebarCollectionData,sidebarProductData,pl,placeholder_class,sbItem]>{% endcomment %}
-                            <div class="{{ 'product-content-price-js' }}">
-                              {% if sidebarProductItem.selected_or_first_available_variant.compare_at_price
-                                  > sidebarProductItem.selected_or_first_available_variant.price
-                              %}
-                                <div class="product-price-on-sale-js">
-                                  <del
-                                    class="{{ 'fw:400 ff:font-secondary fz:14px c:color-gray6' }} mr:5px"
-                                    data-css="{{ null }}"
-                                  >
-                                    {{
-                                      sidebarProductItem.selected_or_first_available_variant.compare_at_price
-                                      | money
-                                    }}
-                                  </del>
-                                  <ins
-                                    class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }}"
-                                    data-css="{{ null }}"
-                                  >
-                                    {{ sidebarProductItem.selected_or_first_available_variant.price | money }}
-                                  </ins>
-                                </div>
-                                <ins
-                                  class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }} product-price-not-sale-js d:none"
-                                  data-css="{{ null }}"
-                                >
-                                </ins>
-                              {% else %}
-                                <div class="product-price-on-sale-js d:none">
-                                  <del
-                                    class="{{ 'fw:400 ff:font-secondary fz:14px c:color-gray6' }} mr:5px"
-                                    data-css="{{ null }}"
-                                  >
-                                  </del>
-                                  <ins
-                                    class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }}"
-                                    data-css="{{ null }}"
-                                  >
-                                  </ins>
-                                </div>
-                                <ins
-                                  class="{{ 'd:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none' }} product-price-not-sale-js"
-                                  data-css="{{ null }}"
-                                >
-                                  <div>
-                                    {{ sidebarProductItem.selected_or_first_available_variant.price | money }}
-                                  </div>
-                                </ins>
-                              {% endif %}
+                          </a>
+                        {% endfor %}
+                      {% else %}
+                        {% for j in (1..3) %}
+                          <a
+                            {% if forloop.index == 1 %}
+                              class="group* d:flex ai:center"
+                            {% else %}
+                              class="group* d:flex ai:center mt:10px"
+                            {% endif %}
+                          >
+                            <div class="w:70px flxs:0 mr:10px">
+                              <div class="veda-image-cover">
+                                {{ 'product-1' | placeholder_svg_tag: 'veda-placeholder-svg bgc:color-gray2 ' }}
+                              </div>
                             </div>
-                            {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
-                          </div>
-                        </a>
-                      {% endfor %}
+                            <div>
+                              <h4 class="lines-2 m:0 fz:14px ff:font-secondary fw:500 c:color-gray9 c:color-primary*group-hover trs:0.3s">
+                                Your product's name
+                              </h4>
+                              <div>
+                                <div class="product-price-on-sale-js">
+                                  <del class="fw:400 ff:font-secondary fz:14px c:color-gray6 mr:5px">
+                                    {{ 10000 | money }}
+                                  </del>
+                                  <ins class="d:inline-block mt:5px fw:400 ff:font-secondary fz:14px c:color-primary td:none">
+                                    {{ 8000 | money }}
+                                  </ins>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        {% endfor %}
+                      {% endif %}
                     </div>
                   {% when 'sidebar_banner' %}
                     <a
