@@ -136,6 +136,39 @@
 		]
 	},
 	{
+		"name": "Review Settings",
+		"settings": [
+			{
+				"type": "radio",
+				"default": "shopify",
+				"label": "Shopify review app",
+				"id": "shopify_review_app",
+				"options": [
+					{
+						"label": "Shopify review [install here](https://apps.shopify.com/product-reviews?ref=myshopkit)",
+						"value": "shopify"
+					},
+					{
+						"label": "Judge.me [install here](https://apps.shopify.com/judgeme?ref=myshopkit)",
+						"value": "judgeme"
+					},
+					{
+						"label": "Ryviu [install here](https://apps.shopify.com/ryviu?ref=myshopkit)",
+						"value": "ryviu"
+					},
+					{
+						"label": "Ryviu [install here](https://apps.shopify.com/ali-reviews?ref=myshopkit)",
+						"value": "alireviews"
+					},
+					{
+						"label": "Another app",
+						"value": "other"
+					}
+				]
+			}
+		]
+	},
+	{
 		"name": "Layout",
 		"settings": [
 			{
