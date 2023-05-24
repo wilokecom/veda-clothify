@@ -14,7 +14,7 @@ function veda_fn_veda_main_cart () {
   }
   window.veda_fn_veda_main_cartCleanup.cleanup();
 
-      const uniqueId = "id_d0512115-5a18-4cc3-a395-55204c123697";
+      const uniqueId = "veda-main-cart-uniqueId";
       const containers = document.querySelectorAll(`[data-id="${uniqueId}"]`);
       containers.forEach(container => {
         if (!container) {
