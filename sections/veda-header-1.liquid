@@ -30,7 +30,7 @@
 	else
 		assign containerType = 'container'
 	endif
-
+	
 	assign _prefix = false
 	
 	assign _alt = false
@@ -430,13 +430,26 @@
 						></div>
 					</div>
 				</div>
+			{% elsif block.type == 'right_actions_cart' %}
+				<div class="pos:relative z:2 bgz:cover bgp:center">
+				<a
+					href="/cart"
+					{% if action.right_actions___new_tab %}
+						target="_blank"
+					{% endif %}
+					data-css="{{ null }}"
+					class="veda-cart-toggle-js pos:relative"
+				>
+					<i class="far fa-shopping"></i>
+				</a>
+				</div>
 			{% elsif block.type == 'right_actions_search' %}
 				<span
 					data-css="{{ null }}"
 					class="btn-search-js p:0_5px cur:pointer c:color-gray9 c:color-primary|h trs:0.3s ml:10px"
 				>
             <i class="far fa-search"></i>
-          </span>
+        </span>
 			{% elsif block.type == 'right_actions_link' %}
 				{% if action.right_actions___link %}
 					<a
@@ -461,7 +474,59 @@
 	{% for block in section.blocks %}
 		{% assign lcItem = block.settings %}
 		
-			{% if block.type == 'VEDA_array_1' %}
+		{% if block.type == 'VEDA_array_1' %}
+			<div
+				{% if builderMode %}
+					data-tooltip-position="right"
+					data-tooltip-text="When you use the editor this data will be fake"
+				{% endif %}
+			>
+				{% liquid
+					assign localization_id = 'localization_form_' | append: uniqueId
+				%}
+				{% form 'localization', id: localization_id, class: 'localization_form' %}
+					<input type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
+					<div class="veda-select veda-select-lang">
+						<div
+							data-css="{{ null }}"
+							class="veda-select__view c:color-gray8 d:flex ai:center jc:space-between bd:0! p:5px_0! fz:13px ff:font-secondary"
+						>
+							<div class="veda-select__label"></div>
+							<span class="pt:2px pl:4px">{{ lcItem.VEDA_icon_1 }}</span>
+						</div>
+						<div
+							data-css="{{ null }}"
+							class="veda-select__options bgc:color-light w:fit-content! bxsh:0_5px_15px_color-gray9.2 bdrs:5px ov:hidden bd:0! p:10px_0"
+						>
+							{% for language in localization.available_languages %}
+								{% liquid
+									assign defaultClass = 'veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px bgc:transparent trs:0.3s'
+								%}
+								<div
+									data-value="{{ language.iso_code }}"
+									{% if language.iso_code == localization.language.iso_code %}
+										{% if builderMode %}
+											class="{{ defaultClass }}"
+										{% else %}
+											class="{{ defaultClass }} c:color-primary"
+										{% endif %}
+										data-selected="selected"
+									{% else %}
+										class="{{ defaultClass }} c:color-primary|h"
+									{% endif %}
+								>
+									{{ language.endonym_name }}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endform %}
+			</div>
+		{% elsif block.type == 'VEDA_array_2' %}
+			{% liquid
+				assign currencySize = shop.enabled_currencies | size
+			%}
+			{% if currencySize > 1 %}
 				<div
 					{% if builderMode %}
 						data-tooltip-position="right"
@@ -469,127 +534,75 @@
 					{% endif %}
 				>
 					{% liquid
-						assign localization_id = 'localization_form_' | append: uniqueId
+						assign currency_id = 'currency_form_' | append: uniqueId
 					%}
-					{% form 'localization', id: localization_id, class: 'localization_form' %}
-						<input type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
-						<div class="veda-select veda-select-lang">
+					{% form 'localization', id: currency_id, class: 'currency_form' %}
+						<input
+							type="hidden"
+							name="currency_code"
+							value="{{ form.current_currency.iso_code }}"
+						>
+						<div class="veda-select veda-select-currency">
 							<div
 								data-css="{{ null }}"
 								class="veda-select__view c:color-gray8 d:flex ai:center jc:space-between bd:0! p:5px_0! fz:13px ff:font-secondary"
 							>
-								<div class="veda-select__label"></div>
+								{% if builderMode %}
+									<span class="mr:5px flag flag-USD"></span>
+									<div class="veda-select__label">USD</div>
+								{% else %}
+									<span class="mr:5px flag flag-{{ form.current_currency.iso_code }}"></span>
+									<div class="veda-select__label">{{ form.current_currency.iso_code }}</div>
+								{% endif %}
 								<span class="pt:2px pl:4px">{{ lcItem.VEDA_icon_1 }}</span>
 							</div>
 							<div
 								data-css="{{ null }}"
 								class="veda-select__options bgc:color-light w:fit-content! bxsh:0_5px_15px_color-gray9.2 bdrs:5px ov:hidden bd:0! p:10px_0"
 							>
-								{% for language in localization.available_languages %}
-									{% liquid
-										assign defaultClass = 'veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px bgc:transparent trs:0.3s'
-									%}
+								{% for currency in shop.enabled_currencies %}
 									<div
-										data-value="{{ language.iso_code }}"
-										{% if language.iso_code == localization.language.iso_code %}
-											{% if builderMode %}
-												class="{{ defaultClass }}"
-											{% else %}
-												class="{{ defaultClass }} c:color-primary"
-											{% endif %}
+										data-value="{{ currency.iso_code }}"
+										{% if form.current_currency.iso_code == currency.iso_code %}
+											class="veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px d:flex ai:center bgc:transparent trs:0.3s c:color-primary"
+											data-selected="selected"
+										{% elsif builderMode and currency.iso_code == 'USD' %}
+											class="veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px d:flex ai:center bgc:transparent trs:0.3s c:color-primary|h"
 											data-selected="selected"
 										{% else %}
-											class="{{ defaultClass }} c:color-primary|h"
+											class="veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px d:flex ai:center bgc:transparent trs:0.3s c:color-primary|h"
 										{% endif %}
 									>
-										{{ language.endonym_name }}
+										<span class="mr:5px flag flag-{{ currency.iso_code }}"></span>
+										{{ currency.iso_code }}
 									</div>
 								{% endfor %}
 							</div>
 						</div>
 					{% endform %}
 				</div>
-			{% elsif block.type == 'VEDA_array_2' %}
-				{% liquid
-					assign currencySize = shop.enabled_currencies | size
-				%}
-				{% if currencySize > 1 %}
-					<div
-						{% if builderMode %}
-							data-tooltip-position="right"
-							data-tooltip-text="When you use the editor this data will be fake"
-						{% endif %}
-					>
-						{% liquid
-							assign currency_id = 'currency_form_' | append: uniqueId
-						%}
-						{% form 'localization', id: currency_id, class: 'currency_form' %}
-							<input
-								type="hidden"
-								name="currency_code"
-								value="{{ form.current_currency.iso_code }}"
-							>
-							<div class="veda-select veda-select-currency">
-								<div
-									data-css="{{ null }}"
-									class="veda-select__view c:color-gray8 d:flex ai:center jc:space-between bd:0! p:5px_0! fz:13px ff:font-secondary"
-								>
-									{% if builderMode %}
-										<span class="mr:5px flag flag-USD"></span>
-										<div class="veda-select__label">USD</div>
-									{% else %}
-										<span class="mr:5px flag flag-{{ form.current_currency.iso_code }}"></span>
-										<div class="veda-select__label">{{ form.current_currency.iso_code }}</div>
-									{% endif %}
-									<span class="pt:2px pl:4px">{{ lcItem.VEDA_icon_1 }}</span>
-								</div>
-								<div
-									data-css="{{ null }}"
-									class="veda-select__options bgc:color-light w:fit-content! bxsh:0_5px_15px_color-gray9.2 bdrs:5px ov:hidden bd:0! p:10px_0"
-								>
-									{% for currency in shop.enabled_currencies %}
-										<div
-											data-value="{{ currency.iso_code }}"
-											{% if form.current_currency.iso_code == currency.iso_code %}
-												class="veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px d:flex ai:center bgc:transparent trs:0.3s c:color-primary"
-												data-selected="selected"
-											{% elsif builderMode and currency.iso_code == 'USD' %}
-												class="veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px d:flex ai:center bgc:transparent trs:0.3s c:color-primary|h"
-												data-selected="selected"
-											{% else %}
-												class="veda-select__option whs:nowrap bd:0! ff:font-secondary fz:13px p:5px_15px d:flex ai:center bgc:transparent trs:0.3s c:color-primary|h"
-											{% endif %}
-										>
-											<span class="mr:5px flag flag-{{ currency.iso_code }}"></span>
-											{{ currency.iso_code }}
-										</div>
-									{% endfor %}
-								</div>
-							</div>
-						{% endform %}
-					</div>
-				{% endif %}
-			{% elsif block.type == 'VEDA_array_3' %}
-				<a
-					class="c:color-light-freeze"
-					data-css="{{ null }}"
-					href="{{ lcItem.VEDA_linkPicker_1 }}"
-				>
-					{% if lcItem.VEDA_switch_2 %}
-						<span class="mr:5px">{{ lcItem.VEDA_icon_2 }}</span>
-					{% endif %}
-					<span>{{ lcItem.VEDA_text_2 }}</span>
-				</a>
-			{% elsif block.type == 'VEDA_array_4' %}
-				<div
-					class="d:flex jc:center"
-					style="width: {{ lcItem.VEDA_slider_3 }}px; height: {{ lcItem.VEDA_slider_2 }}px"
-				>
-					{% if lcItem.VEDA_select_2 == 'line' %}
-						<div class="h:100% w:1px" style="background-color: {{ "#f3f3f3" }}"></div>
-					{% endif %}
-				</div>
 			{% endif %}
+		{% elsif block.type == 'VEDA_array_3' %}
+			<a
+				class="c:color-light-freeze"
+				data-css="{{ null }}"
+				href="{{ lcItem.VEDA_linkPicker_1 }}"
+			>
+				{% if lcItem.VEDA_switch_2 %}
+					<span class="mr:5px">{{ lcItem.VEDA_icon_2 }}</span>
+				{% endif %}
+				<span>{{ lcItem.VEDA_text_2 }}</span>
+			</a>
+		{% elsif block.type == 'VEDA_array_4' %}
+			<div
+				class="d:flex jc:center"
+				style="width: {{ lcItem.VEDA_slider_3 }}px; height: {{ lcItem.VEDA_slider_2 }}px"
+			>
+				{% if lcItem.VEDA_select_2 == 'line' %}
+					<div class="h:100% w:1px" style="background-color: {{ "#f3f3f3" }}"></div>
+				{% endif %}
+			</div>
+		{% endif %}
 	{% endfor %}
 {% endcapture %}
 
@@ -917,6 +930,18 @@
 			]
 		},
 		{
+			"type": "right_actions_cart",
+			"name": "Cart",
+			"settings": [
+				{
+					"label": "Open In New Tab",
+					"id": "right_actions___new_tab",
+					"type": "checkbox",
+					"default": false
+				}
+			]
+		},
+		{
 			"type": "right_actions_search",
 			"name": "Search",
 			"settings": [
@@ -1132,6 +1157,9 @@
 				},
 				{
 					"type": "right_actions_compare"
+				},
+				{
+					"type": "right_actions_cart"
 				},
 				{
 					"type": "right_actions_search"

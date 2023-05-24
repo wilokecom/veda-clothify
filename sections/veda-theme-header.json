@@ -38,6 +38,12 @@
 						"right_actions___enable": true
 					}
 				},
+				"66f495c6-0b1b-4416-a076-zz3c57": {
+					"type": "right_actions_cart",
+					"settings": {
+						"right_actions___enable": true
+					}
+				},
 				"66f495c6-0b1b-4416-a076-44730507a8fd": {
 					"type": "right_actions_search",
 					"settings": {
@@ -110,6 +116,7 @@
 				"4cfe2388-f7e4-4d4e-8555-72b1d246db1e",
 				"213241f6-36c4-4e5a-80dd-0e489a33c8b5",
 				"f43ac1a1-5104-4dc2-9b16-ec8237a5f615",
+				"66f495c6-0b1b-4416-a076-zz3c57",
 				"45efde74-fab0-41f1-823f-7f3b97b94dc7",
 				"66f495c6-0b1b-4416-a076-44730507a8fd",
 				"064fb989-b5a8-4df9-bb9f-2949dc626112",
