@@ -6,10 +6,10 @@
 			"type": "veda-footer-4",
 			"blocks": {
 				"0e4c5ada-3a67-4827-8306-a4bf35284086": {
-					"type": "content_navigation",
+					"type": "content_information",
 					"settings": {
 						"content___title": "Information",
-						"content___enable": true
+						"content___description": ""
 					}
 				},
 				"24414265-5847-496a-96b5-074691d43f5b": {

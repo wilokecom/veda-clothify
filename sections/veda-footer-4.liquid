@@ -343,51 +343,7 @@
             {% endif %}
             {% case block.type %}
               {% when 'content_information' %}
-                {% if item1.content___logo.src %}
-                  <a href="/" class="d:block maw:200px">
-                    {% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_alt,_style,_placeholder,_placeholder_class,_component,pl,placeholder_class,menuIndex,item1]>{% endcomment %}
-                    {% if item1.image.src != blank %}
-                      <img
-                        class="veda-lazyload {{ _class }}"
-                        src="{{ item1.image.src | image_url: width: 10 }}"
-                        draggable="false"
-                        {% if _alt %}
-                          alt="{{ _alt }}"
-                        {% else %}
-                          alt="image"
-                        {% endif %}
-                        {% if item1.image.width %}
-                          data-intrinsic-width="{{ item1.image.width }}"
-                          width="{{ item1.image.width }}"
-                        {% endif %}
-                        {% if item1.image.height %}
-                          height="{{ item1.image.height }}"
-                          data-intrinsic-height="{{ item1.image.height }}"
-                        {% endif %}
-                        {% if _style %}
-                          style="{{ _style }}"
-                        {% endif %}
-                        loading="lazy"
-                      >
-                    {% else %}
-                      {% liquid
-                        assign pl = 'lifestyle-1'
-
-                        if _placeholder
-                          assign pl = _placeholder
-                        endif
-
-                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
-
-                        if 'w:80px'
-                          assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'w:80px'
-                        endif
-                      %}
-                      {{ pl | placeholder_svg_tag: placeholder_class }}
-                    {% endif %}
-                    {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
-                  </a>
-                {% endif %}
+              
                 {% if item1.content___description %}
                   <div
                     class="mt:15px fz:14px c:color-light-freeze.6"
@@ -482,17 +438,14 @@
         {
           "label": "Content > Title",
           "id": "content___title",
+          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
           "type": "liquid"
         },
         {
           "label": "Content > Description",
           "id": "content___description",
+          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
           "type": "liquid"
-        },
-        {
-          "type": "image_picker",
-          "id": "content___logo",
-          "label": "Logo"
         }
       ]
     },
@@ -510,34 +463,34 @@
       "label": "Menu"
     },
     {
-      "label": "Logo > Width",
-      "id": "logo___width",
-      "type": "number"
-    },
-    {
-      "type": "image_picker",
-      "id": "logo___image",
-      "label": "Image"
-    },
-    {
-      "label": "Logo > Enable",
+      "label": "Logo Enable",
       "id": "logo___enable",
       "type": "checkbox",
       "default": false
     },
     {
-      "label": "Subscribe > Description",
-      "id": "subscribe___description",
-      "type": "liquid",
-      "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-      "default": "<p>Subscribe to our newsletter and get 10% off your first purchase</p>"
+      "type": "image_picker",
+      "id": "logo___image",
+      "label": "Logo Image"
     },
     {
-      "label": "Subscribe > Title",
+      "label": "Logo Width",
+      "id": "logo___width",
+      "type": "number"
+    },
+    {
+      "label": "Subscribe Title",
       "id": "subscribe___title",
       "type": "liquid",
       "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
       "default": "Subscribe"
+    },
+    {
+      "label": "Subscribe Description",
+      "id": "subscribe___description",
+      "type": "liquid",
+      "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
+      "default": "<p>Subscribe to our newsletter and get 10% off your first purchase</p>"
     },
     {
       "label": "Footer Bottom > Copyright",
@@ -546,7 +499,7 @@
       "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
       "default": "<p>Copyright</p>"
     },
-     {
+    {
       "label": "Section Settings > Container Width",
       "id": "VEDA_select_4",
       "type": "select",
@@ -687,7 +640,7 @@
       "name": "Footer 4",
       "blocks": [
         {
-          "type": "content_navigation"
+          "type": "content_information"
         },
         {
           "type": "content_navigation"
