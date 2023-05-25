@@ -222,106 +222,104 @@
 
     {% for block in section.blocks %}
       {% assign item = block.settings %}
-      {% if item.content___enable %}
-        <div
-          class="col"
-          {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
-            style="{{ colGap }}"
-          {% endif %}
-        >
-          <div>
-            {% case block.type %}
-              {% when 'content_information' %}
-                {% if item.content___title and block.type != 'subscribe' %}
-                  <h3
-                    class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
-                    data-css="{{ null }}"
-                  >
-                    {{ item.content___title }}
-                  </h3>
-                {% endif %}
-                {% if item.content___logo.src %}
-                  <a href="/" class="d:block maw:200px">
-                    {% if item.image.src != blank %}
-                      <img
-                        class="veda-lazyload {{ _class }}"
-                        src="{{ item.image.src | image_url: width: 10 }}"
-                        draggable="false"
-                        {% if _alt %}
-                          alt="{{ _alt }}"
-                        {% else %}
-                          alt="image"
-                        {% endif %}
-                        {% if item.image.width %}
-                          data-intrinsic-width="{{ item.image.width }}"
-                          width="{{ item.image.width }}"
-                        {% endif %}
-                        {% if item.image.height %}
-                          height="{{ item.image.height }}"
-                          data-intrinsic-height="{{ item.image.height }}"
-                        {% endif %}
-                        {% if _style %}
-                          style="{{ _style }}"
-                        {% endif %}
-                        loading="lazy"
-                      >
-                    {% else %}
-                      {% liquid
-                        assign pl = 'lifestyle-1'
-
-                        if _placeholder
-                          assign pl = _placeholder
-                        endif
-
-                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
-
-                        if 'w:80px'
-                          assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'w:80px'
-                        endif
-                      %}
-                      {{ pl | placeholder_svg_tag: placeholder_class }}
-                    {% endif %}
-                  </a>
-                {% endif %}
-                {% if item.content___description %}
-                  <div
-                    class="mt:15px fz:14px c:color-light-freeze.6"
-                  >
-                    {{ item.content___description }}
-                  </div>
-                {% endif %}
-              {% when 'content_navigation' %}
-                {% liquid
-                  assign menuIndex = menuIndex | plus: 1
-                %}
+      <div
+        class="col"
+        {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
+          style="{{ colGap }}"
+        {% endif %}
+      >
+        <div>
+          {% case block.type %}
+            {% when 'content_information' %}
+              {% if item.content___title and block.type != 'subscribe' %}
                 <h3
                   class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
+                  data-css="{{ null }}"
                 >
-                  {{ section.settings.menu.links[menuIndex].title }}
+                  {{ item.content___title }}
                 </h3>
-                {% if section.settings.menu.links[menuIndex].links != blank %}
-                  <ul class="{{ 'p:0! m:0! w:fit-content ls:none' }}">
-                    {% for link in section.settings.menu.links[menuIndex].links %}
-                      <li>
-                        <a
-                          class="{{ 'd:flex ai:center c:color-light-freeze.6 fz:14px ff:font-secondary pt:6px pb:6px trs:0.3s' }}"
-                          href="{{ link.url }}"
-                          {% if link.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          <span>
-                            {{ link.title }}
-                          </span>
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-            {% endcase %}
-          </div>
+              {% endif %}
+              {% if item.content___logo.src %}
+                <a href="/" class="d:block maw:200px">
+                  {% if item.image.src != blank %}
+                    <img
+                      class="veda-lazyload {{ _class }}"
+                      src="{{ item.image.src | image_url: width: 10 }}"
+                      draggable="false"
+                      {% if _alt %}
+                        alt="{{ _alt }}"
+                      {% else %}
+                        alt="image"
+                      {% endif %}
+                      {% if item.image.width %}
+                        data-intrinsic-width="{{ item.image.width }}"
+                        width="{{ item.image.width }}"
+                      {% endif %}
+                      {% if item.image.height %}
+                        height="{{ item.image.height }}"
+                        data-intrinsic-height="{{ item.image.height }}"
+                      {% endif %}
+                      {% if _style %}
+                        style="{{ _style }}"
+                      {% endif %}
+                      loading="lazy"
+                    >
+                  {% else %}
+                    {% liquid
+                      assign pl = 'lifestyle-1'
+
+                      if _placeholder
+                        assign pl = _placeholder
+                      endif
+
+                      assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _class
+
+                      if 'w:80px'
+                        assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'w:80px'
+                      endif
+                    %}
+                    {{ pl | placeholder_svg_tag: placeholder_class }}
+                  {% endif %}
+                </a>
+              {% endif %}
+              {% if item.content___description %}
+                <div
+                  class="mt:15px fz:14px c:color-light-freeze.6"
+                >
+                  {{ item.content___description }}
+                </div>
+              {% endif %}
+            {% when 'content_navigation' %}
+              {% liquid
+                assign menuIndex = menuIndex | plus: 1
+              %}
+              <h3
+                class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
+              >
+                {{ section.settings.menu.links[menuIndex].title }}
+              </h3>
+              {% if section.settings.menu.links[menuIndex].links != blank %}
+                <ul class="{{ 'p:0! m:0! w:fit-content ls:none' }}">
+                  {% for link in section.settings.menu.links[menuIndex].links %}
+                    <li>
+                      <a
+                        class="{{ 'd:flex ai:center c:color-light-freeze.6 fz:14px ff:font-secondary pt:6px pb:6px trs:0.3s' }}"
+                        href="{{ link.url }}"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        <span>
+                          {{ link.title }}
+                        </span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+          {% endcase %}
         </div>
-      {% endif %}
+      </div>
     {% endfor %}
   {% else %}
 
@@ -482,12 +480,6 @@
       "name": "Content > Information",
       "settings": [
         {
-          "label": "Content > Enable",
-          "id": "content___enable",
-          "type": "checkbox",
-          "default": true
-        },
-        {
           "label": "Content > Title",
           "id": "content___title",
           "type": "liquid"
@@ -508,12 +500,6 @@
       "type": "content_navigation",
       "name": "Content > Navigation",
       "settings": [
-        {
-          "label": "Enable",
-          "id": "content___enable",
-          "type": "checkbox",
-          "default": true
-        }
       ]
     }
   ],
