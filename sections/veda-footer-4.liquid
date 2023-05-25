@@ -230,16 +230,16 @@
           {% endif %}
         >
           <div>
-            {% if item.content___title and block.type != 'subscribe' %}
-              <h3
-                class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
-                data-css="{{ null }}"
-              >
-                {{ item.content___title }}
-              </h3>
-            {% endif %}
             {% case block.type %}
               {% when 'content_information' %}
+                {% if item.content___title and block.type != 'subscribe' %}
+                  <h3
+                    class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
+                    data-css="{{ null }}"
+                  >
+                    {{ item.content___title }}
+                  </h3>
+                {% endif %}
                 {% if item.content___logo.src %}
                   <a href="/" class="d:block maw:200px">
                     {% if item.image.src != blank %}
@@ -294,6 +294,11 @@
                 {% liquid
                   assign menuIndex = menuIndex | plus: 1
                 %}
+                <h3
+                  class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
+                >
+                  {{ section.settings.menu.links[menuIndex].title }}
+                </h3>
                 {% if section.settings.menu.links[menuIndex].links != blank %}
                   <ul class="{{ 'p:0! m:0! w:fit-content ls:none' }}">
                     {% for link in section.settings.menu.links[menuIndex].links %}
@@ -477,6 +482,17 @@
       "name": "Content > Information",
       "settings": [
         {
+          "label": "Content > Enable",
+          "id": "content___enable",
+          "type": "checkbox",
+          "default": true
+        },
+        {
+          "label": "Content > Title",
+          "id": "content___title",
+          "type": "liquid"
+        },
+        {
           "label": "Content > Description",
           "id": "content___description",
           "type": "liquid"
@@ -485,17 +501,6 @@
           "type": "image_picker",
           "id": "content___logo",
           "label": "Logo"
-        },
-        {
-          "label": "Content > Title",
-          "id": "content___title",
-          "type": "liquid"
-        },
-        {
-          "label": "Content > Enable",
-          "id": "content___enable",
-          "type": "checkbox",
-          "default": true
         }
       ]
     },
@@ -504,12 +509,7 @@
       "name": "Content > Navigation",
       "settings": [
         {
-          "label": "Content > Title",
-          "id": "content___title",
-          "type": "liquid"
-        },
-        {
-          "label": "Content > Enable",
+          "label": "Enable",
           "id": "content___enable",
           "type": "checkbox",
           "default": true
@@ -560,21 +560,40 @@
       "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
       "default": "<p>Copyright</p>"
     },
+     {
+      "label": "Section Settings > Container Width",
+      "id": "VEDA_select_4",
+      "type": "select",
+      "default": "boxed",
+      "options": [
+        {
+          "label": "Boxed",
+          "value": "boxed"
+        },
+        {
+          "label": "Full Width",
+          "value": "full_width"
+        },
+        {
+          "label": "Manual",
+          "value": "manual"
+        }
+      ]
+    },
     {
-      "label": "Section Settings > Separator Bottom",
-      "id": "VEDA_slider_1",
+      "label": "Section Settings > Width",
+      "id": "section_settings___width",
       "type": "number"
     },
     {
-      "label": "Section Settings > Separator Top",
-      "id": "VEDA_slider_2",
+      "label": "Section Settings > Column Gap",
+      "id": "VEDA_slider_4",
       "type": "number"
     },
     {
-      "label": "Section Settings > Enable Separator",
-      "id": "VEDA_switch_1",
-      "type": "checkbox",
-      "default": false
+      "label": "Section Settings > Container Gap",
+      "id": "VEDA_slider_5",
+      "type": "number"
     },
     {
       "label": "Section Settings > Background Type",
@@ -660,39 +679,20 @@
       "type": "text"
     },
     {
-      "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_4",
+      "label": "Section Settings > Enable Separator",
+      "id": "VEDA_switch_1",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Section Settings > Separator Bottom",
+      "id": "VEDA_slider_1",
       "type": "number"
     },
     {
-      "label": "Section Settings > Container Gap",
-      "id": "VEDA_slider_5",
+      "label": "Section Settings > Separator Top",
+      "id": "VEDA_slider_2",
       "type": "number"
-    },
-    {
-      "label": "Section Settings > Width",
-      "id": "section_settings___width",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Container Width",
-      "id": "VEDA_select_4",
-      "type": "select",
-      "default": "boxed",
-      "options": [
-        {
-          "label": "Boxed",
-          "value": "boxed"
-        },
-        {
-          "label": "Full Width",
-          "value": "full_width"
-        },
-        {
-          "label": "Manual",
-          "value": "manual"
-        }
-      ]
     }
   ],
   "tag": "div",
