@@ -179,14 +179,10 @@
 					{
 						"label": "LAI [install here](https://apps.shopify.com/lai-reviews)",
 						"value": "lai"
-					},
-					{
-						"label": "Other",
-						"value": "other"
 					}
 				]
 			}
-		]
+    ]
   },
 	{
 		"name": "Layout",

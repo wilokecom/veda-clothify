@@ -1869,8 +1869,6 @@
                             if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
                             SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
                           </script>
-                        {% when 'other' %}
-                          {{ section.settings.star_snippet_code }}
                       {% endcase %}
                     </div>
                     <div style="order:{{ "2" }}">
@@ -2300,8 +2298,6 @@
                   if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
                   SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
                 </script>
-              {% when 'other' %}
-                {{ section.settings.star_snippet_code }}
             {% endcase %}
           </div>
                   <div style="order:{{ "2" }}">
@@ -2501,477 +2497,471 @@
 <div data-portal-id="{{ uniqueId }}" class="z:999"></div>
 {% schema %}
 {
-  "name": "Filter 3",
-  "blocks": [
-    {
-      "type": "filters_collections",
-      "name": "Filters > Collections",
-      "settings": [
-        {
-          "label": "Filters > Amount Position",
-          "id": "VEDA_select_1",
-          "type": "select",
-          "default": "default",
-          "options": [
-            {
-              "label": "Default",
-              "value": "default"
-            },
-            {
-              "label": "Right",
-              "value": "right"
-            }
-          ]
-        },
-        {
-          "label": "Filters > Enable Checkbox",
-          "id": "VEDA_switch_1",
-          "type": "checkbox",
-          "default": true
-        },
-        {
-          "label": "Filters > Enable",
-          "id": "filters___enable",
-          "type": "checkbox",
-          "default": true
-        }
-      ]
-    },
-    {
-      "type": "filters_shopify_filter",
-      "name": "Shopify Filters",
-      "settings": [
-        {
-          "label": "Filters > Variant",
-          "id": "filters___color_variant",
-          "type": "select",
-          "default": "inline",
-          "options": [
-            {
-              "label": "Inline",
-              "value": "inline"
-            },
-            {
-              "label": "Block",
-              "value": "block"
-            }
-          ]
-        },
-        {
-          "label": "Filters > Enable Input",
-          "id": "filters___enable_input",
-          "type": "checkbox",
-          "default": false
-        },
-        {
-          "label": "Filters > Amount Position",
-          "id": "VEDA_select_1",
-          "type": "select",
-          "default": "default",
-          "options": [
-            {
-              "label": "Default",
-              "value": "default"
-            },
-            {
-              "label": "Right",
-              "value": "right"
-            }
-          ]
-        },
-        {
-          "label": "Filters > Enable Checkbox",
-          "id": "VEDA_switch_1",
-          "type": "checkbox",
-          "default": true
-        },
-        {
-          "label": "Filters > Enable",
-          "id": "filters___enable",
-          "type": "checkbox",
-          "default": true
-        }
-      ]
-    },
-    {
-      "type": "filters_banner",
-      "name": "Filters > Banner",
-      "settings": [
-        {
-          "label": "Filters > Link",
-          "id": "filters___banner_link",
-          "type": "text"
-        },
-        {
-          "type": "image_picker",
-          "id": "filters___banner_image",
-          "label": "Image"
-        },
-        {
-          "label": "Filters > Title",
-          "id": "filters___title",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "type": "liquid",
-          "default": "Title"
-        },
-        {
-          "label": "Filters > Enable",
-          "id": "filters___enable",
-          "type": "checkbox",
-          "default": true
-        }
-      ]
-    },
-    {
-      "type": "collection_filter",
-      "name": "Collections",
-      "settings": [
-        {
-          "label": "Collections > Link",
-          "id": "collection_filter___link",
-          "type": "text"
-        },
-        {
-          "label": "Collections > Text",
-          "id": "collection_filter___text",
-          "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
-          "type": "liquid",
-          "default": "Text"
-        }
-      ]
-    }
-  ],
-  "settings": [
-    {
-      "label": "Snippet Code",
-      "id": "star_snippet_code",
-      "type": "liquid",
-      "info": "Please provide the snippet code of the review app you want to use if you select Other."
-    },
-    {
-      "label": "Layout Button > Style",
-      "id": "layout_button___style",
-      "type": "select",
-      "default": "style1",
-      "options": [
-        {
-          "label": "Style 1",
-          "value": "style1"
-        },
-        {
-          "label": "Style 2",
-          "value": "style2"
-        }
-      ]
-    },
-    {
-      "label": "Pagination > Item Variant",
-      "id": "VEDA_select_2",
-      "type": "select",
-      "default": "circle_border",
-      "options": [
-        {
-          "label": "Custom",
-          "value": "custom"
-        },
-        {
-          "label": "Square Shadow",
-          "value": "square_shadow"
-        },
-        {
-          "label": "Square Border",
-          "value": "square_border"
-        },
-        {
-          "label": "Square Gray",
-          "value": "square_gray"
-        },
-        {
-          "label": "Circle Shadow",
-          "value": "circle_shadow"
-        },
-        {
-          "label": "Circle Border",
-          "value": "circle_border"
-        },
-        {
-          "label": "Circle Gray",
-          "value": "circle_gray"
-        }
-      ]
-    },
-    {
-      "label": "Compare Action > Enable",
-      "id": "compare_action___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Quick View Action > Enable",
-      "id": "quick_view___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Wishlist Action > Enable",
-      "id": "VEDA_switch_2",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Sold Out > Enable",
-      "id": "sold_out___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Product Settings > Image Border Radius",
-      "id": "VEDA_slider_1",
-      "type": "number"
-    },
-    {
-      "label": "Product Settings > Aspect Ratio",
-      "id": "VEDA_slider_2",
-      "type": "number",
-      "default": 130
-    },
-    {
-      "label": "Product Settings > Enable Color",
-      "id": "VEDA_switch_3",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Product Settings > Enable Vendor",
-      "id": "VEDA_switch_4",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Product Settings > Limit",
-      "id": "product_settings___limit",
-      "type": "number",
-      "default": 8
-    },
-    {
-      "label": "New > Enable",
-      "id": "new___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Sale > Enable",
-      "id": "sale___enable",
-      "type": "checkbox",
-      "default": true
-    },
-    {
-      "label": "Section Settings > Separator Bottom",
-      "id": "VEDA_slider_3",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Separator Top",
-      "id": "VEDA_slider_4",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Enable Separator",
-      "id": "VEDA_switch_5",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Section Settings > Background Type",
-      "id": "VEDA_select_4",
-      "type": "select",
-      "default": "none",
-      "options": [
-        {
-          "label": "Image",
-          "value": "image"
-        },
-        {
-          "label": "Color",
-          "value": "color"
-        },
-        {
-          "label": "Video",
-          "value": "video"
-        },
-        {
-          "label": "None",
-          "value": "none"
-        }
-      ]
-    },
-    {
-      "type": "image_picker",
-      "id": "VEDA_image_1",
-      "label": "Background Image"
-    },
-    {
-      "label": "Section Settings > Background Overlay Blur",
-      "id": "VEDA_slider_5",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Enable Background Overlay",
-      "id": "VEDA_switch_6",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Section Settings > Background Size",
-      "id": "VEDA_select_3",
-      "type": "select",
-      "default": "cover",
-      "options": [
-        {
-          "label": "Cover",
-          "value": "cover"
-        },
-        {
-          "label": "Contain",
-          "value": "contain"
-        }
-      ]
-    },
-    {
-      "label": "Section Settings > Background Fixed",
-      "id": "VEDA_switch_7",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#fff"
-    },
-    {
-      "type": "range",
-      "id": "background_opacity",
-      "min": 0,
-      "unit": "%",
-      "max": 100,
-      "step": 1,
-      "label": "Opacity",
-      "default": 100
-    },
-    {
-      "label": "Section Settings > Background Video",
-      "id": "VEDA_video_1",
-      "type": "text"
-    },
-    {
-      "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_6",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Container Gap",
-      "id": "VEDA_slider_7",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Width",
-      "id": "section_settings___width",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Container Width",
-      "id": "VEDA_select_5",
-      "type": "select",
-      "default": "boxed",
-      "options": [
-        {
-          "label": "Boxed",
-          "value": "boxed"
-        },
-        {
-          "label": "Full Width",
-          "value": "full_width"
-        },
-        {
-          "label": "Manual",
-          "value": "manual"
-        }
-      ]
-    },
-    {
-      "label": "Filter Scroll Top",
-      "info": "Scroll to the top after filtering",
-      "id": "filter_scroll_top",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Width (%)",
-      "id": "filter_width",
-      "type": "number",
-      "default": 20
-    },
-    {
-      "label": "Filter Variant",
-      "id": "filter_variant",
-      "type": "select",
-      "default": "left",
-      "options": [
-        {
-          "label": "Left",
-          "value": "left"
-        },
-        {
-          "label": "Right",
-          "value": "right"
-        },
-        {
-          "label": "Top Left Fixed",
-          "value": "top_left_fixed"
-        },
-        {
-          "label": "Top Right Fixed",
-          "value": "top_right_fixed"
-        },
-        {
-          "label": "Horizontal",
-          "value": "horizontal"
-        }
-      ]
-    }
-  ],
-  "tag": "div",
-  "presets": [
-    {
-      "name": "Filter 3",
-      "blocks": [
-        {
-          "type": "filters_collections"
-        },
-        {
-          "type": "filters_shopify_filter"
-        },
-        {
-          "type": "filters_banner"
-        },
-        {
-          "type": "collection_filter"
-        },
-        {
-          "type": "collection_filter"
-        },
-        {
-          "type": "collection_filter"
-        },
-        {
-          "type": "collection_filter"
-        },
-        {
-          "type": "collection_filter"
-        }
-      ]
-    }
-  ]
+	"name": "Filter 3",
+	"blocks": [
+		{
+			"type": "filters_collections",
+			"name": "Filters > Collections",
+			"settings": [
+				{
+					"label": "Filters > Amount Position",
+					"id": "VEDA_select_1",
+					"type": "select",
+					"default": "default",
+					"options": [
+						{
+							"label": "Default",
+							"value": "default"
+						},
+						{
+							"label": "Right",
+							"value": "right"
+						}
+					]
+				},
+				{
+					"label": "Filters > Enable Checkbox",
+					"id": "VEDA_switch_1",
+					"type": "checkbox",
+					"default": true
+				},
+				{
+					"label": "Filters > Enable",
+					"id": "filters___enable",
+					"type": "checkbox",
+					"default": true
+				}
+			]
+		},
+		{
+			"type": "filters_shopify_filter",
+			"name": "Shopify Filters",
+			"settings": [
+				{
+					"label": "Filters > Variant",
+					"id": "filters___color_variant",
+					"type": "select",
+					"default": "inline",
+					"options": [
+						{
+							"label": "Inline",
+							"value": "inline"
+						},
+						{
+							"label": "Block",
+							"value": "block"
+						}
+					]
+				},
+				{
+					"label": "Filters > Enable Input",
+					"id": "filters___enable_input",
+					"type": "checkbox",
+					"default": false
+				},
+				{
+					"label": "Filters > Amount Position",
+					"id": "VEDA_select_1",
+					"type": "select",
+					"default": "default",
+					"options": [
+						{
+							"label": "Default",
+							"value": "default"
+						},
+						{
+							"label": "Right",
+							"value": "right"
+						}
+					]
+				},
+				{
+					"label": "Filters > Enable Checkbox",
+					"id": "VEDA_switch_1",
+					"type": "checkbox",
+					"default": true
+				},
+				{
+					"label": "Filters > Enable",
+					"id": "filters___enable",
+					"type": "checkbox",
+					"default": true
+				}
+			]
+		},
+		{
+			"type": "filters_banner",
+			"name": "Filters > Banner",
+			"settings": [
+				{
+					"label": "Filters > Link",
+					"id": "filters___banner_link",
+					"type": "text"
+				},
+				{
+					"type": "image_picker",
+					"id": "filters___banner_image",
+					"label": "Image"
+				},
+				{
+					"label": "Filters > Title",
+					"id": "filters___title",
+					"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
+					"type": "liquid",
+					"default": "Title"
+				},
+				{
+					"label": "Filters > Enable",
+					"id": "filters___enable",
+					"type": "checkbox",
+					"default": true
+				}
+			]
+		},
+		{
+			"type": "collection_filter",
+			"name": "Collections",
+			"settings": [
+				{
+					"label": "Collections > Link",
+					"id": "collection_filter___link",
+					"type": "text"
+				},
+				{
+					"label": "Collections > Text",
+					"id": "collection_filter___text",
+					"info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
+					"type": "liquid",
+					"default": "Text"
+				}
+			]
+		}
+	],
+	"settings": [
+		{
+			"label": "Layout Button > Style",
+			"id": "layout_button___style",
+			"type": "select",
+			"default": "style1",
+			"options": [
+				{
+					"label": "Style 1",
+					"value": "style1"
+				},
+				{
+					"label": "Style 2",
+					"value": "style2"
+				}
+			]
+		},
+		{
+			"label": "Pagination > Item Variant",
+			"id": "VEDA_select_2",
+			"type": "select",
+			"default": "circle_border",
+			"options": [
+				{
+					"label": "Custom",
+					"value": "custom"
+				},
+				{
+					"label": "Square Shadow",
+					"value": "square_shadow"
+				},
+				{
+					"label": "Square Border",
+					"value": "square_border"
+				},
+				{
+					"label": "Square Gray",
+					"value": "square_gray"
+				},
+				{
+					"label": "Circle Shadow",
+					"value": "circle_shadow"
+				},
+				{
+					"label": "Circle Border",
+					"value": "circle_border"
+				},
+				{
+					"label": "Circle Gray",
+					"value": "circle_gray"
+				}
+			]
+		},
+		{
+			"label": "Compare Action > Enable",
+			"id": "compare_action___enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Quick View Action > Enable",
+			"id": "quick_view___enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Wishlist Action > Enable",
+			"id": "VEDA_switch_2",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Sold Out > Enable",
+			"id": "sold_out___enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Product Settings > Image Border Radius",
+			"id": "VEDA_slider_1",
+			"type": "number"
+		},
+		{
+			"label": "Product Settings > Aspect Ratio",
+			"id": "VEDA_slider_2",
+			"type": "number",
+			"default": 130
+		},
+		{
+			"label": "Product Settings > Enable Color",
+			"id": "VEDA_switch_3",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Product Settings > Enable Vendor",
+			"id": "VEDA_switch_4",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Product Settings > Limit",
+			"id": "product_settings___limit",
+			"type": "number",
+			"default": 8
+		},
+		{
+			"label": "New > Enable",
+			"id": "new___enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Sale > Enable",
+			"id": "sale___enable",
+			"type": "checkbox",
+			"default": true
+		},
+		{
+			"label": "Section Settings > Separator Bottom",
+			"id": "VEDA_slider_3",
+			"type": "number"
+		},
+		{
+			"label": "Section Settings > Separator Top",
+			"id": "VEDA_slider_4",
+			"type": "number"
+		},
+		{
+			"label": "Section Settings > Enable Separator",
+			"id": "VEDA_switch_5",
+			"type": "checkbox",
+			"default": false
+		},
+		{
+			"label": "Section Settings > Background Type",
+			"id": "VEDA_select_4",
+			"type": "select",
+			"default": "none",
+			"options": [
+				{
+					"label": "Image",
+					"value": "image"
+				},
+				{
+					"label": "Color",
+					"value": "color"
+				},
+				{
+					"label": "Video",
+					"value": "video"
+				},
+				{
+					"label": "None",
+					"value": "none"
+				}
+			]
+		},
+		{
+			"type": "image_picker",
+			"id": "VEDA_image_1",
+			"label": "Background Image"
+		},
+		{
+			"label": "Section Settings > Background Overlay Blur",
+			"id": "VEDA_slider_5",
+			"type": "number"
+		},
+		{
+			"label": "Section Settings > Enable Background Overlay",
+			"id": "VEDA_switch_6",
+			"type": "checkbox",
+			"default": false
+		},
+		{
+			"label": "Section Settings > Background Size",
+			"id": "VEDA_select_3",
+			"type": "select",
+			"default": "cover",
+			"options": [
+				{
+					"label": "Cover",
+					"value": "cover"
+				},
+				{
+					"label": "Contain",
+					"value": "contain"
+				}
+			]
+		},
+		{
+			"label": "Section Settings > Background Fixed",
+			"id": "VEDA_switch_7",
+			"type": "checkbox",
+			"default": false
+		},
+		{
+			"type": "color",
+			"id": "background_color",
+			"label": "Background Color",
+			"default": "#fff"
+		},
+		{
+			"type": "range",
+			"id": "background_opacity",
+			"min": 0,
+			"unit": "%",
+			"max": 100,
+			"step": 1,
+			"label": "Opacity",
+			"default": 100
+		},
+		{
+			"label": "Section Settings > Background Video",
+			"id": "VEDA_video_1",
+			"type": "text"
+		},
+		{
+			"label": "Section Settings > Column Gap",
+			"id": "VEDA_slider_6",
+			"type": "number"
+		},
+		{
+			"label": "Section Settings > Container Gap",
+			"id": "VEDA_slider_7",
+			"type": "number"
+		},
+		{
+			"label": "Section Settings > Width",
+			"id": "section_settings___width",
+			"type": "number"
+		},
+		{
+			"label": "Section Settings > Container Width",
+			"id": "VEDA_select_5",
+			"type": "select",
+			"default": "boxed",
+			"options": [
+				{
+					"label": "Boxed",
+					"value": "boxed"
+				},
+				{
+					"label": "Full Width",
+					"value": "full_width"
+				},
+				{
+					"label": "Manual",
+					"value": "manual"
+				}
+			]
+		},
+		{
+			"label": "Filter Scroll Top",
+			"info": "Scroll to the top after filtering",
+			"id": "filter_scroll_top",
+			"type": "checkbox",
+			"default": false
+		},
+		{
+			"label": "Width (%)",
+			"id": "filter_width",
+			"type": "number",
+			"default": 20
+		},
+		{
+			"label": "Filter Variant",
+			"id": "filter_variant",
+			"type": "select",
+			"default": "left",
+			"options": [
+				{
+					"label": "Left",
+					"value": "left"
+				},
+				{
+					"label": "Right",
+					"value": "right"
+				},
+				{
+					"label": "Top Left Fixed",
+					"value": "top_left_fixed"
+				},
+				{
+					"label": "Top Right Fixed",
+					"value": "top_right_fixed"
+				},
+				{
+					"label": "Horizontal",
+					"value": "horizontal"
+				}
+			]
+		}
+	],
+	"tag": "div",
+	"presets": [
+		{
+			"name": "Filter 3",
+			"blocks": [
+				{
+					"type": "filters_collections"
+				},
+				{
+					"type": "filters_shopify_filter"
+				},
+				{
+					"type": "filters_banner"
+				},
+				{
+					"type": "collection_filter"
+				},
+				{
+					"type": "collection_filter"
+				},
+				{
+					"type": "collection_filter"
+				},
+				{
+					"type": "collection_filter"
+				},
+				{
+					"type": "collection_filter"
+				}
+			]
+		}
+	]
 }
 {% endschema %}

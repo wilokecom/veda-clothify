@@ -35,19 +35,7 @@
   else
     assign containerType = 'container'
   endif
-
-  if section.settings.VEDA_slider_5 >= 0
-    assign containerGap = 'padding-left: ' | append: section.settings.VEDA_slider_5 | append: 'px; padding-right: ' | append: section.settings.VEDA_slider_5 | append: 'px;'
-  else
-    assign containerGap = ''
-  endif
-
-  if section.settings.section_settings___width >= 0
-    assign containerWidth = 'max-width: ' | append: section.settings.section_settings___width | append: 'px;'
-  else
-    assign containerWidth = ''
-  endif
-
+  
   if section.settings.VEDA_slider_4 >= 0
     assign settingGap = section.settings.VEDA_slider_4 | divided_by: 2.0
 
@@ -63,16 +51,6 @@
   assign rowGap = 'margin-top: -' | append: settingGapVertical | append: 'px; margin-left: -' | append: settingGap | append: 'px; margin-right: -' | append: settingGap | append: 'px;'
 
   assign sectionSeparator = ''
-
-  if section.settings.VEDA_switch_1
-    if section.settings.VEDA_slider_2
-      assign sectionSeparator = sectionSeparator | append: 'border-top: ' | append: section.settings.VEDA_slider_2 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
-    endif
-
-    if section.settings.VEDA_slider_1
-      assign sectionSeparator = sectionSeparator | append: 'border-bottom: ' | append: section.settings.VEDA_slider_1 | append: 'px solid ' | append: '#f3f3f3' | append: ';'
-    endif
-  endif
 
   if colGap and rowGap and builderMode and envatoMode
   endif
@@ -94,7 +72,7 @@
     data-css="{{ null }}"
     class="d:flex@sm ai:center jc:space-between bgc:color-primary p:pfs(30px,40px) mt:-50px mb:40px"
   >
-    {% if section.settings.logo___enable %}
+    {% if section.settings.logo___image.src != blank %}
       <div
         class="pos:relative flxs:1 mr:30px@sm mb:20px@+sm"
         style="width: {{ section.settings["logo___width"] }}px"
@@ -222,12 +200,7 @@
 
     {% for block in section.blocks %}
       {% assign item = block.settings %}
-      <div
-        class="col"
-        {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
-          style="{{ colGap }}"
-        {% endif %}
-      >
+      <div class="col">
         <div>
           {% case block.type %}
             {% when 'content_information' %}
@@ -325,13 +298,7 @@
 
     {% for block in section.blocks %}
       {% assign item1 = block.settings %}
-      {% if item1.content___enable %}
-        <div
-          class="col"
-          {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
-            style="{{ colGap }}"
-          {% endif %}
-        >
+        <div class="col">
           <div>
             {% if item1.content___title and block.type != 'subscribe' %}
               <h3
@@ -357,7 +324,6 @@
             {% endcase %}
           </div>
         </div>
-      {% endif %}
     {% endfor %}
   {% endif %}
 {% endcapture %}
@@ -395,22 +361,10 @@
     class="veda-lazyload pos:relative z:1 bgz:cover bgp:center pt:1px! mt:-1px"
     style="{{ backgroundColor }}{{ backgroundImage }}{{ sectionPadding }}{{ sectionSeparator }}"
   >
-    <div
-      class="{{ containerType }}"
-      {% if section.settings.VEDA_slider_5
-        or section.settings.VEDA_slider_5 == 0
-        or section.settings.section_settings___width
-        or section.settings.section_settings___width == 0
-      %}
-        style="{{ containerGap }}{{ containerWidth }}"
-      {% endif %}
-    >
+    <div class="{{ containerType }}">
       {{ Subscribe }}
       <div
         class="row row-cols-lg-{{ 4 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
-        {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
-          style="{{ rowGap }}"
-        {% endif %}
       >
         {{ Content }}
       </div>
@@ -463,12 +417,6 @@
       "label": "Menu"
     },
     {
-      "label": "Logo Enable",
-      "id": "logo___enable",
-      "type": "checkbox",
-      "default": false
-    },
-    {
       "type": "image_picker",
       "id": "logo___image",
       "label": "Logo Image"
@@ -518,16 +466,6 @@
           "value": "manual"
         }
       ]
-    },
-    {
-      "label": "Section Settings > Width",
-      "id": "section_settings___width",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Column Gap",
-      "id": "VEDA_slider_4",
-      "type": "number"
     },
     {
       "label": "Section Settings > Container Gap",
@@ -616,22 +554,6 @@
       "label": "Section Settings > Background Video",
       "id": "VEDA_video_1",
       "type": "text"
-    },
-    {
-      "label": "Section Settings > Enable Separator",
-      "id": "VEDA_switch_1",
-      "type": "checkbox",
-      "default": false
-    },
-    {
-      "label": "Section Settings > Separator Bottom",
-      "id": "VEDA_slider_1",
-      "type": "number"
-    },
-    {
-      "label": "Section Settings > Separator Top",
-      "id": "VEDA_slider_2",
-      "type": "number"
     }
   ],
   "tag": "div",

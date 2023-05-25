@@ -126,78 +126,20 @@
 		{% liquid
 			assign arrowGeneralClassName = 'fz:pfs(24px,30px)! d:flex! ai:center jc:center ov:hidden trs:0.3s m:5px'
 			
-			case section.settings.VEDA_select_1
-				when 'square_shadow'
-					assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1'
-				when 'square_border'
-					assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light bd:1px_solid_color-gray2 c:color-gray9 c:color-primary|h'
-				when 'square_gray'
-					assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-gray2 c:color-gray9 c:color-primary|h'
-				when 'circle_shadow'
-					assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1 bdrs:50%'
-				when 'circle_border'
-					assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light bd:1px_solid_color-gray2 c:color-gray9 c:color-primary|h bdrs:50%'
-				when 'circle_gray'
-					assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-gray2 c:color-gray9 c:color-primary|h bdrs:50%'
-				when 'custom'
-					assign arrowVariantClassName = 'w:30px h:30px'
-				else
-					assign arrowVariantClassName = 'w:30px h:30px'
-			endcase
+			assign arrowVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1'
 		%}
 		
-		{% if section.settings.VEDA_switch_1
-		and section.settings.VEDA_select_2 != 'top'
-		or section.settings.VEDA_select_2 == 'top'
-		and 12 != 12
-		%}
-			<div
-				{% if section.settings.VEDA_select_2 == 'top' and 12 != 12 %}
-					class="d:flex pos:absolute b:calc(100%_+_5px) r:0"
-				{% elsif section.settings.VEDA_select_2 == 'bottom' %}
-					class="d:flex@sm d:none mt:15px"
-					style="justify-content: {{ "center" }}"
-				{% else %}
-					class="d:flex@sm d:none"
-				{% endif %}
-			>
-				<div
-					{% if section.settings.VEDA_select_2 == 'middle' %}
-						class="swiper-button-prev swiper-button-prev-middle l:0! trf:translate(-50%,-50%) m:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% elsif section.settings.VEDA_select_2 == 'middle_out' %}
-						class="swiper-button-prev swiper-button-prev-middle-out l:auto! r:100%! trf:translate(0,-50%) {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% elsif section.settings.VEDA_select_2 == 'middle_in' %}
-						class="swiper-button-prev swiper-button-prev-middle-in l:0! trf:translate(0,-50%) {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% else %}
-						class="swiper-button-prev swiper-button-prev-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% endif %}
-					data-css="{{ null }}"
-				>
-					<span>{{ section.settings.VEDA_icon_2 }}</span>
-				</div>
-				<div
-					{% if section.settings.VEDA_select_2 == 'middle' %}
-						class="swiper-button-next swiper-button-next-middle r:0! trf:translate(50%,-50%) m:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% elsif section.settings.VEDA_select_2 == 'middle_out' %}
-						class="swiper-button-next swiper-button-next-middle r:auto! l:100%! trf:translate(0,-50%) {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% elsif section.settings.VEDA_select_2 == 'middle_in' %}
-						class="swiper-button-next swiper-button-next-middle r:0! trf:translate(0,-50%) {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% else %}
-						class="swiper-button-next swiper-button-next-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
-					{% endif %}
-					data-css="{{ null }}"
-				>
-					<span>{{ section.settings.VEDA_icon_1 }}</span>
-				</div>
+		<div class="d:flex@sm d:none">
+			<div class="swiper-button-prev swiper-button-prev-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}">
+				<span><i class="fal fa-angle-left"></i></span>
 			</div>
-		{% endif %}
-		{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
-		{% if section.settings.VEDA_switch_2 %}
-			<div
-				class="swiper-pagination c:color-gray9 bd:2px_solid_color-light*span bxz:content-box*span"
-				data-child-css="{{ null }}"
-			></div>
-		{% endif %}
+			<div class="swiper-button-next swiper-button-next-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName
+			}} {{ arrowVariantClassName }}"
+			     data-css="{{ null }}"
+			>
+				<span><i class="fal fa-angle-right"></i></span>
+			</div>
+		</div>
 	</div>
 {% endcapture %}
 
@@ -397,43 +339,9 @@
 					{% comment %}<BẮT_ĐẦU_TÁCH_FILE_4:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_class,_component,_default_link,borderRadius,delay,gap,arrowGeneralClassName,arrowVariantClassName,align,headingDividerPadding,defaultClass,defaultForBottomClass,variantClass,custom_class]>{% endcomment %}
 					{% liquid
 						assign arrowTopGeneralClassName = 'fz:pfs(24px,30px)! d:flex! ai:center jc:center ov:hidden trs:0.3s m:5px'
-						
-						case section.settings.VEDA_select_1
-							when 'square_shadow'
-								assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1'
-							when 'square_border'
-								assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light bd:1px_solid_color-gray2 c:color-gray9 c:color-primary|h'
-							when 'square_gray'
-								assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-gray2 c:color-gray9 c:color-primary|h'
-							when 'circle_shadow'
-								assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1 bdrs:50%'
-							when 'circle_border'
-								assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light bd:1px_solid_color-gray2 c:color-gray9 c:color-primary|h bdrs:50%'
-							when 'circle_gray'
-								assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-gray2 c:color-gray9 c:color-primary|h bdrs:50%'
-							when 'custom'
-								assign arrowTopVariantClassName = 'w:30px h:30px'
-							else
-								assign arrowTopVariantClassName = 'w:30px h:30px'
-						endcase
+						assign arrowTopVariantClassName = 'w:pfs(30px,50px) h:pfs(30px,50px) bgc:color-light c:color-gray9 c:color-primary|h bxsh:0_5px_15px_color-gray9.1'
 					%}
 					
-					{% if section.settings.VEDA_switch_1 and section.settings.VEDA_select_2 == 'top' and 12 == 12 %}
-						<div class="d:flex ml:10px mb:10px">
-							<div
-								class="swiper-button-prev swiper-button-prev-top pos:static! trf:none! {{ arrowTopGeneralClassName }} {{ arrowTopVariantClassName }}"
-								data-css="{{ null }}"
-							>
-								<span>{{ section.settings.VEDA_icon_2 }}</span>
-							</div>
-							<div
-								class="swiper-button-next swiper-button-next-top pos:static! trf:none! mr:0! {{ arrowTopGeneralClassName }} {{ arrowTopVariantClassName }}"
-								data-css="{{ null }}"
-							>
-								<span>{{ section.settings.VEDA_icon_1 }}</span>
-							</div>
-						</div>
-					{% endif %}
 					{% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 				</div>
 			</div>
@@ -638,96 +546,6 @@
 	],
 	"settings": [
 		{
-			"label": "Slider Settings > Right",
-			"info": "[Get icon](https://fontawesome.com/v5/search)",
-			"id": "VEDA_icon_1",
-			"type": "html",
-			"default": "<i class=\"fal fa-angle-right\"></i>"
-		},
-		{
-			"label": "Slider Settings > Left",
-			"info": "[Get icon](https://fontawesome.com/v5/search)",
-			"id": "VEDA_icon_2",
-			"type": "html",
-			"default": "<i class=\"fal fa-angle-left\"></i>"
-		},
-		{
-			"label": "Slider Settings > Arrow Variant",
-			"id": "VEDA_select_1",
-			"type": "select",
-			"default": "custom",
-			"options": [
-				{
-					"label": "Custom",
-					"value": "custom"
-				},
-				{
-					"label": "Square Shadow",
-					"value": "square_shadow"
-				},
-				{
-					"label": "Square Border",
-					"value": "square_border"
-				},
-				{
-					"label": "Square Gray",
-					"value": "square_gray"
-				},
-				{
-					"label": "Circle Shadow",
-					"value": "circle_shadow"
-				},
-				{
-					"label": "Circle Border",
-					"value": "circle_border"
-				},
-				{
-					"label": "Circle Gray",
-					"value": "circle_gray"
-				}
-			]
-		},
-		{
-			"label": "Slider Settings > Arrow Position",
-			"id": "VEDA_select_2",
-			"type": "select",
-			"default": "middle",
-			"options": [
-				{
-					"label": "Top",
-					"value": "top"
-				},
-				{
-					"label": "Middle",
-					"value": "middle"
-				},
-				{
-					"label": "Middle Out",
-					"value": "middle_out"
-				},
-				{
-					"label": "Middle In",
-					"value": "middle_in"
-				},
-				{
-					"label": "Bottom",
-					"value": "bottom"
-				}
-			]
-		},
-		{
-			"label": "Slider Settings > Enable Arrow",
-			"id": "VEDA_switch_1",
-			"type": "checkbox",
-			"default": true
-		},
-		{
-			"label": "Slider Settings > Enable Pagination",
-			"id": "VEDA_switch_2",
-			"type": "checkbox",
-			"default": false
-		},
-		{
 			"label": "Slider Settings > Loop",
 			"id": "slider_settings___loop",
 			"type": "checkbox",
@@ -744,13 +562,6 @@
 			"id": "VEDA_switch_3",
 			"type": "checkbox",
 			"default": false
-		},
-		{
-			"label": "View All Button > Choose",
-			"info": "[Get icon](https://fontawesome.com/v5/search)",
-			"id": "VEDA_icon_3",
-			"type": "html",
-			"default": "<i class=\"far fa-atom\"></i>"
 		},
 		{
 			"label": "Section Settings > Background Type",
