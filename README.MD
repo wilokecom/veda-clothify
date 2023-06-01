@@ -53,6 +53,7 @@ Are you tired of the limitations and drawbacks of free Shopify themes? While fre
 
 
 <aside>
+  
 🚀 [**Explore Veda Landing Page Builder](https://apps.shopify.com/veda-page-builder?utm_source=clothify&utm_medium=github).**
 
 </aside>
