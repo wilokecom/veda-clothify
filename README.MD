@@ -41,14 +41,14 @@ Are you tired of the limitations and drawbacks of free Shopify themes? While fre
 
 - Clothify adapts seamlessly to any screen size, providing an exceptional user experience across desktop, tablet, and mobile devices.
 
-![Main Image.png]
+![Main Image.png](https://cdn.shopify.com/s/files/1/0765/2841/9091/files/Clothify-Shopify-theme-features-1536x960.png?v=1685588520)
 
 <aside>
 📝 **[Read how to set up Clothify.](https://clothify-document.vedabuilder.com/getting-started/how-to-download-and-install-clothify)**
 
 </aside>
 
-![Presentational Images.png](https://cdn.shopify.com/s/files/1/0765/2841/9091/files/Clothify-Shopify-theme-features-1536x960.png?v=1685588520)
+![Presentational Images.png](https://cdn.shopify.com/s/files/1/0765/2841/9091/files/Clothify-and-Veda.png?v=1685588461)
 
 <aside>
 🚀 [**Explore Veda Landing Page Builder](https://apps.shopify.com/veda-page-builder?utm_source=clothify&utm_medium=github).**
