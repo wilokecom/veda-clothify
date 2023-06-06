@@ -45,7 +45,7 @@ Are you tired of the limitations and drawbacks of free Shopify themes? While fre
 
 
 <aside>
-📝 **[Read how to set up Clothify.]([https://clothify-document.vedabuilder.com/getting-started/how-to-download-and-install-clothify](https://clothify-free-shopify-theme.vedabuilder.com/))** 
+📝 **[Read how to set up Clothify.](https://clothify-free-shopify-theme.vedabuilder.com/)** 
 </aside>
 
 
