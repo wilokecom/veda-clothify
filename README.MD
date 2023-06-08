@@ -1,3 +1,5 @@
+**[Demo](https://veda-clothify-fashion.myshopify.com/)**
+
 # Clothify - Free Shopify Theme with Premium Quality
 
 Are you tired of the limitations and drawbacks of free Shopify themes? While free themes can be a great starting point, they often come with their fair share of cons, such as limited customization options, lack of advanced features, and limited support resources.
