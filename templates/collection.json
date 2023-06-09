@@ -1,281 +1,281 @@
 {
-    "sections": {
-        "section_6418195a2967247e1b1eb4d1": {
-            "type": "veda-main-breadcrumb",
-            "settings": {
-                "breadcrumb___separator": "<i class=\"far fa-chevron-right\"><\/i>",
-                "VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
-                "VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
-                "heading___divider": "none",
-                "heading___title": "Breadcrumb",
-                "heading___manual": true,
-                "heading___enable": false,
-                "VEDA_slider_1": 1,
-                "VEDA_switch_1": true,
-                "VEDA_switch_2": false,
-                "VEDA_select_1": "cover",
-                "VEDA_switch_3": false,
-                "VEDA_select_2": "none",
-                "VEDA_select_3": "boxed"
-            }
-        },
-        "section_6418195a2967247e1b1eb4d2": {
-            "type": "veda-image-with-text-10",
-            "blocks": {
-                "bd0d33a2-1890-4315-a60e-70062fd09ebc": {
-                    "type": "heading_title",
-                    "settings": {
-                        "heading___title_tag_name": "h2",
-                        "heading___title": "Title",
-                        "heading___enable": false
-                    }
-                },
-                "48d5f045-a622-4796-8953-94ab9454ccf3": {
-                    "type": "content",
-                    "settings": {
-                        "content___content_width": 51,
-                        "content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
-                        "content___icon_enable": true,
-                        "content___button_variant": "light",
-                        "content___new_tab": false,
-                        "content___button_text": "Shop now",
-                        "content___title": "Best Bag",
-                        "content___sub_title": "Lookbook 2023"
-                    }
-                },
-                "b04aacc5-7fc2-4d0a-9996-363341f6e2e1": {
-                    "type": "content",
-                    "settings": {
-                        "content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
-                        "content___icon_enable": true,
-                        "content___button_variant": "light",
-                        "content___new_tab": false,
-                        "content___button_text": "Shop now",
-                        "content___title": "Stylish Blazer",
-                        "content___sub_title": "Hot Deal"
-                    }
-                },
-                "a740dd4b-01cb-44fe-bba8-daa5c8a6c156": {
-                    "type": "content",
-                    "settings": {
-                        "content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
-                        "content___icon_enable": true,
-                        "content___button_variant": "light",
-                        "content___new_tab": false,
-                        "content___button_text": "Shop now",
-                        "content___title": "Espadrilles Shoe",
-                        "content___sub_title": "Hot Deal"
-                    }
-                }
-            },
-            "block_order": [
-                "bd0d33a2-1890-4315-a60e-70062fd09ebc",
-                "48d5f045-a622-4796-8953-94ab9454ccf3",
-                "b04aacc5-7fc2-4d0a-9996-363341f6e2e1",
-                "a740dd4b-01cb-44fe-bba8-daa5c8a6c156"
-            ],
-            "settings": {
-                "VEDA_icon_1": "<i class=\"far fa-angle-right\"><\/i>",
-                "VEDA_switch_1": true,
-                "VEDA_select_1": "top",
-                "VEDA_select_2": "link",
-                "VEDA_switch_2": false,
-                "button_view_all___text": "See All Collections",
-                "button_view_all___enable": false,
-                "VEDA_switch_3": false,
-                "VEDA_switch_4": false,
-                "VEDA_select_3": "cover",
-                "VEDA_switch_5": false,
-                "VEDA_select_4": "none",
-                "VEDA_select_5": "boxed"
-            }
-        },
-        "section_6418195a2967247e1b1eb4d3": {
-            "type": "veda-filter-3",
-            "blocks": {
-                "ce36eca8-0ac7-49aa-967c-26314f3e4cb7": {
-                    "type": "filters_collections",
-                    "settings": {
-                        "VEDA_select_1": "default",
-                        "VEDA_switch_1": true,
-                        "filters___enable": true
-                    }
-                },
-                "76abe493-b890-4fd3-a360-dc59a55bf6b5": {
-                    "type": "filters_shopify_filter",
-                    "settings": {
-                        "filters___color_variant": "inline",
-                        "filters___enable_input": false,
-                        "VEDA_select_1": "default",
-                        "VEDA_switch_1": true,
-                        "filters___enable": true
-                    }
-                },
-                "536dd64f-5c7f-4fb2-98b1-26a8ce8fa09e": {
-                    "type": "filters_banner",
-                    "settings": {
-                        "filters___title": "Title",
-                        "filters___enable": true
-                    }
-                },
-                "89c296d3-5d2c-448b-95e9-f3d37797bd5f": {
-                    "type": "collection_filter",
-                    "settings": {
-                        "collection_filter___link": "\/collections\/all",
-                        "collection_filter___text": "All"
-                    }
-                },
-                "0ed4f9d5-43f7-44e2-a045-6d05edd173d6": {
-                    "type": "collection_filter",
-                    "settings": {
-                        "collection_filter___link": "\/collections\/hot-items",
-                        "collection_filter___text": "Hot Items"
-                    }
-                },
-                "19487805-0c04-4637-b272-d9024afdb8b0": {
-                    "type": "collection_filter",
-                    "settings": {
-                        "collection_filter___link": "\/collections\/on-sale",
-                        "collection_filter___text": "On Sale"
-                    }
-                },
-                "22bd51fc-59bc-4762-8cdb-c472de08265d": {
-                    "type": "collection_filter",
-                    "settings": {
-                        "collection_filter___link": "\/collections\/best-seller",
-                        "collection_filter___text": "Best Seller"
-                    }
-                },
-                "2bf4f2f1-4dd8-4453-a546-dc6ff12779fc": {
-                    "type": "collection_filter",
-                    "settings": {
-                        "collection_filter___link": "\/collections\/frontpage",
-                        "collection_filter___text": "New Arrivals"
-                    }
-                }
-            },
-            "block_order": [
-                "ce36eca8-0ac7-49aa-967c-26314f3e4cb7",
-                "76abe493-b890-4fd3-a360-dc59a55bf6b5",
-                "536dd64f-5c7f-4fb2-98b1-26a8ce8fa09e",
-                "89c296d3-5d2c-448b-95e9-f3d37797bd5f",
-                "0ed4f9d5-43f7-44e2-a045-6d05edd173d6",
-                "19487805-0c04-4637-b272-d9024afdb8b0",
-                "22bd51fc-59bc-4762-8cdb-c472de08265d",
-                "2bf4f2f1-4dd8-4453-a546-dc6ff12779fc"
-            ],
-            "settings": {
-                "layout_button___style": "style1",
-                "VEDA_select_2": "circle_border",
-                "compare_action___enable": true,
-                "quick_view___enable": true,
-                "VEDA_switch_2": true,
-                "sold_out___enable": true,
-                "VEDA_slider_2": 130,
-                "VEDA_switch_3": true,
-                "VEDA_switch_4": true,
-                "product_settings___limit": 12,
-                "new___enable": true,
-                "sale___enable": true,
-                "VEDA_switch_5": false,
-                "VEDA_switch_6": false,
-                "VEDA_select_3": "cover",
-                "VEDA_switch_7": false,
-                "VEDA_select_4": "none",
-                "VEDA_select_5": "boxed",
-                "filter_scroll_top": false,
-                "filter_width": 20,
-                "filter_variant": "left"
-            }
-        },
-        "section_6418195a2967247e1b1eb4d4": {
-            "type": "veda-services-10",
-            "blocks": {
-                "fee737c6-16bf-4638-822e-16d61bed3ffa": {
-                    "type": "heading_title",
-                    "settings": {
-                        "heading___title_tag_name": "h2",
-                        "heading___title": "Our Services",
-                        "heading___enable": false
-                    }
-                },
-                "26bb804b-d1c5-4514-8518-45f4b8bd6e20": {
-                    "type": "heading_text",
-                    "settings": {
-                        "heading___text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
-                        "heading___enable": false
-                    }
-                },
-                "165b86f4-7dce-4566-b7b9-a950c7d3a1a7": {
-                    "type": "heading_space",
-                    "settings": {
-                        "heading___space": 40,
-                        "heading___enable": false
-                    }
-                },
-                "38d0dc54-ad57-4833-9eb4-22eef269b60a": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Free gift wrapping",
-                        "content___icon": "<i class=\"fal fa-box-full\"><\/i>"
-                    }
-                },
-                "8da9a324-f800-4be1-a475-6736f9047e25": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Easy & Free returns",
-                        "content___icon": "<i class=\"fal fa-ambulance\"><\/i>"
-                    }
-                },
-                "9c09b22b-186b-468d-a8d3-d171e5ffa629": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Duis id leo mollis",
-                        "content___icon": "<i class=\"fal fa-shopping-basket\"><\/i>"
-                    }
-                },
-                "fabc9277-0128-47a2-9a29-2647ac083010": {
-                    "type": "content",
-                    "settings": {
-                        "content___new_tab": false,
-                        "content___title": "Mauris ac euismod",
-                        "content___icon": "<i class=\"fal fa-balance-scale-right\"><\/i>"
-                    }
-                }
-            },
-            "block_order": [
-                "fee737c6-16bf-4638-822e-16d61bed3ffa",
-                "26bb804b-d1c5-4514-8518-45f4b8bd6e20",
-                "165b86f4-7dce-4566-b7b9-a950c7d3a1a7",
-                "38d0dc54-ad57-4833-9eb4-22eef269b60a",
-                "8da9a324-f800-4be1-a475-6736f9047e25",
-                "9c09b22b-186b-468d-a8d3-d171e5ffa629",
-                "fabc9277-0128-47a2-9a29-2647ac083010"
-            ],
-            "settings": {
-                "VEDA_icon_1": "<i class=\"far fa-arrow-right\"><\/i>",
-                "VEDA_switch_1": true,
-                "VEDA_select_1": "top",
-                "VEDA_select_2": "link",
-                "VEDA_switch_2": false,
-                "button_view_all___text": "View All Button",
-                "button_view_all___enable": false,
-                "VEDA_switch_3": false,
-                "VEDA_switch_4": false,
-                "VEDA_select_3": "cover",
-                "VEDA_switch_5": false,
-                "VEDA_select_4": "none",
-                "VEDA_select_5": "boxed"
-            }
-        }
-    },
-    "order": [
-        "section_6418195a2967247e1b1eb4d1",
-        "section_6418195a2967247e1b1eb4d2",
-        "section_6418195a2967247e1b1eb4d3",
-        "section_6418195a2967247e1b1eb4d4"
-    ]
+	"sections": {
+		"section_6418195a2967247e1b1eb4d1": {
+			"type": "veda-main-breadcrumb",
+			"settings": {
+				"breadcrumb___separator": "<i class=\"far fa-chevron-right\"><\/i>",
+				"VEDA_text_1": "{{ 'veda.customer.account.page_title' | t }}",
+				"VEDA_text_2": "{{ 'veda.general.breadcrumbs.home' | t }}",
+				"heading___divider": "none",
+				"heading___title": "Breadcrumb",
+				"heading___manual": true,
+				"heading___enable": false,
+				"VEDA_slider_1": 1,
+				"VEDA_switch_1": true,
+				"VEDA_switch_2": false,
+				"VEDA_select_1": "cover",
+				"VEDA_switch_3": false,
+				"VEDA_select_2": "none",
+				"VEDA_select_3": "boxed"
+			}
+		},
+		"section_6418195a2967247e1b1eb4d2": {
+			"type": "veda-image-with-text-10",
+			"blocks": {
+				"bd0d33a2-1890-4315-a60e-70062fd09ebc": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Title",
+						"heading___enable": false
+					}
+				},
+				"48d5f045-a622-4796-8953-94ab9454ccf3": {
+					"type": "content",
+					"settings": {
+						"content___content_width": 51,
+						"content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
+						"content___icon_enable": true,
+						"content___button_variant": "light",
+						"content___new_tab": false,
+						"content___button_text": "Shop now",
+						"content___title": "Best Bag",
+						"content___sub_title": "Lookbook 2023"
+					}
+				},
+				"b04aacc5-7fc2-4d0a-9996-363341f6e2e1": {
+					"type": "content",
+					"settings": {
+						"content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
+						"content___icon_enable": true,
+						"content___button_variant": "light",
+						"content___new_tab": false,
+						"content___button_text": "Shop now",
+						"content___title": "Stylish Blazer",
+						"content___sub_title": "Hot Deal"
+					}
+				},
+				"a740dd4b-01cb-44fe-bba8-daa5c8a6c156": {
+					"type": "content",
+					"settings": {
+						"content___choose_icon": "<i class=\"far fa-arrow-right\"><\/i>",
+						"content___icon_enable": true,
+						"content___button_variant": "light",
+						"content___new_tab": false,
+						"content___button_text": "Shop now",
+						"content___title": "Espadrilles Shoe",
+						"content___sub_title": "Hot Deal"
+					}
+				}
+			},
+			"block_order": [
+				"bd0d33a2-1890-4315-a60e-70062fd09ebc",
+				"48d5f045-a622-4796-8953-94ab9454ccf3",
+				"b04aacc5-7fc2-4d0a-9996-363341f6e2e1",
+				"a740dd4b-01cb-44fe-bba8-daa5c8a6c156"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"far fa-angle-right\"><\/i>",
+				"VEDA_switch_1": true,
+				"VEDA_select_1": "top",
+				"VEDA_select_2": "link",
+				"VEDA_switch_2": false,
+				"button_view_all___text": "See All Collections",
+				"button_view_all___enable": false,
+				"VEDA_switch_3": false,
+				"VEDA_switch_4": false,
+				"VEDA_select_3": "cover",
+				"VEDA_switch_5": false,
+				"VEDA_select_4": "none",
+				"VEDA_select_5": "boxed"
+			}
+		},
+		"section_6418195a2967247e1b1eb4d3": {
+			"type": "veda-filter-3",
+			"blocks": {
+				"ce36eca8-0ac7-49aa-967c-26314f3e4cb7": {
+					"type": "filters_collections",
+					"settings": {
+						"VEDA_select_1": "default",
+						"VEDA_switch_1": true,
+						"filters___enable": true
+					}
+				},
+				"76abe493-b890-4fd3-a360-dc59a55bf6b5": {
+					"type": "filters_shopify_filter",
+					"settings": {
+						"filters___color_variant": "inline",
+						"filters___enable_input": false,
+						"VEDA_select_1": "default",
+						"VEDA_switch_1": true,
+						"filters___enable": true
+					}
+				},
+				"536dd64f-5c7f-4fb2-98b1-26a8ce8fa09e": {
+					"type": "filters_banner",
+					"settings": {
+						"filters___title": "Title",
+						"filters___enable": true
+					}
+				},
+				"89c296d3-5d2c-448b-95e9-f3d37797bd5f": {
+					"type": "collection_filter",
+					"settings": {
+						"collection_filter___link": "\/collections\/all",
+						"collection_filter___text": "All"
+					}
+				},
+				"0ed4f9d5-43f7-44e2-a045-6d05edd173d6": {
+					"type": "collection_filter",
+					"settings": {
+						"collection_filter___link": "\/collections\/hot-items",
+						"collection_filter___text": "Hot Items"
+					}
+				},
+				"19487805-0c04-4637-b272-d9024afdb8b0": {
+					"type": "collection_filter",
+					"settings": {
+						"collection_filter___link": "\/collections\/on-sale",
+						"collection_filter___text": "On Sale"
+					}
+				},
+				"22bd51fc-59bc-4762-8cdb-c472de08265d": {
+					"type": "collection_filter",
+					"settings": {
+						"collection_filter___link": "\/collections\/best-seller",
+						"collection_filter___text": "Best Seller"
+					}
+				},
+				"2bf4f2f1-4dd8-4453-a546-dc6ff12779fc": {
+					"type": "collection_filter",
+					"settings": {
+						"collection_filter___link": "\/collections\/frontpage",
+						"collection_filter___text": "New Arrivals"
+					}
+				}
+			},
+			"block_order": [
+				"ce36eca8-0ac7-49aa-967c-26314f3e4cb7",
+				"76abe493-b890-4fd3-a360-dc59a55bf6b5",
+				"536dd64f-5c7f-4fb2-98b1-26a8ce8fa09e",
+				"89c296d3-5d2c-448b-95e9-f3d37797bd5f",
+				"0ed4f9d5-43f7-44e2-a045-6d05edd173d6",
+				"19487805-0c04-4637-b272-d9024afdb8b0",
+				"22bd51fc-59bc-4762-8cdb-c472de08265d",
+				"2bf4f2f1-4dd8-4453-a546-dc6ff12779fc"
+			],
+			"settings": {
+				"layout_button___style": "style1",
+				"VEDA_select_2": "circle_border",
+				"compare_action___enable": true,
+				"quick_view___enable": true,
+				"VEDA_switch_2": true,
+				"sold_out___enable": true,
+				"VEDA_slider_2": 130,
+				"VEDA_switch_3": true,
+				"VEDA_switch_4": true,
+				"product_settings___limit": 12,
+				"new___enable": true,
+				"sale___enable": true,
+				"VEDA_switch_5": false,
+				"VEDA_switch_6": false,
+				"VEDA_select_3": "cover",
+				"VEDA_switch_7": false,
+				"VEDA_select_4": "none",
+				"VEDA_select_5": "boxed",
+				"filter_scroll_top": false,
+				"filter_width": 20,
+				"filter_variant": "left"
+			}
+		},
+		"section_6418195a2967247e1b1eb4d4": {
+			"type": "veda-services-10",
+			"blocks": {
+				"fee737c6-16bf-4638-822e-16d61bed3ffa": {
+					"type": "heading_title",
+					"settings": {
+						"heading___title_tag_name": "h2",
+						"heading___title": "Our Services",
+						"heading___enable": false
+					}
+				},
+				"26bb804b-d1c5-4514-8518-45f4b8bd6e20": {
+					"type": "heading_text",
+					"settings": {
+						"heading___text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+						"heading___enable": false
+					}
+				},
+				"165b86f4-7dce-4566-b7b9-a950c7d3a1a7": {
+					"type": "heading_space",
+					"settings": {
+						"heading___space": 40,
+						"heading___enable": false
+					}
+				},
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Free gift wrapping",
+						"content___icon": "<i class=\"fal fa-box-full\"><\/i>"
+					}
+				},
+				"8da9a324-f800-4be1-a475-6736f9047e25": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Easy & Free returns",
+						"content___icon": "<i class=\"fal fa-ambulance\"><\/i>"
+					}
+				},
+				"9c09b22b-186b-468d-a8d3-d171e5ffa629": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Duis id leo mollis",
+						"content___icon": "<i class=\"fal fa-shopping-basket\"><\/i>"
+					}
+				},
+				"fabc9277-0128-47a2-9a29-2647ac083010": {
+					"type": "content",
+					"settings": {
+						"content___new_tab": false,
+						"content___title": "Mauris ac euismod",
+						"content___icon": "<i class=\"fal fa-balance-scale-right\"><\/i>"
+					}
+				}
+			},
+			"block_order": [
+				"fee737c6-16bf-4638-822e-16d61bed3ffa",
+				"26bb804b-d1c5-4514-8518-45f4b8bd6e20",
+				"165b86f4-7dce-4566-b7b9-a950c7d3a1a7",
+				"38d0dc54-ad57-4833-9eb4-22eef269b60a",
+				"8da9a324-f800-4be1-a475-6736f9047e25",
+				"9c09b22b-186b-468d-a8d3-d171e5ffa629",
+				"fabc9277-0128-47a2-9a29-2647ac083010"
+			],
+			"settings": {
+				"VEDA_icon_1": "<i class=\"far fa-arrow-right\"><\/i>",
+				"VEDA_switch_1": true,
+				"VEDA_select_1": "top",
+				"VEDA_select_2": "link",
+				"VEDA_switch_2": false,
+				"button_view_all___text": "View All Button",
+				"button_view_all___enable": false,
+				"VEDA_switch_3": false,
+				"VEDA_switch_4": false,
+				"VEDA_select_3": "cover",
+				"VEDA_switch_5": false,
+				"VEDA_select_4": "none",
+				"VEDA_select_5": "boxed"
+			}
+		}
+	},
+	"order": [
+		"section_6418195a2967247e1b1eb4d1",
+		"section_6418195a2967247e1b1eb4d2",
+		"section_6418195a2967247e1b1eb4d3",
+		"section_6418195a2967247e1b1eb4d4"
+	]
 }

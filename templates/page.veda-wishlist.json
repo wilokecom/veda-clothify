@@ -135,19 +135,11 @@
                         "heading___text": "<p>Upgrade your wardrobe with these stylish pieces.<\/p>",
                         "heading___enable": true
                     }
-                },
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
-                    "type": "heading_space",
-                    "settings": {
-                        "heading___space": 10,
-                        "heading___enable": true
-                    }
                 }
             },
             "block_order": [
                 "c9fa50ce-3078-4761-a745-107272e6c003",
-                "dff9eed8-e9f3-4b37-a891-2c3efe9dad6c",
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+                "dff9eed8-e9f3-4b37-a891-2c3efe9dad6c"
             ],
             "settings": {
                 "VEDA_slider_2": 150,

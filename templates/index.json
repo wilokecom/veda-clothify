@@ -85,19 +85,11 @@
                         "heading___text": "<p>Upgrade your wardrobe with these stylish pieces.<\/p>",
                         "heading___enable": false
                     }
-                },
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
-                    "type": "heading_space",
-                    "settings": {
-                        "heading___space": 30,
-                        "heading___enable": true
-                    }
                 }
             },
             "block_order": [
                 "c9fa50ce-3078-4761-a745-107272e6c003",
-                "9a87c5fe-6220-41ef-8863-8baf5a1448cf",
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+                "9a87c5fe-6220-41ef-8863-8baf5a1448cf"
             ],
             "settings": {
                 "compare_action___enable": true,
@@ -157,13 +149,6 @@
                         "heading___enable": true
                     }
                 },
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
-                    "type": "heading_space",
-                    "settings": {
-                        "heading___space": 20,
-                        "heading___enable": true
-                    }
-                },
                 "99c557d3-c5f1-43a0-9bc9-4a971c7a821c": {
                     "type": "sidebar_banner",
                     "settings": {
@@ -184,7 +169,6 @@
             },
             "block_order": [
                 "c9fa50ce-3078-4761-a745-107272e6c003",
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18",
                 "99c557d3-c5f1-43a0-9bc9-4a971c7a821c",
                 "23e341fb-4ae6-4498-b790-fb0048308463"
             ],

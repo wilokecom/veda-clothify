@@ -776,8 +776,6 @@
                     if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
                     SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
                   </script>
-                {% when 'other' %}
-                  {{ section.settings.star_snippet_code }}
               {% endcase %}
             </div>
                 <div style="order:{{ "2" }}">
@@ -978,12 +976,6 @@
   "name": "Search 3",
   "blocks": [],
   "settings": [
-    {
-      "label": "Snippet Code",
-      "id": "star_snippet_code",
-      "type": "liquid",
-      "info": "Please provide the snippet code of the review app you want to use if you select Other."
-    },
     {
       "label": "Pagination > Item Variant",
       "id": "VEDA_select_1",

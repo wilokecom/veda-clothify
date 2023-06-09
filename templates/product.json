@@ -221,18 +221,10 @@
                         "heading___title": "Related Products",
                         "heading___enable": true
                     }
-                },
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18": {
-                    "type": "heading_space",
-                    "settings": {
-                        "heading___space": 10,
-                        "heading___enable": true
-                    }
                 }
             },
             "block_order": [
-                "c9fa50ce-3078-4761-a745-107272e6c003",
-                "e2f49099-eb9a-4696-ac4c-c95c64e32c18"
+                "c9fa50ce-3078-4761-a745-107272e6c003"
             ],
             "settings": {
                 "VEDA_icon_1": "<i class=\"fal fa-angle-right\"><\/i>",

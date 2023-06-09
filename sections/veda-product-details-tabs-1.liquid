@@ -207,8 +207,6 @@
                       if(typeof SMARTIFYAPPS!== 'undefined' && SMARTIFYAPPS.rv.installed){
                       SMARTIFYAPPS.rv.scmReviewsRate.actionCreateReviews(); }
                     </script>
-                  {% when 'other' %}
-                    {{ contentItem.review_snippet_code }}
                 {% endcase %}
             </div>
           {% when 'content_rich_text' %}
@@ -291,12 +289,6 @@
           "type": "liquid",
           "info": "Useful: Using [ MyShopKit HTML Generator](https://myshopkit.app/shopify-color-codes/) to make up your text",
           "default": "Title"
-        },
-        {
-          "label": "Snippet Code",
-          "id": "review_snippet_code",
-          "type": "liquid",
-          "info": "Please provide the snippet code of the review app you want to use if you select Other."
         }
       ]
     },
