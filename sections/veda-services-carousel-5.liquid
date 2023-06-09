@@ -64,13 +64,13 @@
 					class="d:flex w:100% trs:0.3s"
 					style="text-align: left"
 				>
-					<span class="d:block fz:30px c:color-primary mr:20px" data-css="{{ null }}">{{ item.content___icon }}</span>
+					<span class="d:block fz:30px c:color-primary mr:20px" >{{ item.content___icon }}</span>
 					<div>
 						<h5 class="fz:20px fw:500 c:color-gray9" data-css="{{ "css_4148353258" }}">
 							{{ item.content___title }}
 						</h5>
 						{% if item.content___description %}
-							<div class="c:color-gray7 mt:10px" data-css="{{ null }}">
+							<div class="c:color-gray7 mt:10px" >
 								{{ item.content___description }}
 							</div>
 						{% endif %}
@@ -110,9 +110,9 @@
         },
         spaceBetween: {{ gap }},
         breakpoints: {
-          768: { slidesPerView: {{ 2 }} },
-          992: { slidesPerView: {{ 3 }} },
-          1200: { slidesPerView: {{ 4 }} }
+          768: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 }
         }
       }
     "
@@ -171,7 +171,7 @@
 					{% else %}
 						class="swiper-button-prev swiper-button-prev-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
 					{% endif %}
-					data-css="{{ null }}"
+					
 				>
 					<span>{{ section.settings.VEDA_icon_2 }}</span>
 				</div>
@@ -185,7 +185,7 @@
 					{% else %}
 						class="swiper-button-next swiper-button-next-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
 					{% endif %}
-					data-css="{{ null }}"
+					
 				>
 					<span>{{ section.settings.VEDA_icon_1 }}</span>
 				</div>
@@ -239,7 +239,7 @@
 								endif
 							%}
 							{% capture attr %}
-								data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+								 class="fw:500" style="text-align: {{ align }}"
 							{% endcapture %}
 							{% case block.type %}
 								{% when 'heading_title' %}
@@ -256,7 +256,7 @@
 									{% endif %}
 								{% when 'heading_text' %}
 									<div
-										data-css="{{ null }}"
+										
 										style="text-align: {{ align }}"
 										class="fz:16px"
 									>
@@ -264,7 +264,7 @@
 									</div>
 								{% when 'heading_icon' %}
 									<div
-										data-css="{{ null }}"
+										
 										{% if 'left' == 'left' %}
 											style="text-align: start"
 										{% elsif 'left' == 'center' %}
@@ -422,13 +422,13 @@
 						<div class="d:flex ml:10px mb:10px">
 							<div
 								class="swiper-button-prev swiper-button-prev-top pos:static! trf:none! {{ arrowTopGeneralClassName }} {{ arrowTopVariantClassName }}"
-								data-css="{{ null }}"
+								
 							>
 								<span>{{ section.settings.VEDA_icon_2 }}</span>
 							</div>
 							<div
 								class="swiper-button-next swiper-button-next-top pos:static! trf:none! mr:0! {{ arrowTopGeneralClassName }} {{ arrowTopVariantClassName }}"
-								data-css="{{ null }}"
+								
 							>
 								<span>{{ section.settings.VEDA_icon_1 }}</span>
 							</div>

@@ -93,7 +93,7 @@
 %}
 {% capture Content %}
   <div
-    class="row row-cols-lg-{{ 3 }} row-cols-md-{{ 2 }} row-cols-sm-{{ 1 }} row-cols-{{ 1 }}"
+    class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1"
     {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
       style="{{ rowGap }}"
     {% endif %}
@@ -183,19 +183,19 @@
             >
               <h4
                 class="c:color-gray7 trs:0.3s fw:400 fz:14px tt:uppercase lts:1px mb:10px"
-                data-css="{{ null }}"
+                
               >
                 {{ item.content___sub_title }}
               </h4>
               <h3
                 class="c:color-gray9 trs:0.3s fw:500 fz:pfs(22px,26px)"
-                data-css="{{ null }}"
+                
               >
                 {{ item.content___title }}
               </h3>
               <div
                 class="c:color-gray8 trs:0.3s fz:pfs(15px,18px)"
-                data-css="{{ null }}"
+                
               >
                 {{ item.content___description }}
               </div>
@@ -236,13 +236,13 @@
                   {% if item.content___new_tab %}
                     target="_blank"
                   {% endif %}
-                  data-css="{{ null }}"
+                  
                   href="{{ item.content___button_link }}"
                 >
                   {% if item.content___icon_enable and 'right' == 'left' %}
                     <span
                       class="mr:10px"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ item.content___choose_icon }}
                     </span>
@@ -253,7 +253,7 @@
                   {% if item.content___icon_enable and 'right' == 'right' %}
                     <span
                       class="ml:10px"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ item.content___choose_icon }}
                     </span>
@@ -317,7 +317,7 @@
                   endif
                 %}
                 {% capture attr %}
-                  data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+                   class="fw:500" style="text-align: {{ align }}"
                 {% endcapture %}
                 {% case block.type %}
                   {% when 'heading_title' %}
@@ -334,7 +334,7 @@
                     {% endif %}
                   {% when 'heading_text' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       style="text-align: {{ align }}"
                       class="fz:16px"
                     >
@@ -342,7 +342,7 @@
                     </div>
                   {% when 'heading_icon' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       {% if 'left' == 'left' %}
                         style="text-align: start"
                       {% elsif 'left' == 'center' %}
@@ -479,7 +479,7 @@
 
               {% endif %}
               class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-              data-css="{{ null }}"
+              
               {% if _default_link %}
                 href="{{ _default_link }}"
               {% else %}
@@ -490,13 +490,13 @@
               {% endif %}
             >
               {% if section.settings.VEDA_switch_1 and 'right' == 'left' %}
-                <span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+                <span class="mr:10px" >{{ section.settings.VEDA_icon_1 }}</span>
               {% endif %}
               <span>
                 {{ section.settings.button_view_all___text }}
               </span>
               {% if section.settings.VEDA_switch_1 and 'right' == 'right' %}
-                <span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+                <span class="ml:10px" >{{ section.settings.VEDA_icon_1 }}</span>
               {% endif %}
             </a>
           {% endcapture %}
@@ -591,7 +591,7 @@
 
         {% endif %}
         class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-        data-css="{{ null }}"
+        
         {% if _default_link %}
           href="{{ _default_link }}"
         {% else %}
@@ -602,13 +602,13 @@
         {% endif %}
       >
         {% if section.settings.VEDA_switch_1 and 'right' == 'left' %}
-          <span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+          <span class="mr:10px" >{{ section.settings.VEDA_icon_1 }}</span>
         {% endif %}
         <span>
           {{ section.settings.button_view_all___text }}
         </span>
         {% if section.settings.VEDA_switch_1 and 'right' == 'right' %}
-          <span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+          <span class="ml:10px" >{{ section.settings.VEDA_icon_1 }}</span>
         {% endif %}
       </a>
     {% endcapture %}

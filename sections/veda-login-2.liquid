@@ -132,7 +132,7 @@
       {% if builderMode and section.settings.recover_success___test %}
         <div
           class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-success.1 c:color-success"
-          data-css="{{ null }}"
+          
           {% if _component %}
             component="{{ _component }}"
           {% else %}
@@ -145,7 +145,7 @@
       {% elsif form.posted_successfully? %}
         <div
           class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-success.1 c:color-success"
-          data-css="{{ null }}"
+          
         >
           <span><i class="far fa-check-circle mr:10px"></i></span>
           <div>{{ success_message }}</div>
@@ -155,7 +155,7 @@
       {% if builderMode and section.settings.error___test %}
         <div
           class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
-          data-css="{{ null }}"
+          
           {% if _component %}
             component="{{ _component }}"
           {% else %}
@@ -168,7 +168,7 @@
       {% elsif form.errors %}
         <div
           class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
-          data-css="{{ null }}"
+          
         >
           <span><i class="far fa-exclamation-circle mr:10px"></i></span>
           {{ form.errors | default_errors }}
@@ -189,7 +189,7 @@
           {% else %}
             class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.form_login___email_label }}
         </span>
@@ -199,7 +199,7 @@
           {% else %}
             class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
           {% endif %}
-          data-css="{{ null }}"
+          
           type="{{ 'email' }}"
           name="{{ 'email' }}"
           {% if _value %}
@@ -288,7 +288,7 @@
           {% if _data_button_video_id %}
             data-button-video-id="{{ _data_button_video_id }}"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {% if section.settings.VEDA_switch_3 and 'left' == 'left' %}
             <span
@@ -301,7 +301,7 @@
               {% elsif _icon_class %}
                 class="{{ _icon_class }}"
               {% endif %}
-              data-css="{{ null }}"
+              
             >
               {{ section.settings.VEDA_icon_3 }}
             </span>
@@ -320,7 +320,7 @@
               {% elsif _icon_class %}
                 class="{{ _icon_class }}"
               {% endif %}
-              data-css="{{ null }}"
+              
             >
               {{ section.settings.VEDA_icon_3 }}
             </span>
@@ -395,7 +395,7 @@
           {% if _data_button_video_id %}
             data-button-video-id="{{ _data_button_video_id }}"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {% if section.settings.VEDA_switch_2 and 'left' == 'left' %}
             <span
@@ -408,7 +408,7 @@
               {% elsif _icon_class %}
                 class="{{ _icon_class }}"
               {% endif %}
-              data-css="{{ null }}"
+              
             >
               {{ section.settings.VEDA_icon_2 }}
             </span>
@@ -427,7 +427,7 @@
               {% elsif _icon_class %}
                 class="{{ _icon_class }}"
               {% endif %}
-              data-css="{{ null }}"
+              
             >
               {{ section.settings.VEDA_icon_2 }}
             </span>
@@ -444,7 +444,7 @@
     {% if builderMode and section.settings.error___test %}
       <div
         class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
-        data-css="{{ null }}"
+        
         {% if 'error' %}
           component="{{ 'error' }}"
         {% else %}
@@ -457,7 +457,7 @@
     {% elsif form.errors %}
       <div
         class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
-        data-css="{{ null }}"
+        
       >
         <span><i class="far fa-exclamation-circle mr:10px"></i></span>
         {{ form.errors | default_errors }}
@@ -479,7 +479,7 @@
           {% else %}
             class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.form_login___email_label }}
         </span>
@@ -489,7 +489,7 @@
           {% else %}
             class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
           {% endif %}
-          data-css="{{ null }}"
+          
           type="{{ 'email' }}"
           name="{{ 'customer[email]' }}"
           {% if _value %}
@@ -525,7 +525,7 @@
             {% else %}
               class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.VEDA_text_4 }}
           </span>
@@ -535,7 +535,7 @@
             {% else %}
               class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
             {% endif %}
-            data-css="{{ null }}"
+            
             type="{{ 'password' }}"
             name="{{ 'customer[password]' }}"
             {% if _value %}
@@ -560,7 +560,7 @@
 
       <div
         class="btn-login-to-recover-js mt:15px fz:14px fw:400 td:underline c:color-gray9 cur:pointer"
-        data-css="{{ null }}"
+        
       >
         {{ section.settings.VEDA_text_3 }}
       </div>
@@ -631,7 +631,7 @@
         {% if _data_button_video_id %}
           data-button-video-id="{{ _data_button_video_id }}"
         {% endif %}
-        data-css="{{ null }}"
+        
       >
         {% if section.settings.VEDA_switch_4 and 'left' == 'left' %}
           <span
@@ -644,7 +644,7 @@
             {% elsif _icon_class %}
               class="{{ _icon_class }}"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.VEDA_icon_4 }}
           </span>
@@ -663,7 +663,7 @@
             {% elsif _icon_class %}
               class="{{ _icon_class }}"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.VEDA_icon_4 }}
           </span>
@@ -671,7 +671,7 @@
       </button>
       {% comment %}<KẾT_THÚC_TÁCH_FILE>{% endcomment %}
 
-      <div class="mt:10px c:color-gray7 c:color-primary*a td:underline*a" data-css="{{ null }}">
+      <div class="mt:10px c:color-gray7 c:color-primary*a td:underline*a" >
         {{ section.settings.VEDA_richText_1 }}
       </div>
     </div>
@@ -751,7 +751,7 @@
         {% if _data_button_video_id %}
           data-button-video-id="{{ _data_button_video_id }}"
         {% endif %}
-        data-css="{{ null }}"
+        
       >
         {% if section.settings.VEDA_switch_1 and 'left' == 'left' %}
           <span
@@ -764,7 +764,7 @@
             {% elsif _icon_class %}
               class="{{ _icon_class }}"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.VEDA_icon_1 }}
           </span>
@@ -783,7 +783,7 @@
             {% elsif _icon_class %}
               class="{{ _icon_class }}"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.VEDA_icon_1 }}
           </span>
@@ -857,7 +857,7 @@
                     {% endif %}
                   {% when 'heading_login_text' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       style="text-align: {{ align }}"
                       class="fz:16px"
                     >
@@ -865,7 +865,7 @@
                     </div>
                   {% when 'heading_login_icon' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       {% if 'left' == 'left' %}
                         style="text-align: start"
                       {% elsif 'left' == 'center' %}
@@ -1002,7 +1002,7 @@
                     {% endif %}
                   {% when 'heading_recover_text' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       style="text-align: {{ align }}"
                       class="fz:16px"
                     >
@@ -1010,7 +1010,7 @@
                     </div>
                   {% when 'heading_recover_icon' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       {% if 'left' == 'left' %}
                         style="text-align: start"
                       {% elsif 'left' == 'center' %}

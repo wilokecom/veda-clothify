@@ -82,7 +82,7 @@
 {% capture Content %}
 	<div
 		class="w:100%@+md! mih:100% d:flex fld:column jc:center pr:30px@md"
-		data-css="{{ null }}"
+		
 		{% if 'left' == 'left' %}
 			style="width: {{ section.settings["VEDA_slider_1"] }}%"
 		{% else %}
@@ -91,11 +91,11 @@
 	>
 		<h3
 			class="fw:500"
-			data-css="{{ null }}"
+			
 		>
 			{{ 'veda.customer.order.title' | t: name: order.name }}
 		</h3>
-		<div class="mb:30px fz:15px c:color-gray7" data-css="{{ null }}">
+		<div class="mb:30px fz:15px c:color-gray7" >
 			{% liquid
 				assign order_date = order.created_at | date: '%b %d, %Y at %I:%M %P'
 			%}
@@ -105,16 +105,16 @@
 			{% liquid
 				assign cancelled_at = order.cancelled_at | date: '%b %d, %Y at %I:%M %P'
 			%}
-			<div class="mb:30px fz:15px c:color-gray7" data-css="{{ null }}">
+			<div class="mb:30px fz:15px c:color-gray7" >
 				{{ 'veda.customer.order.cancelled_html' | t: date: cancelled_at }}
 			</div>
-			<div class="mb:30px fz:15px c:color-gray7" data-css="{{ null }}">
+			<div class="mb:30px fz:15px c:color-gray7" >
 				{{ 'veda.customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}
 			</div>
 		{% endif %}
 		{% comment %}<BẮT_ĐẦU_TÁCH_FILE_1:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_head_tr_class,order_date,cancelled_at]>{% endcomment %}
 		<table class="table-responsive-768">
-			<thead data-css="{{ null }}">
+			<thead >
 			<tr
 				{% if _head_tr_class %}
 					class="{{ _head_tr_class }}"
@@ -137,7 +137,7 @@
 				</td>
 			</tr>
 			</thead>
-			<tbody data-css="{{ null }}">
+			<tbody >
 			{% for order_line_item in order.line_items %}
 				{% liquid
 					if order_line_item.sku
@@ -319,7 +319,7 @@
 			{% endfor %}
 			</tbody>
 			<tfoot>
-			<tr data-css="{{ null }}">
+			<tr >
 				<td
 					colspan="4"
 					class="d:none!@+md ff:font-secondary fw:500 {{ 'p:15px! c:color-gray9 bd:1px_solid_color-gray5' }}"
@@ -334,7 +334,7 @@
 				</td>
 			</tr>
 			{% if order.cart_level_discount_applications %}
-				<tr data-css="{{ null }}">
+				<tr >
 					{% for discount_application in order.cart_level_discount_applications %}
 						<td
 							colspan="4"
@@ -366,7 +366,7 @@
 				</tr>
 			{% endif %}
 			{% for shipping_method in order.shipping_methods %}
-				<tr data-css="{{ null }}">
+				<tr >
 					<td
 						colspan="4"
 						class="d:none!@+md ff:font-secondary fw:500 {{ 'p:15px! c:color-gray9 bd:1px_solid_color-gray5' }}"
@@ -386,7 +386,7 @@
 				</tr>
 			{% endfor %}
 			{% for tax_line in order.tax_lines %}
-				<tr data-css="{{ null }}">
+				<tr >
 					<td
 						class="d:none!@+md ff:font-secondary fw:500 {{ 'p:15px! c:color-gray9 bd:1px_solid_color-gray5' }}"
 						colspan="4"
@@ -403,7 +403,7 @@
 				</tr>
 			{% endfor %}
 			{% if order.total_duties %}
-				<tr data-css="{{ null }}">
+				<tr >
 					<td
 						class="d:none!@+md ff:font-secondary fw:500 {{ 'p:15px! c:color-gray9 bd:1px_solid_color-gray5' }}"
 						colspan="4"
@@ -418,7 +418,7 @@
 					</td>
 				</tr>
 			{% endif %}
-			<tr class="fz:22px" data-css="{{ null }}">
+			<tr class="fz:22px" >
 				<td
 					class="d:none!@+md ff:font-secondary fw:500 {{ 'p:15px! c:color-gray9 bd:1px_solid_color-gray5' }}"
 					colspan="4"
@@ -444,19 +444,19 @@
 		class="pos:relative w:100%@+md! mih:100% mt:30px@+md fz:15px ff:font-secondary c:color-gray8"
 		style="width: {{ 100 | minus: section.settings["VEDA_slider_1"] }}%"
 	>
-		<h4 class="fw:500 mb:35px" data-css="{{ null }}">
+		<h4 class="fw:500 mb:35px" >
 			{{ section.settings.VEDA_text_3 }}
 		</h4>
 		<div>
-      <span class="mt:15px" data-css="{{ null }}">
+      <span class="mt:15px" >
         {{ section.settings.payment___payment_status }}
       </span>
-			<span class="mt:15px" data-css="{{ null }}">
+			<span class="mt:15px" >
         {{ order.financial_status_label }}
       </span>
 		</div>
 		{% if builderMode %}
-			<div data-css="{{ null }}">
+			<div >
 				<div>{{ customer.name }}</div>
 				<div>{{ customer.default_address.address1 }}</div>
 				<div>
@@ -467,21 +467,21 @@
 				<div>{{ customer.default_address.country.name }}</div>
 			</div>
 		{% else %}
-			<div data-css="{{ null }}">{{ order.billing_address | format_address }}</div>
+			<div >{{ order.billing_address | format_address }}</div>
 		{% endif %}
-		<h4 class="fw:500 mt:20px mb:30px" data-css="{{ null }}">
+		<h4 class="fw:500 mt:20px mb:30px" >
 			{{ section.settings.VEDA_text_2 }}
 		</h4>
 		<div>
-      <span class="mt:15px" data-css="{{ null }}">
+      <span class="mt:15px" >
         {{ section.settings.VEDA_text_1 }}
       </span>
-			<span class="mt:15px" data-css="{{ null }}">
+			<span class="mt:15px" >
         {{ order.fulfillment_status_label }}
       </span>
 		</div>
 		{% if builderMode %}
-			<div data-css="{{ null }}">
+			<div >
 				<div>{{ customer.name }}</div>
 				<div>{{ customer.default_address.address1 }}</div>
 				<div>
@@ -492,7 +492,7 @@
 				<div>{{ customer.default_address.country.name }}</div>
 			</div>
 		{% else %}
-			<div data-css="{{ null }}">
+			<div >
 				{{ order.billing_address | format_address }}
 			</div>
 		{% endif %}
@@ -532,7 +532,7 @@
 						endif
 					%}
 					{% capture attr %}
-						data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+						 class="fw:500" style="text-align: {{ align }}"
 					{% endcapture %}
 					{% case block.type %}
 						{% when 'heading_title' %}
@@ -549,7 +549,7 @@
 							{% endif %}
 						{% when 'heading_text' %}
 							<div
-								data-css="{{ null }}"
+								
 								style="text-align: {{ align }}"
 								class="fz:16px"
 							>
@@ -557,7 +557,7 @@
 							</div>
 						{% when 'heading_icon' %}
 							<div
-								data-css="{{ null }}"
+								
 								{% if 'left' == 'left' %}
 									style="text-align: start"
 								{% elsif 'left' == 'center' %}
@@ -575,7 +575,7 @@
 							<a
 								href="{{ heading_item.heading___link }}"
 								class="ff:font-secondary fz:16px fw:500 c:color-gray9 c:color-gray9|h! td:underline"
-								data-css="{{ null }}"
+								
 								style="text-align: {{ align }}"
 							>
 								{{ heading_item.heading___text_link }}

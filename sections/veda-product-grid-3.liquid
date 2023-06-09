@@ -52,7 +52,7 @@
 		assign productData = collectionData.products
 	%}
 	
-	<div class="row row-cols-lg-{{ 5 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 2 }}">
+	<div class="row row-cols-lg-{{ 5 }} row-cols-md-3 row-cols-sm-2 row-cols-2">
 		<script type="application/json" class="quickview-data-js">
       {
         add_to_cart_text: "{{ 'veda.products.product.add_to_cart' | t }}",
@@ -83,7 +83,7 @@
 								assign price_compare = 0
 							endif
 						%}
-						<script class="{{ 'product-card-data-js' }}" type="application/json">
+						<script class="product-card-data-js" type="application/json">
               {
                 id: {{ productItem.id | json }},
                 title: {{ productItem.title | json }},
@@ -171,7 +171,7 @@
 										{% if 'new' %}
 											component="{{ 'new' }}"
 										{% endif %}
-										data-css="{{ null }}"
+										
 									>
 										{{ 'veda.products.product.new' | t }}
 									</div>
@@ -187,7 +187,7 @@
 									{% if 'sale' %}
 										component="{{ 'sale' }}"
 									{% endif %}
-									data-css="{{ null }}"
+									
 								>
 									{% liquid
 										assign ratio = productItem.price | times: 100.0 | divided_by: productItem.compare_at_price
@@ -261,7 +261,7 @@
 											data-tooltip-text="{{ 'veda.products.product.quick_view' | t }}"
 											data-tooltip-position="top"
 											data-tooltip-active="false"
-											data-css="{{ null }}"
+											
 										>
                       <i class="far fa-eye"></i>
                     </span>
@@ -271,7 +271,7 @@
 										data-tooltip-position="top"
 										data-tooltip-text="{{ 'veda.products.product.add_to_cart' | t }}"
 										data-cart-success-text="{{ 'veda.products.product.add_to_cart' | t }}"
-										data-css="{{ null }}"
+										
 									>
                     <div class="product-cart-add-icon-js mr:10px@md"><i class="far fa-shopping-cart"></i></div>
                     <span class="d:none@+md">{{ 'veda.products.product.add_to_cart' | t }}</span>
@@ -287,7 +287,7 @@
 											data-tooltip-active="true"
 											data-tooltip-text="{{ 'veda.products.product.add_to_wishlist' | t }}"
 											data-tooltip-active-text="{{ 'veda.products.product.remove_from_wishlist' | t }}"
-											data-css="{{ null }}"
+											
 										>
                       <i class="fas fa-heart"></i>
                     </span>
@@ -299,7 +299,7 @@
 											data-tooltip-active="false"
 											data-tooltip-text="{{ 'veda.products.product.add_to_compare' | t }}"
 											data-tooltip-active-text="{{ 'veda.products.product.remove_from_compare' | t }}"
-											data-css="{{ null }}"
+											
 										>
                       <i class="fas fa-repeat-alt"></i>
                     </span>
@@ -333,12 +333,12 @@
 							<div class="sold-out-js pos:absolute t:50% l:0 p:pfs(5px,20px) w:100% h:fit-content trf:translateY(-50%) bg:transparent!*span ta:center z:10 {{ poiter_event }} {{ visibleSoldOut }}">
 								<div
 									class="pos:absolute t:0 l:0 w:100% h:100% bgc:color-gray9 op:0.4 z:-1"
-									data-css="{{ null }}"
+									
 								></div>
 								<span
 									class=" fz:pfs(13px,20px) fw:500 c:color-light"
 									style="background: transparent !important; background-color: transparent !important"
-									data-css="{{ null }}"
+									
 								>
                   {{ 'veda.products.product.sold_out' | t }}
                 </span>
@@ -354,7 +354,7 @@
                 {% if section.settings.VEDA_switch_5 %}
                   <a
                     class="{{ 'd:block fz:12px ff:font-secondary c:color-gray7' }}"
-                    data-css="{{ null }}"
+                    
                     href="{{ shop.url }}/collections/vendors?q={{ productItem.vendor }}"
                     {% if _component %}
                       component="{{ _component }}"
@@ -369,7 +369,7 @@
                 <a
                   class="d:block mt:5px fz:14px ff:font-secondary fw:400 c:color-gray9 trs:0.3s"
                   href="{{ productItem.url }}"
-                  data-css="{{ null }}"
+                  
                 >
                   {{ productItem.title }}
                 </a>
@@ -453,38 +453,38 @@
                       <div class="product-price-on-sale-js">
                         <del
                           class="{{ 'fw:400 ff:font-secondary fz:16px c:color-gray6' }} mr:5px"
-                          data-css="{{ null }}"
+                          
                         >
                           {{ productItem.selected_or_first_available_variant.compare_at_price | money }}
                         </del>
                         <ins
                           class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }}"
-                          data-css="{{ null }}"
+                          
                         >
                           {{ productItem.selected_or_first_available_variant.price | money }}
                         </ins>
                       </div>
                       <ins
                         class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }} product-price-not-sale-js d:none"
-                        data-css="{{ null }}"
+                        
                       >
                       </ins>
                     {% else %}
                       <div class="product-price-on-sale-js d:none">
                         <del
                           class="{{ 'fw:400 ff:font-secondary fz:16px c:color-gray6' }} mr:5px"
-                          data-css="{{ null }}"
+                          
                         >
                         </del>
                         <ins
                           class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }}"
-                          data-css="{{ null }}"
+                          
                         >
                         </ins>
                       </div>
                       <ins
                         class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }} product-price-not-sale-js"
-                        data-css="{{ null }}"
+                        
                       >
                         <div>
                           {{ productItem.selected_or_first_available_variant.price | money }}
@@ -520,7 +520,14 @@
         >
           <div class="group* pos:relative mih:100%">
             <div class="w:100% pos:relative">
-              {{ 'product-1' | placeholder_svg_tag: 'veda-placeholder-svg bgc:color-gray2 ' }}
+							{% liquid
+								assign min = 1
+								assign max = 6
+								assign diff = max | minus: min
+								assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min
+								assign pl = 'product-' | append: randomNumber
+							%}
+							{{ pl | placeholder_svg_tag: 'veda-placeholder-svg bgc:color-gray2 ' }}
             </div>
             <div class="d:flex fld:column pt:10px" style="text-align: left;">
               <div style="order: 0;">
@@ -634,7 +641,7 @@
 									{% endif %}
 								{% when 'heading_text' %}
 									<div
-										data-css="{{ null }}"
+										
 										style="text-align: {{ align }}"
 										class="fz:16px"
 									>
@@ -642,7 +649,7 @@
 									</div>
 								{% when 'heading_icon' %}
 									<div
-										data-css="{{ null }}"
+										
 										{% if 'center' == 'left' %}
 											style="text-align: start"
 										{% elsif 'center' == 'center' %}
@@ -776,7 +783,7 @@
 							
 							{% endif %}
 							class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-							data-css="{{ null }}"
+							
 							{% if _default_link %}
 								href="{{ _default_link }}"
 							{% else %}
@@ -787,13 +794,13 @@
 							{% endif %}
 						>
 							{% if section.settings.VEDA_switch_2 and 'right' == 'left' %}
-								<span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+								<span class="mr:10px" >{{ section.settings.VEDA_icon_1 }}</span>
 							{% endif %}
 							<span>
                 {{ section.settings.button_view_all___text }}
               </span>
 							{% if section.settings.VEDA_switch_2 and 'right' == 'right' %}
-								<span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+								<span class="ml:10px" >{{ section.settings.VEDA_icon_1 }}</span>
 							{% endif %}
 						</a>
 					{% endcapture %}
@@ -878,7 +885,7 @@
 				
 				{% endif %}
 				class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-				data-css="{{ null }}"
+				
 				{% if _default_link %}
 					href="{{ _default_link }}"
 				{% else %}
@@ -889,13 +896,13 @@
 				{% endif %}
 			>
 				{% if section.settings.VEDA_switch_2 and 'right' == 'left' %}
-					<span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+					<span class="mr:10px" >{{ section.settings.VEDA_icon_1 }}</span>
 				{% endif %}
 				<span>
           {{ section.settings.button_view_all___text }}
         </span>
 				{% if section.settings.VEDA_switch_2 and 'right' == 'right' %}
-					<span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_1 }}</span>
+					<span class="ml:10px" >{{ section.settings.VEDA_icon_1 }}</span>
 				{% endif %}
 			</a>
 		{% endcapture %}

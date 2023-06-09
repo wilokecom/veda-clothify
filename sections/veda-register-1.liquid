@@ -129,7 +129,7 @@
     {% if builderMode and section.settings.error___test %}
       <div
         class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
-        data-css="{{ null }}"
+        
         {% if 'error' %}
           component="{{ 'error' }}"
         {% else %}
@@ -142,7 +142,7 @@
     {% elsif form.errors %}
       <div
         class="d:flex ai:center fz:14px p:10px m:10px_0 bgc:color-error.1 c:color-error ls:none*ul p:0*ul m:0*ul"
-        data-css="{{ null }}"
+        
       >
         <span><i class="far fa-exclamation-circle mr:10px"></i></span>
         {{ form.errors | default_errors }}
@@ -164,7 +164,7 @@
           {% else %}
             class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.VEDA_text_4 }}
         </span>
@@ -174,7 +174,7 @@
           {% else %}
             class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
           {% endif %}
-          data-css="{{ null }}"
+          
           type="{{ 'text' }}"
           name="{{ 'customer[first_name]' }}"
           {% if _value %}
@@ -209,7 +209,7 @@
           {% else %}
             class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.VEDA_text_3 }}
         </span>
@@ -219,7 +219,7 @@
           {% else %}
             class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
           {% endif %}
-          data-css="{{ null }}"
+          
           type="{{ 'text' }}"
           name="{{ 'customer[last_name]' }}"
           {% if _value %}
@@ -254,7 +254,7 @@
           {% else %}
             class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.VEDA_text_2 }}
         </span>
@@ -264,7 +264,7 @@
           {% else %}
             class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
           {% endif %}
-          data-css="{{ null }}"
+          
           type="{{ 'email' }}"
           name="{{ 'customer[email]' }}"
           {% if _value %}
@@ -299,7 +299,7 @@
           {% else %}
             class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.VEDA_text_1 }}
         </span>
@@ -309,7 +309,7 @@
           {% else %}
             class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
           {% endif %}
-          data-css="{{ null }}"
+          
           type="{{ 'password' }}"
           name="{{ 'customer[password]' }}"
           {% if _value %}
@@ -398,7 +398,7 @@
         {% if _data_button_video_id %}
           data-button-video-id="{{ _data_button_video_id }}"
         {% endif %}
-        data-css="{{ null }}"
+        
       >
         {% if section.settings.button___icon_enable and 'left' == 'left' %}
           <span
@@ -411,7 +411,7 @@
             {% elsif _icon_class %}
               class="{{ _icon_class }}"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.button___choose_icon }}
           </span>
@@ -430,7 +430,7 @@
             {% elsif _icon_class %}
               class="{{ _icon_class }}"
             {% endif %}
-            data-css="{{ null }}"
+            
           >
             {{ section.settings.button___choose_icon }}
           </span>
@@ -440,7 +440,7 @@
 
       <div
         class="mt:10px c:color-gray7 c:color-primary*a td:underline*a"
-        data-css="{{ null }}"
+        
       >
         {{ section.settings.VEDA_richText_1 }}
       </div>
@@ -510,7 +510,7 @@
                   {% endif %}
                 {% when 'heading_text' %}
                   <div
-                    data-css="{{ null }}"
+                    
                     style="text-align: {{ align }}"
                     class="fz:16px"
                   >
@@ -518,7 +518,7 @@
                   </div>
                 {% when 'heading_icon' %}
                   <div
-                    data-css="{{ null }}"
+                    
                     {% if 'left' == 'left' %}
                       style="text-align: start"
                     {% elsif 'left' == 'center' %}

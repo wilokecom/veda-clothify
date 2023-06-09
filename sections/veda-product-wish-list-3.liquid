@@ -166,7 +166,7 @@
     }
   </script>
   <div
-    class="row row-cols-lg-{{ 5 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }} veda-wishlist-wrapper"
+    class="row row-cols-lg-{{ 5 }} row-cols-md-3 row-cols-sm-2 row-cols-1 veda-wishlist-wrapper"
     {% if section.settings.VEDA_slider_6 or section.settings.VEDA_slider_6 == 0 %}
       style="{{ rowGap }}"
     {% endif %}
@@ -209,13 +209,13 @@
       {% if section.settings.button___new_tab %}
         target="_blank"
       {% endif %}
-      data-css="{{ null }}"
+      
       href="{{ section.settings["button___link"] }}"
     >
       {% if section.settings.button___icon_enable and 'left' == 'left' %}
         <span
           class="mr:10px"
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.button___choose_icon }}
         </span>
@@ -226,7 +226,7 @@
       {% if section.settings.button___icon_enable and 'left' == 'right' %}
         <span
           class="ml:10px"
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.button___choose_icon }}
         </span>
@@ -286,7 +286,7 @@
                   endif
                 %}
                 {% capture attr %}
-                  data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+                   class="fw:500" style="text-align: {{ align }}"
                 {% endcapture %}
                 {% case block.type %}
                   {% when 'heading_title' %}
@@ -303,7 +303,7 @@
                     {% endif %}
                   {% when 'heading_text' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       style="text-align: {{ align }}"
                       class="fz:16px"
                     >
@@ -311,7 +311,7 @@
                     </div>
                   {% when 'heading_icon' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       {% if 'center' == 'left' %}
                         style="text-align: start"
                       {% elsif 'center' == 'center' %}

@@ -78,7 +78,7 @@
 
       {% if contentItem.content___enable %}
         {% capture attr %}
-          data-css="{{ null }}" class="fz:65px c:color-gray9-freeze fw:500" style="text-align: {{ 'left' }}"
+           class="fz:65px c:color-gray9-freeze fw:500" style="text-align: {{ 'left' }}"
         {% endcapture %}
         {% capture title %}
           {{ contentItem.content___title }}
@@ -106,7 +106,7 @@
             </div>
           {% when 'content_icon' %}
             <div
-              data-css="{{ null }}"
+              
               style="text-align: {{ "left" }}"
               class="fz:34px"
             >
@@ -236,13 +236,13 @@
       {% if section.settings.button___new_tab %}
         target="_blank"
       {% endif %}
-      data-css="{{ null }}"
+      
       href="{{ section.settings["button___link"] }}"
     >
       {% if section.settings.button___icon_enable and 'right' == 'left' %}
         <span
           class="mr:10px"
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.button___choose_icon }}
         </span>
@@ -253,7 +253,7 @@
       {% if section.settings.button___icon_enable and 'right' == 'right' %}
         <span
           class="ml:10px"
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.button___choose_icon }}
         </span>

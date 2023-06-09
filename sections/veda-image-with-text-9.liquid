@@ -102,11 +102,11 @@
 			>
 				<h3
 					class="c:color-gray9 trs:0.3s fw:500 fz:pfs(26px,50px) lh:1.3 mb:0"
-					data-css="{{ null }}"
+					
 				>
 					{{ section.settings.content___title }}
 				</h3>
-				<div class="fz:16px mt:20px" data-css="{{ null }}">{{ section.settings.content___text }}</div>
+				<div class="fz:16px mt:20px" >{{ section.settings.content___text }}</div>
 				{% liquid
 					if section.settings.content___button_variant == 'link'
 						assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s '
@@ -142,7 +142,7 @@
 					{% if section.settings.content___new_tab %}
 						target="_blank"
 					{% endif %}
-					data-css="{{ null }}"
+					
 					href="{{ section.settings["content___button_link"] }}"
 				>
           <span>
@@ -151,7 +151,7 @@
 					{% if section.settings.content___choose_icon %}
 						<span
 							class="ml:10px"
-							data-css="{{ null }}"
+							
 						>
               {{ section.settings.content___choose_icon }}
             </span>

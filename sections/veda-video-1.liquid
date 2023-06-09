@@ -20,7 +20,7 @@
 %}
 
 {% capture Content %}
-  <div class="row row-cols-lg-{{ 1 }} row-cols-md-{{ 1 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}">
+  <div class="row row-cols-lg-1 row-cols-md-1 row-cols-sm-2 row-cols-1">
     {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
     {% for block in section.blocks %}
@@ -71,7 +71,7 @@
               >
                 <div
                   class="veda-video-button-child-js trs:0.6s_cubic-bezier(.29,.99,.53,.88) d:flex ai:center jc:center w:80px h:80px bd:2px_solid_color-light-freeze c:color-light-freeze bdrs:50% fz:20px cur:pointer"
-                  data-css="{{ null }}"
+                  
                 >
                   <i class="far fa-play"></i>
                 </div>
@@ -111,7 +111,7 @@
             <div class="pos:relative bgc:color-light">
               <div
                 class="veda-video-close-js pos:absolute t:0 l:100% ml:5px w:30px h:30px bgc:color-light c:color-gray9 fz:22px d:flex ai:center jc:center cur:pointer"
-                data-css="{{ null }}"
+                
               >
                 <i class="fal fa-times"></i>
               </div>
@@ -154,7 +154,7 @@
             endif
           %}
           {% capture attr %}
-            data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+             class="fw:500" style="text-align: {{ align }}"
           {% endcapture %}
           {% case block.type %}
             {% when 'heading_title' %}
@@ -171,7 +171,7 @@
               {% endif %}
             {% when 'heading_text' %}
               <div
-                data-css="{{ null }}"
+                
                 style="text-align: {{ align }}"
                 class="fz:16px"
               >
@@ -179,7 +179,7 @@
               </div>
             {% when 'heading_icon' %}
               <div
-                data-css="{{ null }}"
+                
                 {% if 'center' == 'left' %}
                   style="text-align: start"
                 {% elsif 'center' == 'center' %}

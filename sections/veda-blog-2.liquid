@@ -129,7 +129,7 @@
       endif
     %}
     <div
-      class="row row-cols-lg-{{ 3 }} row-cols-md-{{ 2 }} row-cols-sm-{{ 1 }} row-cols-{{ 1 }} {{ contentPadding }} w:100%"
+      class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 {{ contentPadding }} w:100%"
       {% if section.settings.VEDA_slider_7 or section.settings.VEDA_slider_7 == 0 %}
         style="{{ rowGap }}"
       {% endif %}
@@ -200,7 +200,7 @@
                           <div class="ff:font-secondary fz:12px fw:500 c:color-gray8">Elliana</div>
                         </div>
                       {% else %}
-                        <div class="d:flex ai:center" data-css="{{ null }}">
+                        <div class="d:flex ai:center" >
                           <div class="ff:font-secondary fz:12px fw:500 c:color-gray8">
                             {{ articleItem.user.name }}
                           </div>
@@ -215,7 +215,7 @@
                       {% if tagSize >= 1 and section.settings.content___enable_tag %}
                         <div
                           class="c:color-primary"
-                          data-css="{{ null }}"
+                          
                         >
                           {{ articleItem.tags[0] | link_to_tag: articleItem.tags[0] }}
                         </div>
@@ -228,7 +228,7 @@
                         <div class="w:15px"></div>
                       {% endif %}
                       {% if section.settings.content___enable_comment and articleItem.comments_enabled %}
-                        <div class="ff:font-secondary" data-css="{{ null }}">
+                        <div class="ff:font-secondary" >
                           {% if articleItem.comments_count > 1 %}
                             <i class="far fa-comments-alt"></i>
                             <span class="ml:3px">
@@ -247,12 +247,12 @@
                   <a
                     href="{{ articleItem.url }}"
                     class="lines-2 c:color-gray9 fz:16px fw:500 ff:font-secondary cur:pointer tt:capitalize trs:0.3s"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ articleItem.title }}
                   </a>
                   {% if section.settings.content___enable_excerpt %}
-                    <div class="mt:10px lines-3" data-css="{{ null }}">
+                    <div class="mt:10px lines-3" >
                       {% liquid
                         assign excerptSize = articleItem.excerpt | size
                       %}
@@ -266,7 +266,7 @@
                 </div>
               </div>
               {% if section.settings.content___enable_date and articleItem.published_at %}
-                <div class="p:15px pt:0! c:color-gray7 fz:12px" data-css="{{ null }}">
+                <div class="p:15px pt:0! c:color-gray7 fz:12px" >
                   <i class="far fa-calendar-alt"></i>
                   <span class="ff:font-secondary ml:3px">{{ articleItem.published_at | date: '%b %d, %Y' }}</span>
                 </div>
@@ -298,7 +298,7 @@
                 assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px'
             endcase
           %}
-          <nav class="w:100% pt:50px m:0!" data-css="{{ null }}">
+          <nav class="w:100% pt:50px m:0!" >
             <ol class="d:flex jc:center ls:none m:0! p:0!">
               {% if paginate.previous %}
                 <li>
@@ -306,7 +306,7 @@
                     class="{{ item_general_class }} {{ item_variant_class }}"
                     aria-label="Previous"
                     href="{{ paginate.previous.url }}"
-                    data-css="{{ null }}"
+                    
                   >
                     <i class="far fa-arrow-left"></i>
                   </a>
@@ -319,7 +319,7 @@
                       class="{{ item_general_class }} {{ item_variant_class }}"
                       aria-label="Page {{ part.title }}"
                       href="{{ part.url }}"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ part.title }}
                     </a>
@@ -331,7 +331,7 @@
                         class="{{ item_general_class }} {{ item_variant_class }} bgc:color-primary! c:color-light-freeze!"
                         aria-current="page"
                         aria-label="Page {{ part.title }}"
-                        data-css="{{ null }}"
+                        
                       >
                         {{ part.title }}
                       </span>
@@ -341,7 +341,7 @@
                       <span
                         class="{{ item_general_class }} {{ item_variant_class }}"
                         aria-label="Page {{ part.title }}"
-                        data-css="{{ null }}"
+                        
                       >
                         {{ part.title }}
                       </span>
@@ -356,7 +356,7 @@
                     class="{{ item_general_class }} {{ item_variant_class }}"
                     aria-label="Next"
                     href="{{ paginate.next.url }}"
-                    data-css="{{ null }}"
+                    
                   >
                     <i class="far fa-arrow-right"></i>
                   </a>
@@ -566,22 +566,22 @@
                       autocorrect="off"
                       autocapitalize="off"
                       placeholder="{{ itemSidebar.VEDA_text_1 }}"
-                      data-css="{{ null }}"
+                      
                     >
                     <button
                       class="d:inline-flex ai:center p:0_20px h:100% ff:font-secondary fw:500 trs:0.3s cur:pointer bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h bd:1px_solid_color-gray9 bd:1px_solid_color-primary|h"
                       type="submit"
                       aria-label="submit"
-                      data-css="{{ null }}"
+                      
                     >
                       {% if 'right' == 'left' %}
-                        <span class="mr:10px" data-css="{{ null }}">
+                        <span class="mr:10px" >
                           {{ itemSidebar.sidebar___icon }}
                         </span>
                       {% endif %}
                       <span>{{ itemSidebar.sidebar___button_text }}</span>
                       {% if 'right' == 'right' %}
-                        <span class="ml:10px" data-css="{{ null }}">
+                        <span class="ml:10px" >
                           {{ itemSidebar.sidebar___icon }}
                         </span>
                       {% endif %}
@@ -596,7 +596,7 @@
                     {% assign itemCollection = block.settings %}
 
                     <a
-                      data-css="{{ null }}"
+                      
                       class="d:flex ai:center c:color-gray7 fz:14px ff:font-secondary pt:6px pb:6px trs:0.3s"
                       href="{{ itemCollection.veda_collections___link }}"
                     >

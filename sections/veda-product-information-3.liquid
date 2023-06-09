@@ -233,7 +233,7 @@
             assign price_compare = 0
           endif
         %}
-        <script class="{{ 'product-card-data-js' }}" type="application/json">
+        <script class="product-card-data-js" type="application/json">
           {
             id: {{ product.id | json }},
             title: {{ product.title | json }},
@@ -306,7 +306,7 @@
               {% for option in product.options_with_values %}
                 <div
                   class="veda-option-title-{{ option.position }} mb:10px ff:font-secondary c:color-gray9"
-                  data-css="{{ null }}"
+                  
                 >
                   {{ option.name }}: {{ option.selected_value }}
                 </div>
@@ -367,9 +367,9 @@
                       <div
                         class="veda-toggle-group__item p:5px miw:36px mr:10px mb:10px c:color-gray9 bgc:color-gray2 ta:center us:none cur:pointer"
                         {% if option.selected_value == value %}
-                          data-css="{{ null }}"
+                          
                         {% else %}
-                          data-css="{{ null }}"
+                          
                         {% endif %}
                         data-tooltip-position="top"
                         data-tooltip-text="{{ value }}"
@@ -380,9 +380,9 @@
                       <div
                         class="veda-toggle-group__item p:5px_15px miw:70px mr:10px mb:10px c:color-gray9 bgc:color-gray2 ta:center us:none cur:pointer"
                         {% if option.selected_value == value %}
-                          data-css="{{ null }}"
+                          
                         {% else %}
-                          data-css="{{ null }}"
+                          
                         {% endif %}
                         data-tooltip-position="top"
                         data-tooltip-text="{{ value }}"
@@ -401,7 +401,7 @@
             {% when 'content_title' %}
               <h3
                 class="mb:15px fz:25px fw:500 c:color-gray9"
-                data-css="{{ null }}"
+                
               >
                 {{ product.title }}
               </h3>
@@ -426,7 +426,7 @@
                       {% if _component %}
                         component="{{ _component }}"
                       {% endif %}
-                      data-css="{{ null }}"
+                      
                     >
                       {{ 'veda.products.product.new' | t }}
                     </div>
@@ -444,7 +444,7 @@
                     {% if _component %}
                       component="{{ _component }}"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                   >
                     {{ 'veda.products.product.on_sale' | t }}
                   </div>
@@ -456,7 +456,7 @@
               {% if true %}
                 <a
                   class="{{ 'd:block mb:10px ff:font-secondary c:color-gray9' }}"
-                  data-css="{{ null }}"
+                  
                   href="{{ shop.url }}/collections/vendors?q={{ product.vendor }}"
                   {% if 'content' %}
                     component="{{ 'content' }}"
@@ -472,7 +472,7 @@
               %}
                 <div
                   class="veda-product-sku-js mb:10px ff:font-secondary c:color-gray9"
-                  data-css="{{ null }}"
+                  
                 >
                   {{ 'veda.customer.order.sku' | t }}: {{ product.selected_or_first_available_variant.sku }}
                 </div>
@@ -481,7 +481,7 @@
               {% if product.type and product.type != '' %}
                 <div
                   class="mb:10px ff:font-secondary c:color-gray9"
-                  data-css="{{ null }}"
+                  
                 >
                   {{ 'veda.products.product.product_type' | t }}: {{ product.type }}
                 </div>
@@ -496,38 +496,38 @@
                     <div class="product-price-on-sale-js">
                       <del
                         class="{{ 'mb:10px fw:500 fz:22px c:color-gray5 trs:0.3s' }} mr:5px"
-                        data-css="{{ null }}"
+                        
                       >
                         {{ product.selected_or_first_available_variant.compare_at_price | money }}
                       </del>
                       <ins
                         class="{{ 'mb:10px mr:10px fw:500 fz:25px c:color-primary td:none trs:0.3s' }}"
-                        data-css="{{ null }}"
+                        
                       >
                         {{ product.selected_or_first_available_variant.price | money }}
                       </ins>
                     </div>
                     <ins
                       class="{{ 'mb:10px mr:10px fw:500 fz:25px c:color-primary td:none trs:0.3s' }} product-price-not-sale-js d:none"
-                      data-css="{{ null }}"
+                      
                     >
                     </ins>
                   {% else %}
                     <div class="product-price-on-sale-js d:none">
                       <del
                         class="{{ 'mb:10px fw:500 fz:22px c:color-gray5 trs:0.3s' }} mr:5px"
-                        data-css="{{ null }}"
+                        
                       >
                       </del>
                       <ins
                         class="{{ 'mb:10px mr:10px fw:500 fz:25px c:color-primary td:none trs:0.3s' }}"
-                        data-css="{{ null }}"
+                        
                       >
                       </ins>
                     </div>
                     <ins
                       class="{{ 'mb:10px mr:10px fw:500 fz:25px c:color-primary td:none trs:0.3s' }} product-price-not-sale-js"
-                      data-css="{{ null }}"
+                      
                     >
                       <div>
                         {{ product.selected_or_first_available_variant.price | money }}
@@ -544,7 +544,7 @@
                 data-title="{{ 'veda.products.product.availabitity' | t }}"
                 data-instock-text="{{ 'veda.products.product.in_stock'| t: count: product.selected_or_first_available_variant.inventory_quantity }}"
                 data-outofstock-text="{{ 'veda.products.product.outofstock' | t }}"
-                data-css="{{ null }}"
+                
               >
                 {{ 'veda.products.product.availabitity' | t }}:
                 {% if product.selected_or_first_available_variant.available %}
@@ -560,7 +560,7 @@
             {% when 'content_description' %}
               <div
                 class="mb:10px"
-                data-css="{{ null }}"
+                
               >
                 {% if product.description %}
                   {{ product.description | strip_html }}
@@ -698,7 +698,7 @@
                       {% if _data_button_video_id %}
                         data-button-video-id="{{ _data_button_video_id }}"
                       {% endif %}
-                      data-css="{{ null }}"
+                      
                     >
                       {% if true and 'left' == 'left' %}
                         <span
@@ -711,7 +711,7 @@
                           {% elsif _icon_class %}
                             class="{{ _icon_class }}"
                           {% endif %}
-                          data-css="{{ null }}"
+                          
                         >
                           {{ cart_icon }}
                         </span>
@@ -730,7 +730,7 @@
                           {% elsif _icon_class %}
                             class="{{ _icon_class }}"
                           {% endif %}
-                          data-css="{{ null }}"
+                          
                         >
                           {{ cart_icon }}
                         </span>
@@ -773,7 +773,7 @@
                             {% else %}
                               class="{{ default_class }} {{ variant_class }}"
                             {% endif %}
-                            data-css="{{ null }}"
+                            
                           >
                             {{ wishlist_icon }}
                           </span>
@@ -814,7 +814,7 @@
                             {% else %}
                               class="{{ default_class }} {{ variant_class }}"
                             {% endif %}
-                            data-css="{{ null }}"
+                            
                           >
                             {{ compare_icon }}
                           </span>
@@ -860,7 +860,7 @@
                       {% else %}
                         class="{{ default_class }}{{ default_for_bottom_class }}{{ variant_class }}"
                       {% endif %}
-                      data-css="{{ null }}"
+                      
                     >
                       <span>
                         {{ 'veda.products.product.buy_it_now' | t }}
@@ -877,7 +877,7 @@
               {% comment %}<BẮT_ĐẦU_TÁCH_FILE_14:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_enable,_class,_component,_design,_button_class,_name,_form,_data_confirm_message,_data_target,_aria_label,_data_index,_data_form_active,_id,_tooltip_position,_tooltip_text,_data_button_video_id,_gap,_icon_class,imageXs,imageSm,imageMd,imageLg,imageItem,classImage,arr,price_compare,i,productDate,currentDate,difference,cart_text,default_class,default_for_bottom_class,variant_class,visibleButton,contentItem]>{% endcomment %}
               <span
                 class="d:flex ai:center mb:20px c:color-gray9"
-                data-css="{{ null }}"
+                
               >
                 <i class="far fa-eye mr:5px anim:viewEye_2s_linear_infinite_alternate"></i>
                 <span
@@ -920,7 +920,7 @@
                           <span
                             class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                             style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                            data-css="{{ null }}"
+                            
                             {% if _tooltip_position %}
                               data-tooltip-position="{{ _tooltip_position }}"
                             {% else %}
@@ -940,7 +940,7 @@
                           <span
                             class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                             style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                            data-css="{{ null }}"
+                            
                             {% if _tooltip_position %}
                               data-tooltip-position="{{ _tooltip_position }}"
                             {% else %}
@@ -960,7 +960,7 @@
                           <span
                             class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                             style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                            data-css="{{ null }}"
+                            
                             {% if _tooltip_position %}
                               data-tooltip-position="{{ _tooltip_position }}"
                             {% else %}
@@ -980,7 +980,7 @@
                           <span
                             class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                             style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                            data-css="{{ null }}"
+                            
                             {% if _tooltip_position %}
                               data-tooltip-position="{{ _tooltip_position }}"
                             {% else %}
@@ -1000,7 +1000,7 @@
                           <span
                             class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                             style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                            data-css="{{ null }}"
+                            
                             {% if _tooltip_position %}
                               data-tooltip-position="{{ _tooltip_position }}"
                             {% else %}
@@ -1020,7 +1020,7 @@
                           <span
                             class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                             style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                            data-css="{{ null }}"
+                            
                             {% if _tooltip_position %}
                               data-tooltip-position="{{ _tooltip_position }}"
                             {% else %}
@@ -1175,7 +1175,7 @@
                 %}
 
                 {% if pick_up_availabilities.size > 0 %}
-                  <div class="pickup-availability-information" data-css="{{ null }}">
+                  <div class="pickup-availability-information" >
                     {% liquid
                       assign closest_location = pick_up_availabilities.first
                     %}

@@ -91,7 +91,7 @@
   %}
   <div
     class="veda-tabs__nav addon-disabled d:none@+md w:100% d:flex {{ alignStyle }}"
-    data-css="{{ null }}"
+    
   >
 
     {% for block in section.blocks %}
@@ -100,10 +100,10 @@
       <div
         {% if forloop.index == 1 %}
           class="veda-tabs__link addon-disabled veda-tabs__link--active"
-          data-css="{{ null }}"
+          
         {% else %}
           class="veda-tabs__link addon-disabled"
-          data-css="{{ null }}"
+          
         {% endif %}
       >
         {{ navItem.content___title }}
@@ -113,7 +113,7 @@
 {% endcapture %}
 
 {% capture TabsContent %}
-  <div class="veda-tabs__content addon-disabled" data-css="{{ null }}">
+  <div class="veda-tabs__content addon-disabled" >
     {% comment %}CẢNH BÁO: Các field settings đã bị cắt vợi đi để pass qua shopify theme check => Các item sẽ trở thành y hệt nhau về một số thứ => Check code để fix css sao cho giống với theme demo => Ví dụ mỗi item đều có field color picker để setup background. Item 1 màu xanh, Item 2 màu đỏ => Sync ở chế độ cắt vợi đi thì cả 2 Item sẽ thành màu xanh => Sai với theme demo => Cần fix{% endcomment %}
 
     {% for block in section.blocks %}
@@ -122,10 +122,10 @@
       <div
         {% if forloop.index == 1 %}
           class="veda-tabs__collapse-button addon-disabled veda-tabs__collapse-button--active d:none@md d:flex ai:center jc:space-between p:10px_0 fz:16px fw:500 ff:font-secondary c:color-gray9 cur:pointer"
-          data-css="{{ null }}"
+          
         {% else %}
           class="veda-tabs__collapse-button addon-disabled d:none@md d:flex ai:center jc:space-between p:10px_0 fz:16px fw:500 ff:font-secondary c:color-gray9 cur:pointer"
-          data-css="{{ null }}"
+          
         {% endif %}
       >
         <span>{{ contentItem.content___title }}</span>
@@ -226,7 +226,7 @@
   <div
     class="veda-tabs addon-disabled veda-tabs--1"
     tabs-data-css-active="{{ null }}"
-    tabs-data-css="{{ null }}"
+    tabs-
   >
     {{ TabsNav }}
     {{ TabsContent }}

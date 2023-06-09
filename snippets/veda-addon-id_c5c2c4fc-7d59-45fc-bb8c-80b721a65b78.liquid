@@ -110,7 +110,7 @@ endif
                 >
                   {{ cart_item.title }}                </a>
               </div>
-              <div style="order:{{ 1 }}">
+              <div style="order:1">
                 <a
                   href="{{ shop.url }}/collections/{{ cart_item.vendor | handle }}"
                   class="d:block mt:5px fz:13px fw:400 c:color-gray7"
@@ -118,7 +118,7 @@ endif
                 >
                   {{ cart_item.vendor }}                </a>
               </div>
-              <div style="order:{{ 2 }}">
+              <div style="order:2">
                 {% if builderMode %}                  <div
                     class="mt:5px fz:16px ff:font-secondary c:color-gray9"
                     data-css="{{ content.regular_price_design.id }}"
@@ -142,7 +142,7 @@ endif
                     >
                       {{ cart_item.original_price | money }}                    </div>
                   {% endif %}                {% endif %}              </div>
-              {% if cart_item.product.has_only_default_variant == false or cart_item.properties.size != 0 or cart_item.selling_plan_allocation != null %}                <div style="order:{{ 4 }}">
+              {% if cart_item.product.has_only_default_variant == false or cart_item.properties.size != 0 or cart_item.selling_plan_allocation != null %}                <div style="order:4">
                   <div>
                     {% if cart_item.product.has_only_default_variant == false %}                      {% for option in cart_item.options_with_values %}                        <div class="d:flex mt:10px" data-css="{{ content.options_design.id }}">
                           {{ option.name }}: {{ option.value }}                        </div>
@@ -163,7 +163,7 @@ endif
                 class="veda-counter mt:10px d:flex w:fit-content h:30px fz:14px c:color-gray9 bd:1px_solid_color-gray3"
                 data-options="{ value: {{ cart_item.quantity }} }"
                 data-css="{{ "" }}"
-                style="order:{{ 3 }}"
+                style="order:3"
               >
                 <div class="veda-counter__decrement d:flex jc:center ai:center w:20px h:100% ta:center cur:pointer lh:30px">
                   <i class="fal fa-minus fz:13px"></i>

@@ -95,7 +95,7 @@
 %}
 {% capture Search %}
   <div class="d:flex fld:column ai:center mb:30px">
-    <h3 class="ta:center fz:pfs(20px,28px) fw:500" data-css="{{ null }}">
+    <h3 class="ta:center fz:pfs(20px,28px) fw:500" >
       {% if search.results_count == 1 %}
         {{ 'veda.templates.search.results_with_count.one' | t: count: 1, terms: search.terms | escape }}
       {% else %}
@@ -112,7 +112,7 @@
       <div
         class="veda-search-form-js bgc:color-light bdrs:6px pl:15px pr:5px trs:0.3s d:flex jc:center"
         data-text-result="{{ 'veda.templates.search.search_for' | t: terms: 'a' }}"
-        data-css="{{ null }}"
+        
       >
         <form
           action="{{ routes.search_url }}"
@@ -122,7 +122,7 @@
           <div class="d:flex ai:center w:100%">
             <input
               class="rs w:100% h:44px bd:0! bxsh:none! o:none! bgc:transparent ff:font-secondary fz:16px c:color-gray8 c:color-gray6||ph trs:0.3s"
-              data-css="{{ null }}"
+              
               type="text"
               placeholder="{{ section.settings["VEDA_text_1"] }}"
               name="q"
@@ -162,7 +162,7 @@
           </div>
           <button
             class="rs flxs:0 bxsh:none bd:0 bgc:transparent! bxsh:none! o:none! fz:22px c:color-gray8 c:color-primary|h trs:0.3s cur:pointer"
-            data-css="{{ null }}"
+            
             type="submit"
             aria-label="Search"
           >
@@ -195,7 +195,7 @@
   %}
 
   <div
-    class="row row-cols-lg-{{ 5 }} row-cols-md-{{ 4 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
+    class="row row-cols-lg-{{ 5 }} row-cols-md-4 row-cols-sm-2 row-cols-1"
     {% if section.settings.VEDA_slider_10 or section.settings.VEDA_slider_10 == 0 %}
       style="{{ rowGap }}"
     {% endif %}
@@ -283,7 +283,7 @@
                 {% if tagSize >= 1 and section.settings.VEDA_switch_5 %}
                   <div
                     class="mb:5px c:color-gray9 fz:11px fw:500 ff:font-secondary lts:1px tt:uppercase"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ articleItem.tags[0] | link_to_tag: articleItem.tags[0] }}
                   </div>
@@ -291,13 +291,13 @@
                 <a
                   href="{{ articleItem.url }}"
                   class="lines-3 c:color-gray9 fz:18px fw:500 ff:font-secondary cur:pointer trs:0.3s"
-                  data-css="{{ null }}"
+                  
                 >
                   {{ articleItem.title }}
                 </a>
                 <div class="d:flex ai:center c:color-gray7 fz:13px">
                   {% if section.settings.VEDA_switch_7 and articleItem.published_at %}
-                    <div class="mt:5px" data-css="{{ null }}">
+                    <div class="mt:5px" >
                       <i class="far fa-calendar-alt"></i>
                       <span class="ff:font-secondary ml:3px">{{ articleItem.published_at | date: '%b %d, %Y' }}</span>
                     </div>
@@ -310,7 +310,7 @@
                     <div class="ml:10px mr:10px c:color-gray5">.</div>
                   {% endif %}
                   {% if section.settings.VEDA_switch_6 and articleItem.comments_enabled %}
-                    <div class="mt:5px" data-css="{{ null }}">
+                    <div class="mt:5px" >
                       {% if articleItem.comments_count > 1 %}
                         <i class="far fa-comments"></i>
                         <span class="ff:font-secondary ml:3px tt:capitalize">
@@ -326,7 +326,7 @@
                   {% endif %}
                 </div>
                 {% if section.settings.VEDA_switch_4 %}
-                  <div class="mt:15px lines-3" data-css="{{ null }}">
+                  <div class="mt:15px lines-3" >
                     {% liquid
                       assign excerptSize = articleItem.excerpt | size
                     %}
@@ -350,17 +350,17 @@
             <a
               href="{{ searchItem.url }}"
               class="d:flex fld:column jc:center mih:250px p:20px bgc:color-gray2 bdrs:15px"
-              data-css="{{ null }}"
+              
             >
               <h3
                 class="lines-3 c:color-gray9 fz:18px fw:500 cur:pointer trs:0.3s"
-                data-css="{{ null }}"
+                
               >
                 {{ searchItem.title }}
               </h3>
               <div class="d:flex ai:center c:color-gray7 fz:13px">
                 {% if searchItem.published_at %}
-                  <div class="mt:5px" data-css="{{ null }}">
+                  <div class="mt:5px" >
                     <i class="far fa-calendar-alt"></i>
                     <span class="ff:font-secondary ml:3px">{{ searchItem.published_at | date: '%b %d, %Y' }}</span>
                   </div>
@@ -369,7 +369,7 @@
                   <div class="ml:10px mr:10px c:color-gray5">.</div>
                 {% endif %}
                 {% if searchItem.author %}
-                  <div class="mt:5px" data-css="{{ null }}">
+                  <div class="mt:5px" >
                     <i class="far fa-user"></i>
                     <span class="ff:font-secondary ml:3px">
                       {{ searchItem.author }}
@@ -378,7 +378,7 @@
                 {% endif %}
               </div>
               {% if searchItem.content %}
-                <div class="mt:15px lines-3" data-css="{{ null }}">
+                <div class="mt:15px lines-3" >
                   {{ searchItem.content | strip_html | truncatewords: 24, '...' }}
                 </div>
               {% endif %}
@@ -396,7 +396,7 @@
           >
             <div
               class="product-card-js group* pos:relative mih:100%"
-              data-css="{{ null }}"
+              
             >
               {% comment %}<BẮT_ĐẦU_TÁCH_FILE_3:[section,backgroundFixed,backgroundColor,bgImage,backgroundImage,sectionPadding,containerType,containerGap,containerWidth,settingGap,settingGapVertical,colGap,rowGap,sectionSeparator,_prefix,_style,_placeholder,_placeholder_class,_class,_component,_defaul_aspect_ratio,_image_border_radius,imageRadius,aspectRatio,quantity_displayed,articleCond,pageCond,productCond,articleItem,pl,placeholder_class,tagSize,excerptSize,productItem]>{% endcomment %}
               {% liquid
@@ -408,7 +408,7 @@
                   assign price_compare = 0
                 endif
               %}
-              <script class="{{ 'product-card-data-js' }}" type="application/json">
+              <script class="product-card-data-js" type="application/json">
                 {
                   id: {{ productItem.id | json }},
                   title: {{ productItem.title | json }},
@@ -505,7 +505,7 @@
                       {% if 'new' %}
                         component="{{ 'new' }}"
                       {% endif %}
-                      data-css="{{ null }}"
+                      
                     >
                       {{ 'veda.products.product.new' | t }}
                     </div>
@@ -523,7 +523,7 @@
                     {% if 'sale' %}
                       component="{{ 'sale' }}"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                   >
                     {% liquid
                       assign ratio = productItem.price | times: 100.0 | divided_by: productItem.compare_at_price
@@ -597,7 +597,7 @@
                         data-tooltip-text="{{ 'veda.products.product.quick_view' | t }}"
                         data-tooltip-position="top"
                         data-tooltip-active="false"
-                        data-css="{{ null }}"
+                        
                       >
                         <i class="far fa-eye"></i>
                       </span>
@@ -607,7 +607,7 @@
                       data-tooltip-position="top"
                       data-tooltip-text="{{ 'veda.products.product.add_to_cart' | t }}"
                       data-cart-success-text="{{ 'veda.products.product.add_to_cart' | t }}"
-                      data-css="{{ null }}"
+                      
                     >
                       <div class="product-cart-add-icon-js mr:10px@md"><i class="far fa-shopping-cart"></i></div>
                       <span class="d:none@+md">{{ 'veda.products.product.add_to_cart' | t }}</span>
@@ -623,7 +623,7 @@
                         data-tooltip-active="true"
                         data-tooltip-text="{{ 'veda.products.product.add_to_wishlist' | t }}"
                         data-tooltip-active-text="{{ 'veda.products.product.remove_from_wishlist' | t }}"
-                        data-css="{{ null }}"
+                        
                       >
                         <i class="fas fa-heart"></i>
                       </span>
@@ -635,7 +635,7 @@
                         data-tooltip-active="false"
                         data-tooltip-text="{{ 'veda.products.product.add_to_compare' | t }}"
                         data-tooltip-active-text="{{ 'veda.products.product.remove_from_compare' | t }}"
-                        data-css="{{ null }}"
+                        
                       >
                         <i class="fas fa-repeat-alt"></i>
                       </span>
@@ -669,12 +669,12 @@
                 <div class="sold-out-js pos:absolute t:50% l:0 p:pfs(5px,20px) w:100% h:fit-content trf:translateY(-50%) bg:transparent!*span ta:center z:10 {{ poiter_event }} {{ visibleSoldOut }}">
                   <div
                     class="pos:absolute t:0 l:0 w:100% h:100% bgc:color-gray9 op:0.4 z:-1"
-                    data-css="{{ null }}"
+                    
                   ></div>
                   <span
                     class=" fz:pfs(13px,20px) fw:500 c:color-light"
                     style="background: transparent !important; background-color: transparent !important"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ 'veda.products.product.sold_out' | t }}
                   </span>
@@ -690,7 +690,7 @@
                   {% if section.settings.VEDA_switch_3 %}
                     <a
                       class="{{ 'd:block fz:12px ff:font-secondary c:color-gray7' }}"
-                      data-css="{{ null }}"
+                      
                       href="{{ shop.url }}/collections/vendors?q={{ productItem.vendor }}"
                       {% if _component %}
                         component="{{ _component }}"
@@ -705,7 +705,7 @@
                   <a
                     class="d:block mt:5px fz:14px ff:font-secondary fw:400 c:color-gray9 trs:0.3s"
                     href="{{ productItem.url }}"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ productItem.title }}
                   </a>
@@ -790,38 +790,38 @@
                         <div class="product-price-on-sale-js">
                           <del
                             class="{{ 'fw:400 ff:font-secondary fz:16px c:color-gray6' }} mr:5px"
-                            data-css="{{ null }}"
+                            
                           >
                             {{ productItem.selected_or_first_available_variant.compare_at_price | money }}
                           </del>
                           <ins
                             class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }}"
-                            data-css="{{ null }}"
+                            
                           >
                             {{ productItem.selected_or_first_available_variant.price | money }}
                           </ins>
                         </div>
                         <ins
                           class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }} product-price-not-sale-js d:none"
-                          data-css="{{ null }}"
+                          
                         >
                         </ins>
                       {% else %}
                         <div class="product-price-on-sale-js d:none">
                           <del
                             class="{{ 'fw:400 ff:font-secondary fz:16px c:color-gray6' }} mr:5px"
-                            data-css="{{ null }}"
+                            
                           >
                           </del>
                           <ins
                             class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }}"
-                            data-css="{{ null }}"
+                            
                           >
                           </ins>
                         </div>
                         <ins
                           class="{{ 'fw:400 ff:font-secondary fz:18px c:color-primary td:none mr:5px' }} product-price-not-sale-js"
-                          data-css="{{ null }}"
+                          
                         >
                           <div>
                             {{ productItem.selected_or_first_available_variant.price | money }}
@@ -873,7 +873,7 @@
               assign item_variant_class = 'w:fit-content miw:46px h:46px p:0_10px'
           endcase
         %}
-        <nav class="w:100% pt:50px m:0!" data-css="{{ null }}">
+        <nav class="w:100% pt:50px m:0!" >
           <ol class="d:flex jc:center ls:none m:0! p:0!">
             {% if paginate.previous %}
               <li>
@@ -881,7 +881,7 @@
                   class="{{ item_general_class }} {{ item_variant_class }}"
                   aria-label="Previous"
                   href="{{ paginate.previous.url }}"
-                  data-css="{{ null }}"
+                  
                 >
                   <i class="far fa-arrow-left"></i>
                 </a>
@@ -894,7 +894,7 @@
                     class="{{ item_general_class }} {{ item_variant_class }}"
                     aria-label="Page {{ part.title }}"
                     href="{{ part.url }}"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ part.title }}
                   </a>
@@ -906,7 +906,7 @@
                       class="{{ item_general_class }} {{ item_variant_class }} bgc:color-primary! c:color-light-freeze!"
                       aria-current="page"
                       aria-label="Page {{ part.title }}"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ part.title }}
                     </span>
@@ -916,7 +916,7 @@
                     <span
                       class="{{ item_general_class }} {{ item_variant_class }}"
                       aria-label="Page {{ part.title }}"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ part.title }}
                     </span>
@@ -931,7 +931,7 @@
                   class="{{ item_general_class }} {{ item_variant_class }}"
                   aria-label="Next"
                   href="{{ paginate.next.url }}"
-                  data-css="{{ null }}"
+                  
                 >
                   <i class="far fa-arrow-right"></i>
                 </a>

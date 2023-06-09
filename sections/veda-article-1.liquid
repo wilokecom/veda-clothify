@@ -158,21 +158,21 @@
         {% when 'content_article_title' %}
           <h2
             class="m:10px_0 fz:pfs(20px,35px) fw:500 c:color-gray9"
-            data-css="{{ null }}"
+            
           >
             {{ article.title }}
           </h2>
         {% when 'VEDA_array_1' %}
           <div
             class="mt:20px mr:10px fz:13px fw:400 c:color-gray9"
-            data-css="{{ null }}"
+            
           >
             {{ article.author }} ⋅ {{ article.published_at | date: '%b %d, %Y' }}
           </div>
         {% when 'content_article_content' %}
           <div
             class="veda-content"
-            data-css="{{ null }}"
+            
           >
             {{ article.content }}
           </div>
@@ -236,7 +236,7 @@
           {% capture ListComment %}
             <span
               class="d:flex ai:center m:15px_0 fz:pfs(15px,25px) fw:700 c:color-gray9"
-              data-css="{{ null }}"
+              
             >
               <i class="fal fa-comment mr:10px"></i>
               {% if article.comments_count %}
@@ -249,10 +249,10 @@
               {% paginate article.comments by 3 %}
                 {% for articleCommentItem in article.comments %}
                   <div class="p:20px bdt:1px_solid_color-gray3">
-                    <span class="fz:15px fw:700 c:color-gray9" data-css="{{ null }}">
+                    <span class="fz:15px fw:700 c:color-gray9" >
                       {{ articleCommentItem.author }} - {{ articleCommentItem.updated_at | date: '%b %d, %Y' }}
                     </span>
-                    <div class="m:10px_0 fz:15px c:color-gray9 fw:400" data-css="{{ null }}">
+                    <div class="m:10px_0 fz:15px c:color-gray9 fw:400" >
                       {{ articleCommentItem.content }}
                     </div>
                   </div>
@@ -265,7 +265,7 @@
           {% capture AddComment %}
             <div
               class="m:20px_0 fz:16px fw:500 c:color-gray9"
-              data-css="{{ null }}"
+              
             >
               {{ contentItem.VEDA_text_4 }}
             </div>
@@ -320,7 +320,7 @@
                     {% else %}
                       class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                   >
                     {{ contentItem.content_article___name }}
                   </span>
@@ -330,7 +330,7 @@
                     {% else %}
                       class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                     type="{{ 'text' }}"
                     name="{{ 'comment[author]' }}"
                     {% if form.author %}
@@ -365,7 +365,7 @@
                     {% else %}
                       class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                   >
                     {{ contentItem.content_article___email }}
                   </span>
@@ -375,7 +375,7 @@
                     {% else %}
                       class="rs w:100% p:12px_15px fz:14px c:color-gray9 c:color-gray7-freeze||ph bgc:color-light bd:1px_solid_color-gray3 o:none"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                     type="{{ 'email' }}"
                     name="{{ 'comment[email]' }}"
                     {% if form.email %}
@@ -399,7 +399,7 @@
                 <label class="d:block mb:15px">
                   <span
                     class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ contentItem.VEDA_text_3 }}
                   </span>
@@ -409,7 +409,7 @@
                     class="rs w:100% bd:1px_solid_color-gray3 p:10px_15px c:color-gray9 c:color-gray5||ph o:none"
                     aria-required="true"
                     required
-                    data-css="{{ null }}"
+                    
                   >{{ form.body }}</textarea>
                 </label>
               </div>
@@ -485,7 +485,7 @@
                 {% if _data_button_video_id %}
                   data-button-video-id="{{ _data_button_video_id }}"
                 {% endif %}
-                data-css="{{ null }}"
+                
               >
                 {% if contentItem.VEDA_switch_3 and 'left' == 'left' %}
                   <span
@@ -498,7 +498,7 @@
                     {% elsif _icon_class %}
                       class="{{ _icon_class }}"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                   >
                     {{ contentItem.VEDA_icon_2 }}
                   </span>
@@ -517,7 +517,7 @@
                     {% elsif _icon_class %}
                       class="{{ _icon_class }}"
                     {% endif %}
-                    data-css="{{ null }}"
+                    
                   >
                     {{ contentItem.VEDA_icon_2 }}
                   </span>
@@ -554,7 +554,7 @@
           {% if blog.previous_article != null and blog.next_article != null %}
             <div
               class="d:flex mt:30px pt:15px pb:15px bdt:1px_solid_color-gray3 bdb:1px_solid_color-gray3"
-              data-css="{{ null }}"
+              
               component="{{ 'content_article' }}"
             >
               {% if blog.previous_article != null %}
@@ -568,7 +568,7 @@
                 <a
                   href="{{ blog.previous_article.url }}"
                   class="trs:0.3s w:50% {{ border_button }} {{ item_variant_class_name }}"
-                  data-css="{{ null }}"
+                  
                 >
                   <span class="fz:20px">
                     {{ contentItem.VEDA_icon_4 }}
@@ -576,7 +576,7 @@
                   <div class="ml:20px">
                     <div
                       class="tt:uppercase ff:font-secondary fz:15px fw:500 mb:1px@lg"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ contentItem.VEDA_text_6 }}
                     </div>
@@ -590,12 +590,12 @@
                 <a
                   href="{{ blog.next_article.url }}"
                   class="trs:0.3s w:50% jc:flex-end {{ item_variant_class_name }}"
-                  data-css="{{ null }}"
+                  
                 >
                   <div class="mr:20px ta:right">
                     <div
                       class="tt:uppercase ff:font-secondary fz:15px fw:500 mb:1px@lg"
-                      data-css="{{ null }}"
+                      
                     >
                       {{ contentItem.VEDA_text_5 }}
                     </div>
@@ -637,7 +637,7 @@
                       <span
                         class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                         style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                        data-css="{{ null }}"
+                        
                         {% if _tooltip_position %}
                           data-tooltip-position="{{ _tooltip_position }}"
                         {% else %}
@@ -657,7 +657,7 @@
                       <span
                         class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                         style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                        data-css="{{ null }}"
+                        
                         {% if _tooltip_position %}
                           data-tooltip-position="{{ _tooltip_position }}"
                         {% else %}
@@ -677,7 +677,7 @@
                       <span
                         class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                         style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                        data-css="{{ null }}"
+                        
                         {% if _tooltip_position %}
                           data-tooltip-position="{{ _tooltip_position }}"
                         {% else %}
@@ -697,7 +697,7 @@
                       <span
                         class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                         style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                        data-css="{{ null }}"
+                        
                         {% if _tooltip_position %}
                           data-tooltip-position="{{ _tooltip_position }}"
                         {% else %}
@@ -717,7 +717,7 @@
                       <span
                         class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                         style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                        data-css="{{ null }}"
+                        
                         {% if _tooltip_position %}
                           data-tooltip-position="{{ _tooltip_position }}"
                         {% else %}
@@ -737,7 +737,7 @@
                       <span
                         class="fz:16px c:color-gray9 trf:translateY(-5px)|h trs:0.3s"
                         style="padding-left: {{ gap }}px; padding-right: {{ gap }}px;"
-                        data-css="{{ null }}"
+                        
                         {% if _tooltip_position %}
                           data-tooltip-position="{{ _tooltip_position }}"
                         {% else %}
@@ -960,22 +960,22 @@
                       autocorrect="off"
                       autocapitalize="off"
                       placeholder="{{ itemSidebar.VEDA_text_1 }}"
-                      data-css="{{ null }}"
+                      
                     >
                     <button
                       class="d:inline-flex ai:center p:0_20px h:100% ff:font-secondary fw:500 trs:0.3s cur:pointer bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h bd:1px_solid_color-gray9 bd:1px_solid_color-primary|h"
                       type="submit"
                       aria-label="submit"
-                      data-css="{{ null }}"
+                      
                     >
                       {% if 'right' == 'left' %}
-                        <span class="mr:10px" data-css="{{ null }}">
+                        <span class="mr:10px" >
                           {{ itemSidebar.sidebar___icon }}
                         </span>
                       {% endif %}
                       <span>{{ itemSidebar.sidebar___button_text }}</span>
                       {% if 'right' == 'right' %}
-                        <span class="ml:10px" data-css="{{ null }}">
+                        <span class="ml:10px" >
                           {{ itemSidebar.sidebar___icon }}
                         </span>
                       {% endif %}
@@ -990,7 +990,7 @@
                     {% assign itemCollection = block.settings %}
 
                     <a
-                      data-css="{{ null }}"
+                      
                       class="d:flex ai:center c:color-gray7 fz:14px ff:font-secondary pt:6px pb:6px trs:0.3s"
                       href="{{ itemCollection.veda_collections___link }}"
                     >

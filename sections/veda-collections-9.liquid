@@ -121,7 +121,7 @@
 					<div class="w:100% pos:absolute b:15px l:50% trf:translateX(-50%) z:1000 ta:center p:0_15px">
 						<div
 							class="d:inline-block bgc:color-light p:8px_35px ff:font-secondary c:color-gray9 fw:400 fz:15px"
-							data-css="{{ null }}"
+							
 						>
 							{{ item.content___title }}
 						</div>
@@ -175,7 +175,7 @@
 										{% endif %}
 									{% when 'heading_text' %}
 										<div
-											data-css="{{ null }}"
+											
 											style="text-align: {{ align }}"
 											class="fz:16px"
 										>
@@ -183,7 +183,7 @@
 										</div>
 									{% when 'heading_icon' %}
 										<div
-											data-css="{{ null }}"
+											
 											{% if 'left' == 'left' %}
 												style="text-align: start"
 											{% elsif 'left' == 'center' %}
@@ -319,7 +319,7 @@
 							
 							{% endif %}
 							class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-							data-css="{{ null }}"
+							
 							{% if _default_link %}
 								href="{{ _default_link }}"
 							{% else %}
@@ -332,7 +332,7 @@
               <span>
                 {{ section.settings.button_view_all___text }}
               </span>
-							<span class="ml:10px" data-css="{{ null }}"><i class="far fa-arrow-right"></i></span>
+							<span class="ml:10px" ><i class="far fa-arrow-right"></i></span>
 						</a>
 					{% endcapture %}
 					
@@ -421,7 +421,7 @@
 				
 				{% endif %}
 				class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-				data-css="{{ null }}"
+				
 				{% if _default_link %}
 					href="{{ _default_link }}"
 				{% else %}
@@ -434,7 +434,7 @@
 				<span>
           {{ section.settings.button_view_all___text }}
         </span>
-				<span class="ml:10px" data-css="{{ null }}"><i class="far fa-arrow-right"></i></span>
+				<span class="ml:10px" ><i class="far fa-arrow-right"></i></span>
 			</a>
 		{% endcapture %}
 		

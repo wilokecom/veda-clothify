@@ -43,7 +43,7 @@
   assign _default_link = false
 %}
 {% capture Content %}
-  <div class="row row-cols-lg-{{ 6 }} row-cols-md-{{ 4 }} row-cols-sm-{{ 3 }} row-cols-{{ 2 }}">
+  <div class="row row-cols-lg-{{ 6 }} row-cols-md-4 row-cols-sm-3 row-cols-2">
     {% for block in section.blocks %}
       {% if block.type == 'content' %}
         {% assign item = block.settings %}
@@ -65,11 +65,11 @@
             >
               {{ item.content___icon }}
             </span>
-            <h5 class="fz:15px fw:400 c:color-gray9" data-css="{{ null }}">
+            <h5 class="fz:15px fw:400 c:color-gray9" >
               {{ item.content___title }}
             </h5>
             {% if item.content___description %}
-              <div class="c:color-gray7 mt:10px" data-css="{{ null }}">
+              <div class="c:color-gray7 mt:10px" >
                 {{ item.content___description }}
               </div>
             {% endif %}
@@ -103,7 +103,7 @@
                   endif
                 %}
                 {% capture attr %}
-                  data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+                   class="fw:500" style="text-align: {{ align }}"
                 {% endcapture %}
                 {% case block.type %}
                   {% when 'heading_title' %}
@@ -120,7 +120,7 @@
                     {% endif %}
                   {% when 'heading_text' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       style="text-align: {{ align }}"
                       class="fz:16px"
                     >
@@ -128,7 +128,7 @@
                     </div>
                   {% when 'heading_icon' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       {% if 'center' == 'left' %}
                         style="text-align: start"
                       {% elsif 'center' == 'center' %}

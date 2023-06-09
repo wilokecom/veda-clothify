@@ -174,7 +174,7 @@
             {% if tagSize >= 1 and section.settings.content___enable_tag %}
               <div
                 class="mb:5px c:color-gray9 fz:11px fw:500 ff:font-secondary lts:1px tt:uppercase"
-                data-css="{{ null }}"
+                
               >
                 {{ articleItem.tags[0] | link_to_tag: articleItem.tags[0] }}
               </div>
@@ -185,13 +185,13 @@
                 target="_blank"
               {% endif %}
               class="lines-3 c:color-gray9 fz:18px fw:500 ff:font-secondary cur:pointer tt:capitalize trs:0.3s"
-              data-css="{{ null }}"
+              
             >
               {{ articleItem.title }}
             </a>
             <div class="d:flex ai:center c:color-gray7 fz:12px">
               {% if section.settings.content___enable_date and articleItem.published_at %}
-                <div class="mt:5px" data-css="{{ null }}">
+                <div class="mt:5px" >
                   <i class="far fa-calendar-alt"></i>
                   <span class="ff:font-secondary ml:3px">{{ articleItem.published_at | date: '%b %d, %Y' }}</span>
                 </div>
@@ -204,7 +204,7 @@
                 <div class="ml:10px mr:10px c:color-gray5">.</div>
               {% endif %}
               {% if section.settings.content___enable_comment and articleItem.comments_enabled %}
-                <div class="mt:5px" data-css="{{ null }}">
+                <div class="mt:5px" >
                   {% if articleItem.comments_count > 1 %}
                     <i class="far fa-comments"></i>
                     <span class="ff:font-secondary ml:3px tt:capitalize">
@@ -220,7 +220,7 @@
               {% endif %}
             </div>
             {% if section.settings.content___enable_excerpt %}
-              <div class="mt:15px lines-3" data-css="{{ null }}">
+              <div class="mt:15px lines-3" >
                 {% liquid
                   assign excerptSize = articleItem.excerpt | size
                 %}
@@ -265,20 +265,20 @@
             {% if section.settings.content___enable_tag %}
               <div
                 class="mb:5px c:color-gray9 fz:11px fw:500 ff:font-secondary lts:1px tt:uppercase"
-                data-css="{{ null }}"
+                
               >
                 Tag
               </div>
             {% endif %}
             <a
               class="lines-3 c:color-gray9 fz:18px fw:500 ff:font-secondary cur:pointer tt:capitalize trs:0.3s"
-              data-css="{{ null }}"
+              
             >
               Article title
             </a>
             <div class="d:flex ai:center c:color-gray7 fz:12px">
               {% if section.settings.content___enable_date %}
-                <div class="mt:5px" data-css="{{ null }}">
+                <div class="mt:5px" >
                   <i class="far fa-calendar-alt"></i>
                   <span class="ff:font-secondary ml:3px">{{ '2022-06-04 19:27:33 -0400' | date: '%b %d, %Y' }}</span>
                 </div>
@@ -287,7 +287,7 @@
                 <div class="ml:10px mr:10px c:color-gray5">.</div>
               {% endif %}
               {% if section.settings.content___enable_comment %}
-                <div class="mt:5px" data-css="{{ null }}">
+                <div class="mt:5px" >
                   <i class="far fa-comments"></i>
                   <span class="ff:font-secondary ml:3px tt:capitalize">
                     {{ 'veda.blogs.article.comments.other' | t: count: 2 }}
@@ -296,7 +296,7 @@
               {% endif %}
             </div>
             {% if section.settings.content___enable_excerpt %}
-              <div class="mt:15px lines-3" data-css="{{ null }}">
+              <div class="mt:15px lines-3" >
                 {{
                   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                   | truncatewords: 24, '...'
@@ -343,9 +343,9 @@
         },
         spaceBetween: {{ gap }},
         breakpoints: {
-          768: { slidesPerView: {{ 2 }} },
-          992: { slidesPerView: {{ 3 }} },
-          1200: { slidesPerView: {{ 3 }} }
+          768: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+          1200: { slidesPerView: 3 }
         }
       }
     "
@@ -404,7 +404,7 @@
           {% else %}
             class="swiper-button-prev swiper-button-prev-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           <span>{{ section.settings.VEDA_icon_2 }}</span>
         </div>
@@ -418,7 +418,7 @@
           {% else %}
             class="swiper-button-next swiper-button-next-bottom pos:static! trf:none! mt:0! {{ arrowGeneralClassName }} {{ arrowVariantClassName }}"
           {% endif %}
-          data-css="{{ null }}"
+          
         >
           <span>{{ section.settings.VEDA_icon_1 }}</span>
         </div>
@@ -482,7 +482,7 @@
                   endif
                 %}
                 {% capture attr %}
-                  data-css="{{ null }}" class="fw:500" style="text-align: {{ align }}"
+                   class="fw:500" style="text-align: {{ align }}"
                 {% endcapture %}
                 {% case block.type %}
                   {% when 'heading_title' %}
@@ -499,7 +499,7 @@
                     {% endif %}
                   {% when 'heading_text' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       style="text-align: {{ align }}"
                       class="fz:16px"
                     >
@@ -507,7 +507,7 @@
                     </div>
                   {% when 'heading_icon' %}
                     <div
-                      data-css="{{ null }}"
+                      
                       {% if 'center' == 'left' %}
                         style="text-align: start"
                       {% elsif 'center' == 'center' %}
@@ -644,7 +644,7 @@
 
               {% endif %}
               class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-              data-css="{{ null }}"
+              
               {% if _default_link %}
                 href="{{ _default_link }}"
               {% else %}
@@ -655,13 +655,13 @@
               {% endif %}
             >
               {% if section.settings.VEDA_switch_4 and 'right' == 'left' %}
-                <span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
+                <span class="mr:10px" >{{ section.settings.VEDA_icon_3 }}</span>
               {% endif %}
               <span>
                 {{ section.settings.button_view_all___text }}
               </span>
               {% if section.settings.VEDA_switch_4 and 'right' == 'right' %}
-                <span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
+                <span class="ml:10px" >{{ section.settings.VEDA_icon_3 }}</span>
               {% endif %}
             </a>
           {% endcapture %}
@@ -722,13 +722,13 @@
             <div class="d:flex ml:10px mb:10px">
               <div
                 class="swiper-button-prev swiper-button-prev-top pos:static! trf:none! {{ arrowTopGeneralClassName }} {{ arrowTopVariantClassName }}"
-                data-css="{{ null }}"
+                
               >
                 <span>{{ section.settings.VEDA_icon_2 }}</span>
               </div>
               <div
                 class="swiper-button-next swiper-button-next-top pos:static! trf:none! mr:0! {{ arrowTopGeneralClassName }} {{ arrowTopVariantClassName }}"
-                data-css="{{ null }}"
+                
               >
                 <span>{{ section.settings.VEDA_icon_1 }}</span>
               </div>
@@ -793,7 +793,7 @@
 
         {% endif %}
         class="d:inline-flex ai:center ff:font-primary fw:500 trs:0.3s{{ defaultForBottomClass }}{{ defaultClass }}{{ variantClass }} {{ custom_class }}"
-        data-css="{{ null }}"
+        
         {% if _default_link %}
           href="{{ _default_link }}"
         {% else %}
@@ -804,13 +804,13 @@
         {% endif %}
       >
         {% if section.settings.VEDA_switch_4 and 'right' == 'left' %}
-          <span class="mr:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
+          <span class="mr:10px" >{{ section.settings.VEDA_icon_3 }}</span>
         {% endif %}
         <span>
           {{ section.settings.button_view_all___text }}
         </span>
         {% if section.settings.VEDA_switch_4 and 'right' == 'right' %}
-          <span class="ml:10px" data-css="{{ null }}">{{ section.settings.VEDA_icon_3 }}</span>
+          <span class="ml:10px" >{{ section.settings.VEDA_icon_3 }}</span>
         {% endif %}
       </a>
     {% endcapture %}

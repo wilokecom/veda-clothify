@@ -452,7 +452,7 @@
 						{% if action.right_actions___new_tab %}
 							target="_blank"
 						{% endif %}
-						data-css="{{ null }}"
+						
 						class="p:0_5px cur:pointer c:color-gray9 c:color-primary|h trs:0.3s"
 					>
 						{{ action.right_actions___icon }}
@@ -483,14 +483,14 @@
 					<input type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
 					<div class="veda-select veda-select-lang">
 						<div
-							data-css="{{ null }}"
+							
 							class="veda-select__view c:color-gray8 d:flex ai:center jc:space-between bd:0! p:5px_0! fz:13px ff:font-secondary"
 						>
 							<div class="veda-select__label"></div>
 							<span class="pt:2px pl:4px">{{ lcItem.VEDA_icon_1 }}</span>
 						</div>
 						<div
-							data-css="{{ null }}"
+							
 							class="veda-select__options bgc:color-light w:fit-content! bxsh:0_5px_15px_color-gray9.2 bdrs:5px ov:hidden bd:0! p:10px_0"
 						>
 							{% for language in localization.available_languages %}
@@ -539,7 +539,7 @@
 						>
 						<div class="veda-select veda-select-currency">
 							<div
-								data-css="{{ null }}"
+								
 								class="veda-select__view c:color-gray8 d:flex ai:center jc:space-between bd:0! p:5px_0! fz:13px ff:font-secondary"
 							>
 								{% if builderMode %}
@@ -552,7 +552,7 @@
 								<span class="pt:2px pl:4px">{{ lcItem.VEDA_icon_1 }}</span>
 							</div>
 							<div
-								data-css="{{ null }}"
+								
 								class="veda-select__options bgc:color-light w:fit-content! bxsh:0_5px_15px_color-gray9.2 bdrs:5px ov:hidden bd:0! p:10px_0"
 							>
 								{% for currency in shop.enabled_currencies %}
@@ -580,7 +580,7 @@
 		{% elsif block.type == 'VEDA_array_3' %}
 			<a
 				class="c:color-light-freeze"
-				data-css="{{ null }}"
+				
 				href="{{ lcItem.VEDA_linkPicker_1 }}"
 			>
 				{% if lcItem.VEDA_switch_2 %}
@@ -602,7 +602,7 @@
 {% endcapture %}
 
 {% capture Topbar %}
-	<div data-css="{{ null }}" class="bdb:1px_solid_color-gray2">
+	<div  class="bdb:1px_solid_color-gray2">
 		<div class="pl:15px@+md! pr:15px@+md! {{ containerType }}">
 			<div class="pos:relative d:flex ai:center jc:space-between pt:10px pb:10px">
 				<div class="d:flex ai:center w:33.3333%@md">
@@ -610,7 +610,7 @@
 				</div>
 				<div
 					class="d:none@+md ta:center c:color-gray9 c:color-primary*a ff:font-secondary w:33.3333%@md"
-					data-css="{{ null }}"
+					
 				>
 					{{ section.settings.announcement_bar___text }}
 				</div>
@@ -624,7 +624,7 @@
 							
 							<a
 								class="p:4px_6px c:color-gray9 c:color-gray7|h trs:0.3s"
-								data-css="{{ null }}"
+								
 								target="_blank"
 								href="{{ social.socials___link }}"
 								data-tooltip-text="{{ social.socials___label }}"
@@ -653,7 +653,7 @@
 				<nav class="veda-nav d:flex ai:center jc:space-between mih:60px">
 					<div class="d:flex ai:center">
 						<div
-							data-css="{{ null }}"
+							
 							class="veda-nav__hamburger veda-hamburger-menu-icon fz:20px c:color-gray9 mr:20px d:none"
 						>
 							{{ section.settings.hamburger___icon }}
@@ -691,14 +691,14 @@
 			data-text-result="{{ 'veda.templates.search.search_for' | t: terms: 'a' }}"
 		>
 			<form
-				data-css="{{ null }}"
+				
 				action="{{ routes.search_url }}"
 				method="GET"
 				class="d:flex ai:center jc:space-between w:80% maw:800px bdb:3px_solid_color-gray3"
 			>
 				<div class="d:flex ai:center w:100%">
 					<input
-						data-css="{{ null }}"
+						
 						class="input-search-js rs w:100% bd:0! bxsh:none! o:none! bgc:transparent ff:font-secondary fz:pfs(26px,34px) c:color-gray8 c:color-gray5||ph trs:0.3s"
 						type="text"
 						placeholder="{{ "veda.general.search.search" | t }}"
@@ -738,7 +738,7 @@
 					{% endif %}
 				</div>
 				<button
-					data-css="{{ null }}"
+					
 					class="rs flxs:0 bxsh:none bd:0 bgc:transparent! bxsh:none! o:none! fz:pfs(18px,26px) c:color-gray5 c:color-primary|h trs:0.3s cur:pointer"
 					type="submit"
 					aria-label="Search"

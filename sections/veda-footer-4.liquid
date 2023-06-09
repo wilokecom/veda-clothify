@@ -91,7 +91,7 @@
 %}
 {% capture Subscribe %}
   <div
-    data-css="{{ null }}"
+    
     class="d:flex@sm ai:center jc:space-between bgc:color-primary p:pfs(30px,40px) mt:-50px mb:40px"
   >
     {% if section.settings.logo___enable %}
@@ -146,7 +146,7 @@
       {% if section.settings.subscribe___title %}
         <h3
           class="c:color-light-freeze fz:28px fw:400 ff:font-secondary"
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.subscribe___title }}
         </h3>
@@ -154,7 +154,7 @@
       {% if section.settings.subscribe___description %}
         <div
           class="mt:5px fz:14px c:color-light-freeze.8"
-          data-css="{{ null }}"
+          
         >
           {{ section.settings.subscribe___description }}
         </div>
@@ -234,7 +234,7 @@
               {% if item.content___title and block.type != 'subscribe' %}
                 <h3
                   class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
-                  data-css="{{ null }}"
+                  
                 >
                   {{ item.content___title }}
                 </h3>
@@ -336,7 +336,7 @@
             {% if item1.content___title and block.type != 'subscribe' %}
               <h3
                 class="mb:23px c:color-light-freeze fz:16px fw:400 ff:font-secondary"
-                data-css="{{ null }}"
+                
               >
                 {{ item1.content___title }}
               </h3>
@@ -347,7 +347,7 @@
                 {% if item1.content___description %}
                   <div
                     class="mt:15px fz:14px c:color-light-freeze.6"
-                    data-css="{{ null }}"
+                    
                   >
                     {{ item1.content___description }}
                   </div>
@@ -365,7 +365,7 @@
 {% capture FooterBottom %}
   <div
     class="ff:font-secondary c:color-light-freeze.8 fz:14px bdt:1px_solid_color-light-freeze.1 mt:30px"
-    data-css="{{ null }}"
+    
   >
     <div class="d:flex@sm ai:center jc:space-between ta:center@+sm p:20px_0">
       <div>
@@ -407,7 +407,7 @@
     >
       {{ Subscribe }}
       <div
-        class="row row-cols-lg-{{ 4 }} row-cols-md-{{ 3 }} row-cols-sm-{{ 2 }} row-cols-{{ 1 }}"
+        class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1"
         {% if section.settings.VEDA_slider_4 or section.settings.VEDA_slider_4 == 0 %}
           style="{{ rowGap }}"
         {% endif %}
