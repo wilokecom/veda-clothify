@@ -39,8 +39,9 @@ It is automatically generated from Veda
               {% else %}                <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
               {% endif %}            {% else %}              <span class="shopify-product-reviews-badge" data-id="{{ productItem.id }}"></span>
             {% endif %}          </div>
-      {% endcase %}    {% endif %}  
+      {% endcase %}    {% endif %}
 </div>
 
 
-<script src="{{ 'veda-addon-id_ae573385-1269-4bfb-85cd-2bd6463bb0e7.js' | asset_url }}" defer></script>
+<link rel="preload" as="script" class="veda-page-script"
+      href="{{ 'veda-addon-id_ae573385-1269-4bfb-85cd-2bd6463bb0e7.js' | asset_url }}">

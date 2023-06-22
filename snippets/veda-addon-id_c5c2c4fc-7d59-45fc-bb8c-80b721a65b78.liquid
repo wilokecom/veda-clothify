@@ -18,7 +18,7 @@ It is automatically generated from Veda
       data-css=""
     >
       
-        {{ cart.item_count }}      
+        {{ cart.item_count }}
     </div>
   </span>
     <div
@@ -47,7 +47,7 @@ It is automatically generated from Veda
       <i class="fal fa-times"></i>
     </span>
   </div>
-            
+    
     <form
       action="{{ routes.cart_url }}"
       method="post"
@@ -88,16 +88,16 @@ It is automatically generated from Veda
     {% endif %}    {% if _style %}      style="{{ _style }}"
     {% endif %}    loading="lazy"
   >
-{% else %}  {% 
-liquid 
-assign pl = 'lifestyle-1' 
-if _placeholder 
-assign pl = _placeholder 
+{% else %}  {%
+liquid
+assign pl = 'lifestyle-1'
+if _placeholder
+assign pl = _placeholder
 endif
- 
-assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'veda-lazyload miw:100%' 
-if _placeholder_class 
-assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class 
+
+assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: 'veda-lazyload miw:100%'
+if _placeholder_class
+assign placeholder_class = 'veda-placeholder-svg bgc:color-gray2 ' | append: _placeholder_class
 endif
  %}  {{ pl | placeholder_svg_tag: placeholder_class }}{% endif %}{% comment %}KET_THUC_TACH_FILE{% endcomment %}              </a>
             </div>
@@ -226,7 +226,7 @@ endif
                       <span class="fz:18px" data-css="">
                         <i class="far fa-percent"></i>                      </span>
                       translation missing veda.sections.cart.coupon_code                    </div>
-                                              
+                      
           </div>
           
 
@@ -236,7 +236,7 @@ endif
                     translation missing veda.sections.cart.subtotal                  </div>
                   <span class="fz:18px fw:500 c:color-gray9" data-css="">
                     
-                      {{ cart.total_price | money }}                    
+                      {{ cart.total_price | money }}
                   </span>
                 </div>
                 <div>
@@ -249,13 +249,13 @@ endif
                             {{ discountItem.title }}                            (-{{ discountItem.total_allocated_amount | money }})
                           </li>
                         {% endfor %}                      </ul>
-                    {% endif %}                  
+                    {% endif %}
                 </div>
-                        
+                
 
 
             
-                              
+                
 <button
   type="submit"
   
@@ -268,33 +268,33 @@ endif
     translation missing veda.sections.cart.checkout  </span>
   </button>
 
-                        
+                  
 
 
             
-                              
-                  {% comment %}BAT_DAU_TACH_FILE{% endcomment %}{% 
-liquid 
-if "gray" == 'link' 
-assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s ' 
-else 
-assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer ' 
+                  
+                  {% comment %}BAT_DAU_TACH_FILE{% endcomment %}{%
+liquid
+if "gray" == 'link'
+assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s '
+else
+assign default_class = 'rs d:inline-block td:none lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer '
 endif
- 
-assign default_for_bottom_class = '' 
-case "gray" 
-when 'primary' 
-assign variant_class = ' bgc:color-primary c:color-light-freeze bgc:color-gray9|h c:color-light|h' 
-when 'secondary' 
-assign variant_class = ' bgc:color-secondary c:color-light-freeze bgc:color-gray9|h c:color-light|h' 
-when 'dark' 
-assign variant_class = ' bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h' 
-when 'gray' 
-assign variant_class = ' bgc:color-gray3 c:color-gray9 bgc:color-primary|h c:color-light-freeze|h' 
-when 'light' 
-assign variant_class = ' bgc:color-light c:color-gray9 bgc:color-primary|h c:color-light-freeze|h' 
-else 
-assign variant_class = ' c:color-gray9 c:color-primary|h' 
+
+assign default_for_bottom_class = ''
+case "gray"
+when 'primary'
+assign variant_class = ' bgc:color-primary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
+when 'secondary'
+assign variant_class = ' bgc:color-secondary c:color-light-freeze bgc:color-gray9|h c:color-light|h'
+when 'dark'
+assign variant_class = ' bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h'
+when 'gray'
+assign variant_class = ' bgc:color-gray3 c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
+when 'light'
+assign variant_class = ' bgc:color-light c:color-gray9 bgc:color-primary|h c:color-light-freeze|h'
+else
+assign variant_class = ' c:color-gray9 c:color-primary|h'
 endcase
  %}<a
   component="{{ 'footer' }}"
@@ -317,8 +317,8 @@ endcase
     >
       {{ '<i class="far fa-shopping-cart"></i>' }}    </span>
   {% endif %}</a>
-{% comment %}KET_THUC_TACH_FILE{% endcomment %}                
-                        
+{% comment %}KET_THUC_TACH_FILE{% endcomment %}
+        
 
         </div>
             </div>
@@ -344,7 +344,7 @@ endcase
                 data-css=""
               >
               
-                {{ cart.note }}              
+                {{ cart.note }}
                 </textarea>
             </label>
             
@@ -358,7 +358,7 @@ endcase
     translation missing veda.sections.cart.save  </span>
   </button>
 
-            
+  
 <button
   type="button"
   
@@ -392,8 +392,8 @@ endcase
                 autocomplete="country"
                 data-css=""
               >
-                                  
-                    {{ all_country_option_tags }}                  
+                    
+                    {{ all_country_option_tags }}
                               </select>
             </label>
             <label class="address-province-container-shipping d:block mb:15px" style="display:none">
@@ -436,7 +436,7 @@ endcase
     translation missing veda.sections.cart.estimate_shipping_rates  </span>
   </button>
 
-            
+  
 <button
   type="button"
   
@@ -482,7 +482,7 @@ endcase
     translation missing veda.sections.cart.save  </span>
   </button>
 
-            
+  
 <button
   type="button"
   
@@ -507,4 +507,5 @@ endcase
 </div>
 
 
-<script src="{{ 'veda-addon-id_c5c2c4fc-7d59-45fc-bb8c-80b721a65b78.js' | asset_url }}" defer></script>
+<link rel="preload" class="veda-page-script" as="script"
+      href="{{ 'veda-addon-id_c5c2c4fc-7d59-45fc-bb8c-80b721a65b78.js' | asset_url }}">

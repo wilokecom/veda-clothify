@@ -14,50 +14,52 @@ It is automatically generated from Veda.
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-
+    
     {%- unless settings.type_header_font.system? -%}
         <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-
+    
     <title>{{ shop.name }}</title>
-
+    
     {% if page_description %}
         <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
-
+    
     {% render 'meta-tags' %}
-
+    
     {{ content_for_header }}
-
+    
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-
+    
     {% comment %} Fera addon {% endcomment %}
     {%- liquid
-        capture  fedaScript
+        capture fedaScript
             render 'banana-stand-footer'
         endcapture
-
-        unless  fedaScript contains 'Liquid error'
+        
+        unless fedaScript contains 'Liquid error'
             echo fedaScript
         endunless
     %}
-
+    <!--VEDA_ROCKET_LOADER--><script src="{{ 'veda-rocket-loader.js' | asset_url }}" defer></script><!--END_VEDA_ROCKET_LOADER-->
+    
     <!--VEDA_HEADER_SCRIPTS_POSITION-->
     {%- render 'veda-header-scripts' -%}
     {%- render 'veda-pv-header-scripts' -%}
-
+    
     <!--VEDA_NO_PLACEMENT_ADDON_POSITION-->
     {%- render 'veda-no-placement-addons' -%}
 </head>
 <body>
 <div id="veda-root" class="veda-container">
     {% sections 'veda-pv-theme-header' %}
-
+    
     {{ content_for_layout }}
-
+    
     <!--VEDA_FOOTER_SCRIPTS_POSITION-->
     {%- render 'veda-pv-footer-scripts' -%}
     {%- render 'veda-footer-scripts' -%}
+    <!--BEFORE_CLOSE_VEDA_ROOT-->
 </div>
 </body>
 </html>

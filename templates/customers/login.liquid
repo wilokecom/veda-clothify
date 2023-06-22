@@ -35,15 +35,15 @@
                   {% endif %}
                 <button type="submit" component="sign_in_button" class="rs lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer  bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h w:100% m:20px_0">
                   <span class="mr:10px">
-                    <i class="far fa-user-alt"></i>    
+                    <i class="far fa-user-alt"></i>
                   </span>
                   <span>
-                    {{ 'veda.customer.login.sign_in' | t }} 
+                    {{ 'veda.customer.login.sign_in' | t }}
                   </span>
                 </button>
               </div>
               <div class="mt:10px c:color-gray7*a td:underline*a ta:center">
-                {{ 'veda.layout.customer.create_account' | t | customer_register_link }} 
+                {{ 'veda.layout.customer.create_account' | t | customer_register_link }}
               </div>
             {% endform %}
             {% if shop.checkout.guest_login %}
@@ -89,7 +89,7 @@
               <div class="d:flex jc:center mt:20px fxw:wrap">
                 <button type="submit" component="submit_recover_button" class="rs lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer  bgc:color-gray9 c:color-light bgc:color-primary|h c:color-light-freeze|h btn-recover-password-js mr:10px">
                   <span class="mr:10px">
-                    <i class="far fa-badge-check"></i>    
+                    <i class="far fa-badge-check"></i>
                   </span>
                   <span>
                     {{ "veda.customer.login_page.submit" | t }}
@@ -97,7 +97,7 @@
                 </button>
                 <button type="reset" component="cancel_recover_button" class="rs lh:1.5 fz:15px ff:font-primary fw:500 trs:0.3s p:13px_20px bd:none bxsh:none o:none cur:pointer  bgc:color-gray2 c:color-gray9 bgc:color-primary|h c:color-light-freeze|h btn-recover-password-cancel-js" data-css="">
                   <span class="mr:10px">
-                    <i class="far fa-times-hexagon"></i>    
+                    <i class="far fa-times-hexagon"></i>
                   </span>
                   <span>
                     {{ "veda.customer.login_page.cancel" | t }}
@@ -111,4 +111,4 @@
     </div>
   </div>
 </section>
-<script src="{{ 'veda-main-login.js' | asset_url }}" defer></script>
+<link rel="preload" class="veda-page-script" as="script" href="{{ 'veda-main-login.js' | asset_url }}" />

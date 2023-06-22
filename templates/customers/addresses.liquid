@@ -6,7 +6,7 @@
 					{{ "veda.customer.addresses.title" | t }}
 				</h2>
         <a href="{{ routes.account_url }}" class="ff:font-secondary fz:16px fw:500 c:color-gray9 c:color-gray9|h! td:underline" veda-component-index="1" style="text-align: center;">
-          {{ "veda.customer.account.return" | t }}     
+          {{ "veda.customer.account.return" | t }}
 				</a>
         <div class="pt:20px fz:0" veda-component-index="2" style="text-align: center;">
           <div class="d:inline-block! w:50px h:2px bgc:color-gray3"></div>
@@ -62,7 +62,7 @@
 							</label>
 							<label class="d:block mb:15px">
 								<span class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px">
-									{{ "veda.customer.addresses.country" | t }}      
+									{{ "veda.customer.addresses.country" | t }}
 								</span>
 								<select name="address[country]" id="address-country-new" data-default="{{ form.country }}" class="rs w:100% p:12px_15px fz:14px bd:1px_solid_color-gray3 o:none c:color-gray9 c:color-gray7||ph bgc:color-light" autocomplete="country">
 									{{ all_country_option_tags }}
@@ -82,20 +82,20 @@
 							</label>
 							<label class="d:block mb:15px"
 								<span class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px">
-									{{ "veda.customer.addresses.zip" | t }}    
+									{{ "veda.customer.addresses.zip" | t }}
 								</span>
 								<input type="text" name="address[zip]" class="rs w:100% p:12px_15px fz:14px bd:1px_solid_color-gray3 o:none c:color-gray9 c:color-gray7||ph bgc:color-light" autocapitalize="characters" autocomplete="postal-code" value="">
 							</label>
 							<label class="d:block mb:15px">
 								<span class="d:block fz:15px ff:font-secondary c:color-gray9 mb:4px">
-									{{ "veda.customer.addresses.phone" | t }}  
+									{{ "veda.customer.addresses.phone" | t }}
 								</span>
 								<input type="tel" class="rs w:100% p:12px_15px fz:14px bd:1px_solid_color-gray3 o:none c:color-gray9 c:color-gray7||ph bgc:color-light" name="address[phone]" autocomplete="tel" value="">
 							</label>
 							<div class="mt:10px">
 								 {{ form.set_as_default_checkbox }}
 								<label class="fz:14px c:color-gray7" for="address_default_address_new">
-										{{ "veda.customer.addresses.set_default" | t }}    
+										{{ "veda.customer.addresses.set_default" | t }}
 								</label>
 							</div>
 							<div class="d:flex">
@@ -344,6 +344,7 @@
 				</div>
     	</div>
   	</div>
-	</div>	
+	</div>
 </section>
-<script src="{{ 'veda-main-address.js' | asset_url }}" defer></script>
+
+<link rel="preload" class="veda-page-script" as="script" href="{{ 'veda-main-address.js' | asset_url }}" />
