@@ -43,12 +43,10 @@
 	</script>
 	<!--VEDA_HEADER_SCRIPTS_POSITION-->
 	{%- render 'veda-header-scripts' -%}
-	<!--VEDA_NO_PLACEMENT_ADDON_POSITION-->
-	{% render 'veda-no-placement-addons' %}
 </head>
 
 <body class="gradient">
-<div id="veda-root" style="opacity: 0;">
+<div id="veda-root" style="overflow: hidden; overflow: clip; display: flow-root; opacity: 0">
 	<!--VEDA_HEADER_THEME_POSITION-->
 	{% sections 'veda-theme-header' %}
 	
@@ -101,6 +99,10 @@
 	{% sections 'veda-theme-footer' %}
 	<!--VEDA_FOOTER_SCRIPTS_POSITION-->
 	{%- render 'veda-footer-scripts' -%}
+	
+	<!--VEDA_NO_PLACEMENT_ADDON_POSITION-->
+	{% render 'veda-no-placement-addons' %}
+	
 	<!--BEFORE_CLOSE_VEDA_ROOT-->
 </div><!--End of #veda-root-->
 </body>
