@@ -4,6 +4,8 @@
 
 Are you tired of the limitations and drawbacks of free Shopify themes? While free themes can be a great starting point, they often come with their fair share of cons, such as limited customization options, lack of advanced features, and limited support resources.
 
+[LEARN HOW TO INSTALL THE THEME](https://www.youtube.com/watch?v=vYc2pwqPNds)
+
 <aside>
 📢 But what if you could enjoy the benefits of **a premium theme without spending a single dollar**? Introducing **Clothify**, the solution that combines the best of both worlds.
 
