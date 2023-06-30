@@ -1,34 +1,68 @@
 {%- style -%}
-	.section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-	}
-	
-	@media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-	}
-  .veda-content p span {
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 25px 0px;
+	.veda-page-content {
+    padding: 20px 0;
+    font-size: 16px;
   }
+ .h1,h2,h3,h4,h5,h5,p {
+   margin: 0 0 1em 0;
+   line-height: 1.4;
+ }
+.veda-page-content img[style*="float:left"], .veda-page-content img[style*="float: left"] {
+  margin-right: 20px;
+}
+.veda-page-content img[style*="float:right"], .veda-page-content img[style*="float: right"] {
+  margin-left: 20px;
+}
+.veda-page-content blockquote {
+  padding: 3px 0 3px 15px;
+  border-left: 3px solid var(--color-gray2);
+  font-size: 18px;
+  font-style: italic;
+  margin: 20px 30px;
+}
+.veda-page-content figcaption {
+  display: block;
+  text-align: center;
+  margin: 5px 0px;
+}
+.veda-page-content figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+.veda-page-content table {
+  margin: 15px 0;
+  font-size: 15px;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-gray3);
+  box-shadow: none;
+  caption-side: bottom;
+}
+.veda-page-content table th {
+  font-weight: 600;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid var(--color-gray3);
+  color: var(--color-gray9);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+}
+.veda-page-content table td {
+  padding: 15px;
+  border: 1px solid var(--color-gray3);
+}
 {%- endstyle -%}
 
-<div class="container veda-content page-width page-width--narrow section-{{ section.id }}-padding">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h1 class="main-page-title page-title h0">
-        {{ page.title | escape }}
-      </h1>
-      <div class="rte">
-        {{ page.content }}
-      </div>
+<div class="container">
+  <div class="veda-page-content">
+    <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {{ page.content }}
     </div>
   </div>
 </div>
