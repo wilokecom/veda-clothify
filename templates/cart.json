@@ -112,7 +112,7 @@
 				"VEDA_select_3": "bottom",
 				"VEDA_select_4": "gray",
 				"VEDA_switch_6": false,
-				"button_view_all___text": "{{'veda.sections.featured_collection.view_all' | t}}",
+				"button_view_all___text": "View all",
 				"button_view_all___enable": true,
 				"sold_out___enable": true,
 				"new___enable": true,
