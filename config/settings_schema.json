@@ -8,6 +8,17 @@
 		"theme_support_url": "https://vedabuilder.com"
 	},
 	{
+		"name": "Favicon",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "favicon",
+				"label": "Favicon",
+				"info": "Will be scaled down to 32 x 32px"
+			}
+		]
+	},
+	{
 		"name": "Custom fonts for theme",
 		"settings": [
 			{
