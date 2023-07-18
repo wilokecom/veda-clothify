@@ -16,6 +16,34 @@
 				"cart": "Cart",
 				"search": "Search"
 			},
+			"contact": {
+				"first_name": "First name",
+				"last_name": "Last name",
+				"name": "Name",
+				"email": "Email",
+				"text_message": "Text message",
+				"order": "Order Number",
+				"request_type": "What is this regarding?",
+				"method": "How do you want us to contact you?",
+				"time": "When is the best time to reach you?",
+				"phone": "Phone",
+				"morning": "Morning",
+				"afternoon": "Afternoon",
+				"evening": "Evening",
+				"comment": "Comment",
+				"returns": "Returns",
+				"shipping": "Shipping",
+				"custom_order": "Custom order",
+				"other": "Other",
+				"send": "Send",
+				"post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+				"error_heading": "Please adjust the following:"
+			},
+			"free_shipping": {
+				"none": "Free Shipping for all orders over {{ money }}",
+				"warning": "Don't miss out on FREE SHIPPING! Simply add {{ money }} more to your purchase.",
+				"success": "Congratulations! You'll enjoy free shipping on your purchase!"
+			},
 			"password_page": {
 				"login_form_heading": "Enter {{ first_name }} store {{ last_name }} using password:",
 				"login_password_button": "Enter using password",
@@ -24,7 +52,7 @@
 				"login_form_error": "Wrong password!",
 				"login_form_submit": "Enter",
 				"modal": "Password modal",
-				"admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
+				"admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
 				"powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
 			},
 			"social": {
@@ -57,6 +85,8 @@
 			"continue_shopping": "Continue shopping",
 			"start_shopping": "Start shopping",
 			"nothing_found": "Nothing found",
+			"wishlist_title": "Wishlist",
+			"nothing_wishlist": "No products have been added to the wish list",
 			"pagination": {
 				"label": "Pagination",
 				"page": "Page {{ number }}",
@@ -64,7 +94,8 @@
 				"previous": "Previous page"
 			},
 			"search": {
-				"search": "Search"
+				"search": "Search",
+				"heading": "{{ count }} results found for “{{ terms }}”"
 			},
 			"cart": {
 				"view": "View my cart ({{ count }})",
@@ -76,6 +107,10 @@
 				"share_url": "Link",
 				"success_message": "Link copied to clipboard",
 				"close": "Close share"
+			},
+			"empty": {
+				"title": "Nothing exists here",
+				"text": "We couldn't find any results for your search."
 			}
 		},
 		"contact": {
@@ -84,7 +119,9 @@
 				"phone": "Phone",
 				"email": "Email",
 				"message": "Message",
-				"send": "Send"
+				"send": "Send",
+				"post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+				"error_heading": "Please adjust the following:"
 			}
 		},
 		"newsletter": {
@@ -119,6 +156,10 @@
 				"blog": "Blog",
 				"read_more_title": "Read more: {{ title }}",
 				"comments": {
+					"one": "{{ count }} comment",
+					"other": "{{ count }} comments"
+				},
+				"comments_with_count": {
 					"one": "{{ count }} comment",
 					"other": "{{ count }} comments"
 				},
@@ -185,8 +226,7 @@
 					"open_featured_media": "Open featured media in gallery view",
 					"open_media": "Open media {{ index }} in gallery view",
 					"play_model": "Play 3D Viewer",
-					"play_video": "Play video",
-					"image_available": "Image available"
+					"play_video": "Play video"
 				},
 				"quantity": {
 					"label": "Quantity",
@@ -198,8 +238,9 @@
 					"view_store_info": "View store information",
 					"check_other_stores": "Check availability at other stores",
 					"pick_up_available": "Pickup available",
-					"pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
-					"pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+					"pick_up_currently_unavailable": "Pickup currently unavailable",
+					"pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+					"pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
 					"unavailable": "Couldn't load pickup availability",
 					"refresh": "Refresh"
 				},
@@ -218,7 +259,8 @@
 				"view_full_details": "View full details",
 				"xr_button": "View in your space",
 				"xr_button_label": "View in your space, loads item in augmented reality window",
-				"value_unavailable": "Unavailable"
+				"instock2": "In stock {{ count }}",
+				"outofstock2": "Out of stock {{ count }}"
 			},
 			"compare": {
 				"title": "Compare",
@@ -249,6 +291,8 @@
 			},
 			"contact": {
 				"form": {
+					"first_name": "First name",
+					"last_name": "Last name",
 					"name": "Name",
 					"email": "Email",
 					"phone": "Phone number",
@@ -283,9 +327,9 @@
 				"empty": "Your cart is empty",
 				"cart_error": "There was an error while updating your cart. Please try again.",
 				"cart_quantity_error_html": "You can only add [quantity] of this item to your cart.",
-				"taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link}}\">shipping<\/a> calculated at checkout",
+				"taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
 				"taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-				"taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+				"taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
 				"taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
 				"headings": {
 					"product": "Product",
@@ -297,7 +341,7 @@
 				"update": "Update",
 				"login": {
 					"title": "Have an account?",
-					"paragraph_html": "<a href=\"{{ link}}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
+					"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
 				},
 				"cancel": "Cancel",
 				"estimate_shipping_rates": "Estimate shipping rates",
@@ -305,6 +349,7 @@
 				"special_instrutions_for_seller": "Special instrutions for seller",
 				"calculate_shipping_rates": "Calculate shipping rates",
 				"shopping_cart_title": "Shopping cart",
+				"add_gift_wrap": "Add a gift wrap",
 				"add_discount_code": "Add a discount code",
 				"limited_checkout_title": "These products are limited, checkout within",
 				"buy_to_free_shipping": "Buy {{ price }} more to enjoy FREE Shipping",
@@ -325,7 +370,18 @@
 			},
 			"featured_collection": {
 				"view_all": "View all",
-				"view_all_label": "View all products in the {{ collection_name }} collection"
+				"view_all_label": "View all products in the {{ collection_name }} collection",
+				"refine_by": "Refine by",
+				"categories": "Categories",
+				"color": "Color",
+				"size": "Size",
+				"brand": "Brand",
+				"availability": "Availability",
+				"price": "Price",
+				"tag": "Tag",
+				"tags": "Tags",
+				"show_more": "Show More",
+				"show_less": "Show Less"
 			},
 			"filter": {
 				"filter": "Filter",
@@ -343,7 +399,18 @@
 				"show_less": "Show Less"
 			},
 			"collection_list": {
-				"view_all": "View all"
+				"view_all": "View all",
+				"refine_by": "Refine by",
+				"categories": "Categories",
+				"color": "Color",
+				"size": "Size",
+				"brand": "Brand",
+				"availability": "Availability",
+				"price": "Price",
+				"tag": "Tag",
+				"tags": "Tags",
+				"show_more": "Show More",
+				"show_less": "Show Less"
 			},
 			"collection_template": {
 				"title": "Collection",
@@ -364,7 +431,7 @@
 				"max_price": "The highest price is {{ price }}",
 				"reset": "Reset",
 				"to": "To",
-				"use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class}}\" href=\"{{ link}}\">clear all<\/a>",
+				"use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>",
 				"product_count": {
 					"one": "{{ product_count }} of {{ count }} product",
 					"other": "{{ product_count }} of {{ count }} products"
@@ -376,18 +443,14 @@
 			},
 			"video": {
 				"load_video": "Load video: {{ description }}"
-			},
-			"slideshow": {
-				"play_slideshow": "Play",
-				"pause_slideshow": "Pause"
 			}
 		},
 		"localization": {
-			"country_label": "Country\/region",
+			"country_label": "Country/region",
 			"state_label": "State",
 			"language_label": "Language",
 			"update_language": "Update language",
-			"update_country": "Update country\/region"
+			"update_country": "Update country/region"
 		},
 		"customer": {
 			"account": {
@@ -395,7 +458,7 @@
 				"title": "Account",
 				"details": "Account details",
 				"view_addresses": "View addresses",
-				"return": "Return to account details"
+				"return": "Return to Account details"
 			},
 			"account_fallback": "Account",
 			"activate_account": {
@@ -417,9 +480,9 @@
 				"address1": "Address 1",
 				"address2": "Address 2",
 				"city": "City",
-				"country": "Country\/region",
+				"country": "Country/region",
 				"province": "Province",
-				"zip": "Postal\/ZIP code",
+				"zip": "Postal/ZIP code",
 				"phone": "Phone",
 				"set_default": "Set as default address",
 				"add": "Add address",
@@ -434,6 +497,18 @@
 			"log_out": "Log out",
 			"sign_up": "Sign up",
 			"login_page": {
+				"cancel": "Cancel",
+				"create_account": "Create account",
+				"email": "Email",
+				"forgot_password": "Forgot your password?",
+				"guest_continue": "Continue",
+				"guest_title": "Continue as a guest",
+				"password": "Password",
+				"title": "Login",
+				"sign_in": "Sign in",
+				"submit": "Submit"
+			},
+			"login": {
 				"cancel": "Cancel",
 				"create_account": "Create account",
 				"email": "Email",
@@ -462,6 +537,7 @@
 				"price": "Price",
 				"quantity": "Quantity",
 				"total": "Total",
+				"total_duties": "Total",
 				"fulfilled_at_html": "Fulfilled {{ date }}",
 				"track_shipment": "Track shipment",
 				"tracking_url": "Tracking link",
@@ -477,6 +553,7 @@
 				"payment_status": "Payment status",
 				"fulfillment_status": "Fulfillment status",
 				"total": "Total",
+				"total_duties": "Total",
 				"none": "You haven't placed any orders yet."
 			},
 			"recover_password": {
